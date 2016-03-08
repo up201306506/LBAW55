@@ -10,12 +10,7 @@
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-
 	<link rel="stylesheet" type="text/css" href="profile.css">
-
-
-	<!-- jquery -->
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -50,9 +45,9 @@
 
 		<h1> Profile </h1>
 
-
-
-		<!-- boot strap java script (in the end to load faster) -->
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="jquery-1.12.1.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
