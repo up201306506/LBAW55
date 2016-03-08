@@ -12,3 +12,15 @@ html, body {
 	position: absolute;
 	transform: translate(-50%, -50%);
 }
+
+.jumbotron {
+	margin: 0;
+}
+
+.form-group:last-child {
+	margin-bottom: 0;
+}
+
+#username, #password, #email {
+	text-align: center;
+}

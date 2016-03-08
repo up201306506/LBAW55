@@ -20,50 +20,45 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="container row">
+	<div class="container">
 		<div class="col-sm-6">
-			<form class="form-horizontal" role="form">
+			<form class="form-horizontal jumbotron" role="form">
 				<div class="form-group">
-					<label class="control-label col-sm-2" for="username">Username:</label>
-					<div class="col-sm-10">
-						<input id="username" class="form-control" type="text" placeholder="enter username"></input>
+					<div class="col-sm-offset-1 col-sm-10">
+						<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-2" for="password">Password:</label>
-					<div class="col-sm-10">
-						<input id="password" class="form-control" type="password" placeholder="enter password"></input>
+					<div class="col-sm-offset-1 col-sm-10">
+						<input id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
+					<div class="col-sm-offset-1 col-sm-11">
 						<input class="btn btn-default" type="submit" value="Log In"></input>
 					</div>
 				</div>
 			</form>
 		</div> <!-- log in -->
 		<div class="col-sm-6">
-			<form class="form-horizontal" role="form">
+			<form class="form-horizontal jumbotron" role="form">
 				<div class="form-group">
-					<label class="control-label col-sm-2" for="username">Username:</label>
-					<div class="col-sm-10">
-						<input id="username" class="form-control" type="text" placeholder="enter username"></input>
+					<div class="col-sm-offset-1 col-sm-10">
+						<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-2" for="email">Email:</label>
-					<div class="col-sm-10">
-						<input id="email" class="form-control" type="email" placeholder="enter email"></input>
+					<div class="col-sm-offset-1 col-sm-10">
+						<input id="email" class="form-control" type="email" placeholder="EMAIL"></input>
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-2" for="password">Password:</label>
-					<div class="col-sm-10">
-						<input id="password" class="form-control" type="password" placeholder="enter password"></input>
+					<div class="col-sm-offset-1 col-sm-10">
+						<input id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
+					<div class="col-sm-offset-1 col-sm-11">
 						<input class="btn btn-default" type="submit" value="Sign Up"></input>
 					</div>
 				</div>
