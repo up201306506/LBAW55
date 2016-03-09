@@ -8,9 +8,13 @@ html, body {
 .container {
 	top: 50%;
 	left: 50%;
-	max-width: 1000px;
+	max-width: 1170px;
 	position: absolute;
 	transform: translate(-50%, -50%);
+}
+
+.login-form, .signup-form {
+	padding: 15px;
 }
 
 .jumbotron {

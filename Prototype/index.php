@@ -21,8 +21,8 @@
 </head>
 <body>
 	<div class="container">
-		<div class="col-sm-6">
-			<form class="form-horizontal jumbotron" role="form">
+		<div class="login-form col-sm-6">
+			<form class="form-horizontal jumbotron" action="profile.php" method="post" role="form">
 				<div class="form-group">
 					<div class="col-sm-offset-1 col-sm-10">
 						<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
@@ -40,8 +40,8 @@
 				</div>
 			</form>
 		</div> <!-- log in -->
-		<div class="col-sm-6">
-			<form class="form-horizontal jumbotron" role="form">
+		<div class="signup-form col-sm-6">
+			<form class="form-horizontal jumbotron" action="profile.php" method="post" role="form">
 				<div class="form-group">
 					<div class="col-sm-offset-1 col-sm-10">
 						<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
