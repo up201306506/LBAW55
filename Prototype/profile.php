@@ -20,30 +20,32 @@
 	<![endif]-->
 </head>
 	<body>
-		<!-- top nav bar using boot strap -->
-		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-		      <a class="navbar-brand" href="#">Home</a>
-		    </div>
-		    <div id="navbar" class="navbar-collapse collapse">
-			    <ul class="nav navbar-nav">
-			    	<li><a href="#"><span class="glyphicon glyphicon-search"> Search</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-user"> Profile</a></li>
-			    </ul>
-			    <ul class="nav navbar-nav navbar-right">
-			      <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
-			    </ul>
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">WebSiteName</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Page 1</a></li>
+						<li><a href="#">Page 2</a></li>
+						<li><a href="#">Page 3</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Username</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					</ul>
+				</div>
 			</div>
-		  </div>
-		</nav>
+		</nav> <!-- navbar -->
 
-		<h1> Profile </h1>
+		<h1>Profile Page</h1>
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="jquery-1.12.1.min.js"></script>
