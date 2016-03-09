@@ -49,7 +49,7 @@
 						<li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 					</ul>
 				</div>
-			</div>
+			</div> <!-- container-fluid -->
 		</nav> <!-- navbar -->
 
 		<div class="container page-content">
