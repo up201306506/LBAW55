@@ -32,10 +32,17 @@
 				</div>
 				<div class="collapse navbar-collapse" id="navbar">
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Home</a></li>
-						<li><a href="#">Page 1</a></li>
-						<li><a href="#">Page 2</a></li>
-						<li><a href="#">Page 3</a></li>
+						<li><a href="#">Home</a></li>
+						<li>
+							<form class="navbar-form" action="#" method="post" role="search">
+								<div class="input-group">
+									<input type="text" class="form-control" placeholder="Search"></input>
+									<div class="input-group-btn">
+										<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+									</div>
+								</div>
+							</form>
+						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#"><span class="glyphicon glyphicon-user"></span> Username</a></li>
