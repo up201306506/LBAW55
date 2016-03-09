@@ -1,0 +1,21 @@
+h1 {
+	margin: 0 0 0 15px;
+}
+
+.user, .user-info {
+	padding: 15px;
+}
+
+.user span {
+	padding: 10px;
+	display: block;
+	max-width: 100%;
+}
+
+.page-content {
+	margin: auto;
+}
+
+.navbar {
+	border-radius: 0;
+}

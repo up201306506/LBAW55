@@ -52,7 +52,33 @@
 			</div>
 		</nav> <!-- navbar -->
 
-		<h1>Profile Page</h1>
+		<div class="container page-content">
+			<h1>Profile</h1>
+			<div class="user col-sm-4">
+				<img class="img-responsive" src="user_img.png" alt="User´s Profile Image" width="200" height="200">
+				<span class="glyphicon glyphicon-user">Name</span>
+				<span class="glyphicon glyphicon-envelope">Email</span>
+				<span class="glyphicon glyphicon-tag">UserID</span>
+			</div>
+			<div class="user-info col-sm-8">
+				<div class="panel panel-default">
+					<div class="panel-heading">Classes</div>
+					<div class="panel-body">LBAW</div>
+					<div class="panel-body">PPIN</div>
+					<div class="panel-body">COMP</div>
+					<div class="panel-body">SDIS</div>
+					<div class="panel-body">IART</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">Exams</div>
+					<div class="panel-body">LBAW (13/03/2016)</div>
+					<div class="panel-body">PPIN (19/03/2016)</div>
+					<div class="panel-body">COMP (25/05/2016)</div>
+					<div class="panel-body">SDIS (02/03/2016)</div>
+					<div class="panel-body">IART (30/04/2016)</div>
+				</div>
+			</div>
+		</div> <!-- container -->
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="jquery-1.12.1.min.js"></script>
