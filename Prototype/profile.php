@@ -54,13 +54,13 @@
 
 		<div class="container page-content">
 			<h1>Profile</h1>
-			<div class="user col-sm-4">
+			<div class="user col-sm-3">
 				<img class="img-responsive" src="user_img.png" alt="User´s Profile Image" width="200" height="200">
 				<span class="glyphicon glyphicon-user">Name</span>
 				<span class="glyphicon glyphicon-envelope">Email</span>
 				<span class="glyphicon glyphicon-tag">UserID</span>
 			</div>
-			<div class="user-info col-sm-8">
+			<div class="user-info col-sm-9">
 				<div class="panel panel-default">
 					<div class="panel-heading">Classes</div>
 					<div class="panel-body">LBAW</div>
