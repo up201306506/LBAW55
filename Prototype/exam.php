@@ -31,80 +31,92 @@
 			<button class="btn btn-warning btn-lg" type="submit">End Test</button>
 		</div>
 		<div class="exam col-sm-9">
-			<div class="panel panel-default">
-				<div class="panel panel-heading question">1. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
-				<div class="panel-body">
-					<form role="Question">
-						<div class="radio">
-						<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-					</form>
+			<div class="question-group">
+				<span class="glyphicon glyphicon-star col-sm-1"></span>
+				<div class="panel panel-default col-sm-11">
+					<div class="panel-heading question">1. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+					<div class="panel-body">
+						<form role="Question">
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
-			<div class="panel panel-default">
-				<div class="panel panel-heading question">2. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
-				<div class="panel-body">
-					<form role="Question">
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-					</form>
+			<div class="question-group">
+				<span class="glyphicon glyphicon-star col-sm-1"></span>
+				<div class="panel panel-default col-sm-11">
+					<div class="panel-heading question">2. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+					<div class="panel-body">
+						<form role="Question">
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
-			<div class="panel panel-default">
-				<div class="panel panel-heading question">3. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
-				<div class="panel-body">
-					<form role="Question">
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-					</form>
+			<div class="question-group">
+				<span class="glyphicon glyphicon-star col-sm-1"></span>
+				<div class="panel panel-default col-sm-11">
+					<div class="panel-heading question">3. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+					<div class="panel-body">
+						<form role="Question">
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
-			<div class="panel panel-default">
-				<div class="panel panel-heading question">4. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
-				<div class="panel-body">
-					<form role="Question">
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-						<div class="radio">
-							<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
-						</div>
-					</form>
+			<div class="question-group">
+				<span class="glyphicon glyphicon-star col-sm-1"></span>
+				<div class="panel panel-default col-sm-11">
+					<div class="panel-heading question">4. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+					<div class="panel-body">
+						<form role="Question">
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+							<div class="radio">
+								<label><input type="radio" name="optradio"/>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>

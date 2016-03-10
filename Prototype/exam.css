@@ -20,6 +20,10 @@ h1 {
     margin: 10px;
 }
 
+.question-group .panel {
+	padding: 0;
+}
+
 .question {
     margin: 0;
     border-radius: 0;
