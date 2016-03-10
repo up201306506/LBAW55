@@ -57,23 +57,23 @@
 							</div>
 						</div>
 						<div class="choice">
-							<input id="A" type="radio" name="choice" value="ola" />
-							<label for="A">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							<input id="A-1" type="radio" name="choice" value="ola" />
+							<label for="A-1">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">
-						    <input id="B" type="radio" name="choice" value="eu" />
-						    <label for="B">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="B-1" type="radio" name="choice" value="eu" />
+						    <label for="B-1">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">    
-						    <input id="C" type="radio" name="choice" value="sou" />
-						    <label for="C">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="C-1" type="radio" name="choice" value="sou" />
+						    <label for="C-1">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">    
-						    <input id="D" type="radio" name="choice" value="o potter" />
-						    <label for="D">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="D-1" type="radio" name="choice" value="o potter" />
+						    <label for="D-1">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 				</div>
 			</div>
@@ -88,23 +88,23 @@
 							</div>
 						</div>
 						<div class="choice">
-							<input id="A" type="radio" name="choice" value="ola" />
-							<label for="A">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							<input id="A-2" type="radio" name="choice" value="ola" />
+							<label for="A-2">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">
-						    <input id="B" type="radio" name="choice" value="eu" />
-						    <label for="B">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="B-2" type="radio" name="choice" value="eu" />
+						    <label for="B-2">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">    
-						    <input id="C" type="radio" name="choice" value="sou" />
-						    <label for="C">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="C-2" type="radio" name="choice" value="sou" />
+						    <label for="C-2">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">    
-						    <input id="D" type="radio" name="choice" value="o potter" />
-						    <label for="D">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="D-2" type="radio" name="choice" value="o potter" />
+						    <label for="D-2">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 				</div>
 			</div>
@@ -119,23 +119,23 @@
 							</div>
 						</div>
 						<div class="choice">
-							<input id="A" type="radio" name="choice" value="ola" />
-							<label for="A">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							<input id="A-3" type="radio" name="choice" value="ola" />
+							<label for="A-3">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">
-						    <input id="B" type="radio" name="choice" value="eu" />
-						    <label for="B">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="B-3" type="radio" name="choice" value="eu" />
+						    <label for="B-3">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">    
-						    <input id="C" type="radio" name="choice" value="sou" />
-						    <label for="C">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="C-3" type="radio" name="choice" value="sou" />
+						    <label for="C-3">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">    
-						    <input id="D" type="radio" name="choice" value="o potter" />
-						    <label for="D">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="D-3" type="radio" name="choice" value="o potter" />
+						    <label for="D-3">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 				</div>
 			</div>
@@ -150,23 +150,23 @@
 							</div>
 						</div>
 						<div class="choice">
-							<input id="A" type="radio" name="choice" value="ola" />
-							<label for="A">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							<input id="A-4" type="radio" name="choice" value="ola" />
+							<label for="A-4">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">
-						    <input id="B" type="radio" name="choice" value="eu" />
-						    <label for="B">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="B-4" type="radio" name="choice" value="eu" />
+						    <label for="B-4">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">    
-						    <input id="C" type="radio" name="choice" value="sou" />
-						    <label for="C">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="C-4" type="radio" name="choice" value="sou" />
+						    <label for="C-4">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">    
-						    <input id="D" type="radio" name="choice" value="o potter" />
-						    <label for="D">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="D-4" type="radio" name="choice" value="o potter" />
+						    <label for="D-4">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 				</div>
 			</div>
@@ -181,30 +181,29 @@
 							</div>
 						</div>
 						<div class="choice">
-							<input id="A" type="radio" name="choice" value="ola" />
-							<label for="A">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+							<input id="A-5" type="radio" name="choice" value="ola" />
+							<label for="A-5">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">
-						    <input id="B" type="radio" name="choice" value="eu" />
-						    <label for="B">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="B-5" type="radio" name="choice" value="eu" />
+						    <label for="B-5">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">    
-						    <input id="C" type="radio" name="choice" value="sou" />
-						    <label for="C">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="C-5" type="radio" name="choice" value="sou" />
+						    <label for="C-5">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 
 						<div class="choice">    
-						    <input id="D" type="radio" name="choice" value="o potter" />
-						    <label for="D">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
+						    <input id="D-5" type="radio" name="choice" value="o potter" />
+						    <label for="D-5">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</label>
 						</div>
 					</div>
 				</div>
 			</div> 
 		</div>
 	</div>
-</div>	
 
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
