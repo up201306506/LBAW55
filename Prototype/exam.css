@@ -20,11 +20,15 @@ h1 {
     margin: 10px;
 }
 
-.question-group .panel {
+.question-group .panel, .question-group .panel-body {
 	padding: 0;
 }
 
 .question {
     margin: 0;
     border-radius: 0;
+}
+
+.radio {
+	margin: 15px;
 }

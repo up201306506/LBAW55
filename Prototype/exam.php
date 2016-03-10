@@ -31,6 +31,7 @@
 			<button class="btn btn-warning btn-lg" type="submit">End Test</button>
 		</div>
 		<div class="exam col-sm-9">
+			<!-- <div class="exam-info"></div> -->
 			<div class="question-group">
 				<span class="glyphicon glyphicon-star col-sm-1"></span>
 				<div class="panel panel-default col-sm-11">
