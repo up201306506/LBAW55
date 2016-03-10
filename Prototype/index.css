@@ -13,12 +13,16 @@ html, body {
 	transform: translate(-50%, -50%);
 }
 
+.jumbotron {
+	margin: 0;
+}
+
 .login-form, .signup-form {
 	padding: 15px;
 }
 
-.jumbotron {
-	margin: 0;
+.radio-group {
+	height: 34px;
 }
 
 .form-group:last-child {

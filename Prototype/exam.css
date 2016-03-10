@@ -1,63 +1,26 @@
-
-h1{
-	text-align: center;	
+.container {
+    margin-top: 20px;
 }
 
-.panel .choice {
-	margin-left: 15px;
+h1 {
+    margin: 0 0 0 15px;
 }
 
-.panel{
-	border-radius: 0;
+.user, .exam {
+    padding: 15px;
 }
 
-.user {
-	margin-left: 10px;
+.user span {
+    padding: 10px;
+    display: block;
+    max-width: 100%;
 }
 
-div.user { display:block }
-
-@media screen and (max-width:550px) {
-    div.user { display:none }
+.user button {
+    margin: 10px;
 }
 
-/* to take the boot strap button effects from the user start and to end buttons */
-.btn.btn-success.btn-user {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #5cb85c;
-}
-.btn.btn-success.btn-user.focus,
-.btn.btn-success.btn-user:focus {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #5cb85c;
-  outline: none;
-  box-shadow: none;
-}
-.btn.btn-success.btn-user:hover {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #5cb85c;
-  outline: none;
-  box-shadow: none;
-}
-.btn.btn-success.btn-user.active,
-.btn.btn-success.btn-user:active {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #5cb85c;
-  outline: none;
-}
-.btn.btn-success.btn-user.active.focus,
-.btn.btn-success.btn-user.active:focus,
-.btn.btn-success.btn-user.active:hover,
-.btn.btn-success.btn-user:active.focus,
-.btn.btn-success.btn-user:active:focus,
-.btn.btn-success.btn-user:active:hover {
-  color: #fff;
-  background-color: #5cb85c;
-  border-color: #5cb85c;
-  outline: none;
-  box-shadow: none;
+.question {
+    margin: 0;
+    border-radius: 0;
 }

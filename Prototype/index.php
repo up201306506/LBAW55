@@ -57,6 +57,12 @@
 						<input id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
 					</div>
 				</div>
+				<div class="form-group radio-group">
+					<div class="col-sm-offset-1 col-sm-10">
+						<label class="radio-inline"><input type="radio" name="optradio"/>Professor</label>
+						<label class="radio-inline"><input type="radio" name="optradio"/>Student</label>
+					</div>
+				</div>
 				<div class="form-group">
 					<div class="col-sm-offset-1 col-sm-11">
 						<input class="btn btn-default" type="submit" value="Sign Up"></input>

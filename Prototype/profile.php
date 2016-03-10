@@ -52,10 +52,10 @@
 		</div> <!-- container-fluid -->
 	</nav> <!-- navbar -->
 
-	<div class="container page-content">
+	<div class="container">
 		<h1>Profile</h1>
 		<div class="user col-sm-3">
-			<img class="img-responsive" src="user_img.png" alt="User´s Profile Image" width="200" height="200">
+			<img class="img-responsive" src="user_img.png" alt="User's Profile Image" width="200" height="200">
 			<span class="glyphicon glyphicon-user">Name</span>
 			<span class="glyphicon glyphicon-envelope">Email</span>
 			<span class="glyphicon glyphicon-tag">UserID</span>
@@ -63,19 +63,23 @@
 		<div class="user-info col-sm-9">
 			<div class="panel panel-default">
 				<div class="panel-heading">Classes</div>
-				<div class="panel-body">LBAW</div>
-				<div class="panel-body">PPIN</div>
-				<div class="panel-body">COMP</div>
-				<div class="panel-body">SDIS</div>
-				<div class="panel-body">IART</div>
+				<ul class="list-group">
+					<li class="list-group-item">LBAW</li>
+					<li class="list-group-item">PPIN</li>
+					<li class="list-group-item">COMP</li>
+					<li class="list-group-item">SDIS</li>
+					<li class="list-group-item">IART</li>
+				</ul>
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">Exams</div>
-				<div class="panel-body">LBAW (13/03/2016)</div>
-				<div class="panel-body">PPIN (19/03/2016)</div>
-				<div class="panel-body">COMP (25/05/2016)</div>
-				<div class="panel-body">SDIS (02/03/2016)</div>
-				<div class="panel-body">IART (30/04/2016)</div>
+				<ul class="list-group">
+					<li class="list-group-item"><a href="exam.php">LBAW (13/03/2016)</a></li>
+					<li class="list-group-item"><a href="exam.php">PPIN (19/03/2016)</a></li>
+					<li class="list-group-item"><a href="exam.php">COMP (25/05/2016)</a></li>
+					<li class="list-group-item"><a href="exam.php">SDIS (02/03/2016)</a></li>
+					<li class="list-group-item"><a href="exam.php">IART (30/04/2016)</a></li>
+				</ul>
 			</div>
 		</div>
 	</div> <!-- container -->
