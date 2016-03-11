@@ -28,7 +28,9 @@
 			<span class="glyphicon glyphicon-tag">UserID</span>
 			<span class="glyphicon glyphicon-play">Start: 13:35:43</span>
 			<span class="glyphicon glyphicon-time">Finish: 45:05:17</span>
-			<button class="btn btn-warning btn-lg" type="submit">End Test</button>
+			<form action='profile.php' method='POST'>
+				<button class="btn btn-warning btn-lg" type="submit">End Test</button>
+			</form>
 		</div>
 		<div class="exam col-sm-9">
 			<!-- <div class="exam-info"></div> -->
