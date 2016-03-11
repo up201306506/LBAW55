@@ -32,3 +32,21 @@ h1 {
 .radio {
 	margin: 15px;
 }
+
+.question-group {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.star {
+    width: 3%;
+    float: left;
+    display: block;
+}
+
+.question-panel {
+    width: 97%;
+    float: left;
+    display: block;
+}
