@@ -61,7 +61,7 @@
 	<div class="container">
 		<h1>Profile</h1>
 		<div class="user col-sm-3">
-			<img class="img-responsive" src="user_img.png" alt="User's Profile Image" width="200" height="200">
+			<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
 			<span class="glyphicon glyphicon-user">Name</span>
 			<span class="glyphicon glyphicon-envelope">Email</span>
 			<span class="glyphicon glyphicon-tag">UserID</span>
@@ -89,13 +89,78 @@
 			</div>
 		</div>
 		<div class="user-options col-sm-3">
-			<ul>
-				<li><a href="#">Statistics</a></li>
-				<li><a href="#">Create Class</a></li>
-				<li><a href="#">Create Question</a></li>
-				<li><a href="#">Review Grades</a></li>
-				<li><a href="#">Find Classes</a></li>
-			</ul>
+			<div class="calendar">
+				<table class="calendar-table">
+					<div class="calendar-header">
+						<span class="glyphicon glyphicon-triangle-left text-center arrow-left"></span>
+						<div class="month text-center"><span>Month</span></div>
+						<span class="glyphicon glyphicon-triangle-right text-center arrow-right"></span>
+					</div>
+					<tr>
+						<td class="text-center">Seg</td>
+						<td class="text-center">Ter</td>
+						<td class="text-center">Qua</td>
+						<td class="text-center">Qui</td>
+						<td class="text-center">Sex</td>
+						<td class="text-center">Sab</td>
+						<td class="text-center">Dom</td>
+					</tr>
+					<tr>
+						<td colspan="1"></td>
+						<td class="text-center">1</td>
+						<td class="text-center">2</td>
+						<td class="text-center">3</td>
+						<td class="text-center">4</td>
+						<td class="text-center">5</td>
+						<td class="text-center">6</td>
+					</tr>
+					<tr>
+						<td class="text-center">7</td>
+						<td class="text-center">8</td>
+						<td class="text-center">9</td>
+						<td class="text-center">10</td>
+						<td class="text-center">11</td>
+						<td class="text-center">12</td>
+						<td class="text-center">13</td>
+					</tr>
+					<tr>
+						<td class="text-center">14</td>
+						<td class="text-center">15</td>
+						<td class="text-center">16</td>
+						<td class="text-center">17</td>
+						<td class="text-center">18</td>
+						<td class="text-center">19</td>
+						<td class="text-center">20</td>
+					</tr>
+					<tr>
+						<td class="text-center">21</td>
+						<td class="text-center">22</td>
+						<td class="text-center">23</td>
+						<td class="text-center">24</td>
+						<td class="text-center">25</td>
+						<td class="text-center">26</td>
+						<td class="text-center">27</td>
+					</tr>
+					<tr>
+						<td class="text-center">28</td>
+						<td class="text-center">29</td>
+						<td class="text-center">30</td>
+						<td class="text-center">31</td>
+						<td colspan="1"></td>
+						<td colspan="1"></td>
+						<td colspan="1"></td>
+					</tr>
+				</table>
+			</div>
+			<div class="options">
+				<ul>
+					<li><a href="#">Statistics</a></li>
+					<li><a href="#">Create Class</a></li>
+					<li><a href="#">Create Question</a></li>
+					<li><a href="#">Review Grades</a></li>
+					<li><a href="#">Find Classes</a></li>
+				</ul>
+			</div>
 		</div>
 	</div> <!-- container -->
 

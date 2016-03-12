@@ -10,6 +10,10 @@ h1 {
     padding: 15px;
 }
 
+.profile-img {
+    margin: auto;
+}
+
 .user span {
     padding: 10px;
     display: block;

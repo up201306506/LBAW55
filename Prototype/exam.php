@@ -23,7 +23,7 @@
 	<div class="container">
 		<h1>LBAW exam</h1>
 		<div class="user col-sm-3">
-			<img class="img-responsive" src="user_img.png" alt="User's Profile Image" width="200" height="200">
+			<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
 			<span class="glyphicon glyphicon-user">Name</span>
 			<span class="glyphicon glyphicon-tag">UserID</span>
 			<span class="glyphicon glyphicon-play">Start: 13:35:43</span>
