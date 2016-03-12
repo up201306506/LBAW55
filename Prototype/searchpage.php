@@ -66,23 +66,23 @@
 					<div class="panel-heading">Professors</div>
 					<ul class="list-group">
 						<li class="list-group-item">
-							<a href=""><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
+							<a href="#"><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
 							<a href="#">Professor #1</a>
 						</li>
 						<li class="list-group-item">
-							<a href=""><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
+							<a href="#"><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
 							<a href="#">Professor #2</a>
 						</li>
 						<li class="list-group-item">
-							<a href=""><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
+							<a href="#"><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
 							<a href="#">Professor #3</a>
 						</li>
 						<li class="list-group-item">
-							<a href=""><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
+							<a href="#"><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
 							<a href="#">Professor #4</a>
 						</li>
 						<li class="list-group-item">
-							<a href=""><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
+							<a href="#"><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
 							<a href="#">Professor #5</a>
 						</li>
 					</ul>
@@ -91,23 +91,23 @@
 					<div class="panel-heading">Students</div>
 					<ul class="list-group">
 						<li class="list-group-item">
-							<a href=""><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
+							<a href="#"><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
 							<a href="#">Student #1</a>
 						</li>
 						<li class="list-group-item">
-							<a href=""><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
+							<a href="#"><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
 							<a href="#">Student #2</a>
 						</li>
 						<li class="list-group-item">
-							<a href=""><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
+							<a href="#"><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
 							<a href="#">Student #3</a>
 						</li>
 						<li class="list-group-item">
-							<a href=""><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
+							<a href="#"><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
 							<a href="#">Student #4</a>
 						</li>
 						<li class="list-group-item">
-							<a href=""><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
+							<a href="#"><img class="sm-profile-img" src="user_img.png" alt="User's Profile Image" width="35" height="35"></a>
 							<a href="#">Student #5</a>
 						</li>
 					</ul>
