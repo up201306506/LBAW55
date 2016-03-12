@@ -91,7 +91,7 @@
 			</div>
 		</div>
 		<div class="user-options col-sm-3">
-			<div class="calendar">
+			<div class="table-responsive calendar">
 				<table class="calendar-table">
 					<div class="calendar-header">
 						<span class="glyphicon glyphicon-triangle-left text-center arrow-left"></span>
@@ -99,13 +99,13 @@
 						<span class="glyphicon glyphicon-triangle-right text-center arrow-right"></span>
 					</div>
 					<tr>
-						<td class="text-center">Seg</td>
-						<td class="text-center">Ter</td>
-						<td class="text-center">Qua</td>
-						<td class="text-center">Qui</td>
-						<td class="text-center">Sex</td>
-						<td class="text-center">Sab</td>
-						<td class="text-center">Dom</td>
+						<td class="text-center">Mon</td>
+						<td class="text-center">Tue</td>
+						<td class="text-center">Wed</td>
+						<td class="text-center">Thu</td>
+						<td class="text-center">Fri</td>
+						<td class="text-center">Sat</td>
+						<td class="text-center">Sun</td>
 					</tr>
 					<tr>
 						<td colspan="1"></td>
