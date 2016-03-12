@@ -20,57 +20,64 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="container">
-		<div class="login-form col-sm-6">
-			<form class="form-horizontal jumbotron" action="profile.php" method="post" role="form">
-				<div class="form-group">
-					<div class="col-sm-offset-1 col-sm-10">
-						<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
-					</div>
+	<div class="container-parent">
+		<div class="container">
+			<div class="login-form col-sm-6">
+				<div class="form-box">
+					<form class="form-horizontal" action="profile.php" method="post" role="form">
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<input id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-11">
+								<input class="btn btn-default" type="submit" value="Login"></input>
+							</div>
+						</div>
+					</form>
 				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-1 col-sm-10">
-						<input id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
-					</div>
+			</div> <!-- log in -->
+			<div class="signup-form col-sm-6">
+				<div class="form-box">
+					<form class="form-horizontal" action="profile.php" method="post" role="form">
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<input id="email" class="form-control" type="email" placeholder="EMAIL"></input>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<input id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
+							</div>
+						</div>
+						<div class="form-group radio-group">
+							<div class="col-sm-offset-1 col-sm-10">
+								<label class="radio-inline"><input type="radio" name="optradio"/>Professor</label>
+								<label class="radio-inline"><input type="radio" name="optradio"/>Student</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-1 col-sm-11">
+								<input class="btn btn-default" type="submit" value="Sign Up"></input>
+							</div>
+						</div>
+					</form>
 				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-1 col-sm-11">
-						<input class="btn btn-default" type="submit" value="Login"></input>
-					</div>
-				</div>
-			</form>
-		</div> <!-- log in -->
-		<div class="signup-form col-sm-6">
-			<form class="form-horizontal jumbotron" action="profile.php" method="post" role="form">
-				<div class="form-group">
-					<div class="col-sm-offset-1 col-sm-10">
-						<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-1 col-sm-10">
-						<input id="email" class="form-control" type="email" placeholder="EMAIL"></input>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-1 col-sm-10">
-						<input id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
-					</div>
-				</div>
-				<div class="form-group radio-group">
-					<div class="col-sm-offset-1 col-sm-10">
-						<label class="radio-inline"><input type="radio" name="optradio"/>Professor</label>
-						<label class="radio-inline"><input type="radio" name="optradio"/>Student</label>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-1 col-sm-11">
-						<input class="btn btn-default" type="submit" value="Sign Up"></input>
-					</div>
-				</div>
-			</form>
-		</div> <!-- sign up -->
-	</div> <!-- container -->
+			</div> <!-- sign up -->
+		</div> <!-- container -->
+	</div> <!-- container-parent -->
+	
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="jquery-1.12.1.min.js"></script>

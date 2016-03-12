@@ -23,14 +23,16 @@
 	<div class="container">
 		<h1>LBAW exam</h1>
 		<div class="user col-sm-3">
-			<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
-			<span class="glyphicon glyphicon-user">Name</span>
-			<span class="glyphicon glyphicon-tag">UserID</span>
-			<span class="glyphicon glyphicon-play">Start: 13:35:43</span>
-			<span class="glyphicon glyphicon-time">Finish: 45:05:17</span>
-			<form action='profile.php' method='POST'>
-				<button class="btn btn-warning btn-lg" type="submit">End Test</button>
-			</form>
+			<div class="user-box">
+				<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
+				<span class="glyphicon glyphicon-user">Name</span>
+				<span class="glyphicon glyphicon-tag">UserID</span>
+				<span class="glyphicon glyphicon-play">Start: 13:35:43</span>
+				<span class="glyphicon glyphicon-time">Finish: 45:05:17</span>
+				<form action='profile.php' method='POST'>
+					<button class="btn btn-warning btn-lg" type="submit">End Test</button>
+				</form>
+			</div>
 		</div>
 		<div class="exam col-sm-9">
 			<!-- <div class="exam-info"></div> -->

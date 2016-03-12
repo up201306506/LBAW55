@@ -61,10 +61,12 @@
 	<div class="container">
 		<h1>Profile</h1>
 		<div class="user col-sm-3">
-			<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
-			<span class="glyphicon glyphicon-user">Name</span>
-			<span class="glyphicon glyphicon-envelope">Email</span>
-			<span class="glyphicon glyphicon-tag">UserID</span>
+			<div class="user-box">
+				<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
+				<span class="glyphicon glyphicon-user">Name</span>
+				<span class="glyphicon glyphicon-envelope">Email</span>
+				<span class="glyphicon glyphicon-tag">UserID</span>
+			</div>
 		</div>
 		<div class="user-info col-sm-6">
 			<div class="panel panel-default">
