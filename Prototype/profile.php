@@ -45,8 +45,14 @@
 					</li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Username</a></li>
-					<li><a href="index.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Options <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#"><span class="glyphicon glyphicon-user"></span> Username</a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
+							<li><a href="index.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div> <!-- container-fluid -->
@@ -60,7 +66,7 @@
 			<span class="glyphicon glyphicon-envelope">Email</span>
 			<span class="glyphicon glyphicon-tag">UserID</span>
 		</div>
-		<div class="user-info col-sm-9">
+		<div class="user-info col-sm-6">
 			<div class="panel panel-default">
 				<div class="panel-heading">Classes</div>
 				<ul class="list-group">
@@ -81,6 +87,15 @@
 					<li class="list-group-item"><a href="exam.php">IART (30/04/2016)</a></li>
 				</ul>
 			</div>
+		</div>
+		<div class="user-options col-sm-3">
+			<ul>
+				<li><a href="#">Statistics</a></li>
+				<li><a href="#">Create Class</a></li>
+				<li><a href="#">Create Question</a></li>
+				<li><a href="#">Review Grades</a></li>
+				<li><a href="#">Find Classes</a></li>
+			</ul>
 		</div>
 	</div> <!-- container -->
 

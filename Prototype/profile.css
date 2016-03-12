@@ -2,7 +2,7 @@ h1 {
 	margin: 0 0 0 15px;
 }
 
-.user, .user-info {
+.user, .user-info, .user-options {
 	padding: 15px;
 }
 
@@ -10,6 +10,11 @@ h1 {
 	padding: 10px;
 	display: block;
 	max-width: 100%;
+}
+
+.user-options a {
+	margin: 5px;
+	display: block;
 }
 
 .navbar {
