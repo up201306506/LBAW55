@@ -1,0 +1,24 @@
+body {
+	padding-top: 70px;
+}
+
+.sm-profile-img {
+	margin-right: 10px;
+}
+
+.navbar {
+	border-radius: 0;
+}
+
+.navbar-form {
+	margin: 0;
+	padding: 0;
+}
+
+.input-group {
+	padding: 8px 15px;
+}
+
+.results-box:last-child {
+	margin-bottom: 0;
+}
