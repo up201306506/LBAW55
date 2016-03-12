@@ -20,7 +20,7 @@
 	<![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-inverse" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -34,7 +34,7 @@
 				<ul class="nav navbar-nav">
 					<li><a href="#">Home</a></li>
 					<li>
-						<form class="navbar-form" action="#" method="post" role="search">
+						<form class="navbar-form" action="searchpage.php" method="post" role="search">
 							<div class="input-group">
 								<input type="text" class="form-control" placeholder="Search"></input>
 								<div class="input-group-btn">

@@ -35,7 +35,7 @@
 		<div class="exam col-sm-9">
 			<!-- <div class="exam-info"></div> -->
 			<div class="question-group">
-				<span class="glyphicon glyphicon-star star"></span>
+				<span class="glyphicon glyphicon-flag flag"></span>
 				<div class="panel panel-default question-panel">
 					<div class="panel-heading question">1. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 					<div class="panel-body">
@@ -57,7 +57,7 @@
 				</div>
 			</div>
 			<div class="question-group">
-				<span class="glyphicon glyphicon-star star"></span>
+				<span class="glyphicon glyphicon-flag flag"></span>
 				<div class="panel panel-default question-panel">
 					<div class="panel-heading question">2. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 					<div class="panel-body">
@@ -79,7 +79,7 @@
 				</div>
 			</div>
 			<div class="question-group">
-				<span class="glyphicon glyphicon-star star"></span>
+				<span class="glyphicon glyphicon-flag flag"></span>
 				<div class="panel panel-default question-panel">
 					<div class="panel-heading question">3. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 					<div class="panel-body">
@@ -101,7 +101,7 @@
 				</div>
 			</div>
 			<div class="question-group">
-				<span class="glyphicon glyphicon-star star"></span>
+				<span class="glyphicon glyphicon-flag flag"></span>
 				<div class="panel panel-default question-panel">
 					<div class="panel-heading question">4. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 					<div class="panel-body">
