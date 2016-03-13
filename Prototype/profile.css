@@ -31,6 +31,10 @@ h1 {
 	max-width: 100%;
 }
 
+.user-info .panel:last-child {
+	margin-bottom: 0;
+}
+
 .options a {
 	margin: 5px;
 	display: block;
