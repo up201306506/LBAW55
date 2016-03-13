@@ -31,7 +31,7 @@ h1 {
 	max-width: 100%;
 }
 
-.user-options a {
+.options a {
 	margin: 5px;
 	display: block;
 }
@@ -68,6 +68,7 @@ h1 {
 .arrow-left, .arrow-right {
 	width: 33%;
 	float: left;
+	margin: 0;
 }
 
 .options {

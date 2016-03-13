@@ -94,9 +94,9 @@
 			<div class="table-responsive calendar">
 				<table class="calendar-table">
 					<div class="calendar-header">
-						<span class="glyphicon glyphicon-triangle-left text-center arrow-left"></span>
-						<div class="month text-center"><span>Month</span></div>
-						<span class="glyphicon glyphicon-triangle-right text-center arrow-right"></span>
+						<a class="glyphicon glyphicon-triangle-left text-center arrow-left" href="#"></a>
+						<div class="month text-center"><a href="#">Month</a></div>
+						<a class="glyphicon glyphicon-triangle-right text-center arrow-right" href="#"></a>
 					</div>
 					<tr>
 						<td class="text-center">Mon</td>
