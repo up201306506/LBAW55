@@ -9,7 +9,7 @@
 	<title>Profile</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="profile.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -169,6 +169,6 @@
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="jquery-1.12.1.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="js/bootstrap.min.js"></script>
+	<script src="Bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
