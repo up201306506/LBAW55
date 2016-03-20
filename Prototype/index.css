@@ -5,40 +5,8 @@ html, body {
 	height: 100%;
 }
 
-body {
-	display: table;
-}
-
-.container-parent {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.form-box {
-	border-radius: 5px;
-	border: 1px solid #dddddd;
-	background-color: #f5f5f5;
-	padding: 25px 15px 25px 15px;
-}
-
-@media screen and (max-width: 768px) {
-	.form-box {
-		padding: 15px 15px 15px 15px;
-	}
-}
-
-.login-form, .signup-form {
-	padding: 15px;
-}
-
-.radio-group {
-	height: 34px;
-}
-
-.form-group:last-child {
-	margin-bottom: 0;
-}
-
-#username, #password, #email {
+h1 {
+	margin: 20px;
 	text-align: center;
+	font-family: "Raleway";
 }

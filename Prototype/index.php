@@ -6,11 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>Index</title>
+	<title>ElDoom</title>
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="font.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,64 +21,8 @@
 	<![endif]-->
 </head>
 <body>
-	<div class="container-parent">
-		<div class="container">
-			<div class="login-form col-sm-6">
-				<div class="form-box">
-					<form class="form-horizontal" action="profile.php" method="post" role="form">
-						<div class="form-group">
-							<div class="col-sm-offset-1 col-sm-10">
-								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-1 col-sm-10">
-								<input id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-1 col-sm-11">
-								<input class="btn btn-default" type="submit" value="Login"></input>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div> <!-- log in -->
-			<div class="signup-form col-sm-6">
-				<div class="form-box">
-					<form class="form-horizontal" action="profile.php" method="post" role="form">
-						<div class="form-group">
-							<div class="col-sm-offset-1 col-sm-10">
-								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-1 col-sm-10">
-								<input id="email" class="form-control" type="email" placeholder="EMAIL"></input>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-1 col-sm-10">
-								<input id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
-							</div>
-						</div>
-						<div class="form-group radio-group">
-							<div class="col-sm-offset-1 col-sm-10">
-								<label class="radio-inline"><input type="radio" name="optradio"/>Professor</label>
-								<label class="radio-inline"><input type="radio" name="optradio"/>Student</label>
-							</div>
-						</div>
-						<div class="form-group">
-							<div class="col-sm-offset-1 col-sm-11">
-								<input class="btn btn-default" type="submit" value="Sign Up"></input>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div> <!-- sign up -->
-		</div> <!-- container -->
-	</div> <!-- container-parent -->
-	
+	<h1>ElDoom</h1>
+	<a href="login_signup.php">Log In/Sign Up</a><br>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="jquery-1.12.1.min.js"></script>
