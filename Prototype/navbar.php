@@ -12,7 +12,7 @@
 			<ul class="nav navbar-nav">
 				<li><a href="#">Home</a></li>
 				<li>
-					<form class="navbar-form" action="searchpage.php" method="post" role="search">
+					<form class="navbar-form" action="search_results.php" method="post" role="search">
 						<div class="input-group">
 							<input type="text" class="form-control" placeholder="Search"></input>
 							<div class="input-group-btn">

@@ -10,7 +10,7 @@
 
 	<!-- Bootstrap -->
 	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="searchpage.css">
+	<link rel="stylesheet" type="text/css" href="search_results.css">
 	<link rel="stylesheet" type="text/css" href="navbar.css">
 	<link rel="stylesheet" type="text/css" href="font.css">
 
