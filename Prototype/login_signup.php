@@ -24,12 +24,12 @@
 	<div class="container-parent">
 		<div class="container">
 			<div class="col-sm-offset-3 col-sm-6">
-				<ul class="nav nav-tabs nav-justified">
-					<li class="active"><a data-toggle="tab" href="#login-form">Log In</a></li>
-					<li><a data-toggle="tab" href="#signup-form">Sign Up</a></li>
+				<ul class="tabs">
+					<li class="tab-link current" data-tab="tab-1">Log In</li>
+					<li class="tab-link" data-tab="tab-2">Sign Up</li>
 				</ul>
-				<div class="tab-content">
-					<div id="login-form" class="tab-pane fade in active">
+				<div class="tab-content current" id="tab-1">
+					<div id="login-form">
 						<form class="form-horizontal" action="profile.php" method="post" role="form">
 							<div class="form-group">
 								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
@@ -42,7 +42,9 @@
 							</div>
 						</form>
 					</div>
-					<div id="signup-form" class="tab-pane fade">
+				</div>
+				<div class="tab-content" id="tab-2">
+					<div id="signup-form">
 						<form class="form-horizontal" action="profile.php" method="post" role="form">
 							<div class="form-group">
 								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
@@ -69,6 +71,8 @@
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="jquery-1.12.1.min.js"></script>
+	<!-- Include file to make tabs work -->
+	<script src="tabs.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="Bootstrap/js/bootstrap.min.js"></script>
 </body>
