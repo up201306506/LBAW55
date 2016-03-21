@@ -2,6 +2,10 @@ h1 {
     margin: 0 0 0 15px;
 }
 
+.container {
+    padding-bottom: 15px;
+}
+
 .user, .exam {
     padding: 15px;
 }
@@ -37,4 +41,9 @@ h1 {
 
 .radio {
 	margin: 15px;
+}
+
+.pagination {
+    float: right;
+    margin: auto;
 }

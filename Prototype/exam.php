@@ -29,7 +29,7 @@
 			<div class="user-box">
 				<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
 				<span class="glyphicon glyphicon-user">Name</span>
-				<span class="glyphicon glyphicon-tag">UserID</span>
+				<span class="glyphicon glyphicon-credit-card">UserID</span>
 				<span class="glyphicon glyphicon-play">Start: 13:35:43</span>
 				<span class="glyphicon glyphicon-time">Finish: 45:05:17</span>
 				<form action='profile.php' method='POST'>
@@ -59,7 +59,7 @@
 				</div>
 			</div>
 			<div class="panel panel-default question-panel">
-				<div class="panel-heading question">1. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+				<div class="panel-heading question">2. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 				<div class="panel-body">
 					<form role="Question">
 						<div class="radio">
@@ -78,7 +78,7 @@
 				</div>
 			</div>
 			<div class="panel panel-default question-panel">
-				<div class="panel-heading question">1. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+				<div class="panel-heading question">3. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 				<div class="panel-body">
 					<form role="Question">
 						<div class="radio">
@@ -97,7 +97,7 @@
 				</div>
 			</div>
 			<div class="panel panel-default question-panel">
-				<div class="panel-heading question">1. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+				<div class="panel-heading question">4. Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
 				<div class="panel-body">
 					<form role="Question">
 						<div class="radio">
@@ -116,7 +116,16 @@
 				</div>
 			</div>
 		</div>
-	</div>
+		<div class="page col-sm-12">
+			<ul class="pagination">
+				<li class="active"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+			</ul>
+		</div>
+	</div> <!-- container -->
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="jquery-1.12.1.min.js"></script>

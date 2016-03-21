@@ -1,7 +1,4 @@
-.sm-profile-img {
-	margin-right: 10px;
-}
-
-.results-box:last-child {
-	margin-bottom: 0;
+.checkbox {
+	margin: 0;
+	padding: 5px;
 }

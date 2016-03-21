@@ -30,20 +30,10 @@
 				<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
 				<span class="glyphicon glyphicon-user">Name</span>
 				<span class="glyphicon glyphicon-envelope">Email</span>
-				<span class="glyphicon glyphicon-tag">UserID</span>
+				<span class="glyphicon glyphicon-credit-card">UserID</span>
 			</div>
 		</div>
 		<div class="user-info col-sm-6">
-			<div class="panel panel-default">
-				<div class="panel-heading">Classes</div>
-				<ul class="list-group">
-					<li class="list-group-item">LBAW</li>
-					<li class="list-group-item">PPIN</li>
-					<li class="list-group-item">COMP</li>
-					<li class="list-group-item">SDIS</li>
-					<li class="list-group-item">IART</li>
-				</ul>
-			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading">Exams</div>
 				<ul class="list-group">
@@ -52,6 +42,16 @@
 					<li class="list-group-item"><a href="exam.php">COMP (25/05/2016)</a></li>
 					<li class="list-group-item"><a href="exam.php">SDIS (02/03/2016)</a></li>
 					<li class="list-group-item"><a href="exam.php">IART (30/04/2016)</a></li>
+				</ul>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">Classes</div>
+				<ul class="list-group">
+					<li class="list-group-item"><a href="class.php">LBAW</a></li>
+					<li class="list-group-item"><a href="class.php">PPIN</a></li>
+					<li class="list-group-item"><a href="class.php">COMP</a></li>
+					<li class="list-group-item"><a href="class.php">SDIS</a></li>
+					<li class="list-group-item"><a href="class.php">IART</a></li>
 				</ul>
 			</div>
 		</div>
