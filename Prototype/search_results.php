@@ -68,19 +68,19 @@
 						<a href="#">Student #5</a>
 					</li>
 					<li class="list-group-item">
-						<a href="#"><span class="glyphicon glyphicon-education"></span> Class #1</a>
+						<a href="#"><span class="glyphicon glyphicon-education"></span>Class #1</a>
 					</li>
 					<li class="list-group-item">
-						<a href="#"><span class="glyphicon glyphicon-education"></span> Class #2</a>
+						<a href="#"><span class="glyphicon glyphicon-education"></span>Class #2</a>
 					</li>
 					<li class="list-group-item">
-						<a href="#"><span class="glyphicon glyphicon-education"></span> Class #3</a>
+						<a href="#"><span class="glyphicon glyphicon-education"></span>Class #3</a>
 					</li>
 					<li class="list-group-item">
-						<a href="#"><span class="glyphicon glyphicon-education"></span> Class #4</a>
+						<a href="#"><span class="glyphicon glyphicon-education"></span>Class #4</a>
 					</li>
 					<li class="list-group-item">
-						<a href="#"><span class="glyphicon glyphicon-education"></span> Class #5</a>
+						<a href="#"><span class="glyphicon glyphicon-education"></span>Class #5</a>
 					</li>
 				</ul>
 			</div> <!-- results panel -->

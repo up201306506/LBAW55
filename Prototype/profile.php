@@ -126,12 +126,12 @@
 			</div>
 			<div class="options">
 				<ul>
-					<li><a href="#"><span class="glyphicon glyphicon-education"></span> Create Class</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-file"></span> Create Exam</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-pencil"></span> Create Question</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-stats"></span> Statistics</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Review Grades</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-search"></span> Find Classes</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
+					<li><a href="create_question.php"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 				</ul>
 			</div>
 		</div>
