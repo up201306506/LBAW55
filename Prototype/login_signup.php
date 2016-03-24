@@ -20,6 +20,7 @@
 	<![endif]-->
 </head>
 <body>
+	<h1 class="title">ElDoom</h1>
 	<div class="container-parent">
 		<div class="container">
 			<div class="col-sm-offset-3 col-sm-6">
