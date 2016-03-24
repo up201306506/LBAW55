@@ -126,52 +126,77 @@
 						<option>Other</option>
 					</select>
 				</div>
-				<div class="panel panel-default col-sm-offset-1 col-sm-10">
+				<div class="panel panel-default questions-panel col-sm-offset-1 col-sm-10">
 					<div class="panel-body">
-						<div class="panel panel-default question-block">
-							<div class="panel-heading">Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
-							<div class="panel-body">
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
+						<div class="question-box">
+							<div class="panel panel-success question-block">
+								<div class="panel-heading">Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+								<div class="panel-body">
+									<ul>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+									</ul>
+								</div>
 							</div>
+							<span class="glyphicon glyphicon-remove-circle text-center remove-circle"></span>
 						</div>
-						<div class="panel panel-default question-block">
-							<div class="panel-heading">Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
-							<div class="panel-body">
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
+						<div class="question-box">
+							<div class="panel panel-default question-block">
+								<div class="panel-heading">Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+								<div class="panel-body">
+									<ul>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+									</ul>
+								</div>
 							</div>
+							<span class="glyphicon glyphicon-ok-circle text-center ok-circle"></span>
 						</div>
-						<div class="panel panel-default question-block">
-							<div class="panel-heading">Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
-							<div class="panel-body">
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
+						<div class="question-box">
+							<div class="panel panel-default question-block">
+								<div class="panel-heading">Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+								<div class="panel-body">
+									<ul>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+									</ul>
+								</div>
 							</div>
+							<span class="glyphicon glyphicon-ok-circle text-center ok-circle"></span>
 						</div>
-						<div class="panel panel-default question-block">
-							<div class="panel-heading">Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
-							<div class="panel-body">
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
+						<div class="question-box">
+							<div class="panel panel-default question-block">
+								<div class="panel-heading">Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+								<div class="panel-body">
+									<ul>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+									</ul>
+								</div>
 							</div>
+							<span class="glyphicon glyphicon-ok-circle text-center ok-circle"></span>
 						</div>
-						<div class="panel panel-default question-block">
-							<div class="panel-heading">Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
-							<div class="panel-body">
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
-								<span class="answer">Some default panel content here. Nulla vitae elit libero, a pharetra augue.</span>
+						<div class="question-box">
+							<div class="panel panel-default question-block">
+								<div class="panel-heading">Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</div>
+								<div class="panel-body">
+									<ul>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+										<li>Some default panel content here. Nulla vitae elit libero, a pharetra augue.</li>
+									</ul>
+								</div>
 							</div>
+							<span class="glyphicon glyphicon-ok-circle text-center ok-circle"></span>
 						</div>
 					</div>
 				</div>
@@ -182,12 +207,15 @@
 					<li><a href="#">4</a></li>
 					<li><a href="#">5</a></li>
 				</ul>
+				<button id="next" class="btn btn-primary" type="button">Next</button>
 			</div> <!-- exam-questions-box -->
 		</form>
 	</div> <!-- container -->
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="jquery-1.12.1.min.js"></script>
+	<!-- Include corresponding .js file -->
+	<script src="create_exam.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="Bootstrap/js/bootstrap.min.js"></script>
 </body>
