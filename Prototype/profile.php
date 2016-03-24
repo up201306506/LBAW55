@@ -34,7 +34,7 @@
 		</div>
 		<div class="user-info col-sm-6">
 			<div class="panel panel-default">
-				<div class="panel-heading">Exams</div>
+				<div class="panel-heading text-center">Exams</div>
 				<ul class="list-group">
 					<li class="list-group-item"><a href="exam.php">LBAW (13/03/2016)</a></li>
 					<li class="list-group-item"><a href="exam.php">PPIN (19/03/2016)</a></li>
@@ -44,7 +44,7 @@
 				</ul>
 			</div>
 			<div class="panel panel-default">
-				<div class="panel-heading">Classes</div>
+				<div class="panel-heading text-center">Classes</div>
 				<ul class="list-group">
 					<li class="list-group-item"><a href="class.php">LBAW</a></li>
 					<li class="list-group-item"><a href="class.php">PPIN</a></li>

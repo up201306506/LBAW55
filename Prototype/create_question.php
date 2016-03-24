@@ -23,6 +23,7 @@
 <body>
 	<?php include 'navbar.php'; ?>
 	<div class="container">
+		<h1 class="col-sm-offset-3">New Question</h1>
 		<div class="col-sm-offset-3 col-sm-6">
 			<div class="new-question-box">
 				<form action="#" method="post" role="form">
@@ -60,7 +61,7 @@
 					</div>
 					<div class="buttons">
 						<button id="add_answer" class="btn btn-primary" type="button">Add Answer</button>
-						<input id="finish" class="btn btn-success" type="submit" value="Finish"></input>
+						<input id="finish" class="btn btn-success" type="submit" value="Submit Question"></input>
 					</div>
 				</form>
 			</div>
