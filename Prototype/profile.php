@@ -69,13 +69,13 @@
 						<a class="glyphicon glyphicon-triangle-right text-center arrow-right" href="#"></a>
 					</div>
 					<tr>
-						<td class="text-center">Mon</td>
-						<td class="text-center">Tue</td>
-						<td class="text-center">Wed</td>
-						<td class="text-center">Thu</td>
-						<td class="text-center">Fri</td>
-						<td class="text-center">Sat</td>
-						<td class="text-center">Sun</td>
+						<td class="text-center"><abbr title="Monday">Mon</abbr></td>
+						<td class="text-center"><abbr title="Tuesday">Tue</abbr></td>
+						<td class="text-center"><abbr title="Wednesday">Wed</abbr></td>
+						<td class="text-center"><abbr title="Thursday">Thu</abbr></td>
+						<td class="text-center"><abbr title="Friday">Fri</abbr></td>
+						<td class="text-center"><abbr title="Saturday">Sat</abbr></td>
+						<td class="text-center"><abbr title="Sunday">Sun</abbr></td>
 					</tr>
 					<tr>
 						<td colspan="1"></td>
