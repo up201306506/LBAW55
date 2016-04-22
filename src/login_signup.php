@@ -9,7 +9,7 @@
 	<title>Log In/Sign Up</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/Bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="login_signup.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -30,7 +30,7 @@
 				</ul>
 				<div class="tab-content current" id="tab-1">
 					<div id="login-form">
-						<form class="form-horizontal" action="profile.php" method="post" role="form">
+						<form class="form-horizontal" action="profile/profile.php" method="post" role="form">
 							<div class="form-group">
 								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
 							</div>
@@ -45,7 +45,7 @@
 				</div>
 				<div class="tab-content" id="tab-2">
 					<div id="signup-form">
-						<form class="form-horizontal" action="profile.php" method="post" role="form">
+						<form class="form-horizontal" action="profile/profile.php" method="post" role="form">
 							<div class="form-group">
 								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
 							</div>
@@ -70,10 +70,10 @@
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="jquery-1.12.1.min.js"></script>
+	<script src="javascript/jquery-1.12.1.min.js"></script>
 	<!-- Include file to make tabs work -->
-	<script src="tabs.js"></script>
+	<script src="javascript/tabs.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="Bootstrap/js/bootstrap.min.js"></script>
+	<script src="css/Bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

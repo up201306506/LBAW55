@@ -9,9 +9,9 @@
 	<title>Create Exam</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="create_exam.css">
-	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<link rel="stylesheet" type="text/css" href="../../css/Bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/create_exam.css">
+	<link rel="stylesheet" type="text/css" href="../../css/navbar.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,7 +21,7 @@
 	<![endif]-->
 </head>
 <body>
-	<?php include 'navbar.php'; ?>
+	<?php include '../../navbar.php'; ?>
 	<div class="container">
 		<h1>New Exam</h1>
 		<form action="#" method="post" role="form">
@@ -108,7 +108,7 @@
 						<label for="professors">Responsible Professors:</label>
 						<ul id="professors" class="list-group">
 							<li class="list-group-item">
-								<img src="user_img.png" alt="User's Profile Image" width="35" height="35">
+								<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">
 								Professor In Charge
 							</li>
 						</ul>
@@ -213,10 +213,10 @@
 	</div> <!-- container -->
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="jquery-1.12.1.min.js"></script>
+	<script src="../../javascript/jquery-1.12.1.min.js"></script>
 	<!-- Include corresponding .js file -->
-	<script src="create_exam.js"></script>
+	<script src="../../javascript/create_exam.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="Bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../css/Bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

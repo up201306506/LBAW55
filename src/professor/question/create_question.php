@@ -9,9 +9,9 @@
 	<title>Create Question</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="create_question.css">
-	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<link rel="stylesheet" type="text/css" href="../../css/Bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/create_question.css">
+	<link rel="stylesheet" type="text/css" href="../../css/navbar.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,7 +21,7 @@
 	<![endif]-->
 </head>
 <body>
-	<?php include 'navbar.php'; ?>
+	<?php include '../../navbar.php'; ?>
 	<div class="container">
 		<h1 class="col-sm-offset-3">New Question</h1>
 		<div class="col-sm-offset-3 col-sm-6">
@@ -69,10 +69,10 @@
 	</div>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="jquery-1.12.1.min.js"></script>
+	<script src="../../javascript/jquery-1.12.1.min.js"></script>
 	<!-- Include corresponding .js file -->
-	<script src="create_question.js"></script>
+	<script src="../../javascript/create_question.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="Bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../css/Bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

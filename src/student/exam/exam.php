@@ -9,9 +9,9 @@
 	<title>Exam</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="exam.css">
-	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<link rel="stylesheet" type="text/css" href="../../css/Bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/exam.css">
+	<link rel="stylesheet" type="text/css" href="../../css/navbar.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,17 +21,17 @@
 	<![endif]-->
 </head>
 <body>
-	<?php include 'navbar.php'; ?>
+	<?php include '../../navbar.php'; ?>
 	<div class="container">
 		<h1>LBAW exam</h1>
 		<div class="user col-sm-3">
 			<div class="user-box">
-				<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
+				<img class="img-responsive profile-img" src="../../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
 				<span class="glyphicon glyphicon-user">Name</span>
 				<span class="glyphicon glyphicon-credit-card">UserID</span>
 				<span class="glyphicon glyphicon-play">Start: 13:35:43</span>
 				<span class="glyphicon glyphicon-time">Finish: 45:05:17</span>
-				<form action='profile.php' method='POST'>
+				<form action="../../profile/profile.php" method="post">
 					<button class="btn btn-warning btn-lg" type="submit">End Test</button>
 				</form>
 			</div>
@@ -135,8 +135,8 @@
 	</div> <!-- container -->
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="jquery-1.12.1.min.js"></script>
+	<script src="../../javascript/jquery-1.12.1.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="Bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../css/Bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

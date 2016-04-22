@@ -9,7 +9,7 @@
 	<title>ElDoom</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/Bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="index.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -24,8 +24,8 @@
 	<a href="login_signup.php">Log In/Sign Up</a><br>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="jquery-1.12.1.min.js"></script>
+	<script src="javascript/jquery-1.12.1.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="Bootstrap/js/bootstrap.min.js"></script>
+	<script src="css/Bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
