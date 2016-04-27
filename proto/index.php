@@ -1,3 +1,13 @@
 <?php
-  header('Location: main.php');
+
+	/*This summons the database and smarty initializer */
+	include_once('config/init.php');
+
+	/*Other PHP actions should go here*/
+	
+	//But the index page probably wouldn't have that.
+	
+	/*This summons the smarty template*/
+	$smarty->display('main.tpl');
+
 ?>
