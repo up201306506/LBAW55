@@ -7,12 +7,14 @@
   $BASE_DIR = '/opt/lbaw/lbaw1555/public_html/LBAW55/'; //FIXME
   $BASE_URL = '/~lbaw1555/src/'; //FIXME
 
+  /*
   $conn = new PDO('pgsql:host=dbm;dbname=lbaw1555', 'lbaw1555', 'VK15D1P4'); //FIXME
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   $conn->exec('SET SCHEMA \'public\''); //FIXME?
-/*
+  */
+  
   include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
   
   $smarty = new Smarty;
@@ -30,5 +32,5 @@
   unset($_SESSION['error_messages']);  
   unset($_SESSION['field_errors']);
   unset($_SESSION['form_values']);
-  */
+  
 ?>
