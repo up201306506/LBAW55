@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<?php include_once('config/init.php'); ?>
+
 	<title>Log In/Sign Up</title>
 
 	<meta charset="utf-8">
