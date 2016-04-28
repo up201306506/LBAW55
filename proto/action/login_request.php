@@ -14,11 +14,11 @@
 
 include_once('../config/init.php');	
 
-
+/*
 	function isLoginCorrect($username, $password) {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 
-	                            FROM "User" 
+	                            FROM User 
 	                            WHERE username = ? AND password = ?");// needs the isActive contrain
 	    $stmt->execute(array($username, $password));// sha1($password)
 	    return $stmt->fetch() == true;
@@ -42,7 +42,11 @@ include_once('../config/init.php');
 	    $_SESSION['error_messages'][] = 'Login failed';  
 	  }
 	  header('Location: ' . $_SERVER['HTTP_REFERER']);
+*/
+	  $stmt = $conn->prepare("SELECT * 
+	                            FROM User");// needs the isActive contrain
+	  $stmt.execute();
 
-	echo '<script type="text/javascript">alert(" user name: '.$username.',password: '.$password.'"); </script>';
+	echo '<script type="text/javascript">alert(" user '.$stmt->fetchAll().' "); </script>';
 
 ?>
