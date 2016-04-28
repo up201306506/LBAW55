@@ -45,7 +45,7 @@ include_once('../config/init.php');
 */
 	  $stmt = $conn->prepare("SELECT * 
 	                            FROM User");// needs the isActive contrain
-	  $stmt.execute();
+	  $stmt->execute();
 
 	echo '<script type="text/javascript">alert(" user '.$stmt->fetchAll().' "); </script>';
 
