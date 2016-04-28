@@ -18,9 +18,9 @@ include_once('../config/init.php');
 	function isLoginCorrect($username, $password) {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 
-	                            FROM User 
+	                            FROM "User" 
 	                            WHERE username = ? AND password = ?");// needs the isActive contrain
-	    $stmt->execute(array($username, sha1($password)));
+	    $stmt->execute(array($username, $password));// sha1($password)
 	    return $stmt->fetch() == true;
  	}
 
