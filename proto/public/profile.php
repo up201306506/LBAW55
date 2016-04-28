@@ -9,9 +9,9 @@
 	<title>Profile</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="Bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="profile.css">
-	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<link rel="stylesheet" type="text/css" href="../css/Bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/profile.css">
+	<link rel="stylesheet" type="text/css" href="../css/navbar.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,12 +21,12 @@
 	<![endif]-->
 </head>
 <body>
-	<?php include 'navbar.php'; ?>
+	<?php include '../navbar.php'; ?>
 	<div class="container">
 		<h1>Profile</h1>
 		<div class="user col-sm-3">
 			<div class="user-box">
-				<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
+				<img class="img-responsive profile-img" src="../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
 				<span class="glyphicon glyphicon-user">Name</span>
 				<span class="glyphicon glyphicon-envelope">Email</span>
 				<span class="glyphicon glyphicon-credit-card">UserID</span>
@@ -36,11 +36,11 @@
 			<div class="panel panel-default">
 				<div class="panel-heading text-center">Exams</div>
 				<ul class="list-group">
-					<li class="list-group-item"><a href="exam.php">LBAW (13/03/2016)</a></li>
-					<li class="list-group-item"><a href="exam.php">PPIN (19/03/2016)</a></li>
-					<li class="list-group-item"><a href="exam.php">COMP (25/05/2016)</a></li>
-					<li class="list-group-item"><a href="exam.php">SDIS (02/03/2016)</a></li>
-					<li class="list-group-item"><a href="exam.php">IART (30/04/2016)</a></li>
+					<li class="list-group-item"><a href="../student/exam/exam.php">LBAW (13/03/2016)</a></li>
+					<li class="list-group-item"><a href="../student/exam/exam.php">PPIN (19/03/2016)</a></li>
+					<li class="list-group-item"><a href="../student/exam/exam.php">COMP (25/05/2016)</a></li>
+					<li class="list-group-item"><a href="../student/exam/exam.php">SDIS (02/03/2016)</a></li>
+					<li class="list-group-item"><a href="../student/exam/exam.php">IART (30/04/2016)</a></li>
 				</ul>
 			</div>
 			<div class="panel panel-default">
@@ -127,8 +127,8 @@
 			<div class="options">
 				<ul>
 					<li><a href="#"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
-					<li><a href="create_exam.php"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
-					<li><a href="create_question.php"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
+					<li><a href="../professor/exam/create_exam.php"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
+					<li><a href="../professor/question/create_question.php"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
@@ -138,8 +138,8 @@
 	</div> <!-- container -->
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="jquery-1.12.1.min.js"></script>
+	<script src="../javascript/jquery-1.12.1.min.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="Bootstrap/js/bootstrap.min.js"></script>
+	<script src="../css/Bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

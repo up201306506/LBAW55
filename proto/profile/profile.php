@@ -46,11 +46,11 @@
 			<div class="panel panel-default">
 				<div class="panel-heading text-center">Classes</div>
 				<ul class="list-group">
-					<li class="list-group-item"><a href="#">LBAW</a></li>
-					<li class="list-group-item"><a href="#">PPIN</a></li>
-					<li class="list-group-item"><a href="#">COMP</a></li>
-					<li class="list-group-item"><a href="#">SDIS</a></li>
-					<li class="list-group-item"><a href="#">IART</a></li>
+					<li class="list-group-item"><a href="../public/class.php">LBAW</a></li>
+					<li class="list-group-item"><a href="../public/class.php">PPIN</a></li>
+					<li class="list-group-item"><a href="../public/class.php">COMP</a></li>
+					<li class="list-group-item"><a href="../public/class.php">SDIS</a></li>
+					<li class="list-group-item"><a href="../public/class.php">IART</a></li>
 				</ul>
 			</div>
 		</div>
