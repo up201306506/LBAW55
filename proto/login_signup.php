@@ -5,7 +5,6 @@
 
 	/*Other PHP actions should go here*/
 	
-	
 	/*This summons the smarty template*/
 	$smarty->display('login_signup.tpl');
 
