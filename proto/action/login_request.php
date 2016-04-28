@@ -44,15 +44,18 @@
 	  header('Location: ' . $_SERVER['HTTP_REFERER']);
 */
 
- 
-	  $stmt = $conn->prepare('SELECT * FROM User WHERE username = :user'); 
-	  $username = $_POST['username'];
-	  $stmt->bindParam(':user', $username); 
-	  $stmt->execute();
+
+	    $_SESSION['username'] = $username;
+
+	  $stmt = $conn->prepare("SELECT * 
+	                            FROM Users WHERE username = ?");// needs the isActive contrain
+	  $stmt->execute(array($username));// sha1($password)
+
+
 
 	  while (($row = $stmt->fetch()) != false)
 	  {
-	  	echo '<p>nova linha<br></p>';
+
 	   echo '<script type="text/javascript">alert(" username: '.json_encode($row).' "); </script>';
 	  }
 
