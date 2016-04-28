@@ -10,7 +10,7 @@
 				</ul>
 				<div class="tab-content current" id="tab-1">
 					<div id="login-form">
-						<form class="form-horizontal" action="profile/profile.php" method="post" role="form">
+						<form class="form-horizontal" action="LBAW55/proto/login_request.php" method="post" role="form">
 							<div class="form-group">
 								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
 							</div>
@@ -25,7 +25,7 @@
 				</div>
 				<div class="tab-content" id="tab-2">
 					<div id="signup-form">
-						<form class="form-horizontal" action="profile/profile.php" method="post" role="form">
+						<form class="form-horizontal" action="LBAW55/proto/create_user.php" method="post" role="form">
 							<div class="form-group">
 								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
 							</div>
