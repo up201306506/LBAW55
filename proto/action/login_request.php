@@ -47,7 +47,9 @@
 	                            FROM User");// needs the isActive contrain
 	  $stmt->execute();
 
-	  while ($row = $result->fetch(PDO::FETCH_ASSOC))
+	  
+
+	  while (($row = $stmt->fetch()) != false)
 	  {
 
 	   echo '<script type="text/javascript">alert(" username: '.json_encode($row).' "); </script>';
