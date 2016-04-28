@@ -44,9 +44,9 @@ include_once('../config/init.php');
 	  header('Location: ' . $_SERVER['HTTP_REFERER']);
 */
 	  $stmt = $conn->prepare("SELECT * 
-	                            FROM User");// needs the isActive contrain
-	  $stmt->execute();
+	                            FROM User WHERE username = ?");// needs the isActive contrain
+	  $stmt->execute(array('admin'));
 
-	echo '<script type="text/javascript">alert(" user '.$stmt->fetchAll().' "); </script>';
+	echo '<script type="text/javascript">alert(" user '.$stmt->fetch().' "); </script>';
 
 ?>
