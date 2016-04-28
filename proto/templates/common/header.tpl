@@ -14,9 +14,6 @@
 		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css" href="css/Bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/index.css">
-		
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
-		<script src="css/Bootstrap/js/bootstrap.min.js"></script>
 
 	</head>
 	<body>

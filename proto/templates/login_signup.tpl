@@ -49,4 +49,6 @@
 		</div>
 	</div>
 
-{include file='common/footer.tpl'}
+{include file='javascript_plugins/bootstrap.tpl'}
+{include file='javascript_plugins/tabs.tpl'}
+{include file='javascript_plugins/footer.tpl'}
