@@ -12,10 +12,10 @@
 					<div id="login-form">
 						<form class="form-horizontal" action="action/login_request.php" method="post" role="form">
 							<div class="form-group">
-								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
+								<input name="username" id="username" class="form-control" type="text" placeholder="USERNAME"></input>
 							</div>
 							<div class="form-group">
-								<input id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
+								<input name="password" id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
 							</div>
 							<div class="form-group">
 								<input class="btn btn-default" type="submit" value="Log In"></input>
@@ -27,17 +27,17 @@
 					<div id="signup-form">
 						<form class="form-horizontal" action="action/create_user.php" method="post" role="form">
 							<div class="form-group">
-								<input id="username" class="form-control" type="text" placeholder="USERNAME"></input>
+								<input name="username" id="username" class="form-control" type="text" placeholder="USERNAME"></input>
 							</div>
 							<div class="form-group">
-								<input id="email" class="form-control" type="text" placeholder="EMAIL"></input>
+								<input name="email" id="email" class="form-control" type="text" placeholder="EMAIL"></input>
 							</div>
 							<div class="form-group">
-								<input id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
+								<input name="password" id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
 							</div>
 							<div class="form-group radio-group">
-								<label class="radio-inline"><input type="radio" name="optradio"/>Professor</label>
-								<label class="radio-inline"><input type="radio" name="optradio"/>Student</label>
+								<label class="radio-inline"><input type="radio" name="opProf"/>Professor</label>
+								<label class="radio-inline"><input type="radio" name="opStudent"/>Student</label>
 							</div>
 							<div class="form-group">
 								<input class="btn btn-default" type="submit" value="Sign Up"></input>
