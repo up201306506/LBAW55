@@ -45,7 +45,7 @@
 */
 
 
-	    $_SESSION['username'] = $username;
+	   $username = $_POST['username'];
 
 	  $stmt = $conn->prepare("SELECT * 
 	                            FROM Users WHERE username = ?");// needs the isActive contrain
