@@ -19,7 +19,7 @@
 	    $stmt = $conn->prepare("SELECT * 
 	                            FROM users 
 	                            WHERE username = '?' AND password = ?");// needs the isActive contrain
-	    $stmt->execute(array($username, $password));// sha1($password)
+	    $stmt->execute(array($username,sha1($password)));// sha1($password)
 	    return $stmt->fetch() == true;
  	}
 
