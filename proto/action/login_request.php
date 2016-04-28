@@ -48,7 +48,7 @@
 	   $username = $_POST['username'];
 
 	  $stmt = $conn->prepare("SELECT * 
-	                            FROM Users WHERE username = ?");// needs the isActive contrain
+	                            FROM User WHERE username = ?");// needs the isActive contrain
 	  $stmt->execute(array($username));// sha1($password)
 
 
