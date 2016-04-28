@@ -48,12 +48,12 @@
 	   $username = $_POST['username'];
 
 	  $stmt = $conn->prepare("SELECT * 
-	                            FROM users WHERE username = ?");// needs the isActive contrain
+	                            FROM Class WHERE classname = ?");// needs the isActive contrain
 	  $stmt->execute(array($username));// sha1($password)
 
 
 	$temprow = $stmt->fetch();
-	echo '<script type="text/javascript">alert(" username: '. $temprow['username'] . ' "); </script>';
+	echo '<script type="text/javascript">alert(" username: '. $temprow['classname'] . ' "); </script>';
 
 	  while (($row = $stmt->fetch()) != false)
 	  {
