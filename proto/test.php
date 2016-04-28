@@ -1,5 +1,24 @@
-{include file='common/header.tpl'}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
+		<title>eldooM</title>
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="javascript/jquery-1.12.1.min.js"></script>
+		
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="css/Bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+	
+	
 	<h1 class="title">eldooM</h1>
 	<div class="container-parent">
 		<div class="container">
@@ -48,7 +67,12 @@
 			</div>
 		</div>
 	</div>
-
-{include file='javascript_plugins/bootstrap.tpl'}
-{include file='javascript_plugins/tabs.tpl'}
-{include file='javascript_plugins/footer.tpl'}
+	
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="css/Bootstrap/js/bootstrap.min.js"></script>
+	<!-- Include file to make tabs work -->
+	<script src="javascript/tabs.js"></script>
+	
+	
+	</body>
+</html>
