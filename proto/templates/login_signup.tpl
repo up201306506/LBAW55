@@ -1,6 +1,6 @@
 {include file='common/header.tpl'}
 
-<h1 class="title">eldooM</h1>
+	<h1 class="title">eldooM</h1>
 	<div class="container-parent">
 		<div class="container">
 			<div class="col-sm-offset-3 col-sm-6">
@@ -49,9 +49,6 @@
 		</div>
 	</div>
 
-	<!-- Include file to make tabs work -->
-	<script src="javascript/tabs.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="css/Bootstrap/js/bootstrap.min.js"></script>
-
+{include file='javascript_plugins/tabs.tpl'}
+{include file='javascript_plugins/bootstrap.tpl'}
 {include file='common/footer.tpl'}
