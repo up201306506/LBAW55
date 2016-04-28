@@ -13,7 +13,7 @@
 		
 		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css" href="css/Bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/login_signup.css">
 
 	</head>
 	<body>
