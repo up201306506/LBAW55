@@ -19,7 +19,7 @@
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 
 	                            FROM User 
-	                            WHERE username = ? AND password = ?");// needs the isActive contrain
+	                            WHERE username = '?' AND password = ?");// needs the isActive contrain
 	    $stmt->execute(array($username, $password));// sha1($password)
 	    return $stmt->fetch() == true;
  	}
