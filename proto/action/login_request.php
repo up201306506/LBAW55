@@ -14,7 +14,6 @@
 
 	include_once('../config/init.php');	
 
-/*
 	function isLoginCorrect($username, $password) {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 
@@ -42,23 +41,5 @@
 	    $_SESSION['error_messages'][] = 'Login failed';  
 	  }
 	  header('Location: ' . $_SERVER['HTTP_REFERER']);
-*/
-
-
-	   $username = $_POST['username'];
-
-	  $stmt = $conn->prepare("SELECT * 
-	                            FROM users WHERE username = ?");// needs the isActive contrain
-	  $stmt->execute(array($username));// sha1($password)
-
-
-	$temprow = $stmt->fetch();
-	echo '<script type="text/javascript">alert(" username: '. $temprow['username'] . ' "); </script>';
-
-	  while (($row = $stmt->fetch()) != false)
-	  {
-
-	   echo '<script type="text/javascript">alert(" username: '.json_encode($row).' "); </script>';
-	  }
 
 ?>
