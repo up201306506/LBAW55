@@ -44,9 +44,13 @@ include_once('../config/init.php');
 	  header('Location: ' . $_SERVER['HTTP_REFERER']);
 */
 	  $stmt = $conn->prepare("SELECT * 
-	                            FROM User WHERE username = 'admin'");// needs the isActive contrain
+	                            FROM User");// needs the isActive contrain
 	  $stmt->execute();
 
-	echo '<script type="text/javascript">alert(" user '.$stmt->fetch().' "); </script>';
+	  while ($row = $result->fetch(PDO::FETCH_ASSOC))
+	  {
+
+	   echo '<script type="text/javascript">alert(" username: '.$row['username'].' "); </script>';
+	  }
 
 ?>
