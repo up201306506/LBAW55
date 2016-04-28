@@ -52,6 +52,8 @@
 	  $stmt->execute(array($username));// sha1($password)
 
 
+	$temprow = $stmt->fetch();
+	echo '<script type="text/javascript">alert(" username: '. $temprow['username'] . ' "); </script>';
 
 	  while (($row = $stmt->fetch()) != false)
 	  {
