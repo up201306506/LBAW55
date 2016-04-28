@@ -1,4 +1,7 @@
 <?php
+	//include_once('config/init.php');	
+
+
 
 	$username = $_POST['username'];
 	$password = $_POST['password'];
