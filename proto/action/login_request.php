@@ -5,7 +5,7 @@
 	 if (!$_POST['username'] || !$_POST['password']) {
 	    $_SESSION['error_messages'][] = 'Invalid login';
 	    $_SESSION['form_values'] = $_POST;
-	   // header('Location: ' . $_SERVER['HTTP_REFERER']);
+	    header('Location: ' . $_SERVER['HTTP_REFERER']);
 	    echo '<script type="text/javascript">alert(" failed to login "); </script>';
 	    exit;
 	  }
