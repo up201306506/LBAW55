@@ -36,11 +36,13 @@
 	  
 	  if (isLoginCorrect($username, $password)) {
 	    $_SESSION['username'] = $username;
-	    $_SESSION['success_messages'][] = 'Login successful';  
+	    $_SESSION['success_messages'][] = 'Login successful';
+		echo '<script type="text/javascript">alert(" login done "); </script>';
+		header('Location: '. $BASE_URL .'profile/profile.php');		
 	  } else {
-	    $_SESSION['error_messages'][] = 'Login failed';  
+	    $_SESSION['error_messages'][] = 'Login failed';
+		echo '<script type="text/javascript">alert(" login failed "); </script>';
 	  }
-	  echo '<script type="text/javascript">alert(" login done "); </script>';
-	  header('Location: '. $BASE_URL .'profile/profile.php');
+	  
 
 ?>
