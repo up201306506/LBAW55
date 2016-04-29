@@ -127,7 +127,7 @@
 			</div>
 			<div class="options">
 				<ul>
-					<li><a href="#"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
+					<li><a href="../professor/class/create_class.php"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
 					<li><a href="../professor/exam/create_exam.php"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
 					<li><a href="../professor/question/create_question.php"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
