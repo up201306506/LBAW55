@@ -33,7 +33,7 @@
 	
 	function insertNewUser($username, $email, $password, $usertype, $name, $isactive){
 		global $conn;
-	    $stmt = $conn->prepare("INSERT INTO users (username,accounttypevar,description,email,name,password,isActive) VALUES (:username, :usertype, NULL, :email, :name, :password, :isactive)");// needs the isActive contrain
+	    $stmt = $conn->prepare("INSERT INTO users (username,accounttypevar,description,email,name,password,isActive) VALUES (:username, :usertype, 'Please insert a description', :email, :name, :password, :isactive)");// needs the isActive contrain
 		$stmt->bindParam(':username', $username);
 		$stmt->bindParam(':usertype', $usertype);
 		$stmt->bindParam(':email', $email);
