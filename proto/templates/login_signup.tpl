@@ -30,6 +30,9 @@
 								<input name="username" id="username" class="form-control" type="text" placeholder="USERNAME"></input>
 							</div>
 							<div class="form-group">
+								<input name="name" id="name" class="form-control" type="text" placeholder="NAME"></input>
+							</div>
+							<div class="form-group">
 								<input name="email" id="email" class="form-control" type="text" placeholder="EMAIL"></input>
 							</div>
 							<div class="form-group">
