@@ -3,10 +3,9 @@
 	include_once('../database/user_functions.php');
 
 	 if (!$_POST['username'] || !$_POST['password']) {
-	    $_SESSION['error_messages'][] = 'Invalid login';
+	    $_SESSION['error_messages'][] = 'Fill all input fields';
 	    $_SESSION['form_values'] = $_POST;
 	    header('Location: ' . $_SERVER['HTTP_REFERER']);
-	    echo '<script type="text/javascript">alert(" failed to login "); </script>';
 	    exit;
 	  }
 
@@ -19,8 +18,8 @@
 		echo '<script type="text/javascript">alert(" login done "); </script>';
 		header('Location: '. $BASE_URL .'profile/profile.php');		
 	  } else {
-	    $_SESSION['error_messages'][] = 'Login failed';
-		echo '<script type="text/javascript">alert(" login failed "); </script>';
+	    $_SESSION['error_messages'][] = 'Wrong Login Credentials';
+		header('Location: ' . $_SERVER['HTTP_REFERER']);
 	  }
 	  
 

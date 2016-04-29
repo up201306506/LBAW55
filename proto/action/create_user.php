@@ -4,26 +4,40 @@
 	include_once('../database/user_functions.php');
 	
 	
-	 if (!$_POST['username'] || !$_POST['password'] || !$_POST['name'] || !$_POST['email'] || !$_POST['password']) {
-	    $_SESSION['error_messages'][] = 'Invalid login';
+	 if (!$_POST['username'] || !$_POST['password'] || !$_POST['name'] || !$_POST['email'] || !$_POST['opUsertype']) {
+	    $_SESSION['error_messages'][] = 'Fill all input fields';
 	    $_SESSION['form_values'] = $_POST;
-	   // header('Location: ' . $_SERVER['HTTP_REFERER']);
-	    echo '<script type="text/javascript">alert(" failed to login "); </script>';
+	    header('Location: ' . $_SERVER['HTTP_REFERER']);
 	    exit;
 	  }
 
 	  $username = $_POST['username'];
 	  $password = $_POST['password'];
+	  $name = $_POST['name'];
+	  $email = $_POST['email'];
+	  $usertype = $_POST['opUsertype'];
 	  
-	  if (isLoginCorrect($username, $password)) {
-	    $_SESSION['username'] = $username;
-	    $_SESSION['success_messages'][] = 'Login successful';
-		echo '<script type="text/javascript">alert(" login done "); </script>';
+	  $isactive = 'Active';
+	  if($usertype == 'Professor')
+		  $isactive = 'Pending';
+	  
+	  
+	  
+	  try
+	  {
+		insertNewUser($username, $email, $password, $usertype, $name, $isactive);
+		$_SESSION['username'] = $username;
+	    $_SESSION['success_messages'][] = 'Register successful';
 		header('Location: '. $BASE_URL .'profile/profile.php');		
-	  } else {
-	    $_SESSION['error_messages'][] = 'Login failed';
-		echo '<script type="text/javascript">alert(" login failed "); </script>';
+		
 	  }
+	  catch (PDOException $Exception)
+	  {
+		$_SESSION['error_messages'][] = 'Register Failed';
+	    $_SESSION['form_values'] = $_POST;
+	    header('Location: ' . $_SERVER['HTTP_REFERER']);
+	  }
+
 	  
 
 ?>
