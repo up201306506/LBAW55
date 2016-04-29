@@ -8,6 +8,6 @@
 	$smarty->assign('pagename', $pagename);
 	
 	/*This summons the smarty template*/
-	$smarty->display('create_class.tpl');
+	$smarty->display('professor/class/create_class.tpl');
 
 ?>
