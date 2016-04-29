@@ -1,6 +1,6 @@
 {include file='common/header.tpl'}
 
-	{include file='../navbar.php'}
+	{$navbar}
 	<div class="container">
 		<h1>TESTE</h1>
 	</div>
