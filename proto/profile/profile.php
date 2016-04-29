@@ -21,13 +21,14 @@
 	<![endif]-->
 </head>
 <body>
+	<?php include_once('../config/init.php'); ?>
 	<?php include '../navbar.php'; ?>
 	<div class="container">
 		<h1>Profile</h1>
 		<div class="user col-sm-3">
 			<div class="user-box">
 				<img class="img-responsive profile-img" src="../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
-				<span class="glyphicon glyphicon-user">Name</span>
+				<span class="glyphicon glyphicon-user"><?php echo $_SESSION['username']; ?></span>
 				<span class="glyphicon glyphicon-envelope">Email</span>
 				<span class="glyphicon glyphicon-credit-card">UserID</span>
 			</div>
@@ -46,11 +47,11 @@
 			<div class="panel panel-default">
 				<div class="panel-heading text-center">Classes</div>
 				<ul class="list-group">
-					<li class="list-group-item"><a href="#">LBAW</a></li>
-					<li class="list-group-item"><a href="#">PPIN</a></li>
-					<li class="list-group-item"><a href="#">COMP</a></li>
-					<li class="list-group-item"><a href="#">SDIS</a></li>
-					<li class="list-group-item"><a href="#">IART</a></li>
+					<li class="list-group-item"><a href="../public/class.php">LBAW</a></li>
+					<li class="list-group-item"><a href="../public/class.php">PPIN</a></li>
+					<li class="list-group-item"><a href="../public/class.php">COMP</a></li>
+					<li class="list-group-item"><a href="../public/class.php">SDIS</a></li>
+					<li class="list-group-item"><a href="../public/class.php">IART</a></li>
 				</ul>
 			</div>
 		</div>
