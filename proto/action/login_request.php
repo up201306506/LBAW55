@@ -40,6 +40,7 @@
 	  } else {
 	    $_SESSION['error_messages'][] = 'Login failed';  
 	  }
-	  header('Location: ' . $_SERVER['HTTP_REFERER']);
+	  echo '<script type="text/javascript">alert(" login done "); </script>';
+	  header('Location: ' . $BASE_DIR .'profile/profile.php');
 
 ?>
