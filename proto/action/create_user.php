@@ -21,15 +21,15 @@
 	  if($usertype == 'Professor')
 		  $isactive = 'Pending';
 	  
-	  insertNewUser($username, $email, $password, $usertype, $name, $isactive);
+	 
+	  
+	  
+	  try
+	  {
+		insertNewUser($username, $email, $password, $usertype, $name, $isactive);
 		$_SESSION['username'] = $username;
 	    $_SESSION['success_messages'][] = 'Register successful';
 		header('Location: '. $BASE_URL .'profile/profile.php');	
-	  
-	  
-	  /*try
-	  {
-			
 		
 	  }
 	  catch (PDOException $Exception)
@@ -37,7 +37,7 @@
 		$_SESSION['error_messages'][] = 'Register Failed';
 	    $_SESSION['form_values'] = $_POST;
 	    header('Location: ' . $_SERVER['HTTP_REFERER']);
-	  }*/
+	  }
 
 	  
 
