@@ -39,8 +39,8 @@
 								<input name="password" id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
 							</div>
 							<div class="form-group radio-group">
-								<label class="radio-inline"><input type="radio" name="opProf"/>Professor</label>
-								<label class="radio-inline"><input type="radio" name="opStudent"/>Student</label>
+								<label class="radio-inline"><input type="radio" name="opUsertype" checked/>Student</label>
+								<label class="radio-inline"><input type="radio" name="opUsertype"/>Professor</label>
 							</div>
 							<div class="form-group">
 								<input class="btn btn-default" type="submit" value="Sign Up"></input>

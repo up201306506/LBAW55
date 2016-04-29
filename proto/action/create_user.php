@@ -4,7 +4,7 @@
 	include_once('../database/user_functions.php');
 	
 	
-	 if (!$_POST['username'] || !$_POST['password']) {
+	 if (!$_POST['username'] || !$_POST['password'] || !$_POST['name'] || !$_POST['email'] || !$_POST['password']) {
 	    $_SESSION['error_messages'][] = 'Invalid login';
 	    $_SESSION['form_values'] = $_POST;
 	   // header('Location: ' . $_SERVER['HTTP_REFERER']);

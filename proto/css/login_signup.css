@@ -47,7 +47,7 @@ body {
 	margin-bottom: 0;
 }
 
-#username, #password, #email {
+#username, #password, #email #name {
 	text-align: center;
 }
 
