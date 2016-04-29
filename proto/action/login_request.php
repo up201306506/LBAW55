@@ -41,6 +41,6 @@
 	    $_SESSION['error_messages'][] = 'Login failed';  
 	  }
 	  echo '<script type="text/javascript">alert(" login done "); </script>';
-	  header('Location: profile/profile.php');
+	  header('Location: '. $BASE_URL .'profile/profile.php');
 
 ?>
