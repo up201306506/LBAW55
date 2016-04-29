@@ -21,13 +21,14 @@
 	<![endif]-->
 </head>
 <body>
+	<?php include_once('../config/init.php'); ?>
 	<?php include '../navbar.php'; ?>
 	<div class="container">
 		<h1>Profile</h1>
 		<div class="user col-sm-3">
 			<div class="user-box">
 				<img class="img-responsive profile-img" src="../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
-				<span class="glyphicon glyphicon-user">Name</span>
+				<span class="glyphicon glyphicon-user"><?php $_SESSION['username'] ?></span>
 				<span class="glyphicon glyphicon-envelope">Email</span>
 				<span class="glyphicon glyphicon-credit-card">UserID</span>
 			</div>
