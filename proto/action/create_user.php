@@ -18,7 +18,7 @@
 	  $usertype = $_POST['opUsertype'];
 	  
 	  $isactive = 'Active';
-	  if($usertype === 'Professor')
+	  if($usertype == 'Professor')
 		  $isactive = 'Pending';
 
 	  try
