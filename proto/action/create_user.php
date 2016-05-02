@@ -18,7 +18,7 @@
 	  $usertype = $_POST['opUsertype'];
 	  
 	  $isactive = 'Active';
-	  if($usertype == 'Professor')
+	  if($usertype === 'Professor')
 		  $isactive = 'Pending';
 
 	  try
@@ -28,7 +28,7 @@
 
 		$_SESSION['success_messages'][] = 'Register successful';
 		
-		if($user['isactive'] == 'Active'){
+		if($user['isactive'] === 'Active'){
 			$_SESSION['username'] = $user['username'];
 			$_SESSION['accounttypevar'] = $_POST['accounttypevar'];
 			$_SESSION['description'] =  $user['description'];
@@ -43,7 +43,7 @@
 	  }
 	  catch (PDOException $Exception)
 	  {
-		$_SESSION['error_messages'][] = 'Register Failed';
+		$_SESSION['error_messages'][] = $e->getMessage();
 	    $_SESSION['form_values'] = $_POST;
 	  	header('Location: ' . $_SERVER['HTTP_REFERER']);  
 	  }
