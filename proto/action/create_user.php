@@ -3,6 +3,7 @@
 	include_once('../config/init.php');	
 	include_once('../database/user_functions.php');
 	
+	$allData = '';
 	
 	 if (!$_POST['username'] || !$_POST['password'] || !$_POST['name'] || !$_POST['email'] || !$_POST['opUsertype']) {
 	    $_SESSION['error_messages'][] = 'Fill all input fields';
@@ -20,6 +21,8 @@
 	  $isactive = 'Active';
 	  if($usertype === 'Professor')
 		  $isactive = 'Pending';
+
+		$allData = $username . ' - ' . $password . ' - ' . $name . ' - ' . $email . ' - ' . $usertype  . ' - ' . $isactive;
 
 	  try
 	  {
@@ -43,7 +46,7 @@
 	  }
 	  catch (PDOException $Exception)
 	  {
-		$_SESSION['error_messages'][] = $Exception->getMessage();
+		$_SESSION['error_messages'][] = $Exception->getMessage() . ' -> ' .  $allData;
 	    $_SESSION['form_values'] = $_POST;
 	  	header('Location: ' . $_SERVER['HTTP_REFERER']);  
 	  }
