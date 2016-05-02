@@ -28,10 +28,9 @@
 		<div class="user col-sm-3">
 			<div class="user-box">
 				<img class="img-responsive profile-img" src="../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
-				<span class="glyphicon glyphicon-user"><?= $_SESSION['name'] ?></span>
-				<span class="glyphicon glyphicon-envelope"><?= $_SESSION['email'] ?></span>
-				<span class="glyphicon glyphicon-credit-card"><?= $_SESSION['username'] ?></span>
-				<button type="button">edit!</button>
+				<span class="glyphicon glyphicon-user"><?= $_SESSION['name'] ?></span> <button type="button" class="btn btn-info editName">edit</button>				
+				<span class="glyphicon glyphicon-envelope"><?= $_SESSION['email'] ?></span> <button type="button" class="btn btn-info editEmail">edit</button>
+				<span class="glyphicon glyphicon-credit-card"><?= $_SESSION['username'] ?></span> <button type="button" class="btn btn-info editUserName">edit</button>
 			</div>
 		</div>
 		<div class="user-info col-sm-6">
