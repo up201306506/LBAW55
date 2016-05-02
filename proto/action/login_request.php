@@ -24,7 +24,7 @@
 			$_SESSION['email'] = $user['email'];
 			$_SESSION['name'] =  $user['name'];
 
-			header('Location: '. $BASE_DIR .'profile/profile.php');	
+			header('Location: '. $BASE_URL .'profile/profile.php');	
 		}else{
 			$_SESSION['error_messages'][] = 'User account still pending!';
 		}	
