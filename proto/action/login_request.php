@@ -14,9 +14,10 @@
 	  
 	  $user = isLoginCorrect($username, $password);
 	  if ($user) {
-	    $_SESSION['success_messages'][] = 'Register successful';
+	    $_SESSION['success_messages'][] = 'login successful';
 		
 		if($user['isactive'] == 'Active'){
+			 $_SESSION['success_messages'][] = 'active';
 			$_SESSION['username'] = $user['username'];
 			$_SESSION['accounttypevar'] = $_POST['accounttypevar'];
 			$_SESSION['description'] =  $user['description'];
