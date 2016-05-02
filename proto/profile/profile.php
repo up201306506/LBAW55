@@ -31,6 +31,7 @@
 				<span class="glyphicon glyphicon-user"><?= $_SESSION['name'] ?></span>
 				<span class="glyphicon glyphicon-envelope"><?= $_SESSION['email'] ?></span>
 				<span class="glyphicon glyphicon-credit-card"><?= $_SESSION['username'] ?></span>
+				<button type="button">edit!</button>
 			</div>
 		</div>
 		<div class="user-info col-sm-6">
