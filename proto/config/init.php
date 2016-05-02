@@ -20,9 +20,6 @@
   $smarty->template_dir = $BASE_DIR . 'templates/';
   $smarty->compile_dir = $BASE_DIR . 'templates_c/';
   $smarty->assign('BASE_URL', $BASE_URL);
- 
-  error_reporting  =  E_ALL & ~E_NOTICE 
-display_errors = On 
   
   $smarty->assign('ERROR_MESSAGES', $_SESSION['error_messages']);  
   $smarty->assign('FIELD_ERRORS', $_SESSION['field_errors']);
@@ -39,4 +36,5 @@ display_errors = On
   unset($_SESSION['error_messages']);  
   unset($_SESSION['field_errors']);
   unset($_SESSION['form_values']);
+  
 ?>
