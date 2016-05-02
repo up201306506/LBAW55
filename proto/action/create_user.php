@@ -38,14 +38,13 @@
 			header('Location: '. $BASE_URL .'profile/profile.php');	
 		}else{
 			$_SESSION['error_messages'][] = 'User account is pending!';
+			header('Location: ' . $_SERVER['HTTP_REFERER']);  
 		}		
 	  }
 	  catch (PDOException $Exception)
 	  {
 		$_SESSION['error_messages'][] = 'Register Failed';
 	    $_SESSION['form_values'] = $_POST;
+	  	header('Location: ' . $_SERVER['HTTP_REFERER']);  
 	  }
-
-	  header('Location: ' . $_SERVER['HTTP_REFERER']);  
-
 ?>
