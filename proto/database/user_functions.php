@@ -19,7 +19,7 @@
 	                            FROM users 
 	                            WHERE username = ? AND password = ?");// needs the isActive contrain
 	    $stmt->execute(array($username, $password));// sha1($password)
-	    return $stmt->fetch() == true;
+	    return $stmt->fetch();
  	}
 
 	function existsUser($username){

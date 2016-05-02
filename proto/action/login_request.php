@@ -12,15 +12,21 @@
 	  $username = $_POST['username'];
 	  $password = $_POST['password'];
 	  
-	  if (isLoginCorrect($username, $password)) {
-	    $_SESSION['username'] = $username;
-	    $_SESSION['success_messages'][] = 'Login successful';
-		echo '<script type="text/javascript">alert(" login done "); </script>';
-		header('Location: '. $BASE_URL .'profile/profile.php');		
+	  $user = isLoginCorrect($username, $password);
+	  if ($user) {
+	    $_SESSION['success_messages'][] = 'Register successful';
+		
+		if($user['isactive'] === 'Active'){
+			$_SESSION['username'] = $user['username'];
+			$_SESSION['accounttypevar'] = $_POST['accounttypevar'];
+			$_SESSION['description'] =  $user['description'];
+			$_SESSION['email'] = $user['email'];
+			$_SESSION['name'] =  $user['name'];
+
+			header('Location: '. $BASE_URL .'profile/profile.php');	
+		}	
 	  } else {
 	    $_SESSION['error_messages'][] = 'Wrong Login Credentials';
-		header('Location: ' . $_SERVER['HTTP_REFERER']);
 	  }
-	  
-
+	  header('Location: ' . $_SERVER['HTTP_REFERER']);
 ?>

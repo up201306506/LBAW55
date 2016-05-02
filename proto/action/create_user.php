@@ -18,27 +18,34 @@
 	  $usertype = $_POST['opUsertype'];
 	  
 	  $isactive = 'Active';
-	  if($usertype == 'Professor')
+	  if($usertype === 'Professor')
 		  $isactive = 'Pending';
-	  
-	 
-	  
-	  
+
 	  try
 	  {
-		insertNewUser($username, $email, $password, $usertype, $name, $isactive);
-		$_SESSION['username'] = $username;
-	    $_SESSION['success_messages'][] = 'Register successful';
-		header('Location: '. $BASE_URL .'profile/profile.php');	
+
+		$user = insertNewUser($username, $email, $password, $usertype, $name, $isactive);
+
+		$_SESSION['success_messages'][] = 'Register successful';
 		
+		if($user['isactive'] === 'Active'){
+			$_SESSION['username'] = $user['username'];
+			$_SESSION['accounttypevar'] = $_POST['accounttypevar'];
+			$_SESSION['description'] =  $user['description'];
+			$_SESSION['email'] = $user['email'];
+			$_SESSION['name'] =  $user['name'];
+
+			header('Location: '. $BASE_URL .'profile/profile.php');	
+		}else{
+			$_SESSION['error_messages'][] = 'User account is pending!';
+		}		
 	  }
 	  catch (PDOException $Exception)
 	  {
 		$_SESSION['error_messages'][] = 'Register Failed';
 	    $_SESSION['form_values'] = $_POST;
-	    header('Location: ' . $_SERVER['HTTP_REFERER']);
 	  }
 
-	  
+	  header('Location: ' . $_SERVER['HTTP_REFERER']);  
 
 ?>
