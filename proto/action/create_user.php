@@ -43,7 +43,7 @@
 	  }
 	  catch (PDOException $Exception)
 	  {
-		$_SESSION['error_messages'][] = $e->getMessage();
+		$_SESSION['error_messages'][] = $Exception->getMessage();
 	    $_SESSION['form_values'] = $_POST;
 	  	header('Location: ' . $_SERVER['HTTP_REFERER']);  
 	  }
