@@ -13,17 +13,16 @@
 	  $password = $_POST['password'];
 	  
 	  $user = isLoginCorrect($username, $password);
-	  if ($user) {
-	    $_SESSION['success_messages'][] = 'login successful';
-		
+	  if ($user) {		
 		if($user['isactive'] == 'Active'){
-			 $_SESSION['success_messages'][] = 'active';
+			$_SESSION['success_messages'][] = 'active';
 			$_SESSION['username'] = $user['username'];
 			$_SESSION['accounttypevar'] = $_POST['accounttypevar'];
 			$_SESSION['description'] =  $user['description'];
 			$_SESSION['email'] = $user['email'];
 			$_SESSION['name'] =  $user['name'];
 
+			$_SESSION['success_messages'][] = 'login successful';
 			header('Location: '. $BASE_URL .'profile/profile.php');	
 		}else{
 			$_SESSION['error_messages'][] = 'User account still pending!';

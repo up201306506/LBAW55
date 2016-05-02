@@ -28,7 +28,7 @@
 
 		$_SESSION['success_messages'][] = 'Register successful';
 		
-		if($user['isactive'] === 'Active'){
+		if($user['isactive'] == 'Active'){
 			$_SESSION['username'] = $user['username'];
 			$_SESSION['accounttypevar'] = $_POST['accounttypevar'];
 			$_SESSION['description'] =  $user['description'];
