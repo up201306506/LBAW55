@@ -30,5 +30,5 @@
 	  } else {
 	    $_SESSION['error_messages'][] = 'Wrong Login Credentials';
 	  }
-	  header('Location: ' . $_SERVER['HTTP_REFERER']);
+	 // header('Location: ' . $_SERVER['HTTP_REFERER']);
 ?>
