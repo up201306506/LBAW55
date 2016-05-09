@@ -1,6 +1,8 @@
 {include file='common/header.tpl'}
 {include file='common/navbar.tpl'}
 
+{include file='javascript_plugins/jquery.tpl'}
+{include file='javascript_plugins/bootstrap.tpl'}
 
 	<div class="container">
 		<h1>Profile</h1>
@@ -117,10 +119,5 @@
 			</div>
 		</div>
 	</div> <!-- container -->
-
-
-
-{include file='javascript_plugins/jquery.tpl'}
-{include file='javascript_plugins/bootstrap.tpl'}
 
 {include file='common/footer.tpl'}
