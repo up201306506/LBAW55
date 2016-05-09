@@ -4,7 +4,7 @@
 	include_once('../config/init.php');
 
 	/*Other PHP actions should go here*/
-    $pagename = 'Profil';
+    $pagename = 'Profile';
 	$css_name = 'profile';
 	$smarty->assign('pagename', $pagename);
 	
@@ -17,6 +17,6 @@
 	
 	
 	/*This summons the smarty template*/
-	$smarty->display('profile.tpl');
+	$smarty->display('profile/profile.tpl');
 
 ?>

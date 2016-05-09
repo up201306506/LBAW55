@@ -1,11 +1,11 @@
-{include file='common/header.tpl'}
+{include file='common/header_scripts.tpl'}
 {include file='common/navbar.tpl'}
 
 	<div class="container">
 		<h1>Profile</h1>
 		<div class="user col-sm-3">
 			<div class="user-box">
-				<img class="img-responsive profile-img" src="../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
+				<img class="img-responsive profile-img" src="../../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
 				<span class="glyphicon glyphicon-user"> {$session_name}</span> 		
 				<span class="glyphicon glyphicon-envelope"> {$session_email}</span> 
 				<span class="glyphicon glyphicon-credit-card"> {$session_username}</span> 
@@ -16,21 +16,21 @@
 			<div class="panel panel-default">
 				<div class="panel-heading text-center">Exams</div>
 				<ul class="list-group">
-					<li class="list-group-item"><a href="../student/exam/exam.php">LBAW (13/03/2016)</a></li>
-					<li class="list-group-item"><a href="../student/exam/exam.php">PPIN (19/03/2016)</a></li>
-					<li class="list-group-item"><a href="../student/exam/exam.php">COMP (25/05/2016)</a></li>
-					<li class="list-group-item"><a href="../student/exam/exam.php">SDIS (02/03/2016)</a></li>
-					<li class="list-group-item"><a href="../student/exam/exam.php">IART (30/04/2016)</a></li>
+					<li class="list-group-item"><a href="../../student/exam/exam.php">LBAW (13/03/2016)</a></li>
+					<li class="list-group-item"><a href="../../student/exam/exam.php">PPIN (19/03/2016)</a></li>
+					<li class="list-group-item"><a href="../../student/exam/exam.php">COMP (25/05/2016)</a></li>
+					<li class="list-group-item"><a href="../../student/exam/exam.php">SDIS (02/03/2016)</a></li>
+					<li class="list-group-item"><a href="../../student/exam/exam.php">IART (30/04/2016)</a></li>
 				</ul>
 			</div>
 			<div class="panel panel-default">
 				<div class="panel-heading text-center">Classes</div>
 				<ul class="list-group">
-					<li class="list-group-item"><a href="../public/class.php">LBAW</a></li>
-					<li class="list-group-item"><a href="../public/class.php">PPIN</a></li>
-					<li class="list-group-item"><a href="../public/class.php">COMP</a></li>
-					<li class="list-group-item"><a href="../public/class.php">SDIS</a></li>
-					<li class="list-group-item"><a href="../public/class.php">IART</a></li>
+					<li class="list-group-item"><a href="../../public/class.php">LBAW</a></li>
+					<li class="list-group-item"><a href="../../public/class.php">PPIN</a></li>
+					<li class="list-group-item"><a href="../../public/class.php">COMP</a></li>
+					<li class="list-group-item"><a href="../../public/class.php">SDIS</a></li>
+					<li class="list-group-item"><a href="../../public/class.php">IART</a></li>
 				</ul>
 			</div>
 		</div>
@@ -106,9 +106,9 @@
 			</div>
 			<div class="options">
 				<ul>
-					<li><a href="../professor/class/create_class.php"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
-					<li><a href="../professor/exam/create_exam.php"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
-					<li><a href="../professor/question/create_question.php"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
+					<li><a href="../../professor/class/create_class.php"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
+					<li><a href="../../professor/exam/create_exam.php"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
+					<li><a href="../../professor/question/create_question.php"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
