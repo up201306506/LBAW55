@@ -4,7 +4,8 @@
 	include_once('config/init.php');
 
 	/*Other PHP actions should go here*/
-	$pagename = 'index';
+	$pagename = 'Index';
+	$css_name = 'index';
 	$smarty->assign('pagename', $pagename);
 	
 	/*This summons the smarty template*/

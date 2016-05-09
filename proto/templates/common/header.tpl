@@ -10,7 +10,7 @@
 	
 		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css" href="css/Bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/{$pagename}.css">
+		<link rel="stylesheet" type="text/css" href="css/{$css_name}.css">
 		<link rel="stylesheet" type="text/css" href="css/navbar.css">
 
 

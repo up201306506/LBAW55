@@ -4,7 +4,8 @@
 	include_once('../config/init.php');
 
 	/*Other PHP actions should go here*/
-	$pagename = 'Profile';
+    $pagename = 'Profil';
+	$css_name = 'profile';
 	$smarty->assign('pagename', $pagename);
 	
 	$session_username = $_SESSION['username'];
