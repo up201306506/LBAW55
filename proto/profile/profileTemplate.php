@@ -23,6 +23,8 @@
 	
 	
 	/*This summons the smarty template*/
-	$smarty->display('profile/profile.tpl');
+	//$smarty->display('profile/profile.tpl');
+
+echo $bootstrap
 
 ?>
