@@ -7,6 +7,7 @@
     $pagename = 'Profile';
 	$css_name = 'profile';
 	$smarty->assign('pagename', $pagename);
+    $smarty->assign('$css_name', $css_name);
 	
 	$session_username = $_SESSION['username'];
 	$smarty->assign('session_username', $session_username);

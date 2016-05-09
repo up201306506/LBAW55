@@ -7,6 +7,7 @@
 	$pagename = 'Index';
 	$css_name = 'index';
 	$smarty->assign('pagename', $pagename);
+	$smarty->assign('$css_name', $css_name);
 	
 	/*This summons the smarty template*/
 	$smarty->display('main.tpl');

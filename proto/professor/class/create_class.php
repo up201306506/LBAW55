@@ -4,9 +4,13 @@
 	include_once('../../config/init.php');
 
 	/*Other PHP actions should go here*/
-	$pagename = 'create_class';
-	$navbar = "<?php include '../../navbar.php'; ?>";
+	$pagename = 'Create_class';
 	$smarty->assign('pagename', $pagename);
+
+	$css_name = 'create_class';
+	$smarty->assign('$css_name', $css_name);
+
+	$navbar = "<?php include '../../navbar.php'; ?>";
 	$smarty->assign('navbar', $navbar);
 
 	/*This summons the smarty template*/
