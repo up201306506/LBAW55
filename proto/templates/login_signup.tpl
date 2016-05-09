@@ -54,4 +54,5 @@
 
 {include file='javascript_plugins/tabs.tpl'}
 {include file='javascript_plugins/bootstrap.tpl'}
+{include file='javascript_plugins/jquery.tpl'}
 {include file='common/footer.tpl'}

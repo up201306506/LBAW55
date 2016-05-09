@@ -6,11 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>eldooM</title>
-
-		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-		<script src="javascript/jquery-1.12.1.min.js"></script>
-		
+		<title>{$pagename}</title>
+	
 		<!-- Bootstrap -->
 		<link rel="stylesheet" type="text/css" href="css/Bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/{$pagename}.css">
