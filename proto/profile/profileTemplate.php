@@ -7,12 +7,12 @@
     $pagename = 'Profile';
     $smarty->assign('pagename', $pagename);
 
-	$bootstrap_location = '../css/Bootstrap/css/bootstrap.min.css';
-    $smarty->assign('$bootstrap_location', $bootstrap_location);
-    $css_location = '../css/profile.css';
-    $smarty->assign('$css_location', $css_location);
-    $css_navbar = '../css/navbar.css';
-    $smarty->assign('$css_navbar', $css_navbar);
+	$bootstrap = '../css/Bootstrap/css/bootstrap.min.css';
+    $smarty->assign('$bootstrap', $bootstrap);
+    $csspage = '../css/profile.css';
+    $smarty->assign('$csspage', $csspage);
+    $cssnavbar = '../css/navbar.css';
+    $smarty->assign('$cssnavbar', $cssnavbar);
 	
 	$session_username = $_SESSION['username'];
 	$smarty->assign('session_username', $session_username);

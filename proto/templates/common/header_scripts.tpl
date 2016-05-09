@@ -6,12 +6,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<title>{$css_location}</title>
+	<title>{$pagename}</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="{$bootstrap_location}">
-	<link rel="stylesheet" type="text/css" href="{$css_location}">
-	<link rel="stylesheet" type="text/css" href="{$css_navbar}">
+	<link rel="stylesheet" type="text/css" href="{$bootstrap}">
+	<link rel="stylesheet" type="text/css" href="{$csspage}">
+	<link rel="stylesheet" type="text/css" href="{$cssnavbar}">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

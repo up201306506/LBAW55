@@ -9,9 +9,9 @@
 	<title>{$pagename}</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="{$bootstrap_location}">
-	<link rel="stylesheet" type="text/css" href="{$css_location}">
-	<link rel="stylesheet" type="text/css" href="{$css_navbar}">
+	<link rel="stylesheet" type="text/css" href="{$bootstrap}">
+	<link rel="stylesheet" type="text/css" href="{$csspage}">
+	<link rel="stylesheet" type="text/css" href="{$cssnavbar}">
 
 
 </head>
