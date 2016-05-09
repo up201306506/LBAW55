@@ -9,9 +9,9 @@
 		<title>{$pagename}</title>
 	
 		<!-- Bootstrap -->
-		<link rel="stylesheet" type="text/css" href="css/Bootstrap/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="css/{$css_name}.css">
-		<link rel="stylesheet" type="text/css" href="css/navbar.css">
+		<link rel="stylesheet" type="text/css" href="{$bootstrap_location}">
+		<link rel="stylesheet" type="text/css" href="{$css_location}">
+		<link rel="stylesheet" type="text/css" href="{$css_navbar}">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

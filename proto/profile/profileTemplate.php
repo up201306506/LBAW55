@@ -5,9 +5,14 @@
 
 	/*Other PHP actions should go here*/
     $pagename = 'Profile';
-	$css_name = 'profile';
-	$smarty->assign('pagename', $pagename);
-    $smarty->assign('$css_name', $css_name);
+    $smarty->assign('pagename', $pagename);
+
+	$bootstrap_location = '../css/Bootstrap/css/bootstrap.min.css';
+    $smarty->assign('$bootstrap_location', $bootstrap_location);
+    $css_location = '../css/profile.css';
+    $smarty->assign('$css_location', $css_location);
+    $css_navbar = '../css/navbar.css';
+    $smarty->assign('$css_navbar', $css_navbar);
 	
 	$session_username = $_SESSION['username'];
 	$smarty->assign('session_username', $session_username);
