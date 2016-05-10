@@ -6,9 +6,9 @@
 	<div class="user col-sm-3">
 		<div class="user-box">
 			<img class="img-responsive profile-img" src="../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
-			<span class="glyphicon glyphicon-user"> <?= $_SESSION['name']?></span>
-			<span class="glyphicon glyphicon-envelope"> <?= $_SESSION['email']?></span>
-			<span class="glyphicon glyphicon-credit-card"> <?= $_SESSION['username']?></span>
+			<span class="glyphicon glyphicon-user"> {$session_name}</span>
+			<span class="glyphicon glyphicon-envelope"> {$session_email}</span>
+			<span class="glyphicon glyphicon-credit-card"> {$session_username}</span>
 			<button type="button" class="btn btn-info editUserName">edit</button>
 		</div>
 	</div>
