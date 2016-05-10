@@ -12,13 +12,13 @@
 					<div id="login-form">
 						<form class="form-horizontal" action="action/login_request.php" method="post" role="form">
 							<div class="form-group">
-								<input name="username" id="username" class="form-control" type="text" placeholder="USERNAME"></input>
+								<input name="username" id="username" class="form-control" type="text" placeholder="USERNAME">
 							</div>
 							<div class="form-group">
-								<input name="password" id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
+								<input name="password" id="password" class="form-control" type="password" placeholder="PASSWORD">
 							</div>
 							<div class="form-group">
-								<input class="btn btn-default" type="submit" value="Log In"></input>
+								<input class="btn btn-default" type="submit" value="Log In">
 							</div>
 						</form>
 					</div>
@@ -27,23 +27,23 @@
 					<div id="signup-form">
 						<form class="form-horizontal" action="action/create_user.php" method="post" role="form">
 							<div class="form-group">
-								<input name="username" id="username" class="form-control" type="text" placeholder="USERNAME"></input>
+								<input name="username" id="username" class="form-control" type="text" placeholder="USERNAME">
 							</div>
 							<div class="form-group">
-								<input name="name" id="name" class="form-control" type="text" placeholder="NAME"></input>
+								<input name="name" id="name" class="form-control" type="text" placeholder="NAME">
 							</div>
 							<div class="form-group">
-								<input name="email" id="email" class="form-control" type="text" placeholder="EMAIL"></input>
+								<input name="email" id="email" class="form-control" type="text" placeholder="EMAIL">
 							</div>
 							<div class="form-group">
-								<input name="password" id="password" class="form-control" type="password" placeholder="PASSWORD"></input>
+								<input name="password" id="password" class="form-control" type="password" placeholder="PASSWORD">
 							</div>
 							<div class="form-group radio-group">
 								<label class="radio-inline"><input type="radio" name="opUsertype" value='Student' checked/>Student</label>
 								<label class="radio-inline"><input type="radio" name="opUsertype" value='Professor' />Professor</label>
 							</div>
 							<div class="form-group">
-								<input class="btn btn-default" type="submit" value="Sign Up"></input>
+								<input class="btn btn-default" type="submit" value="Sign Up">
 							</div>
 						</form>
 					</div>
@@ -54,4 +54,5 @@
 
 {include file='javascript_plugins/tabs.tpl'}
 {include file='javascript_plugins/bootstrap.tpl'}
+{include file='javascript_plugins/jquery.tpl'}
 {include file='common/footer.tpl'}
