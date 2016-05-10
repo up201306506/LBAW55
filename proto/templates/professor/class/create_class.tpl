@@ -1,4 +1,4 @@
-{include file='common/header_scripts.tpl'}
+{include file='common/header.tpl'}
 
 	{$navbar}
 	<div class="container">
