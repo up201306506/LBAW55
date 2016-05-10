@@ -10,7 +10,7 @@
 
 	{if !empty($jquery)}
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<link rel="stylesheet" type="text/css" href="{$jquery}">
+	<script src="{$jquery}"></script>
 	{/if}
 
 
