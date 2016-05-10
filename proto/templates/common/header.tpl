@@ -9,9 +9,15 @@
 	<title>{$pagename}</title>
 
 	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="{$bootstrap}">
-	<link rel="stylesheet" type="text/css" href="{$csspage}">
-	<link rel="stylesheet" type="text/css" href="{$cssnavbar}">
+	{if !empty($bootstrap)}
+		<link rel="stylesheet" type="text/css" href="{$bootstrap}">
+	{/if}
+	{if !empty($csspage)}
+		<link rel="stylesheet" type="text/css" href="{$csspage}">
+	{/if}
+	{if !empty($cssnavbar)}
+		<link rel="stylesheet" type="text/css" href="{$cssnavbar}">
+	{/if}
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

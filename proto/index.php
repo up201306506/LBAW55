@@ -4,10 +4,10 @@
 	include_once('config/init.php');
 
 	/*Other PHP actions should go here*/
-	$pagename = 'Index';
-	$css_name = 'index';
-	$smarty->assign('pagename', $pagename);
-	$smarty->assign('$css_name', $css_name);
+	$smarty->assign('pagename', 'Index');
+
+	$smarty->assign('bootstrap', "css/Bootstrap/css/bootstrap.min.css");
+	$smarty->assign('csspage', "css/index.css");
 	
 	/*This summons the smarty template*/
 	$smarty->display('main.tpl');
