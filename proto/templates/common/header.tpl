@@ -8,15 +8,21 @@
 
 	<title>{$pagename}</title>
 
+	{if !empty($jquery)}
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="{$jquery}"></script>
+	{/if}
+
+
 	<!-- Bootstrap -->
 	{if !empty($bootstrap)}
-		<link rel="stylesheet" type="text/css" href="{$bootstrap}">
+	<link rel="stylesheet" type="text/css" href="{$bootstrap}">
 	{/if}
 	{if !empty($csspage)}
-		<link rel="stylesheet" type="text/css" href="{$csspage}">
+	<link rel="stylesheet" type="text/css" href="{$csspage}">
 	{/if}
 	{if !empty($cssnavbar)}
-		<link rel="stylesheet" type="text/css" href="{$cssnavbar}">
+	<link rel="stylesheet" type="text/css" href="{$cssnavbar}">
 	{/if}
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
