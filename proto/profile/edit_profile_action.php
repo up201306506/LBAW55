@@ -25,6 +25,8 @@ switch ($_GET['update']) {
 		case 'description':
 		 	$description = $_POST['description'];
 
+		 	echo '<p>ola :)</p>';
+
 		 	echo '<p>'.htmlspecialchars($description).'</p>';
 		 	break;
 		case 'picture':
