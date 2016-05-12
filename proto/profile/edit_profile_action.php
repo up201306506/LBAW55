@@ -3,7 +3,7 @@
 	include_once('../database/user_functions.php');
 
 	//$currentUsername = $_SESSION['username'];
-	$currentUsername = 'potter2';
+	$currentUsername = 'potter';
 
 	try{
 		switch ($_GET['update']) {
