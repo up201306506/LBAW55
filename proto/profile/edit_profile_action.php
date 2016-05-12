@@ -7,7 +7,7 @@
 
 	if ($oldUsername === "") {
 		$_SESSION['error_messages'][]  = 'it is not possible to have a empty user name.';
-		echo "<script>alert('".'1'."');</script>";
+		
 		header('Location: ' . $_SERVER['HTTP_REFERER']);  
 		exit;
 	}
@@ -15,14 +15,14 @@
 		switch ($_GET['update']) {
 			case 'name':
 				$username = $_POST['name'];
-				if (existsUser($username)) {
+				/*if (existsUser($username)) {
 					$_SESSION['error_messages'][]  = 'username already taken.';
-					echo '<p>potter</p>';
+					
 					header('Location: ' . $_SERVER['HTTP_REFERER']);  
 				}else{
 					updateUserName($oldUsername,$username);
-				}
-
+				}*/
+					echo '<p>'.$username.'</p>';
 			  break;
 
 			case 'email':
@@ -56,8 +56,8 @@
 			  break;
 		}
     }catch (PDOException $Exception){
-	 	$_SESSION['error_messages'][] = 'Register Failed';// send message by the error code (need to be changed)
+	 	/*$_SESSION['error_messages'][] = 'Register Failed';// send message by the error code (need to be changed)
 	    $_SESSION['form_values'] = $_POST;
-	  	header('Location: ' . $_SERVER['HTTP_REFERER']);  
+	  	header('Location: ' . $_SERVER['HTTP_REFERER']); */ 
 	}
 ?>
