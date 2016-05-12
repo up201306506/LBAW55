@@ -49,13 +49,22 @@
 		$stmt->execute(array($username,$oldname));
 	}
 
-/*	function updateUserEmail($userName,$email){
-			//UPDATE "User" SET name = '%%%' WHERE username = '%%%';
-			//UPDATE "User" SET password = '%%%' WHERE username = '%%%';
-			//UPDATE "User" SET description = '%%%' WHERE username = '%%%';
+	function updateUserEmail($userName,$email){
+		global $conn;
+	  	$stmt = $conn->prepare('UPDATE users SET email = ? WHERE username = ?');
+		$stmt->execute(array($email,$username));
 	}
 
 	function updatePassword($userName,$password){
+		global $conn;
+	  	$stmt = $conn->prepare('UPDATE users SET password = ? WHERE username = ?');
+		$stmt->execute(array($password,$username));
 	}
-*/
+
+	function updateDescription($userName,$description){
+		global $conn;
+	  	$stmt = $conn->prepare('UPDATE users SET description = ? WHERE username = ?');
+		$stmt->execute(array($description,$username));
+	}
+
 ?>
