@@ -15,13 +15,13 @@
 		switch ($_GET['update']) {
 			case 'name':
 				$username = $_POST['name'];
-				/*if (existsUser($username)) {
+				if (existsUser($username)) {
 					$_SESSION['error_messages'][]  = 'username already taken.';
 					
 					header('Location: ' . $_SERVER['HTTP_REFERER']);  
 				}else{
 					updateUserName($oldUsername,$username);
-				}*/
+				}
 					echo '<p>'.$username.'</p>';
 			  break;
 
