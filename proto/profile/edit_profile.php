@@ -60,7 +60,7 @@
 				<form action="edit_profile_action.php?update=description" method="post" name="textAreaForm" role="form">
 					<div class="form-group">
 						<label for="description">Description:</label>
-						<textarea id="description" name="description" form="textAreaForm" class="form-control" rows="6"></textarea>
+						<textarea id="description" name="description" form="textAreaForm" class="form-control" value="description" rows="6"></textarea>
 					</div>
 					<input id="edit-description" class="btn btn-primary" type="submit" value="Submit new Description"></input>
 				</form> <!-- Edit description -->
