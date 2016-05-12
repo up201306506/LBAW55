@@ -17,7 +17,7 @@
 				$username = $_POST['name'];
 				if (existsUser($username)) {
 					$_SESSION['error_messages'][]  = 'username already taken.';
-					 echo "<script>alert('".'2'."');</script>";
+					echo '<p>potter</p>';
 					header('Location: ' . $_SERVER['HTTP_REFERER']);  
 				}else{
 					updateUserName($oldUsername,$username);
