@@ -43,4 +43,20 @@
 		$stmt->execute();
 	}
 	
+	function updateUserName($oldname,$username){
+		global $conn;
+	    $stmt = $conn->prepare("UPDATE users SET name);// needs the isActive contrain
+		$stmt->bindParam(':username', $username);
+			UPDATE "User" SET name = '%%%' WHERE username = '%%%';
+	}
+
+	function updateUserEmail($userName,$email){
+			//UPDATE "User" SET name = '%%%' WHERE username = '%%%';
+			//UPDATE "User" SET password = '%%%' WHERE username = '%%%';
+			//UPDATE "User" SET description = '%%%' WHERE username = '%%%';
+	}
+
+	function updatePassword($userName,$password){
+	}
+
 ?>
