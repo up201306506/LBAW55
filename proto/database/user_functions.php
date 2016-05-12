@@ -49,19 +49,19 @@
 		$stmt->execute(array($username,$oldname));
 	}
 
-	function updateUserEmail($userName,$email){
+	function updateUserEmail($username,$email){
 		global $conn;
 	  	$stmt = $conn->prepare('UPDATE users SET email = ? WHERE username = ?');
 		$stmt->execute(array($email,$username));
 	}
 
-	function updatePassword($userName,$password){
+	function updatePassword($username,$password){
 		global $conn;
 	  	$stmt = $conn->prepare('UPDATE users SET password = ? WHERE username = ?');
 		$stmt->execute(array($password,$username));
 	}
 
-	function updateDescription($userName,$description){
+	function updateDescription($username,$description){
 		global $conn;
 	  	$stmt = $conn->prepare('UPDATE users SET description = ? WHERE username = ?');
 		$stmt->execute(array($description,$username));
