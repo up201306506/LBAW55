@@ -2,7 +2,8 @@
 	include_once('../config/init.php');	
 	include_once('../database/user_functions.php');
 
-	$oldUsername = $_SESSION['username'];
+	//$oldUsername = $_SESSION['username'];
+	$oldUsername = 'potter';
 
 	if ($oldUsername === "") {
 		$_SESSION['error_messages'][]  = 'it is not possible to have a empty user name.';
