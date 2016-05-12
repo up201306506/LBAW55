@@ -4,7 +4,7 @@
 
 switch ($_GET['update']) {
 		case 'name':
-			$username = $_POST['inputUserNameTextField'];
+			$username = $_POST['name'];
 			echo '<p>'.$username.'</p>';
 
 		  break;
