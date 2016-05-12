@@ -57,10 +57,10 @@
 				</form> <!-- Edit password -->
 			</div>
 			<div id="edit-description-box">
-				<form action="edit_profile_action.php?update=description" method="post" role="form">
+				<form action="edit_profile_action.php?update=description" method="post" name="textAreaForm" role="form">
 					<div class="form-group">
 						<label for="description">Description:</label>
-						<textarea id="description" class="form-control" rows="6"></textarea>
+						<textarea id="description" name="description" form="textAreaForm" class="form-control" rows="6"></textarea>
 					</div>
 					<input id="edit-description" class="btn btn-primary" type="submit" value="Submit new Description"></input>
 				</form> <!-- Edit description -->
@@ -69,7 +69,7 @@
 				<form action="edit_profile_action.php?update=picture" method="post" role="form">
 					<div class="form-group">
 						<label for="upload_img">Profile Picture:</label>
-						<input id="upload_img" type="file" accept="image/*"></input>
+						<input id="upload_img" name="upload_img" type="file" accept="image/*"></input>
 					</div>
 					<input id="edit-profile-pic" class="btn btn-primary" type="submit" value="Submit new Profile Picture"></input>
 				</form> <!-- Edit profile picture -->
