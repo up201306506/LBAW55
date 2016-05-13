@@ -33,6 +33,7 @@
 
 				updateUserEmail($currentUsername,$email);
 
+				$_SESSION['email'] = $email;
 				$_SESSION['success_messages'][] = 'email updated successfully';
 			  break;
 			case 'password':
@@ -51,6 +52,8 @@
 			 	$description = $_POST['description'];
 
 			 	updateDescription($currentUsername,htmlspecialchars($description));
+
+			 	$_SESSION['description'] = htmlspecialchars($description);
 			 	$_SESSION['success_messages'][] = 'description updated successfully';
 			 	break;
 			case 'picture':
