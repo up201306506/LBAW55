@@ -18,12 +18,12 @@
 				if (existsUser($username)) {
 					$_SESSION['error_messages'][]  = 'username already taken.';					
 					header('Location: ' . $_SERVER['HTTP_REFERER']);  
-				}else{
+				}
+
 					updateUserName($currentUsername,$username);
 
 					$_SESSION['username'] = $username;
 					$_SESSION['success_messages'][] = 'username updated successfully';
-				}
 			  break;
 
 			case 'email':

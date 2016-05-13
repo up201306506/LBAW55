@@ -45,7 +45,7 @@
 	
 	function updateUserName($oldname,$username){
 		global $conn;
-	    $stmt = $conn->prepare('UPDATE users SET username = ? WHERE username = ?');
+	    $stmt = $conn->prepare('UPDATE users SET name = ? WHERE username = ?');
 		$stmt->execute(array($username,$oldname));
 	}
 
