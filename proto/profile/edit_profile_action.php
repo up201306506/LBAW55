@@ -2,8 +2,7 @@
 	include_once('../config/init.php');	
 	include_once('../database/user_functions.php');
 
-	//$currentUsername = $_SESSION['username'];
-	$currentUsername = 'potter';
+	$currentUsername = $_SESSION['username'];
 
 	try{
 		switch ($_GET['update']) {
