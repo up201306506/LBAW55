@@ -20,10 +20,10 @@
 					header('Location: ' . $_SERVER['HTTP_REFERER']);  
 				}
 
-					updateUserName($currentUsername,$username);
+				updateUserName($currentUsername,$username);
 
-					$_SESSION['username'] = $username;
-					$_SESSION['success_messages'][] = 'username updated successfully';
+				$_SESSION['username'] = $username;
+				$_SESSION['success_messages'][] = 'username updated successfully';
 			  break;
 
 			case 'email':
@@ -56,6 +56,7 @@
 			 	$_SESSION['description'] = htmlspecialchars($description);
 			 	$_SESSION['success_messages'][] = 'description updated successfully';
 			 	break;
+
 			case 'picture':
 				$picture = $_POST['upload_img'];
 
@@ -63,7 +64,6 @@
 
 				echo '<p>'.$picture.'</p>';
 			 	break;
-
 
 			default:
 			  break;

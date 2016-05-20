@@ -9,7 +9,6 @@
 			<span class="glyphicon glyphicon-user"> {$session_name}</span>
 			<span class="glyphicon glyphicon-envelope"> {$session_email}</span>
 			<span class="glyphicon glyphicon-credit-card"> {$session_username}</span>
-			<button type="button" class="btn btn-info editUserName">edit</button>
 		</div>
 	</div>
 	<div class="user-info col-sm-6">
