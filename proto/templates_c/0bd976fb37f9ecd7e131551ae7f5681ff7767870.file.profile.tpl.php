@@ -1,18 +1,52 @@
-{include file='common/header.tpl'}
-{include file='common/navbar.tpl'}
+<?php /* Smarty version Smarty-3.1.15, created on 2016-05-20 11:51:02
+         compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:346403140573ed52287fa37-14355705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '0bd976fb37f9ecd7e131551ae7f5681ff7767870' => 
+    array (
+      0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl',
+      1 => 1463737805,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '346403140573ed52287fa37-14355705',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_573ed522e5c2a2_65592306',
+  'variables' => 
+  array (
+    'session_name' => 0,
+    'session_email' => 0,
+    'session_username' => 0,
+    'description' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_573ed522e5c2a2_65592306')) {function content_573ed522e5c2a2_65592306($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <div class="container">
 	<h1>Profile</h1>
 	<div class="user col-sm-3">
 		<div class="user-box">
 			<img class="img-responsive profile-img" src="../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
-			<span class="glyphicon glyphicon-user">{$session_name}</span>
-			<span class="glyphicon glyphicon-envelope">{$session_email}</span>
-			<span class="glyphicon glyphicon-credit-card">{$session_username}</span>
+			<span class="glyphicon glyphicon-user"><?php echo $_smarty_tpl->tpl_vars['session_name']->value;?>
+</span>
+			<span class="glyphicon glyphicon-envelope"><?php echo $_smarty_tpl->tpl_vars['session_email']->value;?>
+</span>
+			<span class="glyphicon glyphicon-credit-card"><?php echo $_smarty_tpl->tpl_vars['session_username']->value;?>
+</span>
 		</div>
 		<div id="description">
 			<h3>Description</h3>
-			<span>{$description}</span>
+			<span><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+</span>
 		</div>
 	</div>
 	<div class="user-info col-sm-6">
@@ -127,7 +161,11 @@
 	</div>
 </div> <!-- container -->
 
-{include file='javascript_plugins/jquery.tpl'}
-{include file='javascript_plugins/script.tpl'}
-{include file='javascript_plugins/bootstrap.tpl'}
-{include file='common/footer.tpl'}
+<?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/jquery.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/script.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/bootstrap.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php }} ?>

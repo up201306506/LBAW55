@@ -16,6 +16,7 @@ h1 {
 .user-box {
 	padding: 15px;
 	border-radius: 5px;
+	margin-bottom: 20px;
 	border: 1px solid #dddddd;
 	background-color: #f5f5f5;
 }
@@ -38,6 +39,22 @@ h1 {
 	margin-bottom: 0;
 }
 
+#description {
+	padding: 15px;
+	border-radius: 5px;
+	border: 1px solid #dddddd;
+	background-color: #f5f5f5;
+}
+
+#description h3 {
+	margin: 0 0 15px 0;
+}
+
+#description span {
+	text-align: justify;
+	padding: 0 5px 0 5px;
+}
+
 .options a {
 	margin: 5px;
 	display: block;
@@ -58,7 +75,7 @@ h1 {
 	margin-top: 0;
 }
 
-.calendar {
+#calendar {
 	padding: 15px;
 	margin-top: 20px;
 	border-radius: 5px;
@@ -66,19 +83,40 @@ h1 {
 	background-color: #f5f5f5;
 }
 
-.calendar, .calendar-table, .calendar-header {
+#calendar-options {
 	width: 100%;
 }
 
-.month {
-	width: 33%;
+.options-block {
 	float: left;
 }
 
-.arrow-left, .arrow-right {
-	width: 33%;
+.options-block a {
+	text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+#calendar-grid {
+	width: 100%;
+}
+
+.calendar-row {
+	width: 100%;
+}
+
+.day-cell {
 	float: left;
-	margin: 0;
+	text-align: center;
+}
+
+.calendar-cell {
+	float: left;
+	text-align: center;
+}
+
+.empty-cell {
+	float: left;
 }
 
 .options {
