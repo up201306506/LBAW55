@@ -25,8 +25,13 @@
   $smarty->assign('FIELD_ERRORS', $_SESSION['field_errors']);
   $smarty->assign('SUCCESS_MESSAGES', $_SESSION['success_messages']);
   $smarty->assign('FORM_VALUES', $_SESSION['form_values']);
+  
   $smarty->assign('USERNAME', $_SESSION['username']);
- 
+  $smarty->assign('ACCOUNTTYPEVAR', $_SESSION['accounttypevar']);
+  $smarty->assign('DESCRIPTION', $_SESSION['description']);
+  $smarty->assign('EMAIL', $_SESSION['email']);
+  $smarty->assign('NAME', $_SESSION['name']);
+
   unset($_SESSION['success_messages']);
   unset($_SESSION['error_messages']);  
   unset($_SESSION['field_errors']);
