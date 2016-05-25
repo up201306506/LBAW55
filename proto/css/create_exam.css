@@ -25,14 +25,13 @@ h1 {
 	padding-right: 0;
 }
 
-/*.col-sm-1 {
-	margin: auto;
-	text-align: center;
-}*/
-
 .question .panel-body ul {
 	margin: 0;
 	padding-left: 20px;
+}
+
+.question button {
+	margin-left: 5px;
 }
 
 /*.day, .month, .year, .hours, .minutes {

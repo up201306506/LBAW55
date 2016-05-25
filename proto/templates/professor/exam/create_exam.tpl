@@ -77,9 +77,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row question">
 						<div class="col-sm-11">
-							<div class="panel panel-default question">
+							<div class="panel panel-default">
 								<div class="panel-heading">
 									<span>
 										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
