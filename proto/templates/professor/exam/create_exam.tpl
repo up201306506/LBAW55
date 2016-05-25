@@ -77,53 +77,53 @@
 					</div>
 					<div class="panel panel-default question">
 						<div class="panel-heading">
-							This is a question
+							<span>This is a question</span>
 						</div>
 						<div class="panel-body">
 							<ul>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
 							</ul>
 						</div>
 					</div>
 					<div class="panel panel-default question">
 						<div class="panel-heading">
-							This is a question
+							<span>This is a question</span>
 						</div>
 						<div class="panel-body">
 							<ul>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
 							</ul>
 						</div>
 					</div>
 					<div class="panel panel-default question">
 						<div class="panel-heading">
-							This is a question
+							<span>This is a question</span>
 						</div>
 						<div class="panel-body">
 							<ul>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
 							</ul>
 						</div>
 					</div>
 					<div class="panel panel-default question">
 						<div class="panel-heading">
-							This is a question
+							<span>This is a question</span>
 						</div>
 						<div class="panel-body">
 							<ul>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
-								<li>This is an answer</li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
+								<li><span>This is an answer</span></li>
 							</ul>
 						</div>
 					</div>
