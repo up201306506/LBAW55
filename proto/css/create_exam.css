@@ -25,6 +25,10 @@ h1 {
 	padding-right: 0;
 }
 
+.question {
+	margin-bottom: 15px;
+}
+
 .question .panel-body ul {
 	margin: 0;
 	padding-left: 20px;
@@ -34,8 +38,12 @@ h1 {
 	margin-left: 5px;
 }
 
+.pagination {
+	margin: 0;
+}
+
 #submit {
-	float: left;
+	float: right;
 }
 
 /*.day, .month, .year, .hours, .minutes {
