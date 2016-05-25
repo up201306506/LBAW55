@@ -4,7 +4,7 @@
 <div class="container">
 	<div class="col-sm-offset-3 col-sm-6">
 		<h1>New Class</h1>
-		<form action="#" method="post" role="form">
+		<form id="class-box" action="#" method="post" role="form">
 			<div class="form-group">
 				<label for="classname">Name of the Class:</label>
 				<input id="classname" class="form-control" type="text"></input>
