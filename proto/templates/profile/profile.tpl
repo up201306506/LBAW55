@@ -119,7 +119,7 @@
 					<div class="calendar-cell" cell="28">28</div>
 					<div class="calendar-cell" cell="29">29</div>
 					<div class="calendar-cell" cell="30">30</div>
-					<div id="last-cell" class="calendar-cell" cell="31">31</div>
+					<div class="calendar-cell" cell="31">31</div>
 					<div class="empty-cell"></div>
 					<div class="empty-cell"></div>
 				</div>
