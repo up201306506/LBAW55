@@ -5,7 +5,7 @@
 	<h1>Profile</h1>
 	<div class="user col-sm-3">
 		<div class="user-box">
-			<img class="img-responsive profile-img" src="../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
+			<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
 			<span class="glyphicon glyphicon-user">{$session_name}</span>
 			<span class="glyphicon glyphicon-envelope">{$session_email}</span>
 			<span class="glyphicon glyphicon-credit-card">{$session_username}</span>
@@ -16,27 +16,46 @@
 		</div>
 	</div>
 	<div class="user-info col-sm-6">
-		<span>TODO: Change these to tables</span>
-		<div class="panel panel-default">
-			<div class="panel-heading text-center">Exams</div>
-			<ul class="list-group">
-				<li class="list-group-item"><a href="exam.php">LBAW (13/03/2016)</a></li>
-				<li class="list-group-item"><a href="exam.php">PPIN (19/03/2016)</a></li>
-				<li class="list-group-item"><a href="exam.php">COMP (25/05/2016)</a></li>
-				<li class="list-group-item"><a href="exam.php">SDIS (02/03/2016)</a></li>
-				<li class="list-group-item"><a href="exam.php">IART (30/04/2016)</a></li>
-			</ul>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading text-center">Classes</div>
-			<ul class="list-group">
-				<li class="list-group-item"><a href="class.php">LBAW</a></li>
-				<li class="list-group-item"><a href="class.php">PPIN</a></li>
-				<li class="list-group-item"><a href="class.php">COMP</a></li>
-				<li class="list-group-item"><a href="class.php">SDIS</a></li>
-				<li class="list-group-item"><a href="class.php">IART</a></li>
-			</ul>
-		</div>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Exam</th>
+					<th>Data and Time</th>
+					<th>Accessibility</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+					for ($i = 1; $i < 6; $i++) {
+						echo "<tr>";
+							echo "<td><a href=\"exam.php\">Exam #$i</a></td>";
+							echo "<td>Date and Time #$i</td>";
+							echo "<td>Accessibility #$i</td>";
+						echo "<tr>";
+					}
+				?>
+			</tbody>
+		</table>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Class</th>
+					<th>Manager</th>
+					<th>Accessibility</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php
+					for ($i = 1; $i < 6; $i++) {
+						echo "<tr>";
+							echo "<td><a href=\"class.php\">Class #$i</a></td>";
+							echo "<td><a href=\"profile.php\">Manager #$i</td>";
+							echo "<td>Accessibility #$i</td>";
+						echo "<tr>";
+					}
+				?>
+			</tbody>
+		</table>
 	</div>
 	<div class="user-options col-sm-3">
 		<div class="events">
