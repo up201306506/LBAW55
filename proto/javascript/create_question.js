@@ -2,7 +2,7 @@ var answer = "<div class=\"form-group\"><label for=\"answer\">Answer#:</label><t
 
 $(document).ready(function() {
 	$("#add_answer").click(function() {
-		console.log($(".answer").length);
+		console.log("There are " + $(".answer").length);
 		$(".answer").last().after(answer);
 	});
 });
