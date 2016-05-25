@@ -31,7 +31,7 @@ h1 {
 }
 
 .question .panel-body ul {
-	padding: 0;
+	margin: 0;
 }
 
 /*.day, .month, .year, .hours, .minutes {
