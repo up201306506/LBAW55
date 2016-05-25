@@ -16,11 +16,11 @@
 						<div class="form-group">
 							<label for="class">Class:</label>
 							<select id="class" class="form-control">
-								<option>LBAW</option>
-								<option>COMP</option>
-								<option>PPIN</option>
-								<option>SDIS</option>
-								<option>IART</option>
+								<option>Class #1</option>
+								<option>Class #2</option>
+								<option>Class #3</option>
+								<option>Class #4</option>
+								<option>Class #5</option>
 							</select>
 						</div>
 						<div class="form-group">
@@ -45,8 +45,7 @@
 							<label for="professors">Responsible Professors:</label>
 							<ul id="professors" class="list-group">
 								<li class="list-group-item">
-									<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">
-									Professor In Charge
+									<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">{$session_username}
 								</li>
 							</ul>
 							<button id="add-professor" class="btn btn-primary" type="button">Add Professor</button>
@@ -63,12 +62,17 @@
 			</div>
 			<div id="collapse2" class="panel-collapse collapse">
 				<div class="panel-body">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					<div class="form-group">
+						<label for="category">Category:</label>
+						<select id="category" class="form-control">
+							<option>Category #1</option>
+							<option>Category #2</option>
+							<option>Category #3</option>
+							<option>Category #4</option>
+							<option>Category #5</option>
+						</select>
+					</div>
+					<!-- question -->
 				</div>
 			</div>
 		</div>
