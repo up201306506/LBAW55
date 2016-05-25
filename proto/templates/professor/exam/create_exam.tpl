@@ -79,7 +79,7 @@
 					</div>
 					<div class="panel panel-default question">
 						<div class="panel-heading">
-							<div class="col-sm-5">
+							<div class="col-sm-11">
 								<span>
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -89,7 +89,7 @@
 									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 								</span>
 							</div>
-							<div class="col-sm-5">
+							<div class="col-sm-1">
 								<button class="btn btn-default">
 									<span class="glyphicon glyphicon-plus"></span>
 								</button>
