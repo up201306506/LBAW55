@@ -4,7 +4,7 @@
 <div class="container">
 	<h1>Profile</h1>
 	<div class="row">
-		<div class="col-sm-3">
+		<div class="col-sm-3" style="border: 1px solid black">
 			<img class="img-circle" src="../css/res/user_img.png" width="100" height="100">
 			<span class="glyphicon glyphicon-credit-card"></span><span> {$session_username}</span>
 			<span class="glyphicon glyphicon-user"></span><span> {$session_name}</span>
@@ -12,9 +12,9 @@
 		</div>
 		<div class="col-sm-6"></div>
 		<div class="col-sm-3">
-			<div id="events"></div>
-			<div id="calendar"></div>
-			<div id="options"></div>
+			<div id="events" style="border: 1px solid black"></div>
+			<div id="calendar" style="border: 1px solid black"></div>
+			<div id="options" style="border: 1px solid black"></div>
 		</div>
 		<!-- <div id="user-info"></div>
 		<div id="user-class-exam"></div>
