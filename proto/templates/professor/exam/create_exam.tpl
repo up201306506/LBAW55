@@ -78,7 +78,9 @@
 					<div class="panel panel-default question">
 						<div class="panel-heading">
 							<span>This is a question</span>
-							<label><input type="checkbox">Check</label>
+							<button class="btn btn-default">
+								<span class="glyphicon glyphicon-plus"></span>
+							</button>
 						</div>
 						<div class="panel-body">
 							<ul>
