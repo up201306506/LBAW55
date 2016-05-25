@@ -12,46 +12,48 @@
 			</div>
 			<div id="collapse1" class="panel-collapse collapse in">
 				<div class="panel-body">
-					<div class="col-sm-4">
-						<div class="form-group">
-							<label for="class">Class:</label>
-							<select id="class" class="form-control">
-								<option>Class #1</option>
-								<option>Class #2</option>
-								<option>Class #3</option>
-								<option>Class #4</option>
-								<option>Class #5</option>
-							</select>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="form-group">
+								<label for="class">Class:</label>
+								<select id="class" class="form-control">
+									<option>Class #1</option>
+									<option>Class #2</option>
+									<option>Class #3</option>
+									<option>Class #4</option>
+									<option>Class #5</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="date">Date:</label>
+								<input id="date" class="form-control" type="text" placeholder="DD/MM/YYYY">
+							</div>
+							<div class="form-group">
+								<label for="hour">Hour:</label>
+								<input id="hour" class="form-control" type="text" placeholder="HH:MM">
+							</div>
+							<div class="form-group">
+								<label for="duration">Duration:</label>
+								<input id="duration" class="form-control" type="text" placeholder="HH:MM">
+							</div>
 						</div>
-						<div class="form-group">
-							<label for="date">Date:</label>
-							<input id="date" class="form-control" type="text" placeholder="DD/MM/YYYY">
+						<div class="col-sm-8">
+							<div class="form-group">
+								<label for="information">Information:</label>
+								<textarea id="information" class="form-control" rows="6"></textarea>
+							</div>
+							<div class="form-group">
+								<label for="professors">Responsible Professors:</label>
+								<ul id="professors" class="list-group">
+									<li class="list-group-item">
+										<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">
+										<span>{$session_username}</span>
+									</li>
+								</ul>
+								<button id="add-professor" class="btn btn-primary" type="button">Add Professor</button>
+							</div>
 						</div>
-						<div class="form-group">
-							<label for="hour">Hour:</label>
-							<input id="hour" class="form-control" type="text" placeholder="HH:MM">
-						</div>
-						<div class="form-group">
-							<label for="duration">Duration:</label>
-							<input id="duration" class="form-control" type="text" placeholder="HH:MM">
-						</div>
-					</div> <!-- col-sm-4 -->
-					<div class="col-sm-8">
-						<div class="form-group">
-							<label for="information">Information:</label>
-							<textarea id="information" class="form-control" rows="6"></textarea>
-						</div>
-						<div class="form-group">
-							<label for="professors">Responsible Professors:</label>
-							<ul id="professors" class="list-group">
-								<li class="list-group-item">
-									<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">
-									<span>{$session_username}</span>
-								</li>
-							</ul>
-							<button id="add-professor" class="btn btn-primary" type="button">Add Professor</button>
-						</div>
-					</div> <!-- col-sm-8 -->
+					</div>
 				</div>
 			</div>
 		</div>
