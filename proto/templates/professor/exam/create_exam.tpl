@@ -81,7 +81,7 @@
 					</div>
 					<div class="row question">
 						<div class="col-sm-11">
-							<div class="panel panel-default">
+							<div class="panel panel-default" panel="1">
 								<div class="panel-heading">
 									<span>This is a question</span>
 								</div>
@@ -96,14 +96,14 @@
 							</div>
 						</div>
 						<div class="col-sm-1">
-							<button class="btn btn-default question-button">
+							<button class="btn btn-default question-button" panel-button="1">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</div>
 					</div>
 					<div class="row question">
 						<div class="col-sm-11">
-							<div class="panel panel-default">
+							<div class="panel panel-default" panel="2">
 								<div class="panel-heading">
 									<span>This is a question</span>
 								</div>
@@ -118,14 +118,14 @@
 							</div>
 						</div>
 						<div class="col-sm-1">
-							<button class="btn btn-default question-button">
+							<button class="btn btn-default question-button" panel-button="2">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</div>
 					</div>
 					<div class="row question">
 						<div class="col-sm-11">
-							<div class="panel panel-default">
+							<div class="panel panel-default" panel="3">
 								<div class="panel-heading">
 									<span>This is a question</span>
 								</div>
@@ -140,14 +140,14 @@
 							</div>
 						</div>
 						<div class="col-sm-1">
-							<button class="btn btn-default question-button">
+							<button class="btn btn-default question-button" panel-button="3">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</div>
 					</div>
 					<div class="row question">
 						<div class="col-sm-11">
-							<div class="panel panel-default">
+							<div class="panel panel-default" panel="4">
 								<div class="panel-heading">
 									<span>This is a question</span>
 								</div>
@@ -162,7 +162,7 @@
 							</div>
 						</div>
 						<div class="col-sm-1">
-							<button class="btn btn-default question-button">
+							<button class="btn btn-default question-button" panel-button="4">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</div>
