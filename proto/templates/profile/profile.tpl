@@ -5,7 +5,7 @@
 	<h1>Profile</h1>
 	<div class="row">
 		<div class="col-sm-3">
-			<img src="../css/res/user_img.png">
+			<img class="img-circle" src="../css/res/user_img.png" width="50" height="50">
 			<span class="glyphicon glyphicon-credit-card"></span><span> {$session_username}</span>
 			<span class="glyphicon glyphicon-user"></span><span> {$session_name}</span>
 			<span class="glyphicon glyphicon-envelope"></span><span> {$session_email}</span>
