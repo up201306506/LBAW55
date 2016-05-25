@@ -26,7 +26,7 @@
 						<div class="form-group">
 							<label for="date">Date:</label>
 							<div id="date">
-								<select id="day">
+								<select id="day" class="form-control">
 									<option>1</option>
 									<option>2</option>
 									<option>...</option>
@@ -94,7 +94,7 @@
 							<label for="professors">Responsible Professors:</label>
 							<ul id="professors" class="list-group">
 								<li class="list-group-item">
-									<img src="user_img.png" alt="User's Profile Image" width="35" height="35">
+									<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">
 									Professor In Charge
 								</li>
 							</ul>
