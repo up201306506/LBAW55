@@ -17,6 +17,14 @@ h1 {
 	padding: 0;
 }
 
+.col-sm-8 {
+	padding-right: 0;
+}
+
+.col-sm-8 .form-group:last-child {
+	margin-bottom: 0;
+}
+
 /*.day, .month, .year, .hours, .minutes {
 	color: #555;
 	height: 34px;
