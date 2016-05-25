@@ -78,7 +78,7 @@
 					<div class="panel panel-default question">
 						<div class="panel-heading">
 							<span>This is a question</span>
-							<input type="checkbox" name="">
+							<input type="checkbox">
 						</div>
 						<div class="panel-body">
 							<ul>

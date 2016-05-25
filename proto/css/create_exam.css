@@ -21,6 +21,10 @@ h1 {
 	margin-bottom: 0;
 }
 
+.question .panel-body ul {
+	list-style-type: none;
+}
+
 /*.day, .month, .year, .hours, .minutes {
 	color: #555;
 	height: 34px;
