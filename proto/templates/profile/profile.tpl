@@ -41,9 +41,6 @@
 				</tr>
 			</thead>
 			<tbody>
-				{ <?php for ($i = 0; $i < 10; $i++) {
-					echo "$i";
-				} ?> }
 				<tr>
 					<td><a href="class.php">Class #$i</a></td>
 					<td><a href="profile.php">Manager #$i</td>
