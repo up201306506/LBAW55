@@ -26,7 +26,7 @@
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Options <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li><a href="#"><span class="glyphicon glyphicon-user"></span> {$session_username}</a></li>
+						<li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> {$session_username}</a></li>
 						<li><a href="edit_profile.php"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
 						<li><a href="index.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 					</ul>
