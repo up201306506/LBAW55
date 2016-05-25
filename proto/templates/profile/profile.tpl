@@ -8,7 +8,7 @@
 			<img src="../css/res/user_img.png">
 			<span class="glyphicon glyphicon-credit-card"></span><span> {$session_username}</span>
 			<span class="glyphicon glyphicon-user"></span><span> {$session_name}</span>
-			<span class="glyphicon glyphicon-envelope"></span><span> {$session_email)</span>
+			<span class="glyphicon glyphicon-envelope"></span><span> {$session_email}</span>
 		</div>
 		<div class="col-sm-6"></div>
 		<div class="col-sm-3">
