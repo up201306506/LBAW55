@@ -62,15 +62,17 @@
 			</div>
 			<div id="collapse2" class="panel-collapse collapse">
 				<div class="panel-body">
-					<div class="form-group">
-						<label for="category">Category:</label>
-						<select id="category" class="form-control">
-							<option>Category #1</option>
-							<option>Category #2</option>
-							<option>Category #3</option>
-							<option>Category #4</option>
-							<option>Category #5</option>
-						</select>
+					<div class="col-sm-offset-4 col-sm-4">
+						<div class="form-group">
+							<label for="category">Category:</label>
+							<select id="category" class="form-control">
+								<option>Category #1</option>
+								<option>Category #2</option>
+								<option>Category #3</option>
+								<option>Category #4</option>
+								<option>Category #5</option>
+							</select>
+						</div>
 					</div>
 					<!-- question -->
 				</div>
