@@ -45,7 +45,8 @@
 							<label for="professors">Responsible Professors:</label>
 							<ul id="professors" class="list-group">
 								<li class="list-group-item">
-									<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">{$session_username}
+									<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">
+									<span>{$session_username}</span>
 								</li>
 							</ul>
 							<button id="add-professor" class="btn btn-primary" type="button">Add Professor</button>
