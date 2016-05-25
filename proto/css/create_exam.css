@@ -9,6 +9,14 @@ h1 {
 	margin: 0 0 10px 0;
 }
 
+.container {
+	margin-bottom: 20px;
+}
+
+.col-sm-4 {
+	padding: 0;
+}
+
 /*.day, .month, .year, .hours, .minutes {
 	color: #555;
 	height: 34px;
