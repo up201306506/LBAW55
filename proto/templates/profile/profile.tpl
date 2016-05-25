@@ -5,7 +5,7 @@
 	<h1>Profile</h1>
 	<div class="user col-sm-3">
 		<div class="user-box">
-			<img class="img-responsive profile-img" src="../res/user_img.png" alt="User's Profile Image" width="200" height="200">
+			<img class="img-responsive profile-img" src="../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
 			<span class="glyphicon glyphicon-user">{$session_name}</span>
 			<span class="glyphicon glyphicon-envelope">{$session_email}</span>
 			<span class="glyphicon glyphicon-credit-card">{$session_username}</span>
@@ -25,17 +25,11 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php
-					for ($i = 1; $i < 6; $i++) {
-						?>
-						<tr>;
-							<td><a href="exam.php">Exam #</a></td>;
-							<td>Date and Time #</td>;
-							<td>Accessibility #</td>;
-						<tr>;
-						<?php
-					}
-				?>
+				<tr>
+					<td><a href="exam.php">Exam #</a></td>
+					<td>Date and Time #</td>
+					<td>Accessibility #</td>
+				<tr>
 			</tbody>
 		</table>
 		<table class="table table-hover">
@@ -47,15 +41,11 @@
 				</tr>
 			</thead>
 			<tbody>
-				<?php
-					for ($i = 1; $i < 6; $i++) {
-						echo "<tr>";
-							echo "<td><a href=\"class.php\">Class #$i</a></td>";
-							echo "<td><a href=\"profile.php\">Manager #$i</td>";
-							echo "<td>Accessibility #$i</td>";
-						echo "<tr>";
-					}
-				?>
+				<tr>
+					<td><a href="class.php">Class #$i</a></td>
+					<td><a href="profile.php">Manager #$i</td>
+					<td>Accessibility #$i</td>
+				<tr>
 			</tbody>
 		</table>
 	</div>
