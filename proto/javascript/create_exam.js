@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	$(".question-button").click(function() {
-		if ($(this).html() == "<span class=\"glyphicon glyphicon-plus\"></span>") {
-			console.log("LEL wut");
-		}
+		//if ($(this).html() == "<span class=\"glyphicon glyphicon-plus\"></span>") {
+			console.log($(this).html());
+		//}
 		// $(this).html("<span class=\"glyphicon glyphicon-minus\"></span>");
 		$("#" + $(this).attr("panel-button")).removeClass("panel-default").addClass("panel-success");
 	});
