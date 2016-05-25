@@ -28,6 +28,7 @@ h1 {
 
 .question .panel-heading label {
 	float: right;
+	margin-left: 5px;
 }
 
 /*.day, .month, .year, .hours, .minutes {
