@@ -96,7 +96,7 @@
 							</div>
 						</div>
 						<div class="col-sm-1">
-							<button class="btn btn-default add-button" panel-button="1">
+							<button class="btn btn-default question-button" panel-button="1">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</div>
@@ -118,7 +118,7 @@
 							</div>
 						</div>
 						<div class="col-sm-1">
-							<button class="btn btn-default add-button" panel-button="2">
+							<button class="btn btn-default question-button" panel-button="2">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</div>
@@ -140,7 +140,7 @@
 							</div>
 						</div>
 						<div class="col-sm-1">
-							<button class="btn btn-default add-button" panel-button="3">
+							<button class="btn btn-default question-button" panel-button="3">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</div>
@@ -162,7 +162,7 @@
 							</div>
 						</div>
 						<div class="col-sm-1">
-							<button class="btn btn-default add-button" panel-button="4">
+							<button class="btn btn-default question-button" panel-button="4">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</div>
