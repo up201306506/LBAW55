@@ -6,7 +6,7 @@
 	<div class="panel-group" id="accordion">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h4 class="panel-title">
+				<h4 class="panel-title text-center">
 					<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Information</a>
 				</h4>
 			</div>
@@ -57,7 +57,7 @@
 		</div>
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				<h4 class="panel-title">
+				<h4 class="panel-title text-center">
 					<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Questions</a>
 				</h4>
 			</div>

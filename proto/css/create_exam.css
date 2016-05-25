@@ -38,6 +38,10 @@ h1 {
 	margin-left: 5px;
 }
 
+.row:last-child {
+	padding: 0 15px 0 15px;
+}
+
 .pagination {
 	margin: 0;
 }
