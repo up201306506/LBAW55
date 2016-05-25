@@ -26,21 +26,21 @@
 						<div class="form-group">
 							<label for="date">Date:</label>
 							<div id="date">
-								<select class="day">
+								<select id="day">
 									<option>1</option>
 									<option>2</option>
 									<option>...</option>
 									<option>31</option>
 								</select>
 								<b><span>/</span></b>
-								<select class="month">
+								<select id="month">
 									<option>January</option>
 									<option>February</option>
 									<option>...</option>
 									<option>December</option>
 								</select>
 								<b><span>/</span></b>
-								<select class="year">
+								<select id="year">
 									<option>2016</option>
 									<option>2017</option>
 									<option>...</option>
@@ -85,6 +85,22 @@
 							</div>
 						</div>
 					</div> <!-- col-sm-4 -->
+					<div class="col-sm-8">
+						<div class="form-group">
+							<label for="information">Information:</label>
+							<textarea id="information" class="form-control" rows="6"></textarea>
+						</div>
+						<div class="form-group">
+							<label for="professors">Responsible Professors:</label>
+							<ul id="professors" class="list-group">
+								<li class="list-group-item">
+									<img src="user_img.png" alt="User's Profile Image" width="35" height="35">
+									Professor In Charge
+								</li>
+							</ul>
+							<button id="add-professor" class="btn btn-primary" type="button">Add Professor</button>
+						</div>
+					</div> <!-- col-sm-8 -->
 				</div>
 			</div>
 		</div>
