@@ -26,7 +26,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><a href="exam.php">Exam #</a></td>
+					<td><a href="exam.php"><span class="glyphicon glyphicon-file"></span>Exam #</a></td>
 					<td>Date and Time #</td>
 					<td>Accessibility #</td>
 				<tr>
@@ -42,7 +42,7 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><a href="class.php">Class #$i</a></td>
+					<td><a href="class.php"><span class="glyphicon glyphicon-education"></span>Class #$i</a></td>
 					<td><a href="profile.php">Manager #$i</td>
 					<td>Accessibility #$i</td>
 				<tr>
