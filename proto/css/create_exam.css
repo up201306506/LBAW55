@@ -24,7 +24,10 @@ h1 {
 .question .panel-body ul {
 	margin: 0;
 	padding: 0;
-	list-style-type: none;
+}
+
+.question .panel-heading input[type="checkbox"] {
+	float: right;
 }
 
 /*.day, .month, .year, .hours, .minutes {
