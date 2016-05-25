@@ -75,7 +75,58 @@
 							</select>
 						</div>
 					</div>
-					<!-- question -->
+					<div class="panel panel-default question">
+						<div class="panel-heading">
+							This is a question
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default question">
+						<div class="panel-heading">
+							This is a question
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default question">
+						<div class="panel-heading">
+							This is a question
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+							</ul>
+						</div>
+					</div>
+					<div class="panel panel-default question">
+						<div class="panel-heading">
+							This is a question
+						</div>
+						<div class="panel-body">
+							<ul>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+								<li>This is an answer</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
