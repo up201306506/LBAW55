@@ -5,7 +5,7 @@
 	<h1>Profile</h1>
 	<div class="user col-sm-3">
 		<div class="user-box">
-			<img class="img-responsive profile-img" src="user_img.png" alt="User's Profile Image" width="200" height="200">
+			<img class="img-responsive profile-img" src="../res/user_img.png" alt="User's Profile Image" width="200" height="200">
 			<span class="glyphicon glyphicon-user">{$session_name}</span>
 			<span class="glyphicon glyphicon-envelope">{$session_email}</span>
 			<span class="glyphicon glyphicon-credit-card">{$session_username}</span>
@@ -27,11 +27,13 @@
 			<tbody>
 				<?php
 					for ($i = 1; $i < 6; $i++) {
-						echo "<tr>";
-							echo "<td><a href=\"exam.php\">Exam #$i</a></td>";
-							echo "<td>Date and Time #$i</td>";
-							echo "<td>Accessibility #$i</td>";
-						echo "<tr>";
+						?>
+						<tr>;
+							<td><a href="exam.php">Exam #</a></td>;
+							<td>Date and Time #</td>;
+							<td>Accessibility #</td>;
+						<tr>;
+						<?php
 					}
 				?>
 			</tbody>
