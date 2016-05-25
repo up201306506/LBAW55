@@ -3,6 +3,27 @@
 
 <div class="container">
 	<h1>Profile</h1>
+	<div class="row">
+		<div class="col-sm-3">
+			<img src="../css/res/user_img.png">
+			<span class="glyphicon glyphicon-credit-card"></span><span> {$session_username}</span>
+			<span class="glyphicon glyphicon-user"></span><span> {$session_name}</span>
+			<span class="glyphicon glyphicon-envelope"></span><span> {$session_email)</span>
+		</div>
+		<div class="col-sm-6"></div>
+		<div class="col-sm-3">
+			<div id="events"></div>
+			<div id="calendar"></div>
+			<div id="options"></div>
+		</div>
+		<!-- <div id="user-info"></div>
+		<div id="user-class-exam"></div>
+		<div id="user-options"></div> -->
+	</div>
+</div>
+
+<!-- <div class="container">
+	<h1>Profile</h1>
 	<div class="user col-sm-3">
 		<div class="user-box">
 			<img class="img-responsive profile-img" src="../css/res/user_img.png" alt="User's Profile Image" width="200" height="200">
@@ -136,7 +157,7 @@
 			</ul>
 		</div>
 	</div>
-</div> <!-- container -->
+</div> --> <!-- container -->
 
 {include file='javascript_plugins/jquery.tpl'}
 {include file='javascript_plugins/script.tpl'}

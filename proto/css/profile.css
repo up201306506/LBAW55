@@ -6,10 +6,10 @@ html, body {
 }
 
 h1 {
-	margin: 0 0 0 15px;
+	margin: 0 0 10px 0;
 }
 
-.user, .user-info, .user-options {
+/*.user, .user-info, .user-options {
 	padding: 15px;
 }
 
@@ -135,4 +135,4 @@ tbody span {
 	padding-left: 0;
 	margin-bottom: 0;
 	list-style-type: none;
-}
+}*/
