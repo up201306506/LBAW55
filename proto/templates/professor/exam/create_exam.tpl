@@ -101,10 +101,107 @@
 							</div>
 						</div>
 						<div class="col-sm-1">
-							<button class="btn btn-default">
+							<button class="btn btn-default question-button">
 								<span class="glyphicon glyphicon-plus"></span>
 							</button>
 						</div>
+					</div>
+					<div class="row question">
+						<div class="col-sm-11">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</span>
+								</div>
+								<div class="panel-body">
+									<ul>
+										<li><span>This is an answer</span></li>
+										<li><span>This is an answer</span></li>
+										<li><span>This is an answer</span></li>
+										<li><span>This is an answer</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-1">
+							<button class="btn btn-default question-button">
+								<span class="glyphicon glyphicon-plus"></span>
+							</button>
+						</div>
+					</div>
+					<div class="row question">
+						<div class="col-sm-11">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</span>
+								</div>
+								<div class="panel-body">
+									<ul>
+										<li><span>This is an answer</span></li>
+										<li><span>This is an answer</span></li>
+										<li><span>This is an answer</span></li>
+										<li><span>This is an answer</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-1">
+							<button class="btn btn-default question-button">
+								<span class="glyphicon glyphicon-plus"></span>
+							</button>
+						</div>
+					</div>
+					<div class="row question">
+						<div class="col-sm-11">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<span>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</span>
+								</div>
+								<div class="panel-body">
+									<ul>
+										<li><span>This is an answer</span></li>
+										<li><span>This is an answer</span></li>
+										<li><span>This is an answer</span></li>
+										<li><span>This is an answer</span></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-1">
+							<button class="btn btn-default question-button">
+								<span class="glyphicon glyphicon-plus"></span>
+							</button>
+						</div>
+					</div>
+					<div class="row">
+						<ul class="pagination">
+							<li class="active"><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+						</ul>
+						<input id="submit" class="btn btn-primary" type="submit" value="Next">
 					</div>
 				</div>
 			</div>

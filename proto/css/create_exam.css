@@ -30,8 +30,12 @@ h1 {
 	padding-left: 20px;
 }
 
-.question button {
+.question-button {
 	margin-left: 5px;
+}
+
+#submit {
+	float: left;
 }
 
 /*.day, .month, .year, .hours, .minutes {
