@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$(".question-button").click(function() {
 		var innerHtml = $(this).html();
-		console.log(innerHtml.type());
+		console.log($.type(innerHtml));
 		if (innerHtml === "<span class=\"glyphicon glyphicon-plus\"></span>") {
 			console.log(innerHtml);
 		}
