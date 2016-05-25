@@ -81,7 +81,7 @@
 					</div>
 					<div class="row question">
 						<div class="col-sm-11">
-							<div class="panel panel-default" panel="1">
+							<div id="1" class="panel panel-default">
 								<div class="panel-heading">
 									<span>This is a question</span>
 								</div>
@@ -103,7 +103,7 @@
 					</div>
 					<div class="row question">
 						<div class="col-sm-11">
-							<div class="panel panel-default" panel="2">
+							<div id="2" class="panel panel-default">
 								<div class="panel-heading">
 									<span>This is a question</span>
 								</div>
@@ -125,7 +125,7 @@
 					</div>
 					<div class="row question">
 						<div class="col-sm-11">
-							<div class="panel panel-default" panel="3">
+							<div id="3" class="panel panel-default">
 								<div class="panel-heading">
 									<span>This is a question</span>
 								</div>
@@ -147,7 +147,7 @@
 					</div>
 					<div class="row question">
 						<div class="col-sm-11">
-							<div class="panel panel-default" panel="4">
+							<div id="4" class="panel panel-default">
 								<div class="panel-heading">
 									<span>This is a question</span>
 								</div>
