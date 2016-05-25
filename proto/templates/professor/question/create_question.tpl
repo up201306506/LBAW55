@@ -19,17 +19,13 @@
 				<textarea id="question" class="form-control" rows="10"></textarea>
 				<input id="upload_img" type="file" accept="image/*"></input>
 			</div>
-			<div class="answer-block">
-				<div class="form-group">
-					<label for="answer">Answer#1:</label>
-					<textarea id="answer" class="form-control" rows="5"></textarea>
-				</div>
+			<div class="form-group answer">
+				<label for="answer">Answer#1:</label>
+				<textarea id="answer" class="form-control" rows="5"></textarea>
 			</div>
-			<div class="answer-block">
-				<div class="form-group">
-					<label for="answer">Answer#2:</label>
-					<textarea id="answer" class="form-control" rows="5"></textarea>
-				</div>
+			<div class="form-group answer">
+				<label for="answer">Answer#2:</label>
+				<textarea id="answer" class="form-control" rows="5"></textarea>
 			</div>
 			<button id="add_answer" class="btn btn-primary" type="button">Add Answer</button>
 			<input id="finish" class="btn btn-success" type="submit" value="Submit Question"></input>
