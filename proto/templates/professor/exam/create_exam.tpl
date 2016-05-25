@@ -25,64 +25,15 @@
 						</div>
 						<div class="form-group">
 							<label for="date">Date:</label>
-							<div id="date">
-								<select id="day" class="form-control">
-									<option>1</option>
-									<option>2</option>
-									<option>...</option>
-									<option>31</option>
-								</select>
-								<b><span>/</span></b>
-								<select id="month">
-									<option>January</option>
-									<option>February</option>
-									<option>...</option>
-									<option>December</option>
-								</select>
-								<b><span>/</span></b>
-								<select id="year">
-									<option>2016</option>
-									<option>2017</option>
-									<option>...</option>
-									<option>3000</option>
-								</select>
-							</div>
+							<input id="date" class="form-control" type="text" placeholder="DD/MM/YYYY">
 						</div>
 						<div class="form-group">
 							<label for="hour">Hour:</label>
-							<div id="hour">
-								<select class="hours">
-									<option>00</option>
-									<option>01</option>
-									<option>...</option>
-									<option>23</option>
-								</select>
-								<b><span>:</span></b>
-								<select class="minutes">
-									<option>00</option>
-									<option>01</option>
-									<option>...</option>
-									<option>59</option>
-								</select>
-							</div>
+							<input id="hour" class="form-control" type="text" placeholder="HH:MM">
 						</div>
 						<div class="form-group">
 							<label for="duration">Duration:</label>
-							<div id="duration">
-								<select class="hours">
-									<option>00</option>
-									<option>01</option>
-									<option>...</option>
-									<option>23</option>
-								</select>
-								<b><span>:</span></b>
-								<select class="minutes">
-									<option>00</option>
-									<option>01</option>
-									<option>...</option>
-									<option>59</option>
-								</select>
-							</div>
+							<input id="duration" class="form-control" type="text" placeholder="HH:MM">
 						</div>
 					</div> <!-- col-sm-4 -->
 					<div class="col-sm-8">
