@@ -1,14 +1,11 @@
 $(document).ready(function() {
-	// var plusHtml = $(".question-button").html();
+	// $(".ok-circle").click(function() {
+	// 	$(".ok-circle").removeClass("glyphicon glyphicon-ok-circle ok-circle").addClass("glyphicon glyphicon-remove-circle remove-circle");
+	// 	$(".question-block").removeClass("panel-default").addClass("panel-success");
+	// });
 
-	// $(".question-button").click(function() {
-	// 	var innerHtml = $(this).html();
-	// 	if (innerHtml === plusHtml) {
-	// 		$(this).html("<span class=\"glyphicon glyphicon-minus\"></span>");
-	// 		$("#" + $(this).attr("panel-button")).removeClass("panel-default").addClass("panel-success");
-	// 	} else {
-	// 		$(this).html("<span class=\"glyphicon glyphicon-plus\"></span>");
-	// 		$("#" + $(this).attr("panel-button")).removeClass("panel-success").addClass("panel-default");
-	// 	}
+	// $(".remove-circle").click(function() {
+	// 	$(".remove-circle").removeClass("glyphicon glyphicon-remove-circle remove-circle").addClass("glyphicon glyphicon-ok-circle ok-circle");
+	// 	$(".question-block").removeClass("panel-success").addClass("panel-default");
 	// });
 });

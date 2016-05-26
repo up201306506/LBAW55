@@ -6,7 +6,7 @@
 	<div class="row">
 		<div id="user-info" class="col-sm-3">
 			<div class="well">
-				<img id="user-img" class="img-circle img-responsive" src="user_img.png" width="200" height="200">
+				<img id="user-img" class="img-circle img-responsive" src="../css/res/user_img.png" width="200" height="200">
 				<div id="username">
 					<span class="glyphicon glyphicon-credit-card"></span>
 					<span> {$session_username}</span>
