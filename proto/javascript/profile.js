@@ -1,20 +1,11 @@
 $(document).ready(function() {
-	$(".day-cell").css("width", $(".calendar-row").width() / 7);
-	$(".empty-cell").css({
-		width: $(".calendar-row").width() / 7,
-		height: $(".day-cell").height()
-	});
-	$(".calendar-cell").css("width", $(".calendar-row").width() / 7);
-	$(".options-block").css("width", $("#calendar-options").width() / 3);
-	$("#calendar").css("height", ($(".calendar-cell").height() * $(".calendar-row").length) + $(".options-block").height() + 32);
+	$("#month li").css("width", Math.floor($("#month").width() / 3));
+	$("#weekdays li").css("width", Math.floor($("#weekdays").width() / 7));
+	$("#days li").css("width", Math.floor($("#days").width() / 7));
 
 	$(window).resize(function() {
-		$(".day-cell").css("width", $(".calendar-row").width() / 7);
-		$(".empty-cell").css({
-		    width: $(".calendar-row").width() / 7,
-		    height: $(".day-cell").height()
-	    });
-		$(".calendar-cell").css("width", $(".calendar-row").width() / 7);
-		$(".options-block").css("width", $("#calendar-options").width() / 3);
+		$("#month li").css("width", Math.floor($("#month").width() / 3));
+		$("#weekdays li").css("width", Math.floor($("#weekdays").width() / 7));
+		$("#days li").css("width", Math.floor($("#days").width() / 7));
 	});
 });

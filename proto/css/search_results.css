@@ -5,11 +5,23 @@ html, body {
 	height: 100%;
 }
 
-.checkbox {
-	margin: 0;
-	padding: 5px;
+h1, h3 {
+	margin: 0 0 10px 0;
 }
 
-.list-group-item span {
+#wrapper {
+	margin: auto;
+	padding: 0 15px 0 15px;
+}
+
+.well table {
+	margin-bottom: 0;
+}
+
+.well table img, .well table a span {
 	margin-right: 5px;
+}
+
+.checkbox:last-child {
+	margin-bottom: 0;
 }
