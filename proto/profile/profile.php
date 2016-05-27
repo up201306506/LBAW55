@@ -18,11 +18,11 @@
 	$smarty->assign('wrapper', "../javascript/wrapper.js");
 	
 	/*Session variables*/
-	$smarty->assign('session_username', $_SESSION['username']);
-	$smarty->assign('session_name', getName($_SESSION['username']));
-	$smarty->assign('usertype', getAccountType($_SESSION['username']));
-	$smarty->assign('session_email', getEmail($_SESSION['username']));
-	$smarty->assign('description', getDescription($_SESSION['username']));
+	$smarty->assign('session_username', getUsername($_SESSION['userid']));
+	$smarty->assign('session_name', getName($_SESSION['userid']));
+	$smarty->assign('usertype', getAccountType($_SESSION['userid']));
+	$smarty->assign('session_email', getEmail($_SESSION['userid']));
+	$smarty->assign('description', getDescription($_SESSION['userid']));
 	
 	/*This summons the smarty template*/
 	$smarty->display('profile/profile.tpl');

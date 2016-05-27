@@ -5,27 +5,27 @@
 
 	try {
 		if (isset($_POST['name'])) {
-			updateName($_POST['name'], $_SESSION['username']);
+			updateName($_POST['name'], $_SESSION['userid']);
 			$_SESSION['success_messages'][] = 'name updated successfully';
 			header('Location: ' . $BASE_URL . 'profile/profile.php');
 		}
 
 		if (isset($_POST['email'])) {
-			updateEmail($_POST['email'], $_SESSION['username']);
+			updateEmail($_POST['email'], $_SESSION['userid']);
 			$_SESSION['success_messages'][] = 'email updated successfully';
 			header('Location: ' . $BASE_URL . 'profile/profile.php');
 		}
 
 		if (isset($_POST['password']) && isset($_POST['re-password'])) {
 			if ($_POST['password'] === $_POST['re-password']) {
-				updatePassword($_POST['password'], $_SESSION['username']);
+				updatePassword($_POST['password'], $_SESSION['userid']);
 				$_SESSION['success_messages'][] = 'password updated successfully';
 				header('Location: ' . $BASE_URL . 'profile/profile.php');
 			}
 		}
 
 		if (isset($_POST['description'])) {
-			updateDescription($_POST['description'], $_SESSION['username']);
+			updateDescription($_POST['description'], $_SESSION['userid']);
 			$_SESSION['success_messages'][] = 'description updated successfully';
 			header('Location: ' . $BASE_URL . 'profile/profile.php');
 		}

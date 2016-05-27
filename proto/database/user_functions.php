@@ -53,63 +53,72 @@
 		return getUser($username);
 	}
 	
-	function updateName($name, $username) {
+	function updateName($name, $userid) {
 		global $conn;
-	    $stmt = $conn->prepare("UPDATE users SET name = ? WHERE username = ?");
-		$stmt->execute(array($name,$username));
+	    $stmt = $conn->prepare("UPDATE users SET name = ? WHERE userid = ?");
+		$stmt->execute(array($name, $userid));
 	}
 
-	function updateEmail($email, $username) {
+	function updateEmail($email, $userid) {
 		global $conn;
-	  	$stmt = $conn->prepare("UPDATE users SET email = ? WHERE username = ?");
-		$stmt->execute(array($email,$username));
+	  	$stmt = $conn->prepare("UPDATE users SET email = ? WHERE userid = ?");
+		$stmt->execute(array($email, $userid));
 	}
 
-	function updatePassword($password, $username) {
+	function updatePassword($password, $userid) {
 		global $conn;
-	  	$stmt = $conn->prepare("UPDATE users SET password = ? WHERE username = ?");
-		$stmt->execute(array(hash('sha256', $password),$username));
+	  	$stmt = $conn->prepare("UPDATE users SET password = ? WHERE userid = ?");
+		$stmt->execute(array(hash('sha256', $password), $userid));
 	}
 
-	function updateDescription($description, $username) {
+	function updateDescription($description, $userid) {
 		global $conn;
-	  	$stmt = $conn->prepare("UPDATE users SET description = ? WHERE username = ?");
-		$stmt->execute(array($description,$username));
+	  	$stmt = $conn->prepare("UPDATE users SET description = ? WHERE userid = ?");
+		$stmt->execute(array($description, $userid));
 	}
 
-	function getName($username) {
+	function getUsername($userid) {
+		global $conn;
+	    $stmt = $conn->prepare("SELECT username 
+	                            FROM users 
+	                            WHERE userid = ?");
+	    $stmt->execute(array($userid));
+	    return $stmt->fetch()['username'];
+	}
+
+	function getName($userid) {
 		global $conn;
 	    $stmt = $conn->prepare("SELECT name 
 	                            FROM users 
-	                            WHERE username = ?");
-	    $stmt->execute(array($username));
+	                            WHERE userid = ?");
+	    $stmt->execute(array($userid));
 	    return $stmt->fetch()['name'];
 	}
 
-	function getEmail($username) {
+	function getEmail($userid) {
 		global $conn;
 	    $stmt = $conn->prepare("SELECT email 
 	                            FROM users 
-	                            WHERE username = ?");
-	    $stmt->execute(array($username));
+	                            WHERE userid = ?");
+	    $stmt->execute(array($userid));
 	    return $stmt->fetch()['email'];
 	}
 
-	function getAccountType($username) {
+	function getAccountType($userid) {
 		global $conn;
 	    $stmt = $conn->prepare("SELECT accounttypevar 
 	                            FROM users 
-	                            WHERE username = ?");
-	    $stmt->execute(array($username));
+	                            WHERE userid = ?");
+	    $stmt->execute(array($userid));
 	    return $stmt->fetch()['accounttypevar'];
 	}
 
-	function getDescription($username) {
+	function getDescription($userid) {
 		global $conn;
 	    $stmt = $conn->prepare("SELECT description 
 	                            FROM users 
-	                            WHERE username = ?");
-	    $stmt->execute(array($username));
+	                            WHERE userid = ?");
+	    $stmt->execute(array($userid));
 	    return $stmt->fetch()['description'];
 	}
 ?>
