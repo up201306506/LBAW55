@@ -2,43 +2,26 @@
 
 	include_once('../config/init.php');	
 	include_once('../database/user_functions.php');
-	
-	if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['name']) && isset($_POST['email']) && isset($_POST['opUsertype'])) {
-		$name = $_POST['name'];
-		$email = $_POST['email'];
-	    $username = $_POST['username'];
-		$password = $_POST['password'];
-		$usertype = $_POST['opUsertype'];
-		
+
+	if (!empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['name']) && !empty($_POST['email']) && !empty($_POST['usertype'])) {
 		$isactive = 'Active';
-		if ($usertype === "Professor") {
+		if ($_POST['usertype'] === 'Professor') {
 			$isactive = 'Pending';
 		}
-		
-		try {
-			$user = insertNewUser($username, $email, $password, $usertype, $name, $isactive);
-			$_SESSION['success_messages'][] = 'Register successful';
 
+		$user = insertNewUser($_POST['username'], $_POST['email'], $_POST['password'], $_POST['usertype'], $_POST['name'], $isactive);
+		if (!empty($user)) {
 			if ($user['isactive'] === 'Active'){
-				$_SESSION['username'] = $user['username'];
-				$_SESSION['accounttypevar'] = $user['accounttypevar'];
-				$_SESSION['description'] =  $user['description'];
-				$_SESSION['email'] = $user['email'];
-				$_SESSION['name'] =  $user['name'];
-
-				header('Location: '. $BASE_URL .'profile/profile.php');	
+				$_SESSION['userid'] = $user['userid'];
+				echo "success";
 			} else {
-				$_SESSION['error_messages'][] = 'User account is pending!';
-				header('Location: ' . $_SERVER['HTTP_REFERER']);  
+				echo "pending";
 			}
-		} catch (PDOException $Exception) {
-			$_SESSION['error_messages'][] = 'Register Failed';// send message by the error code (need to be changed)
-			$_SESSION['form_values'] = $_POST;
-			header('Location: ' . $_SERVER['HTTP_REFERER']);
+		} else {
+			echo "failToRegister";
 		}
 	} else {
-		$_SESSION['error_messages'][] = 'Fill all input fields';
-	    $_SESSION['form_values'] = $_POST;
-	    header('Location: ' . $_SERVER['HTTP_REFERER']);
+		echo "fillInputFields";
 	}
+
 ?>

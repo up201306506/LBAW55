@@ -9,6 +9,12 @@ h1, h3 {
 	margin: 0 0 10px 0;
 }
 
+@media (min-width: 768px) {
+	#wrapper {
+		width: 1170px;
+	}
+}
+
 #wrapper {
 	margin: auto;
 	padding: 0 15px 0 15px;

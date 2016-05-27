@@ -11,7 +11,7 @@
 
 	$smarty->assign('jquery', "javascript/jquery-1.12.1.min.js");
 	$smarty->assign('script_boot', "css/Bootstrap/js/bootstrap.min.js");
-	$smarty->assign('script', "javascript/tabs.js");
+	$smarty->assign('script', "javascript/login_signup.js");
 	
 	/*This summons the smarty template*/
 	$smarty->display('login_signup.tpl');

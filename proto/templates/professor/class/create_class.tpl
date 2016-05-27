@@ -31,6 +31,5 @@
 </div>
 
 {include file='javascript_plugins/jquery.tpl'}
-{include file='javascript_plugins/wrapper.tpl'}
 {include file='javascript_plugins/bootstrap.tpl'}
 {include file='common/footer.tpl'}
