@@ -13,12 +13,21 @@
 	);
 	*/	
 
+	function getUser($username) {
+	    global $conn;
+	    $stmt = $conn->prepare("SELECT * 
+	                            FROM users 
+	                            WHERE username = ?");
+	    $stmt->execute(array($username));
+	    return $stmt->fetch();
+ 	}
+	
 	function isLoginCorrect($username, $password) {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 
 	                            FROM users 
 	                            WHERE username = ? AND password = ?");// needs the isActive contrain
-	    $stmt->execute(array($username, $password));// sha1($password)
+	    $stmt->execute(array($username, hash('sha256', $password)));// sha1($password)
 	    return $stmt->fetch();
  	}
 
@@ -38,15 +47,16 @@
 		$stmt->bindParam(':usertype', $usertype);
 		$stmt->bindParam(':email', $email);
 		$stmt->bindParam(':name', $name);
-		$stmt->bindParam(':password', $password);
+		$stmt->bindParam(':password', hash('sha256', $password));
 		$stmt->bindParam(':isactive', $isactive);
 		$stmt->execute();
+		return getUser($username);
 	}
 	
-	function updateUserName($oldname,$username) {
+	function updateName($username, $name) {
 		global $conn;
 	    $stmt = $conn->prepare("UPDATE users SET name = ? WHERE username = ?");
-		$stmt->execute(array($username,$oldname));
+		$stmt->execute(array($name,$username));
 	}
 
 	function updateUserEmail($username,$email) {
@@ -58,7 +68,7 @@
 	function updatePassword($username,$password) {
 		global $conn;
 	  	$stmt = $conn->prepare("UPDATE users SET password = ? WHERE username = ?");
-		$stmt->execute(array($password,$username));
+		$stmt->execute(array(hash('sha256', $password),$username));
 	}
 
 	function updateDescription($username,$description) {

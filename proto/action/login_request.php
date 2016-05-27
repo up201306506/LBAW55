@@ -17,7 +17,7 @@
 		if($user['isactive'] === 'Active'){
 			$_SESSION['success_messages'][] = 'active';
 			$_SESSION['username'] = $user['username'];
-			$_SESSION['accounttypevar'] = $_POST['accounttypevar'];
+			$_SESSION['accounttypevar'] = $user['accounttypevar'];
 			$_SESSION['description'] =  $user['description'];
 			$_SESSION['email'] = $user['email'];
 			$_SESSION['name'] =  $user['name'];

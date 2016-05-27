@@ -2,7 +2,7 @@
 {include file='common/navbar.tpl'}
 
 <div id="wrapper">
-	<h1>Search results for ""</h1>
+	<h1>Search results for "{$search_term}"</h1>
 	<div class="row">
 		<div class="col-sm-5">
 			<div class="well">
