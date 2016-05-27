@@ -113,6 +113,7 @@
 			</div>
 			<div class="well">
 				<ul id="options">
+					<span>{$usertype}</span>
 					{if $usertype eq 'Administrator'}
 						<li><a href="../admin/validate_accounts.php"><span class="glyphicon glyphicon-education"></span>Verify Teachers</a></li>
 					{elseif $usertype eq 'Professor'}
