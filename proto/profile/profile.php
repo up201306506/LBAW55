@@ -22,7 +22,7 @@
 	$smarty->assign('session_name', $_SESSION['name']);
 	$smarty->assign('usertype', $_SESSION['accounttypevar']);
 	$smarty->assign('session_email', $_SESSION['email']);
-	$smarty->assign('description', $_SESSION['description']);
+	$smarty->assign('description', getDescription($_SESSION['username']));
 
 	/*Other variables*/
 	// $smarty->assign('calendar', $calendar);

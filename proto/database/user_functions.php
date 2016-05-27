@@ -53,10 +53,10 @@
 		return getUser($username);
 	}
 	
-	function updateUserName($oldname,$username) {
+	function updateName($username, $name) {
 		global $conn;
 	    $stmt = $conn->prepare("UPDATE users SET name = ? WHERE username = ?");
-		$stmt->execute(array($username,$oldname));
+		$stmt->execute(array($name,$username));
 	}
 
 	function updateUserEmail($username,$email) {

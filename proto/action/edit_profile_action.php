@@ -4,6 +4,29 @@
 
 	$currentUsername = $_SESSION['username'];
 
+	
+	try {
+		
+		if (isset($_POST['name'])) {
+			updateName($_POST['name'], $_SESSION['username']);
+			$_SESSION['success_messages'][] = 'name updated successfully';
+		}
+		
+		if (isset($_POST['description'])) {
+			updateDescription($currentUsername,htmlspecialchars($_POST['description']));
+			$_SESSION['success_messages'][] = 'description updated successfully';
+		}
+		
+		
+	} catch (PDOException $Exception) {
+		$_SESSION['error_messages'][]  = 'Error occured while updating.';
+		header('Location: ' . $_SERVER['HTTP_REFERER']); 
+	}
+
+	
+	header('Location: ' . $BASE_URL . 'profile/profile.php');  
+	
+	/*
 	try{
 		switch ($_GET['update']) {
 			case 'name':
@@ -69,12 +92,11 @@
 			  break;
 		}
 
-		/*
 			link for the profile page NEEDS to be changed
-		*/
+
 		header('Location: ' . $_SERVER['HTTP_REFERER']);  
     }catch (PDOException $Exception){
 	 	$_SESSION['error_messages'][]  = 'Error occured while updating.';
 	  	header('Location: ' . $_SERVER['HTTP_REFERER']); 
-	}
+	}*/
 ?>
