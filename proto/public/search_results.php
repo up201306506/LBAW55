@@ -17,6 +17,11 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', $_SESSION['username']);
+	
+	
+	/* */
+	$smarty->assign('search_term', $_GET['search_term']);
+	
 
 	/*This summons the smarty template*/
 	$smarty->display('public/search_results.tpl');
