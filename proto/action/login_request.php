@@ -7,13 +7,8 @@
 		$user = isLoginCorrect($_POST['username'], $_POST['password']);
 
 		if (isset($user)) {
-			if ($user['isactive'] === 'Active'){
-				$_SESSION['name'] =  $user['name'];
-				$_SESSION['email'] = $user['email'];
-				$_SESSION['username'] = $user['username'];
-				$_SESSION['accounttypevar'] = $user['accounttypevar'];
-				$_SESSION['description'] =  $user['description'];
-
+			if ($user['isactive'] === 'Active') {
+				$_SESSION['userid'] = $user['userid'];
 				$_SESSION['success_messages'][] = 'active';
 				$_SESSION['success_messages'][] = 'login successful';
 				header('Location: '. $BASE_URL .'profile/profile.php');	
