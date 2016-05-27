@@ -2,30 +2,27 @@
 {include file='common/navbar.tpl'}
 
 <div id="wrapper">
-	<h1>Profile</h1>
+	<h1>Class</h1>
 	<div class="row">
-		<div id="user-info" class="col-sm-3">
-			<div class="well">
-				<img id="user-img" class="img-circle img-responsive" src="../css/res/user_img.png" width="200" height="200">
-				<div id="username">
-					<span class="glyphicon glyphicon-credit-card"></span>
-					<span> {$session_username}</span>
-				</div>
-				<div id="name">
-					<span class="glyphicon glyphicon-user"></span>
-					<span> {$session_name}</span>
-				</div>
-				<div id="email">
-					<span class="glyphicon glyphicon-envelope"></span>
-					<span> {$session_email}</span>
-				</div>
+		<div class="col-sm-3">
+			<div id="class-info" class="well">
+				<h3>Information</h3>
+				<span>Created by: Professor's Name</span>
+				<span>Date: 01/01/2015</span>
 			</div>
 			<div class="well">
 				<h3>Description</h3>
-				<span>{$description}</span>
+				<span>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</span>
 			</div>
-		</div> <!-- col-sm-3 -->
-		<div id="user-class-exam" class="col-sm-6">
+		</div>
+		<div class="col-sm-6">
 			<div class="well">
 				<table class="table table-hover">
 					<thead>
@@ -40,13 +37,12 @@
 					</tbody>
 				</table>
 			</div>
-			<div class="well">
+			<div id="participants" class="well">
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th>Class</th>
-							<th>Manager</th>
-							<th>Accessibility</th>
+							<th>Name</th>
+							<th>Account Type</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -54,8 +50,11 @@
 					</tbody>
 				</table>
 			</div>
-		</div> <!-- col-sm-6 -->
-		<div id="user-options" class="col-sm-3">
+			<div id="center">
+				<button id="shide" class="btn btn-default">Show Participants</button>
+			</div>
+		</div>
+		<div class="col-sm-3">
 			<div class="well">
 				<h5>ONGOING</h5>
 				<span> - Nothing to report</span>
@@ -113,17 +112,14 @@
 			</div>
 			<div class="well">
 				<ul id="options">
-					<li><a href="../professor/class/create_class.php"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
-					<li><a href="../professor/question/create_question.php"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
+					<li><a href="#"><span class=""></span>TODO</a></li>
+					<li><a href="#"><span class=""></span>TODO</a></li>
+					<li><a href="#"><span class=""></span>TODO</a></li>
 				</ul>
 			</div>
-		</div> <!-- col-sm-3 -->
+		</div>
 	</div>
-</div> <!-- wrapper -->
+</div>
 
 {include file='javascript_plugins/jquery.tpl'}
 {include file='javascript_plugins/wrapper.tpl'}

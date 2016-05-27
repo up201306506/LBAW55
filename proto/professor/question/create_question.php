@@ -1,78 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<?php
 
-	<title>Create Question</title>
+	/*This summons the database and smarty initializer */
+	include_once('../../config/init.php');
 
-	<!-- Bootstrap -->
-	<link rel="stylesheet" type="text/css" href="../../css/Bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/create_question.css">
-	<link rel="stylesheet" type="text/css" href="../../css/navbar.css">
+	/*Other PHP actions should go here*/
+	$pagename = 'Create Question';
+	$smarty->assign('pagename', $pagename);
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-</head>
-<body>
-	<?php include '../../navbar.php'; ?>
-	<div class="container">
-		<h1 class="col-sm-offset-3">New Question</h1>
-		<div class="col-sm-offset-3 col-sm-6">
-			<div class="new-question-box">
-				<form action="#" method="post" role="form">
-					<div class="category">
-						<div class="form-group">
-							<label for="category">Category:</label>
-							<select id="category" class="form-control">
-								<option value="math">Math</option>
-								<option value="history">History</option>
-								<option value="science">Science</option>
-								<option value="other">Other</option>
-							</select>
-						</div>
-					</div>
-					<div class="question">
-						<div class="form-group">
-							<label for="question">Question:</label>
-							<textarea id="question" class="form-control" rows="10"></textarea>
-							<input id="upload_img" type="file" accept="image/*"></input>
-						</div>
-					</div>
-					<div class="answers">
-						<div class="answer-block">
-							<div class="form-group">
-								<label for="answer">Answer#1:</label>
-								<textarea id="answer" class="form-control" rows="5"></textarea>
-							</div>
-						</div>
-						<div class="answer-block">
-							<div class="form-group">
-								<label for="answer">Answer#2:</label>
-								<textarea id="answer" class="form-control" rows="5"></textarea>
-							</div>
-						</div>
-					</div>
-					<div class="buttons">
-						<button id="add_answer" class="btn btn-primary" type="button">Add Answer</button>
-						<input id="finish" class="btn btn-success" type="submit" value="Submit Question"></input>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
+	$smarty->assign('bootstrap', "../../css/Bootstrap/css/bootstrap.min.css");
+	$smarty->assign('csspage', "../../css/create_question.css");
+	$smarty->assign('cssnavbar', "../../css/navbar.css");
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="../../javascript/jquery-1.12.1.min.js"></script>
-	<!-- Include corresponding .js file -->
-	<script src="../../javascript/create_question.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="../../css/Bootstrap/js/bootstrap.min.js"></script>
-</body>
-</html>
+	$smarty->assign('script_boot', "../../css/Bootstrap/js/bootstrap.min.js");
+	$smarty->assign('script_jquery', "../../javascript/jquery-1.12.1.min.js");
+	$smarty->assign('script', "../../javascript/create_question.js");
+	$smarty->assign('script', "../../javascript/wrapper.js");
+	
+	/*Session variables*/
+	$smarty->assign('session_username', $_SESSION['username']);
+	
+	/*This summons the smarty template*/
+	$smarty->display('professor/question/create_question.tpl');
+
+?>

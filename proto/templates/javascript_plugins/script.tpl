@@ -1,4 +1,4 @@
-{if !empty($script_boot)}
+{if !empty($script)}
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="{$script_boot}"></script>
+	<script src="{$script}"></script>
 {/if}
