@@ -1,102 +1,41 @@
 <?php
+
 	include_once('../config/init.php');	
 	include_once('../database/user_functions.php');
 
-	$currentUsername = $_SESSION['username'];
-
-	
 	try {
-		
 		if (isset($_POST['name'])) {
 			updateName($_POST['name'], $_SESSION['username']);
 			$_SESSION['success_messages'][] = 'name updated successfully';
+			header('Location: ' . $BASE_URL . 'profile/profile.php');
 		}
-		
+
+		if (isset($_POST['email'])) {
+			updateEmail($_POST['email'], $_SESSION['username']);
+			$_SESSION['success_messages'][] = 'email updated successfully';
+			header('Location: ' . $BASE_URL . 'profile/profile.php');
+		}
+
+		if (isset($_POST['password']) && isset($_POST['re-password'])) {
+			if ($_POST['password'] === $_POST['re-password']) {
+				updatePassword($_POST['password'], $_SESSION['username']);
+				$_SESSION['success_messages'][] = 'password updated successfully';
+				header('Location: ' . $BASE_URL . 'profile/profile.php');
+			}
+		}
+
 		if (isset($_POST['description'])) {
-			updateDescription($currentUsername,htmlspecialchars($_POST['description']));
+			updateDescription($_POST['description'], $_SESSION['username']);
 			$_SESSION['success_messages'][] = 'description updated successfully';
+			header('Location: ' . $BASE_URL . 'profile/profile.php');
 		}
-		
-		
+
+		// if (isset($_POST['upload_img'])) {
+		// 	header('Location: ' . $BASE_URL . 'profile/profile.php');
+		// }
 	} catch (PDOException $Exception) {
 		$_SESSION['error_messages'][]  = 'Error occured while updating.';
-		header('Location: ' . $_SERVER['HTTP_REFERER']); 
+		header('Location: ' . $BASE_URL . 'profile/profile.php');
 	}
 
-	
-	header('Location: ' . $BASE_URL . 'profile/profile.php');  
-	
-	/*
-	try{
-		switch ($_GET['update']) {
-			case 'name':
-				$username = $_POST['name'];
-
-				if ($username === "") {
-					$_SESSION['error_messages'][]  = 'it is not possible to have a empty user name.';
-					header('Location: ' . $_SERVER['HTTP_REFERER']);// volta para a pagina anterior  
-					exit;
-				}
-
-				if (existsUser($username)) {
-					$_SESSION['error_messages'][]  = 'username already taken.';					
-					header('Location: ' . $_SERVER['HTTP_REFERER']);  
-				}
-
-				updateUserName($currentUsername,$username);
-
-				$_SESSION['username'] = $username;
-				$_SESSION['success_messages'][] = 'username updated successfully';
-			  break;
-
-			case 'email':
-				$email = $_POST['email'];
-
-				// email needs to be validated
-
-				updateUserEmail($currentUsername,$email);
-
-				$_SESSION['email'] = $email;
-				$_SESSION['success_messages'][] = 'email updated successfully';
-			  break;
-			case 'password':
-				$password = $_POST['password'];
-				$re_password = $_POST['re-password'];
-				
-				// need to validade password strenght maybe somthing in login to and SHA256 tooooo !!!!!!!!!!
-
-				if($password === $re_password){
-					updatePassword($currentUsername,$password);
-				}
-				$_SESSION['success_messages'][] = 'password updated successfully';
-			  break;
-
-			case 'description':
-			 	$description = $_POST['description'];
-
-			 	updateDescription($currentUsername,htmlspecialchars($description));
-
-			 	$_SESSION['description'] = htmlspecialchars($description);
-			 	$_SESSION['success_messages'][] = 'description updated successfully';
-			 	break;
-
-			case 'picture':
-				$picture = $_POST['upload_img'];
-
-				// still need the update picture part
-
-				echo '<p>'.$picture.'</p>';
-			 	break;
-
-			default:
-			  break;
-		}
-
-			link for the profile page NEEDS to be changed
-
-		header('Location: ' . $_SERVER['HTTP_REFERER']);  
-    }catch (PDOException $Exception){
-	 	$_SESSION['error_messages'][]  = 'Error occured while updating.';
-	  	header('Location: ' . $_SERVER['HTTP_REFERER']); 
-	}*/
 ?>
