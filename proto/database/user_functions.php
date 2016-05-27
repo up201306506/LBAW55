@@ -13,6 +13,15 @@
 	);
 	*/	
 
+	function getUser($username) {
+	    global $conn;
+	    $stmt = $conn->prepare("SELECT * 
+	                            FROM users 
+	                            WHERE username = ?");
+	    $stmt->execute(array($username));
+	    return $stmt->fetch();
+ 	}
+	
 	function isLoginCorrect($username, $password) {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 
@@ -41,6 +50,7 @@
 		$stmt->bindParam(':password', hash('sha256', $password));
 		$stmt->bindParam(':isactive', $isactive);
 		$stmt->execute();
+		return getUser($username);
 	}
 	
 	function updateUserName($oldname,$username) {

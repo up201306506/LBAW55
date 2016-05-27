@@ -53,10 +53,10 @@
 			</div>
 			<div class="form-group">
 				<div class="radio-inline">
-					<label><input type="radio" name="opUsertype">Student</label>
+					<label><input type="radio" name="opUsertype" value="Student">Student</label>
 				</div>
 				<div class="radio-inline">
-					<label><input type="radio" name="opUsertype">Professor</label>
+					<label><input type="radio" name="opUsertype" value="Professor">Professor</label>
 				</div>
 			</div>
 			<div id="signup">
