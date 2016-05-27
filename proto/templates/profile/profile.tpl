@@ -113,14 +113,23 @@
 			</div>
 			<div class="well">
 				<ul id="options">
-					<li><a href="../professor/class/create_class.php"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
-					<li><a href="../professor/question/create_question.php"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
+					<span>{$usertype}</span>
+					{if $usertype eq 'Administrator'}
+						<li><a href="../admin/validate_accounts.php"><span class="glyphicon glyphicon-education"></span>Verify Teachers</a></li>
+						<li><a href="../admin/manage_accounts.php"><span class="glyphicon glyphicon-education"></span>Manage Users</a></li>
+					{elseif $usertype eq 'Professor'}
+						<li><a href="../professor/class/create_class.php"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
+						<li><a href="../professor/question/create_question.php"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
+						<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
+					{else}
+						<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
+					{/if}
 				</ul>
 			</div>
+			
 		</div> <!-- col-sm-3 -->
 	</div>
 </div> <!-- wrapper -->
