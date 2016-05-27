@@ -14,7 +14,6 @@
 	$smarty->assign('script_boot', "../../css/Bootstrap/js/bootstrap.min.js");
 	$smarty->assign('script_jquery', "../../javascript/jquery-1.12.1.min.js");
 	$smarty->assign('script', "../../javascript/create_question.js");
-	$smarty->assign('script', "../../javascript/wrapper.js");
 	
 	/*Session variables*/
 	$smarty->assign('session_username', $_SESSION['username']);

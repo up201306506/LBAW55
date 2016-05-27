@@ -17,6 +17,12 @@ h5:first-child {
 	margin-top: 0;
 }
 
+@media (min-width: 768px) {
+	#wrapper {
+		width: 1170px;
+	}
+}
+
 #wrapper {
 	margin: auto;
 	padding: 0 15px 0 15px;

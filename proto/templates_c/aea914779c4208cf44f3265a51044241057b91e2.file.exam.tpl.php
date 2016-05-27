@@ -1,5 +1,32 @@
-{include file='common/header.tpl'}
-{include file='common/navbar.tpl'}
+<?php /* Smarty version Smarty-3.1.15, created on 2016-05-27 23:43:06
+         compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/student/exam/exam.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:607418025748bf6a809855-78874112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'aea914779c4208cf44f3265a51044241057b91e2' => 
+    array (
+      0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/student/exam/exam.tpl',
+      1 => 1464385132,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '607418025748bf6a809855-78874112',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'session_username' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_5748bf6a8defd6_23302520',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5748bf6a8defd6_23302520')) {function content_5748bf6a8defd6_23302520($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <div id="wrapper">
 	<h1>Exam</h1>
@@ -9,7 +36,8 @@
 				<img id="user-img" class="img-circle img-responsive" src="../../css/res/user_img.png" width="200" height="200">
 				<div id="username">
 					<span class="glyphicon glyphicon-credit-card"></span>
-					<span> {$session_username}</span>
+					<span> <?php echo $_smarty_tpl->tpl_vars['session_username']->value;?>
+</span>
 				</div>
 				<div id="start">
 					<span class="glyphicon glyphicon-play"></span>
@@ -195,7 +223,11 @@
 	</div>
 </div>
 
-{include file='javascript_plugins/jquery.tpl'}
-{include file='javascript_plugins/script.tpl'}
-{include file='javascript_plugins/bootstrap.tpl'}
-{include file='common/footer.tpl'}
+<?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/jquery.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/script.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/bootstrap.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php }} ?>
