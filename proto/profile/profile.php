@@ -19,13 +19,10 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', $_SESSION['username']);
-	$smarty->assign('session_name', $_SESSION['name']);
-	$smarty->assign('usertype', $_SESSION['accounttypevar']);
-	$smarty->assign('session_email', $_SESSION['email']);
+	$smarty->assign('session_name', getName($_SESSION['username']));
+	$smarty->assign('usertype', getAccountType($_SESSION['username']));
+	$smarty->assign('session_email', getEmail($_SESSION['username']));
 	$smarty->assign('description', getDescription($_SESSION['username']));
-
-	/*Other variables*/
-	// $smarty->assign('calendar', $calendar);
 	
 	/*This summons the smarty template*/
 	$smarty->display('profile/profile.tpl');
