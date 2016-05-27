@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-05-20 11:34:09
+<?php /* Smarty version Smarty-3.1.15, created on 2016-05-27 16:06:03
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/login_signup.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1652707502573ed4f8154678-76242170%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f99be8f636e3cef78b226168ba309a9095461771' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/login_signup.tpl',
-      1 => 1463736844,
+      1 => 1464357908,
       2 => 'file',
     ),
   ),
@@ -22,56 +22,71 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_573ed4f81f97b9_71440224')) {function content_573ed4f81f97b9_71440224($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-<h1 class="title">ElDoom</h1>
-<div class="container-parent">
-	<div class="container">
-		<div class="col-sm-offset-3 col-sm-6">
-			<ul class="tabs">
-				<li class="tab-link current" data-tab="tab-1">Log In</li>
-				<li class="tab-link" data-tab="tab-2">Sign Up</li>
-			</ul>
-			<div class="tab-content current" id="tab-1">
-				<div id="login-form">
-					<form class="form-horizontal" action="action/login_request.php" method="post" role="form">
-						<div class="form-group">
-							<input name="username" id="username" class="form-control" type="text" placeholder="USERNAME">
-						</div>
-						<div class="form-group">
-							<input name="password" id="password" class="form-control" type="password" placeholder="PASSWORD">
-						</div>
-						<div class="form-group">
-							<input class="btn btn-default" type="submit" value="Log In">
-						</div>
-					</form>
+<div id="form-box">
+	<div class="well">
+	<ul id="tabs">
+		<li class="tab-link current" data-tab="tab-1"><span>Log In</span></li>
+		<li class="tab-link" data-tab="tab-2"><span>Sign Up</span></li>
+	</ul>
+	<div class="tab-content current" id="tab-1">
+		<form action="action/login_request.php" method="post" role="form">
+			<div class="form-group">
+				<div class="input-group">
+					<input name="username" class="form-control" type="text" placeholder="Username">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-credit-card"></span></span>
 				</div>
 			</div>
-			<div class="tab-content" id="tab-2">
-				<div id="signup-form">
-					<form class="form-horizontal" action="action/create_user.php" method="post" role="form">
-						<div class="form-group">
-							<input name="username" id="username" class="form-control" type="text" placeholder="USERNAME">
-						</div>
-						<div class="form-group">
-							<input name="name" id="name" class="form-control" type="text" placeholder="NAME">
-						</div>
-						<div class="form-group">
-							<input name="email" id="email" class="form-control" type="text" placeholder="EMAIL">
-						</div>
-						<div class="form-group">
-							<input name="password" id="password" class="form-control" type="password" placeholder="PASSWORD">
-						</div>
-						<div class="form-group radio-group">
-							<label class="radio-inline"><input type="radio" name="opUsertype" value='Student' checked/>Student</label>
-							<label class="radio-inline"><input type="radio" name="opUsertype" value='Professor' />Professor</label>
-						</div>
-						<div class="form-group">
-							<input class="btn btn-default" type="submit" value="Sign Up">
-						</div>
-					</form>
+			<div class="form-group">
+				<div class="input-group">
+					<input name="password" class="form-control" type="password" placeholder="Password">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
 				</div>
 			</div>
-		</div>
+			<div id="login">
+				<input class="btn btn-default" type="submit" value="Log In">
+			</div>
+		</form>
 	</div>
+	<div class="tab-content" id="tab-2">
+		<form action="action/create_user.php" method="post" role="form">
+			<div class="form-group">
+				<div class="input-group">
+					<input name="username" class="form-control" type="text" placeholder="Username">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-credit-card"></span></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<input name="name" class="form-control" type="text" placeholder="Name">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<input name="email" class="form-control" type="text" placeholder="Email">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="input-group">
+					<input name="password" class="form-control" type="password" placeholder="Password">
+					<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="radio-inline">
+					<label><input type="radio" name="opUsertype" value="Student">Student</label>
+				</div>
+				<div class="radio-inline">
+					<label><input type="radio" name="opUsertype" value="Professor">Professor</label>
+				</div>
+			</div>
+			<div id="signup">
+				<input class="btn btn-default" type="submit" value="Sign Up">
+			</div>
+		</form>
+	</div>
+</div>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/jquery.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>

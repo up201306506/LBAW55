@@ -53,25 +53,25 @@
 		return getUser($username);
 	}
 	
-	function updateName($username, $name) {
+	function updateName($name, $username) {
 		global $conn;
 	    $stmt = $conn->prepare("UPDATE users SET name = ? WHERE username = ?");
 		$stmt->execute(array($name,$username));
 	}
 
-	function updateUserEmail($username,$email) {
+	function updateEmail($email, $username) {
 		global $conn;
 	  	$stmt = $conn->prepare("UPDATE users SET email = ? WHERE username = ?");
 		$stmt->execute(array($email,$username));
 	}
 
-	function updatePassword($username,$password) {
+	function updatePassword($password, $username) {
 		global $conn;
 	  	$stmt = $conn->prepare("UPDATE users SET password = ? WHERE username = ?");
 		$stmt->execute(array(hash('sha256', $password),$username));
 	}
 
-	function updateDescription($username,$description) {
+	function updateDescription($description, $username) {
 		global $conn;
 	  	$stmt = $conn->prepare("UPDATE users SET description = ? WHERE username = ?");
 		$stmt->execute(array($description,$username));
