@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-05-27 23:43:06
+<?php /* Smarty version Smarty-3.1.15, created on 2016-05-28 01:00:26
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/student/exam/exam.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:607418025748bf6a809855-78874112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'aea914779c4208cf44f3265a51044241057b91e2' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/student/exam/exam.tpl',
-      1 => 1464385132,
+      1 => 1464390005,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_5748bf6a8defd6_23302520',
   'variables' => 
   array (
     'session_username' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_5748bf6a8defd6_23302520',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5748bf6a8defd6_23302520')) {function content_5748bf6a8defd6_23302520($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -62,7 +62,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</span>
 			</div>
-			<div class="row question">
+			<div class="row question input-group">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<span>
@@ -91,8 +91,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</form>
 					</div>
 				</div>
+				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 			</div>
-			<div class="row question">
+			<div class="row question input-group">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<span>
@@ -121,8 +122,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</form>
 					</div>
 				</div>
+				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 			</div>
-			<div class="row question">
+			<div class="row question input-group">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<span>
@@ -151,8 +153,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</form>
 					</div>
 				</div>
+				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 			</div>
-			<div class="row question">
+			<div class="row question input-group">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<span>
@@ -181,8 +184,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</form>
 					</div>
 				</div>
+				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 			</div>
-			<div class="row question">
+			<div class="row question input-group">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<span>
@@ -211,6 +215,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</form>
 					</div>
 				</div>
+				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 			</div>
 			<ul class="pagination">
 				<li class="active"><a href="#">1</a></li>
