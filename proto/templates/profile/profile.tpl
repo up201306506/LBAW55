@@ -116,6 +116,7 @@
 					<span>{$usertype}</span>
 					{if $usertype eq 'Administrator'}
 						<li><a href="../admin/validate_accounts.php"><span class="glyphicon glyphicon-education"></span>Verify Teachers</a></li>
+						<li><a href="../admin/manage_accounts.php"><span class="glyphicon glyphicon-education"></span>Manage Users</a></li>
 					{elseif $usertype eq 'Professor'}
 						<li><a href="../professor/class/create_class.php"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
