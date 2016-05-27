@@ -77,12 +77,39 @@
 		$stmt->execute(array($description,$username));
 	}
 
+	function getName($username) {
+		global $conn;
+	    $stmt = $conn->prepare("SELECT name 
+	                            FROM users 
+	                            WHERE username = ?");
+	    $stmt->execute(array($username));
+	    return $stmt->fetch()['name'];
+	}
+
+	function getEmail($username) {
+		global $conn;
+	    $stmt = $conn->prepare("SELECT email 
+	                            FROM users 
+	                            WHERE username = ?");
+	    $stmt->execute(array($username));
+	    return $stmt->fetch()['email'];
+	}
+
+	function getAccountType($username) {
+		global $conn;
+	    $stmt = $conn->prepare("SELECT accounttypevar 
+	                            FROM users 
+	                            WHERE username = ?");
+	    $stmt->execute(array($username));
+	    return $stmt->fetch()['accounttypevar'];
+	}
+
 	function getDescription($username) {
 		global $conn;
 	    $stmt = $conn->prepare("SELECT description 
 	                            FROM users 
-	                            WHERE username = ?");// needs the isActive contrain
-	    $stmt->execute(array($username));// sha1($password)
+	                            WHERE username = ?");
+	    $stmt->execute(array($username));
 	    return $stmt->fetch()['description'];
 	}
 ?>
