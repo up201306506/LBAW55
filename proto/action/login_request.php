@@ -4,7 +4,7 @@
 	include_once('../database/user_functions.php');
 
 	if (isset($_POST['username']) || isset($_POST['password'])) {
-		$user = isLoginCorrect($username, $password);
+		$user = isLoginCorrect($_POST['username'], $_POST['password']);
 
 		if (isset($user)) {
 			if ($user['isactive'] === 'Active'){
@@ -19,7 +19,7 @@
 				header('Location: '. $BASE_URL .'profile/profile.php');	
 			} else {
 				$_SESSION['error_messages'][] = 'User account still pending!';
-				// header('Location: ' . $_SERVER['HTTP_REFERER']);
+				header('Location: ' . $_SERVER['HTTP_REFERER']);
 			}
 		} else {
 			$_SESSION['error_messages'][] = 'Wrong Login Credentials';
