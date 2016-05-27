@@ -5,78 +5,36 @@ html, body {
 	height: 100%;
 }
 
-body {
-	display: table;
-}
-
-.container-parent {
-	display: table-cell;
-	vertical-align: middle;
-}
-
-.title {
+#form-box {
+	top: 50%;
 	left: 50%;
-	font-size: 52px;
-	margin: 50px 0 0 0;
+	padding: 0 20px;
 	position: absolute;
-	transform: translate(-50%);
+	transform: translate(-50%, -50%);
 }
 
-#login-form {
-	padding: 30px;
-	background-color: #f5f5f5;
-	border-left: 1px solid #dddddd;
-	border-right: 1px solid #dddddd;
-	border-bottom: 1px solid #dddddd;
-}
-
-#signup-form {
-	padding: 30px;
-	background-color: #f5f5f5;
-	border-left: 1px solid #dddddd;
-	border-right: 1px solid #dddddd;
-	border-bottom: 1px solid #dddddd;
-}
-
-.form-horizontal .form-group {
-	margin-left: 0;
-	margin-right: 0;
-}
-
-.form-group:last-child {
+.well {
 	margin-bottom: 0;
 }
 
-#username, #password, #email, #name {
-	text-align: center;
-}
-
-.tabs {
+#tabs {
 	margin: 0;
-	padding: 0 0 50px 0;
+	padding: 0;
 	list-style-type: none;
 }
 
-.tabs li {
-	margin: 0;
+#tabs li span {
 	width: 50%;
 	float: left;
-	padding: 15px 0;
+	padding: 10px;
+	margin-bottom: 15px;
 	text-align: center;
+	background-color: #ddd;
+	transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
 }
 
-.tabs .current {
-	background-color: #f5f5f5;
-	border-top: 1px solid #dddddd;
-	border-left: 1px solid #dddddd;
-	border-right: 1px solid #dddddd;
-}
-
-.tabs li:not(.current) {
-	border-bottom: 1px solid #dddddd;
-}
-
-.tabs li:not(.current):hover {
+#tabs li span:hover {
 	cursor: pointer;
 }
 
@@ -86,4 +44,13 @@ body {
 
 .tab-content.current {
 	display: inherit;
+}
+
+input[type="text"], input[type="password"] {
+	text-align: center;
+}
+
+#login, #signup {
+	margin: auto;
+	text-align: center;
 }

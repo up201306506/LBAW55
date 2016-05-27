@@ -1,7 +1,6 @@
-var question_block = "<div class=\"answer-block\"><div class=\"form-group\"><label for=\"answer\">Answer#:</label><textarea id=\"answer\" class=\"form-control\" rows=\"5\"></textarea></div></div>";
-
 $(document).ready(function() {
 	$("#add_answer").click(function() {
+		var question_block = "<div class=\"answer-block\"><div class=\"form-group\"><label for=\"answer\">Answer #" + ($(".answer-block").length + 1) + ":</label><textarea id=\"answer\" class=\"form-control\" rows=\"5\"></textarea></div></div>";
 		$(".answer-block").last().after(question_block);
 	});
 });

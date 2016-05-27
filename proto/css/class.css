@@ -5,28 +5,32 @@ html, body {
 	height: 100%;
 }
 
-.class, .class-info, .class-options {
-	padding: 15px;
+h1, h3 {
+	margin: 0 0 10px 0;
 }
 
-.class-box {
-	padding: 15px;
-	border-radius: 5px;
-	border: 1px solid #dddddd;
-	background-color: #f5f5f5;
+h5 {
+	margin: 5px 0 5px 0;
 }
 
-.class h1 {
-	margin: 0;
-	padding: 5px;
+h5:first-child {
+	margin-top: 0;
 }
 
-.class span {
-	padding: 5px;
+#wrapper {
+	margin: auto;
+	padding: 0 15px 0 15px;
+}
+
+#class-info span {
 	display: block;
 }
 
-.exams span {
+.well table {
+	margin-bottom: 0;
+}
+
+.well table span {
 	margin-right: 5px;
 }
 
@@ -34,64 +38,38 @@ html, body {
 	display: none;
 }
 
-#shide {
-	margin: auto;
-	display: block!important;
-}
-
-.options a {
-	margin: 5px;
-	display: block;
-}
-
-.options span {
+#participants img {
 	margin-right: 5px;
 }
 
-.events {
-	padding: 15px;
-	border-radius: 5px;
-	border: 1px solid #dddddd;
-	background-color: #f5f5f5;
+#center {
+	margin: auto;
+	text-align: center;
 }
 
-.event-h5 {
-	margin-top: 0;
+#calendar {
+	display: table;
+	content: " ";
 }
 
-.calendar {
-	padding: 15px;
-	margin-top: 20px;
-	border-radius: 5px;
-	border: 1px solid #dddddd;
-	background-color: #f5f5f5;
-}
-
-.calendar, .calendar-table, .calendar-header {
-	width: 100%;
-}
-
-.month {
-	width: 33%;
-	float: left;
-}
-
-.arrow-left, .arrow-right {
-	width: 33%;
-	float: left;
+#month, #weekdays, #days {
 	margin: 0;
-}
-
-.options {
-	padding: 15px;
-	margin-top: 20px;
-	border-radius: 5px;
-	border: 1px solid #dddddd;
-	background-color: #f5f5f5;
-}
-
-.options ul {
-	padding-left: 0;
-	margin-bottom: 0;
+	padding: 0;
 	list-style-type: none;
+}
+
+#month li, #weekdays li, #days li {
+	float: left;
+	text-align: center;
+}
+
+#options {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#options a span {
+	padding: 5px;
+	margin-right: 5px;
 }
