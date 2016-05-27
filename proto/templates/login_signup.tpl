@@ -1,6 +1,7 @@
 {include file='common/header.tpl'}
 
-<div id="form-box" class="well">
+<div id="form-box">
+	<div class="well">
 	<ul id="tabs">
 		<li class="tab-link current" data-tab="tab-1"><span>Log In</span></li>
 		<li class="tab-link" data-tab="tab-2"><span>Sign Up</span></li>
@@ -63,6 +64,7 @@
 			</div>
 		</form>
 	</div>
+</div>
 </div>
 
 {include file='javascript_plugins/jquery.tpl'}
