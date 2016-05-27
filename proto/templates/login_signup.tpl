@@ -7,7 +7,7 @@
 		<li class="tab-link" data-tab="tab-2"><span>Sign Up</span></li>
 	</ul>
 	<div class="tab-content current" id="tab-1">
-		<form action="profile.php" method="post" role="form">
+		<form action="action/login_request.php" method="post" role="form">
 			<div class="form-group">
 				<div class="input-group">
 					<input name="username" class="form-control" type="text" placeholder="Username">
@@ -26,7 +26,7 @@
 		</form>
 	</div>
 	<div class="tab-content" id="tab-2">
-		<form action="profile.php" method="post" role="form">
+		<form action="action/create_user.php" method="post" role="form">
 			<div class="form-group">
 				<div class="input-group">
 					<input name="username" class="form-control" type="text" placeholder="Username">
