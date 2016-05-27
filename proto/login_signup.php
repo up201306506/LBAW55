@@ -10,7 +10,7 @@
 	$smarty->assign('csspage', "css/login_signup.css");
 
 	$smarty->assign('jquery', "javascript/jquery-1.12.1.min.js");
-	$smarty->assign('script_boot', "/css/Bootstrap/js/bootstrap.min.js");
+	$smarty->assign('script_boot', "css/Bootstrap/js/bootstrap.min.js");
 	$smarty->assign('script', "javascript/tabs.js");
 	
 	/*This summons the smarty template*/
