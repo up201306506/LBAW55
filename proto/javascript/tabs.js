@@ -1,11 +1,11 @@
 $(document).ready(function() {
-	$(".tabs li").click(function() {
-		var tab_id = $(this).attr("data-tab");
+	$("#tabs li span").click(function() {
+		var tab_id = $(this).parent().attr("data-tab");
 
-		$(".tabs li").removeClass("current");
+		$("#tabs li").removeClass("current");
 		$(".tab-content").removeClass("current");
 
-		$(this).addClass("current");
+		$(this).parent().addClass("current");
 		$("#" + tab_id).addClass("current");
 	});
 });
