@@ -9,15 +9,15 @@
 		if (!empty($user)) {
 			if ($user['isactive'] === 'Active') {
 				$_SESSION['userid'] = $user['userid'];
-				echo "success";
+				header('Location: ../profile/profile.php');
 			} else {
-				echo "pending";
+				header('Location: ../login_signup.php');
 			}
 		} else {
-			echo "wrongCredentials";
+			header('Location: ../login_signup.php');
 		}
 	} else {
-		echo "fillInputFields";
+		header('Location: ../login_signup.php');
 	}
 
 ?>

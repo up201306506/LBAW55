@@ -24,41 +24,6 @@ $(document).ready(function() {
 		$(this).parent().addClass("current");
 		$("#" + tab_id).addClass("current");
 	});
-
-	$("#login input").click(function() {
-		$.post("action/login_request.php", { username: $("#username").val(), password: $("#password").val() }, function(result) {
-			if (result === "success") {
-				window.location = "profile/profile.php";
-			} else if (result === "pending") {
-				alert("still pending");
-			} else if (result === "wrongCredentials") {
-				alert("wrong credentials");
-			} else if (result === "fillInputFields") {
-				alert("fill input fields");
-			}
-		});
-	});
-
-	$("#signup input").click(function() {
-		var usertype;
-		if ($("#student").is(":checked")) {
-			usertype = "Student";
-		} else if ($("#professor").is(":checked")) {
-			usertype = "Professor";
-		}
-
-		$.post("action/create_user.php", { username: $("#username2").val(), password: $("#password2").val(), name: $("#name").val(), email: $("#email").val(), usertype: usertype }, function(result) {
-			if (result === "success") {
-				window.location = "profile/profile.php";
-			} else if (result === "pending") {
-				alert("still pending");
-			} else if (result === "failToRegister") {
-				alert("failed to register");
-			} else if (result === "fillInputFields") {
-				alert("fill input fields");
-			}
-		});
-	});
 });
 
 
