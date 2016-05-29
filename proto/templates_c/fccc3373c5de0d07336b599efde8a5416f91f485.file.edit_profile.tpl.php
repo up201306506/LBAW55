@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-05-29 05:03:50
+<?php /* Smarty version Smarty-3.1.15, created on 2016-05-29 05:04:32
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/edit_profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:142052089857485514859639-21585156%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fccc3373c5de0d07336b599efde8a5416f91f485' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/edit_profile.tpl',
-      1 => 1464490960,
+      1 => 1464491057,
       2 => 'file',
     ),
   ),
@@ -82,8 +82,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div> <!-- wrapper -->
 
 <?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/jquery.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
-
-<?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/script.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/bootstrap.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

@@ -6,7 +6,7 @@
 		<div class="col-sm-offset-3 col-sm-6">
 			<h1>Edit Profile</h1>
 			<div class="well">
-				<form role="form">
+				<form action="{$BASE_URL|cat:'action/edit_profile_action.php'}" method="post" role="form">
 					<div class="form-group">
 						<label for="name">Name:</label>
 						<input id="name" name="name" class="form-control" type="text"></input>
