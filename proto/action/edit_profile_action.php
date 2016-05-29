@@ -3,6 +3,7 @@
 	include_once('../config/init.php');	
 	include_once('../database/user_functions.php');
 
+	$_SESSION['error_messages'][] = 'your in';
 	if (!empty($_POST['name'])) {
 		updateName($_POST['name'], $_SESSION['userid']);
 		header('Location: ../profile/profile.php');

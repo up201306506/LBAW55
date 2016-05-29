@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-05-28 00:00:06
+<?php /* Smarty version Smarty-3.1.15, created on 2016-05-29 05:00:02
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/edit_profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:142052089857485514859639-21585156%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fccc3373c5de0d07336b599efde8a5416f91f485' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/edit_profile.tpl',
-      1 => 1464386405,
+      1 => 1464490367,
       2 => 'file',
     ),
   ),
@@ -32,49 +32,49 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<form role="form">
 					<div class="form-group">
 						<label for="name">Name:</label>
-						<input id="name" class="form-control" type="text"></input>
+						<input id="name" name="name" class="form-control" type="text"></input>
 					</div>
-					<input id="name-btn" class="btn btn-primary" type="submit" value="Submit new Name"></input>
+					<input class="btn btn-primary" type="submit" value="Submit new Name"></input>
 				</form>
 			</div>
 			<div class="well">
 				<form role="form">
 					<div class="form-group">
 						<label for="email">Email:</label>
-						<input id="email" class="form-control" type="text"></input>
+						<input id="email" name="email" class="form-control" type="text"></input>
 					</div>
-					<input id="email-btn" class="btn btn-primary" type="submit" value="Submit new Email"></input>
+					<input class="btn btn-primary" type="submit" value="Submit new Email"></input>
 				</form>
 			</div>
 			<div class="well">
 				<form role="form">
 					<div class="form-group">
 						<label for="password">Password:</label>
-						<input id="password" class="form-control" type="password"></input>
+						<input id="password" name="password" class="form-control" type="password"></input>
 					</div>
 					<div class="form-group">
 						<label for="re-password">Confirm Password:</label>
-						<input id="re-password" class="form-control" type="password"></input>
+						<input id="re-password" name="re-password" class="form-control" type="password"></input>
 					</div>
-					<input id="password-btn" class="btn btn-primary" type="submit" value="Submit new Password"></input>
+					<input class="btn btn-primary" type="submit" value="Submit new Password"></input>
 				</form>
 			</div>
 			<div class="well">
 				<form role="form">
 					<div class="form-group">
 						<label for="description">Description:</label>
-						<textarea id="description" class="form-control" rows="6"></textarea>
+						<textarea id="description" name="description" class="form-control" rows="6"></textarea>
 					</div>
-					<input id="description-btn" class="btn btn-primary" type="submit" value="Submit new Description"></input>
+					<input class="btn btn-primary" type="submit" value="Submit new Description"></input>
 				</form>
 			</div>
 			<div class="well">
 				<form role="form">
 					<div class="form-group">
 						<label for="upload_img">Profile Picture:</label>
-						<input id="upload_img" type="file" accept="image/*"></input>
+						<input id="upload_img" name="upload_img" type="file" accept="image/*"></input>
 					</div>
-					<input id="profile-pic-btn" class="btn btn-primary" type="submit" value="Submit new Profile Picture"></input>
+					<input class="btn btn-primary" type="submit" value="Submit new Profile Picture"></input>
 				</form>
 			</div>
 		</div>
