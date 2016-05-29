@@ -1,18 +1,5 @@
 <?php
 
-	/*
-	CREATE TABLE User (
-	userId SERIAL PRIMARY KEY,
-	username TEXT NOT NULL UNIQUE,
-	accountType ACCOUNTTYPE,
-	description TEXT NOT NULL CHECK (description.length >= 0 && description.length < 500),
-	email TEXT NOT NULL,
-	name TEXT NOT NULL,
-	password TEXT NOT NULL CHECK (password.length >= 5),
-	isActive USERACTIVE
-	);
-	*/	
-
 	function getUser($username) {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 

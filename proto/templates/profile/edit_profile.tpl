@@ -9,49 +9,49 @@
 				<form role="form">
 					<div class="form-group">
 						<label for="name">Name:</label>
-						<input id="name" class="form-control" type="text"></input>
+						<input id="name" name="name" class="form-control" type="text"></input>
 					</div>
-					<input id="name-btn" class="btn btn-primary" type="submit" value="Submit new Name"></input>
+					<input class="btn btn-primary" type="submit" value="Submit new Name"></input>
 				</form>
 			</div>
 			<div class="well">
 				<form role="form">
 					<div class="form-group">
 						<label for="email">Email:</label>
-						<input id="email" class="form-control" type="text"></input>
+						<input id="email" name="email" class="form-control" type="text"></input>
 					</div>
-					<input id="email-btn" class="btn btn-primary" type="submit" value="Submit new Email"></input>
+					<input class="btn btn-primary" type="submit" value="Submit new Email"></input>
 				</form>
 			</div>
 			<div class="well">
 				<form role="form">
 					<div class="form-group">
 						<label for="password">Password:</label>
-						<input id="password" class="form-control" type="password"></input>
+						<input id="password" name="password" class="form-control" type="password"></input>
 					</div>
 					<div class="form-group">
 						<label for="re-password">Confirm Password:</label>
-						<input id="re-password" class="form-control" type="password"></input>
+						<input id="re-password" name="re-password" class="form-control" type="password"></input>
 					</div>
-					<input id="password-btn" class="btn btn-primary" type="submit" value="Submit new Password"></input>
+					<input class="btn btn-primary" type="submit" value="Submit new Password"></input>
 				</form>
 			</div>
 			<div class="well">
 				<form role="form">
 					<div class="form-group">
 						<label for="description">Description:</label>
-						<textarea id="description" class="form-control" rows="6"></textarea>
+						<textarea id="description" name="description" class="form-control" rows="6"></textarea>
 					</div>
-					<input id="description-btn" class="btn btn-primary" type="submit" value="Submit new Description"></input>
+					<input class="btn btn-primary" type="submit" value="Submit new Description"></input>
 				</form>
 			</div>
 			<div class="well">
 				<form role="form">
 					<div class="form-group">
 						<label for="upload_img">Profile Picture:</label>
-						<input id="upload_img" type="file" accept="image/*"></input>
+						<input id="upload_img" name="upload_img" type="file" accept="image/*"></input>
 					</div>
-					<input id="profile-pic-btn" class="btn btn-primary" type="submit" value="Submit new Profile Picture"></input>
+					<input class="btn btn-primary" type="submit" value="Submit new Profile Picture"></input>
 				</form>
 			</div>
 		</div>
