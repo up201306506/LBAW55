@@ -8,18 +8,21 @@
 			<div class="box">
 				<img id="user-img" class="img-circle img-responsive" src="{$BASE_URL|cat:'css/res/user_img.png'}" width="200" height="200">
 				<div id="username">
-					<span class="glyphicon glyphicon-credit-card"></span>{$session_username}
+					<span class="glyphicon glyphicon-credit-card"></span>
+					<span>{$session_username}</span>
 				</div>
 				<div id="name">
-					<span class="glyphicon glyphicon-user"></span>{$session_name}
+					<span class="glyphicon glyphicon-user"></span>
+					<span>{$session_name}</span>
 				</div>
 				<div id="email">
-					<span class="glyphicon glyphicon-envelope"></span>{$session_email}
+					<span class="glyphicon glyphicon-envelope"></span>
+					<span>{$session_email}</span>
 				</div>
 			</div>
 			<div class="box">
 				<h3>Description</h3>
-				<span>{$description}</span>
+				<span id="description">{$description}</span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-8 col-sm-12">
@@ -62,7 +65,7 @@
 			<div id="calendar" class="box">
 				<ul id="month">
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
-					<li><a href="#">Month</a></li>
+					<li><a href="{$BASE_URL|cat:'profile/calendar.php'}">Month</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
 				</ul>
 				<ul id="weekdays">
@@ -111,18 +114,18 @@
 			<div id="options" class="box">
 				<ul>
 					{if $usertype eq 'Administrator'}
-						<li><a href="{$BASE_URL|cat:'admin/validate_accounts.php'}"><span class=""></span>Verify Teachers</a></li>
+						<li><a href="{$BASE_URL|cat:'admin/validate_accounts.php'}"><span class=""></span>Validate Professor Accounts</a></li>
 						<li><a href="{$BASE_URL|cat:'admin/manage_database.php'}"><span class=""></span>Manage Database</a></li>
 					{elseif $usertype eq 'Professor'}
 						<li><a href="{$BASE_URL|cat:'professor/class/create_class.php'}"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
+						<li><a href="{$BASE_URL|cat:'professor/exam/create_exam.php'}"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
 						<li><a href="{$BASE_URL|cat:'professor/question/create_question.php'}"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
+						<li><a href="{$BASE_URL|cat:'professor/statistics/statistics.php'}"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
+						<li><a href="{$BASE_URL|cat:'public/review_grades.php'}"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
+						<li><a href="{$BASE_URL|cat:'public/find_classes.php'}"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					{else}
-						<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
+						<li><a href="{$BASE_URL|cat:'public/review_grades.php'}"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
+						<li><a href="{$BASE_URL|cat:'public/find_classes.php'}"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					{/if}
 				</ul>
 			</div>

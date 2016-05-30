@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-05-27 23:39:54
+<?php /* Smarty version Smarty-3.1.15, created on 2016-05-30 22:44:54
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/search_results.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:15657205775748678356efe6-68460144%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'c5b6e3b5cd1674ba92da51561540c7da033ee9ee' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/search_results.tpl',
-      1 => 1464385126,
+      1 => 1464641093,
       2 => 'file',
     ),
   ),
@@ -28,12 +28,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-<div id="wrapper">
+<div class="container">
 	<h1>Search results for "<?php echo $_smarty_tpl->tpl_vars['search_term']->value;?>
 "</h1>
 	<div class="row">
-		<div class="col-sm-5">
-			<div class="well">
+		<div class="col-lg-10 col-md-10 col-sm-12">
+			<div class="box">
 				<h3>Users</h3>
 				<table class="table table-hover">
 					<thead>
@@ -47,9 +47,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</tbody>
 				</table>
 			</div>
-		</div>
-		<div class="col-sm-5">
-			<div class="well">
+			<div class="box">
 				<h3>Classes</h3>
 				<table class="table table-hover">
 					<thead>
@@ -65,19 +63,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</table>
 			</div>
 		</div>
-		<div class="col-sm-2">
-			<div class="panel panel-default">
-				<div class="panel-heading text-center">Filters</div>
-				<div class="panel-body">
+		<div class="col-lg-2 col-md-2 col-sm-12">
+			<div class="my-panel">
+				<div class="my-panel-header text-center">Filters</div>
+				<div class="my-panel-body">
 					<span>Filter by:</span>
 					<div class="checkbox">
 						<label><input type="checkbox" />Professors</label>
 					</div>
 					<div class="checkbox">
 						<label><input type="checkbox" />Students</label>
-					</div>
-					<div class="checkbox">
-						<label><input type="checkbox" />Classes</label>
 					</div>
 				</div>
 			</div>

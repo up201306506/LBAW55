@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-05-30 22:22:56
+<?php /* Smarty version Smarty-3.1.15, created on 2016-05-31 00:37:01
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:346403140573ed52287fa37-14355705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0bd976fb37f9ecd7e131551ae7f5681ff7767870' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl',
-      1 => 1464639552,
+      1 => 1464647819,
       2 => 'file',
     ),
   ),
@@ -41,21 +41,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<img id="user-img" class="img-circle img-responsive" src="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('css/res/user_img.png');?>
 " width="200" height="200">
 				<div id="username">
-					<span class="glyphicon glyphicon-credit-card"></span><?php echo $_smarty_tpl->tpl_vars['session_username']->value;?>
-
+					<span class="glyphicon glyphicon-credit-card"></span>
+					<span><?php echo $_smarty_tpl->tpl_vars['session_username']->value;?>
+</span>
 				</div>
 				<div id="name">
-					<span class="glyphicon glyphicon-user"></span><?php echo $_smarty_tpl->tpl_vars['session_name']->value;?>
-
+					<span class="glyphicon glyphicon-user"></span>
+					<span><?php echo $_smarty_tpl->tpl_vars['session_name']->value;?>
+</span>
 				</div>
 				<div id="email">
-					<span class="glyphicon glyphicon-envelope"></span><?php echo $_smarty_tpl->tpl_vars['session_email']->value;?>
-
+					<span class="glyphicon glyphicon-envelope"></span>
+					<span><?php echo $_smarty_tpl->tpl_vars['session_email']->value;?>
+</span>
 				</div>
 			</div>
 			<div class="box">
 				<h3>Description</h3>
-				<span><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+				<span id="description"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
 </span>
 			</div>
 		</div>
@@ -99,7 +102,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div id="calendar" class="box">
 				<ul id="month">
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
-					<li><a href="#">Month</a></li>
+					<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('profile/calendar.php');?>
+">Month</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
 				</ul>
 				<ul id="weekdays">
@@ -149,21 +153,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<ul>
 					<?php if ($_smarty_tpl->tpl_vars['usertype']->value=='Administrator') {?>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/validate_accounts.php');?>
-"><span class=""></span>Verify Teachers</a></li>
+"><span class=""></span>Validate Professor Accounts</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_database.php');?>
 "><span class=""></span>Manage Database</a></li>
 					<?php } elseif ($_smarty_tpl->tpl_vars['usertype']->value=='Professor') {?>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/class/create_class.php');?>
 "><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/exam/create_exam.php');?>
+"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/question/create_question.php');?>
 "><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/statistics/statistics.php');?>
+"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php');?>
+"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/find_classes.php');?>
+"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					<?php } else { ?>
-						<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
-						<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php');?>
+"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/find_classes.php');?>
+"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					<?php }?>
 				</ul>
 			</div>

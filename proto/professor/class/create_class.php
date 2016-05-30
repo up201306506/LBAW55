@@ -2,10 +2,10 @@
 
 	/*This summons the database and smarty initializer */
 	include_once('../../config/init.php');
+	include_once('../../database/user_functions.php');
 
 	/*Other PHP actions should go here*/
-	$pagename = 'Create Class';
-	$smarty->assign('pagename', $pagename);
+	$smarty->assign('pagename', 'Create Class');
 
 	$smarty->assign('bootstrap', "../../css/Bootstrap/css/bootstrap.min.css");
 	$smarty->assign('csspage', "../../css/create_class.css");

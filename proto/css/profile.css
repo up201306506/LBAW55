@@ -26,6 +26,13 @@ h5:first-child {
 #username, #name, #email {
 	padding: 5px;
 	display: block;
+	text-align: justify;
+	word-wrap: break-word;
+}
+
+#description {
+	text-align: justify;
+	word-wrap: break-word;
 }
 
 #username span, #name span, #email span {

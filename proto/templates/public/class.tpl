@@ -1,16 +1,15 @@
 {include file='common/header.tpl'}
 {include file='common/navbar.tpl'}
 
-<div id="wrapper">
-	<h1>Class</h1>
+<div class="container">
 	<div class="row">
-		<div class="col-sm-3">
-			<div id="class-info" class="well">
+		<div id="first" class="col-lg-3 col-md-4 col-sm-12">
+			<div id="class-info" class="box">
 				<h3>Information</h3>
 				<span>Created by: Professor's Name</span>
 				<span>Date: 01/01/2015</span>
 			</div>
-			<div class="well">
+			<div class="box">
 				<h3>Description</h3>
 				<span>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -22,8 +21,8 @@
 				</span>
 			</div>
 		</div>
-		<div class="col-sm-6">
-			<div class="well">
+		<div class="col-lg-6 col-md-8 col-sm-12">
+			<div class="box">
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -37,7 +36,7 @@
 					</tbody>
 				</table>
 			</div>
-			<div id="participants" class="well">
+			<div id="participants" class="box">
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -54,14 +53,14 @@
 				<button id="shide" class="btn btn-default">Show Participants</button>
 			</div>
 		</div>
-		<div class="col-sm-3">
-			<div class="well">
+		<div id="third" class="col-lg-3 col-md-4 col-sm-12">
+			<div id="events" class="box">
 				<h5>ONGOING</h5>
 				<span> - Nothing to report</span>
 				<h5>COMING SOON</h5>
 				<span> - Nothing to report</span>
 			</div>
-			<div id="calendar" class="well">
+			<div id="calendar" class="box">
 				<ul id="month">
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
 					<li><a href="#">Month</a></li>
@@ -110,11 +109,9 @@
 					<li>31</li>
 				</ul>
 			</div>
-			<div class="well">
-				<ul id="options">
-					<li><a href="#"><span class=""></span>TODO</a></li>
-					<li><a href="#"><span class=""></span>TODO</a></li>
-					<li><a href="#"><span class=""></span>TODO</a></li>
+			<div id="options" class="box">
+				<ul>
+					
 				</ul>
 			</div>
 		</div>
