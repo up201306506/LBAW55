@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-05-27 23:29:23
+<?php /* Smarty version Smarty-3.1.15, created on 2016-05-30 22:18:29
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:346403140573ed52287fa37-14355705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0bd976fb37f9ecd7e131551ae7f5681ff7767870' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl',
-      1 => 1464384561,
+      1 => 1464639503,
       2 => 'file',
     ),
   ),
@@ -19,6 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_573ed522e5c2a2_65592306',
   'variables' => 
   array (
+    'BASE_URL' => 0,
     'session_username' => 0,
     'session_name' => 0,
     'session_email' => 0,
@@ -32,37 +33,34 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
-<div class="container"></div>
-<div id="wrapper">
+<div class="container">
 	<h1>Profile</h1>
 	<div class="row">
-		<div id="user-info" class="col-sm-3">
-			<div class="well">
-				<img id="user-img" class="img-circle img-responsive" src="../css/res/user_img.png" width="200" height="200">
+		<div id="first" class="col-lg-3 col-md-4 col-sm-12">
+			<div class="box">
+				<img id="user-img" class="img-circle img-responsive" src="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('css/res/user_img.png');?>
+" width="200" height="200">
 				<div id="username">
-					<span class="glyphicon glyphicon-credit-card"></span>
-					<span> <?php echo $_smarty_tpl->tpl_vars['session_username']->value;?>
-</span>
+					<span class="glyphicon glyphicon-credit-card"></span><?php echo $_smarty_tpl->tpl_vars['session_username']->value;?>
+
 				</div>
 				<div id="name">
-					<span class="glyphicon glyphicon-user"></span>
-					<span> <?php echo $_smarty_tpl->tpl_vars['session_name']->value;?>
-</span>
+					<span class="glyphicon glyphicon-user"></span><?php echo $_smarty_tpl->tpl_vars['session_name']->value;?>
+
 				</div>
 				<div id="email">
-					<span class="glyphicon glyphicon-envelope"></span>
-					<span> <?php echo $_smarty_tpl->tpl_vars['session_email']->value;?>
-</span>
+					<span class="glyphicon glyphicon-envelope"></span><?php echo $_smarty_tpl->tpl_vars['session_email']->value;?>
+
 				</div>
 			</div>
-			<div class="well">
+			<div class="box">
 				<h3>Description</h3>
 				<span><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
 </span>
 			</div>
-		</div> <!-- col-sm-3 -->
-		<div id="user-class-exam" class="col-sm-6">
-			<div class="well">
+		</div>
+		<div class="col-lg-6 col-md-8 col-sm-12">
+			<div class="box">
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -76,7 +74,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</tbody>
 				</table>
 			</div>
-			<div class="well">
+			<div class="box">
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -86,19 +84,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</tr>
 					</thead>
 					<tbody>
-						
+
 					</tbody>
 				</table>
 			</div>
-		</div> <!-- col-sm-6 -->
-		<div id="user-options" class="col-sm-3">
-			<div class="well">
+		</div>
+		<div id="third" class="col-lg-3 col-md-4 col-sm-12">
+			<div id="events" class="box">
 				<h5>ONGOING</h5>
 				<span> - Nothing to report</span>
 				<h5>COMING SOON</h5>
 				<span> - Nothing to report</span>
 			</div>
-			<div id="calendar" class="well">
+			<div id="calendar" class="box">
 				<ul id="month">
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
 					<li><a href="#">Month</a></li>
@@ -147,29 +145,31 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<li>31</li>
 				</ul>
 			</div>
-			<div class="well">
-				<ul id="options">
-					<span><?php echo $_smarty_tpl->tpl_vars['usertype']->value;?>
-</span>
+			<div id="options" class="box">
+				<ul>
 					<?php if ($_smarty_tpl->tpl_vars['usertype']->value=='Administrator') {?>
-						<li><a href="../admin/validate_accounts.php"><span class="glyphicon glyphicon-education"></span>Verify Teachers</a></li>
-						<li><a href="../admin/manage_accounts.php"><span class="glyphicon glyphicon-education"></span>Manage Users</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/validate_accounts.php');?>
+"><span class=""></span>Verify Teachers</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_database.php');?>
+"><span class=""></span>Manage Database</a></li>
 					<?php } elseif ($_smarty_tpl->tpl_vars['usertype']->value=='Professor') {?>
-						<li><a href="../professor/class/create_class.php"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/class/create_class.php');?>
+"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
-						<li><a href="../professor/question/create_question.php"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/question/create_question.php');?>
+"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					<?php } else { ?>
+						<li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
 						<li><a href="#"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					<?php }?>
 				</ul>
 			</div>
-			
-		</div> <!-- col-sm-3 -->
+		</div>
 	</div>
-</div> <!-- wrapper -->
+</div>
 
 <?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/jquery.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-05-27 16:17:19
+<?php /* Smarty version Smarty-3.1.15, created on 2016-05-30 21:52:26
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/common/navbar.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:961057036573ed522e65f85-71060417%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0ce6a930f854fbbde79e5dde3411c249a9273a9f' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/common/navbar.tpl',
-      1 => 1464358635,
+      1 => 1464637944,
       2 => 'file',
     ),
   ),
@@ -36,12 +36,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</div>
 		<div class="collapse navbar-collapse" id="navbar">
 			<ul class="nav navbar-nav">
-				<li><a href="#">Home</a></li>
 				<li>
 					<form class="navbar-form" action="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/search_results.php');?>
 " method="get" role="search">
 						<div class="input-group">
-							<input name="search_term" type="text" class="form-control" placeholder="Search"></input>
+							<input id="search-term" name="search-term" type="text" class="form-control" placeholder="Search"></input>
 							<div class="input-group-btn">
 								<button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
 							</div>
@@ -50,18 +49,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Options <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('profile/profile.php');?>
+				<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('profile/profile.php');?>
 "><span class="glyphicon glyphicon-user"></span> <?php echo $_smarty_tpl->tpl_vars['session_username']->value;?>
 </a></li>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('profile/edit_profile.php');?>
+				<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('profile/edit_profile.php');?>
 "><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('action/logout_request.php');?>
+				<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('action/logout_request.php');?>
 "><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-					</ul>
-				</li>
 			</ul>
 		</div>
 	</div> <!-- container-fluid -->

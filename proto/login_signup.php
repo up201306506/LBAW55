@@ -4,8 +4,7 @@
 	include_once('config/init.php');
 
 	/*Other PHP actions should go here*/
-	$smarty->assign('pagename', 'Log In');
-
+	$smarty->assign('pagename', 'Log In/Sign Up');
 	$smarty->assign('bootstrap', "css/Bootstrap/css/bootstrap.min.css");
 	$smarty->assign('csspage', "css/login_signup.css");
 
