@@ -15,7 +15,7 @@
 	$smarty->assign('script_jquery', "../../javascript/jquery-1.12.1.min.js");
 
 	/*Session variables*/
-	$smarty->assign('session_username', $_SESSION['username']);
+	$smarty->assign('session_username', getUsername($_SESSION['userid']));
 	
 	/*This summons the smarty template*/
 	$smarty->display('professor/class/create_class.tpl');

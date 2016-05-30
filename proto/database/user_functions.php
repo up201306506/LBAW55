@@ -13,8 +13,8 @@
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 
 	                            FROM users 
-	                            WHERE username = ? AND password = ?");// needs the isActive contrain
-	    $stmt->execute(array($username, hash('sha256', $password)));// sha1($password)
+	                            WHERE username = ? AND password = ?");
+	    $stmt->execute(array($username, hash('sha256', $password)));
 	    return $stmt->fetch();
  	}
 
@@ -22,8 +22,8 @@
 		global $conn;
 	    $stmt = $conn->prepare("SELECT * 
 	                            FROM users 
-	                            WHERE username = ?");// needs the isActive contrain
-	    $stmt->execute(array($username));// sha1($password)
+	                            WHERE username = ?");
+	    $stmt->execute(array($username));
 	    return $stmt->fetch() == true;
 	}
 	
