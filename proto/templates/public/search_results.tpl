@@ -4,7 +4,7 @@
 <div class="container">
 	<h1>Search results for "{$search_term}"</h1>
 	<div class="row">
-		<div class="col-lg-5 col-md-5 col-sm-12">
+		<div class="col-lg-10 col-md-10 col-sm-12">
 			<div class="box">
 				<h3>Users</h3>
 				<table class="table table-hover">
@@ -19,8 +19,6 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
-		<div class="col-lg-5 col-md-5 col-sm-12">
 			<div class="box">
 				<h3>Classes</h3>
 				<table class="table table-hover">

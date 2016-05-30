@@ -5,7 +5,7 @@ html, body {
 	height: 100%;
 }
 
-h1 {
+h1, h3 {
 	margin: 0 0 10px 0;
 }
 
@@ -15,6 +15,7 @@ h1 {
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
 
-#description {
-	resize: vertical;
+#export-choice {
+	margin: auto;
+	text-align: center;
 }
