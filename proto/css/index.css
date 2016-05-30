@@ -5,7 +5,62 @@ html, body {
 	height: 100%;
 }
 
-h1 {
-	margin: 20px;
+h3 {
+	margin: 15px 0 0 0;
 	text-align: center;
+}
+
+.navbar {
+	border: 0;
+}
+
+#brand-name {
+	float: left;
+	height: 50px;
+	font-size: 18px;
+	line-height: 20px;
+	padding: 15px 15px;
+	margin-left: -15px;
+}
+
+#options {
+	margin: 0;
+	padding: 0;
+	float: right;
+	list-style-type: none;
+}
+
+#options li {
+	float: left;
+	height: 50px;
+	padding: 15px;
+	margin-right: -15px;
+}
+
+#options span {
+	margin-right: 5px;
+}
+
+#page-img {
+	height: 50%;
+	display: table;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-image: url("res/background_img.jpg");
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.container {
+	padding-top: 20px;
+}
+
+.box {
+	padding: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.box img {
+	margin: auto;
 }

@@ -16,7 +16,7 @@
 	$smarty->assign('script', "../../javascript/exam.js");
 	
 	/*Session variables*/
-	$smarty->assign('session_username', $_SESSION['username']);
+	$smarty->assign('session_username', getUsername($_SESSION['userid']));
 	
 	/*This summons the smarty template*/
 	$smarty->display('student/exam/exam.tpl');

@@ -1,11 +1,11 @@
 {include file='common/header.tpl'}
 {include file='common/navbar.tpl'}
 
-<div id="wrapper">
+<div class="container">
 	<h1>Search results for "{$search_term}"</h1>
 	<div class="row">
-		<div class="col-sm-5">
-			<div class="well">
+		<div class="col-lg-5 col-md-5 col-sm-12">
+			<div class="box">
 				<h3>Users</h3>
 				<table class="table table-hover">
 					<thead>
@@ -20,8 +20,8 @@
 				</table>
 			</div>
 		</div>
-		<div class="col-sm-5">
-			<div class="well">
+		<div class="col-lg-5 col-md-5 col-sm-12">
+			<div class="box">
 				<h3>Classes</h3>
 				<table class="table table-hover">
 					<thead>
@@ -37,19 +37,16 @@
 				</table>
 			</div>
 		</div>
-		<div class="col-sm-2">
-			<div class="panel panel-default">
-				<div class="panel-heading text-center">Filters</div>
-				<div class="panel-body">
+		<div class="col-lg-2 col-md-2 col-sm-12">
+			<div class="my-panel">
+				<div class="my-panel-header text-center">Filters</div>
+				<div class="my-panel-body">
 					<span>Filter by:</span>
 					<div class="checkbox">
 						<label><input type="checkbox" />Professors</label>
 					</div>
 					<div class="checkbox">
 						<label><input type="checkbox" />Students</label>
-					</div>
-					<div class="checkbox">
-						<label><input type="checkbox" />Classes</label>
 					</div>
 				</div>
 			</div>

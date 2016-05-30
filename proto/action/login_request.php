@@ -9,15 +9,19 @@
 		if (!empty($user)) {
 			if ($user['isactive'] === 'Active') {
 				$_SESSION['userid'] = $user['userid'];
-				echo "success";
+				$_SESSION['error_messages'][] = 'noice';
+				header('Location: ../profile/profile.php');
 			} else {
-				echo "pending";
+				$_SESSION['error_messages'][] = 'pending';
+				header('Location: ../login_signup.php');
 			}
 		} else {
-			echo "wrongCredentials";
+			$_SESSION['error_messages'][] = 'no user like that';
+			header('Location: ../login_signup.php');
 		}
 	} else {
-		echo "fillInputFields";
+		$_SESSION['error_messages'][] = 'fill input fields';
+		header('Location: ../login_signup.php');
 	}
 
 ?>

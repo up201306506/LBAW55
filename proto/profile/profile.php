@@ -5,7 +5,7 @@
 	include_once('../database/user_functions.php');
 
 	/*Other PHP actions should go here*/
-	$pagename = 'Profile';
+	$pagename = 'Your Profile';
 	$smarty->assign('pagename', $pagename);
 
 	$smarty->assign('bootstrap', "../css/Bootstrap/css/bootstrap.min.css");
