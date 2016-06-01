@@ -110,6 +110,7 @@
 						{foreach $examlist as $exam}
 							<tr>
 								<td>{$exam.examidentification}</td>
+								<td>EXAM DATE</td>
 								<td>EXAM MANAGER</td>
 								<td>IF IT HAS A PASSWORD</td>
 								<td>IF IT IS OPEN ONGOING OR... UH!</td>

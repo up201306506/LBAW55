@@ -10,20 +10,20 @@
 	
 	$userlist = getAllUsers();
 	$length = count($userlist);
-	$user_pages_needed = $length / 20;
-	if($length%20 != 0)
+	$user_pages_needed = $length / 15;
+	if($length%15 != 0)
 		$user_pages_needed = $user_pages_needed + 1;
-	$userlist = array_slice($userlist, 0, 20);
+	$userlist = array_slice($userlist, 0, 15);
 	$smarty->assign('userlist', $userlist);
 	$smarty->assign('user_pages_needed', $user_pages_needed);
 	
 	
 	$examlist = getAllExams();
 	$length = count($examlist);
-	$exam_pages_needed = $length / 20;
-	if($length%20 != 0)
+	$exam_pages_needed = $length / 15;
+	if($length%15 != 0)
 		$exam_pages_needed = $exam_pages_needed + 1;
-	$examlist = array_slice($examlist, 0, 20);
+	$examlist = array_slice($examlist, 0, 15);
 	$smarty->assign('examlist', $examlist);
 	$smarty->assign('exam_pages_needed', $exam_pages_needed);
 	
