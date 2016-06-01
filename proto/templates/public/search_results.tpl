@@ -15,7 +15,12 @@
 						</tr>
 					</thead>
 					<tbody>
-						
+						{foreach $searched_users as $tempUser}
+							 <tr>
+							     <td>{$tempUser.name}</td>
+							     <td>{$tempUser.accounttypevar}</td>
+							 </tr>
+						{/foreach}
 					</tbody>
 				</table>
 			</div>
@@ -30,7 +35,17 @@
 						</tr>
 					</thead>
 					<tbody>
-						
+						{foreach $searched_classes as $tempClass}
+							<tr>
+							     <td>{$tempClass.classname}</td>
+							     <td>{$tempClass.directorId}</td>{* change in fuction adding name of director *}
+							     {if !$tempClass.password}  
+							     	<td>open</td>
+							     {else}
+							     	<td>closed</td>
+							     {/if}
+							</tr>
+						{/foreach}
 					</tbody>
 				</table>
 			</div>

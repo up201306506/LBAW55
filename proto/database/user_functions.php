@@ -151,4 +151,45 @@
 		$count = $stmt->rowCount();
 		return $count == 1;
 	}
+
+	/* search fuctions */
+	function searchUserBar($user,$prof,$stu){
+		global $conn;
+		$professors =   [];
+		$student =  [];
+		if($prof){
+	    	$stmt = $conn->prepare("SELECT name, description, userid, accounttypevar
+									FROM 
+									(
+										SELECT name, description,userid,accounttypevar,
+										to_tsvector(users.name) || to_tsvector(users.description) as document
+										FROM users
+									) AS alias
+									WHERE alias.document @@ to_tsquery(:searchfield) AND accounttypevar = 'Professor'"); // --Professor or Student 
+	    	$stmt->bindParam(':searchfield', $user);
+	    	$professors = $stmt->fetchAll();
+		}
+		if($stu){	
+			$stmt = $conn->prepare("SELECT name, description, userid, accounttypevar
+									FROM 
+									(
+										SELECT name, description,userid,accounttypevar,
+										to_tsvector(users.name) || to_tsvector(users.description) as document
+										FROM users
+									) AS alias
+									WHERE alias.document @@ to_tsquery(:searchfield) AND accounttypevar = 'Student'"); // --Professor or Student 
+	    	$stmt->bindParam(':searchfield', $user);
+	    	$student = $stmt->fetchAll();
+		}
+	    return array_merge($professors,$student);	
+	}
+
+	function seachClass($class){
+		global $conn;
+		$stmt = $conn->prepare("SELECT * FROM classes
+								WHERE search_tsv = to_tsvector(classes.classname || ' ' || classes.directorId)
+								AND search_tsv @@ to_tsquery(:searchfield)"); 
+	    $stmt->bindParam(':searchfield', $class);
+	    return $stmt->fetchAll();
+	}
 ?>

@@ -20,6 +20,13 @@
 	
 	/*Search term*/
 	$smarty->assign('search_term', $_GET['search-term']);
+
+	/* results from search */
+	$allSearchUsers = searchUserBar($_GET['search_term'],true,true);
+ 	$allSearchClasses = seachClass($_GET['search_term']);
+ 
+ 	$smarty->assign('searched_users', $allSearchUsers);
+ 	$smarty->assign('searched_classes', $allSearchClasses);
 	
 	/*This summons the smarty template*/
 	$smarty->display('public/search_results.tpl');
