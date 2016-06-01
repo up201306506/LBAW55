@@ -16,6 +16,10 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
+
+	/*Other variables*/
+	// $smarty->assign('size', count(getAllClasses()));
+	$smarty->assign('all_classes', getAllClasses());
 	
 	/*This summons the smarty template*/
 	$smarty->display('public/find_classes.tpl');

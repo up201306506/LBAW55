@@ -15,7 +15,13 @@
 						</tr>
 					</thead>
 					<tbody>
-						
+					{foreach $all_classes as $class}
+						<tr>
+							<td>{$class.classname}</td>
+							<td>{$class.name}</td>
+							<td>{$class.classpass}</td>
+						</tr>
+					{/foreach}
 					</tbody>
 				</table>
 			</div>

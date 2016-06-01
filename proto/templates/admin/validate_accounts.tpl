@@ -14,20 +14,42 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>Name</td>
-					<td>Username</td>
-					<td>Email</td>
-					<td>
-						<button class="btn btn-success ok-option">
-							<span class="glyphicon glyphicon-ok"></span>
-						</button>
-						<button class="btn btn-danger remove-option">
-							<span class="glyphicon glyphicon-remove"></span>
-						</button>
-						<button class="btn btn-default undo-option">Undo</button>
-					</td>
-				</tr>
+				
+				{if !$professor_list}
+					<tr>
+						<td><span class="empty_list"> There are no professors left to validate</span></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				{else}
+					<form role="validate">
+						{foreach $professor_list as $professor}
+							<tr id="{$professor.userid}">
+								<td>{$professor.name}</td>
+								<td>{$professor.username}</td>
+								<td>{$professor.email}</td>
+								<td>
+									<button type="button" class="btn btn-success ok-option">
+										<span class="glyphicon glyphicon-ok"></span>
+									</button>
+									<button type="button" class="btn btn-danger remove-option">
+										<span class="glyphicon glyphicon-remove"></span>
+									</button>
+									<button type="button" class="btn btn-default undo-option">Undo</button>
+								</td>
+							</tr>
+						{/foreach}
+						<tr>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td>
+								<input id="buttondone" class="btn btn-primary" type="submit" value="Done"/>
+							</td>
+						</tr>
+					</form>
+				{/if}
 			</tbody>
 		</table>
 	</div>

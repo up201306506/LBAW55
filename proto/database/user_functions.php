@@ -8,6 +8,29 @@
 	    $stmt->execute(array($username));
 	    return $stmt->fetch();
  	}
+
+ 	function getExamsByUser($userid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("");
+ 		$stmt->execute(array($userid));
+ 		return $stmt->fetch();
+ 	}
+
+ 	function getClassesByUser($userid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("");
+ 		$stmt->execute(array($userid));
+ 		return $stmt->fetch();
+ 	}
+
+ 	function getAllClasses() {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT classname, name, class.password AS classpass
+ 								FROM class, users
+ 								WHERE class.directorid = users.userid");
+ 		$stmt->execute();
+ 		return $stmt->fetchAll();
+ 	}
 	
 	function isLoginCorrect($username, $password) {
 	    global $conn;
@@ -107,5 +130,15 @@
 	                            WHERE userid = ?");
 	    $stmt->execute(array($userid));
 	    return $stmt->fetch()['description'];
+	}
+	
+	function banUser($userId){
+		global $conn;
+	    $stmt = $conn->prepare("UPDATE users 
+								SET isactive = 'Inactive' 
+								WHERE userid  = ?");
+	    $stmt->execute(array($userId));
+		$count = $stmt->rowCount();
+		return $count == 1;
 	}
 ?>
