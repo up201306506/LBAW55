@@ -24,4 +24,26 @@ $(document).ready(function() {
 			$(this).parent().parent().removeClass("danger");
 		}
 	});
+	
+	$("#buttondone").click(function() {
+		var arr_good = "";
+		var arr_bad = "";
+
+		$(".success").each( function(){
+			if (arr_good == "")
+				arr_good += $(this).attr("id");
+			else
+				arr_good += "," + $(this).attr("id");
+		});
+		
+		$(".danger").each( function(){
+			if (arr_bad == "")
+				arr_bad += $(this).attr("id");
+			else
+				arr_bad += "," + $(this).attr("id");
+		});
+		
+		$.post("../action/validate_professor_action.php", { validate: arr_good, ban: arr_bad }, function() {} );
+		
+	});
 });

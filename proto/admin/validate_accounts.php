@@ -3,7 +3,8 @@
 	/*This summons the database and smarty initializer */
 	include_once('../config/init.php');
 	include_once('../database/user_functions.php');
-
+	include_once('../database/professor_validation.php');
+	
 	/*Other PHP actions should go here*/
 	$smarty->assign('pagename', 'Validate Accounts');
 
@@ -17,6 +18,10 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
+	
+	/*Get the list of professors*/
+	$professor_list = getUnvalidatedProfessors();
+	$smarty->assign('professor_list' , $professor_list);
 	
 	/*This summons the smarty template*/
 	$smarty->display('admin/validate_accounts.tpl');
