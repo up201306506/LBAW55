@@ -6,12 +6,27 @@
 
 	if(!empty($_POST['userId']))
 	{
-		$success = validateProfessor($_POST['userId'])
-		{
-			
-			
-		}
+		$sent = validateProfessor($_POST['userId']);
 		
+		if($sent)
+		{
+			$success = checkValidation($_POST['userId']));
+			if($sent)
+			{					
+				$_SESSION['error_messages'][] = "Success validating account";
+				header('Location: ../admin/validate_accounts.php');
+			}
+			else
+			{
+				$_SESSION['error_messages'][] = "couldn't check professor validation";
+				header('Location: ../admin/validate_accounts.php');
+			}
+		}
+		else
+		{
+			$_SESSION['error_messages'][] = "couldn't validate the professor";
+			header('Location: ../admin/validate_accounts.php');
+		}
 	}
 	
 	/*

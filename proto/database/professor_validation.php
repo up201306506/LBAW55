@@ -15,7 +15,9 @@
 	    $stmt = $conn->prepare("UPDATE users 
 								SET isactive = 'Active' 
 								WHERE userId  = ?");
-	    return $stmt->execute(array($userId));
+	    $stmt->execute(array($userId));
+		$count = $stmt->rowCount();
+		return $count == 1;
 		
 	}
 	
