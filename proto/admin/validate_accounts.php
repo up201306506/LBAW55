@@ -3,7 +3,8 @@
 	/*This summons the database and smarty initializer */
 	include_once('../config/init.php');
 	include_once('../database/user_functions.php');
-
+	include_once('../database/professor_validtion.php');
+	
 	/*Other PHP actions should go here*/
 	$smarty->assign('pagename', 'Validate Accounts');
 
