@@ -6,7 +6,7 @@
 		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
 			<h1>New Question</h1>
 			<div class="box">
-				<form action="#" method="post" role="form">
+				<form action="{$BASE_URL|cat:'action/create_question_action.php'}" method="post" role="form">
 					<div class="category">
 						<div class="form-group">
 							<label for="category">Category:</label>
