@@ -155,7 +155,7 @@
 	/* search fuctions */
 	function searchUserBar($user,$prof,$stu){
 		global $conn;
-		/*$professors =   [];
+		$professors =   [];
 		$student =  [];
 		if($prof){
 	    	$stmt = $conn->prepare("SELECT name, description, userid, accounttypevar
@@ -169,7 +169,7 @@
 	    	$stmt->bindParam(':searchfield', $user);
 	    	$professors = $stmt->fetchAll();
 		}
-		if($stu){*/	
+		if($stu){	
 			$stmt = $conn->prepare("SELECT name, description, userid, accounttypevar
 									FROM 
 									(
@@ -180,8 +180,16 @@
 									WHERE alias.document @@ to_tsquery(:searchfield) AND accounttypevar = 'Student'"); // --Professor or Student 
 	    	$stmt->bindParam(':searchfield', $user);
 	    	$student = $stmt->fetchAll();
-		//}
-	    return $student;//array_merge($professors,$student);	
+		}
+
+		foreach ($allUsers as $key => $user) {
+			$message = $user['name'];
+			echo "<script type='text/javascript'>alert('$message');</script>";
+
+		}
+
+
+	    return array_merge($professors,$student);	
 	}
 
 	function seachClass($class){
