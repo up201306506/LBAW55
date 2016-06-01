@@ -1,5 +1,4 @@
 <?php	
-
 	function getUnvalidatedProfessors(){
 		global $conn;
 		$stmt = $conn->prepare("SELECT userId,name,username, email
@@ -11,12 +10,21 @@
 		return $stmt->fetchAll();
 	}
 	
-	function validateProfessor($username){
+	function validateProfessor($userId){
 		global $conn;
 	    $stmt = $conn->prepare("UPDATE users 
 								SET isactive = 'Active' 
-								WHERE username  = ?");
-	    return $stmt->execute(array($username));
+								WHERE userId  = ?");
+	    return $stmt->execute(array($userId));
 		
+	}
+	
+	function checkValidation($userId){
+		global $conn;
+	    $stmt = $conn->prepare("SELECT accounttypevar,isactive
+								FROM users
+								WHERE userId  = ?");
+	    $stmt->execute(array($userId));
+		return ($stmt->fetch()['accounttypevar'] == 'Professor' && $stmt->fetch()['isactive'] == 'Active');
 	}
 ?>
