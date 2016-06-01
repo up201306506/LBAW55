@@ -22,8 +22,8 @@
 	$smarty->assign('search_term', $_GET['search-term']);
 
 	/* results from search */
-	$allSearchUsers = searchUserBar($_GET['search_term'],true,true);
- 	$allSearchClasses = seachClass($_GET['search_term']);
+	$allSearchUsers = searchUserBar('search_term',true,true);
+ 	$allSearchClasses = seachClass('search_term');
  
  	$smarty->assign('searched_users', $allSearchUsers);
  	$smarty->assign('searched_classes', $allSearchClasses);
