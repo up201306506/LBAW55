@@ -108,4 +108,15 @@
 	    $stmt->execute(array($userid));
 	    return $stmt->fetch()['description'];
 	}
+	
+	function getUnvalidatedProfessors(){
+		global $conn;
+		$stmt = $conn->prepare("SELECT username, email
+								FROM users
+								WHERE accounttypevar  = 'Professor'
+								AND isactive  = 'Pending'
+								");
+		$stmt->execute();
+		return $stmt->fetchAll();
+	}
 ?>
