@@ -14,6 +14,7 @@
 				</tr>
 			</thead>
 			<tbody>
+				<form action="{$BASE_URL|cat:'action/validate_professor_action.php'}" method="post" role="validate">
 				{foreach $professor_list as $professor}
 					<tr>
 						<td>{$professor.name}</td>
@@ -30,6 +31,15 @@
 						</td>
 					</tr>
 				{/foreach}
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>
+							<input class="btn btn-primary" type="submit" value="Done"/>
+						</td>
+					</tr>
+				</form>
 			</tbody>
 		</table>
 	</div>
