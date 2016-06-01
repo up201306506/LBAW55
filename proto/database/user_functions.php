@@ -25,13 +25,51 @@
 
  	function getAllClasses() {
  		global $conn;
- 		$stmt = $conn->prepare("SELECT classname, name, class.password AS classpass
+ 		$stmt = $conn->prepare("SELECT classid, classname, userid, name, class.password AS classpass
  								FROM class, users
- 								WHERE class.directorid = users.userid");
+ 								WHERE directorid = userid");
  		$stmt->execute();
  		return $stmt->fetchAll();
  	}
+
+ 	function getClassById($classid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT *
+ 								FROM class
+ 								WHERE classid = ?");
+ 		$stmt->execute(array($classid));
+ 		return $stmt->fetch();
+ 	}
 	
+ 	function getManagerOfClass($userid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT name
+ 								FROM users
+ 								WHERE userid = ?");
+ 		$stmt->execute(array($userid));
+ 		return $stmt->fetch();
+ 	}
+
+ 	function getClassProfessors($classid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT name, accounttypevar
+ 								FROM professormanagesclass, users
+ 								WHERE classid = ?
+ 								AND professormanagesclass.userid = users.userid");
+ 		$stmt->execute(array($classid));
+ 		return $stmt->fetchAll();
+ 	}
+
+ 	function getClassStudents($classid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT name, accounttypevar
+ 								FROM userclass, users
+ 								WHERE classid = ?
+ 								AND userclass.userid = users.userid");
+ 		$stmt->execute(array($classid));
+ 		return $stmt->fetchAll();
+ 	}
+
 	function isLoginCorrect($username, $password) {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 

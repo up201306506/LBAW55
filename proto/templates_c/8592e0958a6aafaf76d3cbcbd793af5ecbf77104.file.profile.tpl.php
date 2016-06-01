@@ -1,34 +1,33 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-01 18:51:23
-         compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:346403140573ed52287fa37-14355705%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-01 18:45:48
+         compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/profile.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:1928350295574f10d17e96f7-36909302%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '0bd976fb37f9ecd7e131551ae7f5681ff7767870' => 
+    '8592e0958a6aafaf76d3cbcbd793af5ecbf77104' => 
     array (
-      0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl',
-      1 => 1464799880,
+      0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/profile.tpl',
+      1 => 1464799546,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '346403140573ed52287fa37-14355705',
+  'nocache_hash' => '1928350295574f10d17e96f7-36909302',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_573ed522e5c2a2_65592306',
+  'unifunc' => 'content_574f10d1ab5a14_46305727',
   'variables' => 
   array (
     'BASE_URL' => 0,
-    'session_username' => 0,
-    'session_name' => 0,
-    'session_email' => 0,
+    'name' => 0,
+    'email' => 0,
     'description' => 0,
     'usertype' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_573ed522e5c2a2_65592306')) {function content_573ed522e5c2a2_65592306($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_574f10d1ab5a14_46305727')) {function content_574f10d1ab5a14_46305727($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -40,19 +39,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="box">
 				<img id="user-img" class="img-circle img-responsive" src="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('css/res/user_img.png');?>
 " width="200" height="200">
-				<div id="username">
-					<span class="glyphicon glyphicon-credit-card"></span>
-					<span><?php echo $_smarty_tpl->tpl_vars['session_username']->value;?>
-</span>
-				</div>
 				<div id="name">
 					<span class="glyphicon glyphicon-user"></span>
-					<span><?php echo $_smarty_tpl->tpl_vars['session_name']->value;?>
+					<span><?php echo $_smarty_tpl->tpl_vars['name']->value;?>
 </span>
 				</div>
 				<div id="email">
 					<span class="glyphicon glyphicon-envelope"></span>
-					<span><?php echo $_smarty_tpl->tpl_vars['session_email']->value;?>
+					<span><?php echo $_smarty_tpl->tpl_vars['email']->value;?>
 </span>
 				</div>
 			</div>
@@ -63,20 +57,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-8 col-sm-12">
-			<div class="box">
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>Exam</th>
-							<th>Date</th>
-							<th>Accessibility</th>
-						</tr>
-					</thead>
-					<tbody>
-						
-					</tbody>
-				</table>
-			</div>
 			<div class="box">
 				<table class="table table-hover">
 					<thead>

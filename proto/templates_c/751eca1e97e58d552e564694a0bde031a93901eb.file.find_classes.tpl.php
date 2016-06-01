@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-05-31 02:31:18
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-01 17:32:29
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/find_classes.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:603227613574ca77a6dc042-37244728%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '751eca1e97e58d552e564694a0bde031a93901eb' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/find_classes.tpl',
-      1 => 1464654670,
+      1 => 1464795148,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_574ca77a78f637_20704100',
   'variables' => 
   array (
-    'size' => 0,
+    'all_classes' => 0,
+    'BASE_URL' => 0,
+    'class' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -42,11 +44,33 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</tr>
 					</thead>
 					<tbody>
-					
+					<?php  $_smarty_tpl->tpl_vars['class'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['class']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['all_classes']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['class']->key => $_smarty_tpl->tpl_vars['class']->value) {
+$_smarty_tpl->tpl_vars['class']->_loop = true;
+?>
+						<tr>
+							<td>
+								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/class.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
+"><?php echo $_smarty_tpl->tpl_vars['class']->value['classname'];?>
+</a>
+							</td>
+							<td>
+								<!-- <img src="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('css/res/user_img.png');?>
+" width="35" height="35"> -->
+								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/profile.php?id=')).($_smarty_tpl->tpl_vars['class']->value['userid']);?>
+"><?php echo $_smarty_tpl->tpl_vars['class']->value['name'];?>
+</a>
+							</td>
+						<?php if ($_smarty_tpl->tpl_vars['class']->value['classpass']) {?>
+							<td>Private</td>
+						<?php } else { ?>
+							<td>Public</td>
+						<?php }?>
+						</tr>
+					<?php } ?>
 					</tbody>
 				</table>
-				<span><?php echo $_smarty_tpl->tpl_vars['size']->value;?>
-</span>
 			</div>
 		</div>
 	</div>
