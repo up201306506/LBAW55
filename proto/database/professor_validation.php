@@ -1,7 +1,7 @@
 <?php	
 	function getUnvalidatedProfessors(){
 		global $conn;
-		$stmt = $conn->prepare("SELECT userId,name,username, email
+		$stmt = $conn->prepare("SELECT userid,name,username, email
 								FROM users
 								WHERE accounttypevar  = 'Professor'
 								AND isactive  = 'Pending'
@@ -14,7 +14,7 @@
 		global $conn;
 	    $stmt = $conn->prepare("UPDATE users 
 								SET isactive = 'Active' 
-								WHERE userId  = ?");
+								WHERE userid  = ?");
 	    $stmt->execute(array($userId));
 		$count = $stmt->rowCount();
 		return $count == 1;
@@ -25,7 +25,7 @@
 		global $conn;
 	    $stmt = $conn->prepare("SELECT accounttypevar,isactive
 								FROM users
-								WHERE userId  = ?");
+								WHERE userid  = ?");
 	    $stmt->execute(array($userId));
 		return ($stmt->fetch()['accounttypevar'] == 'Professor' && $stmt->fetch()['isactive'] == 'Active');
 	}

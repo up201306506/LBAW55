@@ -24,4 +24,12 @@ $(document).ready(function() {
 			$(this).parent().parent().removeClass("danger");
 		}
 	});
+	
+	$("#buttondone").click(function() {
+		var arr = [];
+
+		$(".success").each( function( index ){
+			arr.push($(this).attr("id"));
+		});	
+	});
 });
