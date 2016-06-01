@@ -8,11 +8,11 @@
 	/*Other PHP actions should go here*/
 	
 	$userlist = getAllUsers();
-	$userlist = array_slice($userlist, 0, 20);
 	$length = count($userlist);
 	$user_pages_needed = $length / 20;
-	if($length%20 == 0)
-		$user_pages_needed = $user_pages_needed - 1;
+	if($length%20 != 0)
+		$user_pages_needed = $user_pages_needed + 1;
+	$userlist = array_slice($userlist, 0, 20);
 	
 	$smarty->assign('userlist', $userlist);
 	$smarty->assign('user_pages_needed', $user_pages_needed);

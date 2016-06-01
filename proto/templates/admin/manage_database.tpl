@@ -60,13 +60,13 @@
 					</tbody>
 				</table>
 				<div id="center">
+				{if $userlist neq ""}
 					<ul class="pagination">
-						<li class="active"><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
+					{for $c=1 to $user_pages_needed}
+						<li {if $c eq 1 }class="active"{/if}><a href="#">{$c}</a></li>
+					{/for}
 					</ul>
+				{/if}
 				</div>
 			</div>
 		</div>
