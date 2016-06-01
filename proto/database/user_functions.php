@@ -155,6 +155,7 @@
 	/* search fuctions */
 	function searchUserBar($user,$prof,$stu){
 		global $conn;
+		echo "<script type='text/javascript'>alert('$user');</script>";
 		$professors =   [];
 		$student =  [];
 		if($prof){
@@ -180,6 +181,15 @@
 									WHERE alias.document @@ to_tsquery(:searchfield) AND accounttypevar = 'Student'"); // --Professor or Student 
 	    	$stmt->bindParam(':searchfield', $user);
 	    	$student = $stmt->fetchAll();
+		}
+
+		foreach ($student as $key => $user) {
+			$message = "student: " + $user['name'];
+			echo "<script type='text/javascript'>alert('$message');</script>";
+		}
+		foreach ($professors as $key => $user) {
+			$message = "professors: " + $user['name'];
+			echo "<script type='text/javascript'>alert('$message');</script>";
 		}
 
 	    return array_merge($professors,$student);	
