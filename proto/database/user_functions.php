@@ -155,10 +155,10 @@
 	/* search fuctions */
 	function searchUserBar($user,$prof,$stu){
 		global $conn;
+		echo "<script type='text/javascript'>alert('$user');</script>";
 		$professors =   [];
 		$student =  [];
 		if($prof){
-	    	echo "<script type='text/javascript'>alert('searching professors');</script>";
 	    	$stmt = $conn->prepare("SELECT name, description, userid, accounttypevar
 									FROM 
 									(
@@ -171,7 +171,6 @@
 	    	$professors = $stmt->fetchAll();
 		}
 		if($stu){	
-			echo "<script type='text/javascript'>alert('searching students');</script>";
 			$stmt = $conn->prepare("SELECT name, description, userid, accounttypevar
 									FROM 
 									(
