@@ -8,6 +8,16 @@
 	    $stmt->execute(array($username));
 	    return $stmt->fetch();
  	}
+	
+	function getAllUsers() {
+	    global $conn;
+	    $stmt = $conn->prepare("SELECT * 
+	                            FROM users 
+	                            WHERE accounttypevar != 'Administrator' 
+								ORDER BY username ASC");
+	    $stmt->execute();
+	    return $stmt->fetchAll();
+ 	}
 
  	function getExamsByUser($userid) {
  		global $conn;

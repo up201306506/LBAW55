@@ -36,15 +36,27 @@
 						</tr>
 					</thead>
 					<tbody>
+					{if !$userlist}
 						<tr>
-							<td>Name</td>
-							<td>Username</td>
-							<td>Email</td>
-							<td>Type</td>
-							<td>
-								<button class="btn btn-danger">Ban</button>
-							</td>
+							<td>The loneliest website ever! You're all alone here, admin.</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
 						</tr>
+					{else}
+						{foreach $userlist as $user}
+							<tr>
+								<td>{$user.username}</td>
+								<td>{$user.name}</td>
+								<td>{$user.email}</td>
+								<td>{$user.accountvartype}</td>
+								<td>
+									<button class="btn btn-danger">Ban</button>
+								</td>
+							</tr>
+						{/foreach}
+					{/if}
 					</tbody>
 				</table>
 				<div id="center">
