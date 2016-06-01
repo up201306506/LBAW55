@@ -26,10 +26,20 @@ $(document).ready(function() {
 	});
 	
 	$("#buttondone").click(function() {
-		var arr = [];
+		var arr_good = "";
+		var arr_bad = "";
 
-		$(".success").each( function( index ){
-			arr.push($(this).attr("id"));
-		});	
+		$(".success").each( function(){
+			arr_good += $(this).attr("id") + ",";
+		});
+		
+		$(".danger").each( function(){
+			arr_bad += $(this).attr("id") + ",";
+		});
+		
+		$.post("../action/validate_professor_action.php", { validate: arr_good, ban: arr_bad }, function(result) {
+			alert(result);
+		});
+		
 	});
 });

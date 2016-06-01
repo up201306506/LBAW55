@@ -14,7 +14,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<form action="{$BASE_URL|cat:'action/validate_professor_action.php'}" method="post" role="validate">
+				<form role="validate">
 				{foreach $professor_list as $professor}
 					<tr id="{$professor.userid}">
 						<td>{$professor.name}</td>
