@@ -98,16 +98,27 @@
 						</tr>
 					</thead>
 					<tbody>
+					{if !$examlist}
 						<tr>
-							<td>Exam</td>
-							<td>Date</td>
-							<td>Manager</td>
-							<td>Accessibility</td>
-							<td>Done/Ongoing/Not Done</td>
-							<td>
-								<button class="btn btn-primary">Edit</button>
-							</td>
+							<td>No exams were found in the database.</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
 						</tr>
+					{else}
+						{foreach $examlist as $exam}
+							<tr>
+								<td>{$exam.examidentification}</td>
+								<td>EXAM MANAGER</td>
+								<td>IF IT HAS A PASSWORD</td>
+								<td>IF IT IS OPEN ONGOING OR... UH!</td>
+								<td>
+									<button class="btn btn-danger">Ban</button>
+								</td>
+							</tr>
+						{/foreach}
+					{/if}
 					</tbody>
 				</table>
 				<div id="center">
