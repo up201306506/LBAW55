@@ -111,7 +111,7 @@
 	
 	function getUnvalidatedProfessors(){
 		global $conn;
-		$stmt = $conn->prepare("SELECT username, email
+		$stmt = $conn->prepare("SELECT name,username, email
 								FROM users
 								WHERE accounttypevar  = 'Professor'
 								AND isactive  = 'Pending'

@@ -19,8 +19,8 @@
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
 	
 	/*Get the list of professors*/
-	$professor_list = getUnvalidatedProfessors()
-	$smarty -> assign('professor_list',$professor_list);
+	$professor_list = getUnvalidatedProfessors();
+	$smarty->assign('professor_list' , $professor_list);
 	
 	/*This summons the smarty template*/
 	$smarty->display('admin/validate_accounts.tpl');

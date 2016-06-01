@@ -14,20 +14,22 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>Name</td>
-					<td>Username</td>
-					<td>Email</td>
-					<td>
-						<button class="btn btn-success ok-option">
-							<span class="glyphicon glyphicon-ok"></span>
-						</button>
-						<button class="btn btn-danger remove-option">
-							<span class="glyphicon glyphicon-remove"></span>
-						</button>
-						<button class="btn btn-default undo-option">Undo</button>
-					</td>
-				</tr>
+				{foreach $professor_list as $professor}
+					<tr>
+						<td>{$professor.name}</td>
+						<td>{$professor.username}</td>
+						<td>{$professor.email}</td>
+						<td>
+							<button class="btn btn-success ok-option">
+								<span class="glyphicon glyphicon-ok"></span>
+							</button>
+							<button class="btn btn-danger remove-option">
+								<span class="glyphicon glyphicon-remove"></span>
+							</button>
+							<button class="btn btn-default undo-option">Undo</button>
+						</td>
+					</tr>
+				{/foreach}
 			</tbody>
 		</table>
 	</div>
