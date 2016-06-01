@@ -43,7 +43,9 @@ $(document).ready(function() {
 				arr_bad += "," + $(this).attr("id");
 		});
 		
-		$.post("../action/validate_professor_action.php", { validate: arr_good, ban: arr_bad }, function() {} );
+		$.post("../action/validate_professor_action.php", { validate: arr_good, ban: arr_bad }, function() {
+			window.location = '../admin/validate_accounts.php';
+		});
 		
 	});
 });
