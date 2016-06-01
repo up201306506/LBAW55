@@ -25,7 +25,7 @@
 
 	/*Other variables*/
 	// $smarty->assign('exams', getExams($_SESSION['userid']));
-	$smarty->assign('classes', getClasses($_SESSION['userid']));
+	// $smarty->assign('classes', getClasses($_SESSION['userid']));
 	
 	/*This summons the smarty template*/
 	$smarty->display('profile/profile.tpl');
