@@ -1,24 +1,20 @@
 <?php
 
-	/*
-	CREATE TABLE User (
-	userId SERIAL PRIMARY KEY,
-	username TEXT NOT NULL UNIQUE,
-	accountType ACCOUNTTYPE,
-	description TEXT NOT NULL CHECK (description.length >= 0 && description.length < 500),
-	email TEXT NOT NULL,
-	name TEXT NOT NULL,
-	password TEXT NOT NULL CHECK (password.length >= 5),
-	isActive USERACTIVE
-	);
-	*/	
-
+	function getUser($username) {
+	    global $conn;
+	    $stmt = $conn->prepare("SELECT * 
+	                            FROM users 
+	                            WHERE username = ?");
+	    $stmt->execute(array($username));
+	    return $stmt->fetch();
+ 	}
+	
 	function isLoginCorrect($username, $password) {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 
 	                            FROM users 
-	                            WHERE username = ? AND password = ?");// needs the isActive contrain
-	    $stmt->execute(array($username, hash('sha256', $password)));// sha1($password)
+	                            WHERE username = ? AND password = ?");
+	    $stmt->execute(array($username, hash('sha256', $password)));
 	    return $stmt->fetch();
  	}
 
@@ -26,8 +22,8 @@
 		global $conn;
 	    $stmt = $conn->prepare("SELECT * 
 	                            FROM users 
-	                            WHERE username = ?");// needs the isActive contrain
-	    $stmt->execute(array($username));// sha1($password)
+	                            WHERE username = ?");
+	    $stmt->execute(array($username));
 	    return $stmt->fetch() == true;
 	}
 	
@@ -41,38 +37,75 @@
 		$stmt->bindParam(':password', hash('sha256', $password));
 		$stmt->bindParam(':isactive', $isactive);
 		$stmt->execute();
+		return getUser($username);
 	}
 	
-	function updateUserName($oldname,$username) {
+	function updateName($name, $userid) {
 		global $conn;
-	    $stmt = $conn->prepare("UPDATE users SET name = ? WHERE username = ?");
-		$stmt->execute(array($username,$oldname));
+	    $stmt = $conn->prepare("UPDATE users SET name = ? WHERE userid = ?");
+		$stmt->execute(array($name, $userid));
 	}
 
-	function updateUserEmail($username,$email) {
+	function updateEmail($email, $userid) {
 		global $conn;
-	  	$stmt = $conn->prepare("UPDATE users SET email = ? WHERE username = ?");
-		$stmt->execute(array($email,$username));
+	  	$stmt = $conn->prepare("UPDATE users SET email = ? WHERE userid = ?");
+		$stmt->execute(array($email, $userid));
 	}
 
-	function updatePassword($username,$password) {
+	function updatePassword($password, $userid) {
 		global $conn;
-	  	$stmt = $conn->prepare("UPDATE users SET password = ? WHERE username = ?");
-		$stmt->execute(array(hash('sha256', $password),$username));
+	  	$stmt = $conn->prepare("UPDATE users SET password = ? WHERE userid = ?");
+		$stmt->execute(array(hash('sha256', $password), $userid));
 	}
 
-	function updateDescription($username,$description) {
+	function updateDescription($description, $userid) {
 		global $conn;
-	  	$stmt = $conn->prepare("UPDATE users SET description = ? WHERE username = ?");
-		$stmt->execute(array($description,$username));
+	  	$stmt = $conn->prepare("UPDATE users SET description = ? WHERE userid = ?");
+		$stmt->execute(array($description, $userid));
 	}
 
-	function getDescription($username) {
+	function getUsername($userid) {
+		global $conn;
+	    $stmt = $conn->prepare("SELECT username 
+	                            FROM users 
+	                            WHERE userid = ?");
+	    $stmt->execute(array($userid));
+	    return $stmt->fetch()['username'];
+	}
+
+	function getName($userid) {
+		global $conn;
+	    $stmt = $conn->prepare("SELECT name 
+	                            FROM users 
+	                            WHERE userid = ?");
+	    $stmt->execute(array($userid));
+	    return $stmt->fetch()['name'];
+	}
+
+	function getEmail($userid) {
+		global $conn;
+	    $stmt = $conn->prepare("SELECT email 
+	                            FROM users 
+	                            WHERE userid = ?");
+	    $stmt->execute(array($userid));
+	    return $stmt->fetch()['email'];
+	}
+
+	function getAccountType($userid) {
+		global $conn;
+	    $stmt = $conn->prepare("SELECT accounttypevar 
+	                            FROM users 
+	                            WHERE userid = ?");
+	    $stmt->execute(array($userid));
+	    return $stmt->fetch()['accounttypevar'];
+	}
+
+	function getDescription($userid) {
 		global $conn;
 	    $stmt = $conn->prepare("SELECT description 
 	                            FROM users 
-	                            WHERE username = ?");// needs the isActive contrain
-	    $stmt->execute(array($username));// sha1($password)
+	                            WHERE userid = ?");
+	    $stmt->execute(array($userid));
 	    return $stmt->fetch()['description'];
 	}
 ?>

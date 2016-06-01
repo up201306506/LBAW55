@@ -1,27 +1,27 @@
 {include file='common/header.tpl'}
 {include file='common/navbar.tpl'}
 
-<div id="wrapper">
+<div class="container">
 	<div class="row">
-		<div class="col-sm-offset-3 col-sm-6">
+		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
 			<h1>New Class</h1>
-			<div class="well">
+			<div class="box">
 				<form action="#" method="post" role="form">
 					<div class="form-group">
 						<label for="classname">Name of the Class:</label>
-						<input id="classname" class="form-control" type="text"></input>
+						<input id="classname" name="classname" class="form-control" type="text" required="required"></input>
 					</div>
 					<div class="form-group">
 						<label for="password">Password (Optional):</label>
-						<input id="password" class="form-control" type="password"></input>
+						<input id="password" name="password" class="form-control" type="password"></input>
 					</div>
 					<div class="form-group">
 						<label for="re-password">Confirm Password:</label>
-						<input id="re-password" class="form-control" type="password"></input>
+						<input id="re-password" name="re-password" class="form-control" type="password"></input>
 					</div>
 					<div class="form-group">
 						<label for="description">Description:</label>
-						<textarea id="description" class="form-control" rows="6"></textarea>
+						<textarea id="description" name="description" class="form-control" rows="6"></textarea>
 					</div>
 					<input id="submit" class="btn btn-primary" type="submit" value="Done"></input>
 				</form>
@@ -31,6 +31,5 @@
 </div>
 
 {include file='javascript_plugins/jquery.tpl'}
-{include file='javascript_plugins/wrapper.tpl'}
 {include file='javascript_plugins/bootstrap.tpl'}
 {include file='common/footer.tpl'}

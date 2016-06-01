@@ -34,7 +34,7 @@
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</span>
 			</div>
-			<div class="row question">
+			<div class="row question input-group">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<span>
@@ -63,8 +63,9 @@
 						</form>
 					</div>
 				</div>
+				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 			</div>
-			<div class="row question">
+			<div class="row question input-group">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<span>
@@ -93,8 +94,9 @@
 						</form>
 					</div>
 				</div>
+				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 			</div>
-			<div class="row question">
+			<div class="row question input-group">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<span>
@@ -123,8 +125,9 @@
 						</form>
 					</div>
 				</div>
+				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 			</div>
-			<div class="row question">
+			<div class="row question input-group">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<span>
@@ -153,8 +156,9 @@
 						</form>
 					</div>
 				</div>
+				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 			</div>
-			<div class="row question">
+			<div class="row question input-group">
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<span>
@@ -183,6 +187,7 @@
 						</form>
 					</div>
 				</div>
+				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 			</div>
 			<ul class="pagination">
 				<li class="active"><a href="#">1</a></li>
@@ -196,7 +201,6 @@
 </div>
 
 {include file='javascript_plugins/jquery.tpl'}
-{include file='javascript_plugins/wrapper.tpl'}
 {include file='javascript_plugins/script.tpl'}
 {include file='javascript_plugins/bootstrap.tpl'}
 {include file='common/footer.tpl'}
