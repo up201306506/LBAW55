@@ -131,4 +131,14 @@
 	    $stmt->execute(array($userid));
 	    return $stmt->fetch()['description'];
 	}
+	
+	function banUser($userId){
+		global $conn;
+	    $stmt = $conn->prepare("UPDATE users 
+								SET isactive = 'Inactive' 
+								WHERE userid  = ?");
+	    $stmt->execute(array($userId));
+		$count = $stmt->rowCount();
+		return $count == 1;
+	}
 ?>
