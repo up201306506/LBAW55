@@ -30,16 +30,20 @@ $(document).ready(function() {
 		var arr_bad = "";
 
 		$(".success").each( function(){
-			arr_good += $(this).attr("id") + ",";
+			if (arr_good == "")
+				arr_good += $(this).attr("id");
+			else
+				arr_good += "," + $(this).attr("id");
 		});
 		
 		$(".danger").each( function(){
-			arr_bad += $(this).attr("id") + ",";
+			if (arr_bad == "")
+				arr_bad += $(this).attr("id");
+			else
+				arr_bad += "," + $(this).attr("id");
 		});
 		
-		$.post("../action/validate_professor_action.php", { validate: arr_good, ban: arr_bad }, function(result) {
-			alert(result);
-		});
+		$.post("../action/validate_professor_action.php", { validate: arr_good, ban: arr_bad }, function() {} );
 		
 	});
 });

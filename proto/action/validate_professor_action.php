@@ -7,15 +7,17 @@
 	
 	
 	if (!empty($_POST['validate'])) {
-		$ids = explode(",", $_POST['validate']);
-		
-		echo "good";
-	} else {
-		echo "bad";
+		$ids = explode(",", $_POST['validate']);		
+		foreach($ids as $id){
+			validateProfessor($id);
+		}
 	}
 	
-	/*if (!empty($_POST['ban'])) {
+	if (!empty($_POST['ban'])) {
 		$ids = explode(",", $_POST['ban']);
-	}*/
+		foreach($ids as $id){
+			banUser($id);
+		}
+	}
 
 ?>
