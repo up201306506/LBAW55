@@ -182,12 +182,14 @@
 	    	$student = $stmt->fetchAll();
 		}
 
-		foreach ($allUsers as $key => $user) {
-			$message = $user['name'];
+		foreach ($student as $key => $user) {
+			$message = "student: " + $user['name'];
 			echo "<script type='text/javascript'>alert('$message');</script>";
-
 		}
-
+		foreach ($professors as $key => $user) {
+			$message = "professors: " + $user['name'];
+			echo "<script type='text/javascript'>alert('$message');</script>";
+		}
 
 	    return array_merge($professors,$student);	
 	}
