@@ -36,7 +36,17 @@
 						</tr>
 					</thead>
 					<tbody>
-						
+					{foreach $exams as $exam}
+						<tr>
+							<td><a href="{$BASE_URL|cat:'student/exam/exam.php?id='|cat:$exam.examid}">{$exam.examidentification}</a></td>
+							<td>{$exam.date}</td>
+						{if $exam.password}
+							<td>Private</td>
+						{else}
+							<td>Public</td>
+						{/if}
+						</tr>
+					{/foreach}
 					</tbody>
 				</table>
 			</div>
@@ -50,7 +60,17 @@
 						</tr>
 					</thead>
 					<tbody>
-
+					{foreach $classes as $class}
+						<tr>
+							<td><a href="{$BASE_URL|cat:'public/class.php?id='|cat:$class.classid}">{$class.classname}</a></td>
+							<td><a href="{$BASE_URL|cat:'public/profile.php?id='|cat:$class.profid}">{$class.name}</a></td>
+						{if $class.classpass}
+							<td>Private</td>
+						{else}
+							<td>Public</td>
+						{/if}
+						</tr>
+					{/foreach}
 					</tbody>
 				</table>
 			</div>

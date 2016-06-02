@@ -1,30 +1,31 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-02 09:50:46
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-02 10:00:57
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/find_classes.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:603227613574ca77a6dc042-37244728%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:889760459574fe7b9424dc3-36712174%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '751eca1e97e58d552e564694a0bde031a93901eb' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/find_classes.tpl',
-      1 => 1464821764,
+      1 => 1464854142,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '603227613574ca77a6dc042-37244728',
+  'nocache_hash' => '889760459574fe7b9424dc3-36712174',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_574ca77a78f637_20704100',
   'variables' => 
   array (
     'all_classes' => 0,
+    'BASE_URL' => 0,
     'class' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_574fe7b95b1b43_64788322',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_574ca77a78f637_20704100')) {function content_574ca77a78f637_20704100($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_574fe7b95b1b43_64788322')) {function content_574fe7b95b1b43_64788322($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -49,12 +50,21 @@ foreach ($_from as $_smarty_tpl->tpl_vars['class']->key => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['class']->_loop = true;
 ?>
 						<tr>
-							<td><?php echo $_smarty_tpl->tpl_vars['class']->value['classname'];?>
-</td>
-							<td><?php echo $_smarty_tpl->tpl_vars['class']->value['name'];?>
-</td>
-							<td><?php echo $_smarty_tpl->tpl_vars['class']->value['classpass'];?>
-</td>
+							<td>
+								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/class.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
+"><?php echo $_smarty_tpl->tpl_vars['class']->value['classname'];?>
+</a>
+							</td>
+							<td>
+								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/profile.php?id=')).($_smarty_tpl->tpl_vars['class']->value['userid']);?>
+"><?php echo $_smarty_tpl->tpl_vars['class']->value['name'];?>
+</a>
+							</td>
+						<?php if ($_smarty_tpl->tpl_vars['class']->value['classpass']) {?>
+							<td>Private</td>
+						<?php } else { ?>
+							<td>Public</td>
+						<?php }?>
 						</tr>
 					<?php } ?>
 					</tbody>

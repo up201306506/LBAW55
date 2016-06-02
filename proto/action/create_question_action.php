@@ -5,7 +5,11 @@
 
 	if (!empty($_POST['categoryid']) && !empty($_POST['question']) && !empty($_POST['answers'])) {
 		insertNewQuestion($_POST['question'], $_POST['categoryid']);
-		echo $_POST['answers'];
+		
+		$answers = explode("|", $_POST['answers']);
+		foreach ($answers as $answer) {
+			insertNewAnswer($answer);
+		}
 	}
 
 ?>

@@ -12,7 +12,7 @@
 							<label for="category">Category:</label>
 							<select id="category" class="form-control">
 							{foreach $categories as $cat}
-								<option id="{$cat.categoryid}" value="{$cat.type}">{$cat.type}</option>
+								<option value="{$cat.categoryid}">{$cat.type}</option>
 							{/foreach}
 							</select>
 						</div>
@@ -21,7 +21,6 @@
 						<div class="form-group">
 							<label for="question">Question:</label>
 							<textarea id="question" class="form-control" rows="10" required="required"></textarea>
-							<input id="upload_img" type="file" accept="image/*"></input>
 						</div>
 					</div>
 					<div class="answers">

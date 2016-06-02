@@ -2,22 +2,23 @@
 {include file='common/navbar.tpl'}
 
 <div class="container">
-	<h1>{$class.classname}</h1>
+	<h1>Profile</h1>
 	<div class="row">
 		<div id="first" class="col-lg-3 col-md-4 col-sm-12">
-			<div id="class-info" class="box">
-				<h3>Information</h3>
-				<span>Created by: {$manager}</span>
-				<span>Date: {$class.creationdate}</span>
-			<!-- {if $usertype eq 'Professor'}
-				<div id="center-btn">
-					<button class="btn btn-primary" type="button">Edit Class</button>
+			<div class="box">
+				<img id="user-img" class="img-circle img-responsive" src="{$BASE_URL|cat:'css/res/user_img.png'}" width="200" height="200">
+				<div id="name">
+					<span class="glyphicon glyphicon-user"></span>
+					<span>{$name}</span>
 				</div>
-			{/if} -->
+				<div id="email">
+					<span class="glyphicon glyphicon-envelope"></span>
+					<span>{$email}</span>
+				</div>
 			</div>
 			<div class="box">
 				<h3>Description</h3>
-				<span>{$class.description}</span>
+				<span id="description">{$description}</span>
 			</div>
 		</div>
 		<div class="col-lg-6 col-md-8 col-sm-12">
@@ -25,17 +26,17 @@
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th>Exam</th>
-							<th>Date</th>
+							<th>Class</th>
+							<th>Manager</th>
 							<th>Accessibility</th>
 						</tr>
 					</thead>
 					<tbody>
-					{foreach $exams as $exam}
+					{foreach $classes as $class}
 						<tr>
-							<td><a href="{$BASE_URL|cat:'student/exam/exam.php?id='|cat:$exam.examid}">{$exam.examidentification}</a></td>
-							<td>{$exam.date}</td>
-						{if $exam.password}
+							<td><a href="{$BASE_URL|cat:'public/class.php?id='|cat:$class.classid}">{$class.classname}</a></td>
+							<td><a href="{$BASE_URL|cat:'public/profile.php?id='|cat:$class.profid}">{$class.name}</a></td>
+						{if $class.classpass}
 							<td>Private</td>
 						{else}
 							<td>Public</td>
@@ -44,27 +45,6 @@
 					{/foreach}
 					</tbody>
 				</table>
-			</div>
-			<div id="participants" class="box">
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>Account Type</th>
-						</tr>
-					</thead>
-					<tbody>
-					{foreach $participants as $participant}
-						<tr>
-							<td><a href="{$BASE_URL|cat:'public/profile.php?id='|cat:$participant.userid}">{$participant.name}</a></td>
-							<td>{$participant.accounttypevar}</td>
-						</tr>
-					{/foreach}
-					</tbody>
-				</table>
-			</div>
-			<div id="center">
-				<button id="shide" class="btn btn-default">Show Participants</button>
 			</div>
 		</div>
 		<div id="third" class="col-lg-3 col-md-4 col-sm-12">
@@ -77,7 +57,7 @@
 			<div id="calendar" class="box">
 				<ul id="month">
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
-					<li><a href="#">Month</a></li>
+					<li><a href="{$BASE_URL|cat:'profile/calendar.php'}">Month</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
 				</ul>
 				<ul id="weekdays">

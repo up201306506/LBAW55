@@ -30,11 +30,20 @@
 
  	function getAllClasses() {
  		global $conn;
- 		$stmt = $conn->prepare("SELECT classname, name, class.password AS classpass
+ 		$stmt = $conn->prepare("SELECT classid, classname, userid, name, class.password AS classpass
  								FROM class, users
- 								WHERE class.directorid = users.userid");
+ 								WHERE directorid = userid");
  		$stmt->execute();
  		return $stmt->fetchAll();
+ 	}
+
+ 	function getClassById($classid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT *
+ 								FROM class
+ 								WHERE classid = ?");
+ 		$stmt->execute(array($classid));
+ 		return $stmt->fetch();
  	}
 
  	function getAllCategories() {
@@ -44,6 +53,74 @@
  		return $stmt->fetchAll();
  	}
 	
+ 	function getManagerOfClass($userid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT name
+ 								FROM users
+ 								WHERE userid = ?");
+ 		$stmt->execute(array($userid));
+ 		return $stmt->fetch();
+ 	}
+
+ 	function getClassProfessors($classid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT users.userid AS userid, name, accounttypevar
+ 								FROM professormanagesclass, users
+ 								WHERE classid = ?
+ 								AND professormanagesclass.userid = users.userid");
+ 		$stmt->execute(array($classid));
+ 		return $stmt->fetchAll();
+ 	}
+
+ 	function getClassStudents($classid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT users.userid AS userid, name, accounttypevar
+ 								FROM userclass, users
+ 								WHERE classid = ?
+ 								AND userclass.userid = users.userid");
+ 		$stmt->execute(array($classid));
+ 		return $stmt->fetchAll();
+ 	}
+
+ 	function getExamsOfClass($classid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT examid, examidentification, date, password
+ 								FROM exam
+ 								WHERE exam.classid = ?");
+ 		$stmt->execute(array($classid));
+ 		return $stmt->fetchAll();
+ 	}
+
+ 	function getExamsByUser($userid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT examid, examidentification, date, password
+ 								FROM userclass, exam
+ 								WHERE userclass.userid = ?
+ 								AND userclass.classid = exam.classid");
+ 		$stmt->execute(array($userid));
+ 		return $stmt->fetchAll();
+ 	}
+
+ 	function getClassesByUser($userid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT class.classid AS classid, classname, users.userid AS profid, name, class.password AS classpass
+ 								FROM userclass, class, users
+ 								WHERE userclass.userid = ?
+ 								AND userclass.classid = class.classid
+ 								AND class.directorid = users.userid");
+ 		$stmt->execute(array($userid));
+ 		return $stmt->fetchAll();
+ 	}
+
+ 	function getExamById($examid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT *
+ 								FROM exam
+ 								WHERE examid = ?");
+ 		$stmt->execute(array($examid));
+ 		return $stmt->fetch();
+ 	}
+
 	function isLoginCorrect($username, $password) {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 
@@ -81,6 +158,10 @@
 		$stmt->bindParam(':question', $question);
 		$stmt->bindParam(':categoryid', $categoryid);
 		$stmt->execute();
+	}
+
+	function insertNewAnswer($answer) {
+
 	}
 	
 	function updateName($name, $userid) {

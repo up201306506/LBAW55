@@ -5,7 +5,9 @@
 	include_once('../database/user_functions.php');
 
 	/*Other PHP actions should go here*/
-	$smarty->assign('pagename', 'Your Profile');
+
+	$pagename = getName($_GET['id']) . "'s Profile";
+	$smarty->assign('pagename', $pagename);
 
 	$smarty->assign('bootstrap', "../css/Bootstrap/css/bootstrap.min.css");
 	$smarty->assign('csspage', "../css/profile.css");
@@ -17,16 +19,14 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
-	$smarty->assign('session_name', getName($_SESSION['userid']));
-	$smarty->assign('usertype', getAccountType($_SESSION['userid']));
-	$smarty->assign('session_email', getEmail($_SESSION['userid']));
-	$smarty->assign('description', getDescription($_SESSION['userid']));
 
 	/*Other variables*/
-	$smarty->assign('exams', getExamsByUser($_SESSION['userid']));
-	$smarty->assign('classes', getClassesByUser($_SESSION['userid']));
+	$smarty->assign('name', getName($_GET['id']));
+	$smarty->assign('email', getEmail($_GET['id']));
+	$smarty->assign('description', getDescription($_GET['id']));
+	$smarty->assign('classes', getClassesByUser($_GET['id']));
 	
 	/*This summons the smarty template*/
-	$smarty->display('profile/profile.tpl');
+	$smarty->display('public/profile.tpl');
 
 ?>

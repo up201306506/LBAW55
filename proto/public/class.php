@@ -17,7 +17,17 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
-	
+	$smarty->assign('usertype', getAccountType($_SESSION['userid']));
+
+	/*Other variables*/
+	$manager = getManagerOfClass(getClassById($_GET['id'])['directorid'])['name'];
+	$smarty->assign('class', getClassById($_GET['id']));
+	$smarty->assign('manager', $manager);
+
+	$participants = array_merge(getClassProfessors($_GET['id']), getClassStudents($_GET['id']));
+	$smarty->assign('participants', $participants);
+	$smarty->assign('exams', getExamsOfClass($_GET['id']));
+
 	/*This summons the smarty template*/
 	$smarty->display('public/class.tpl');
 

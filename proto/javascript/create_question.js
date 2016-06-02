@@ -15,16 +15,6 @@ $(document).ready(function() {
 			}
 		});
 
-		var catId;
-		var val = $("#category").val();
-		$("#category option").each(function() {
-			if ($(this).val() == val) {
-				catId = $(this).attr("id");
-			}
-		});
-
-		$.post("../../action/create_question_action.php", { categoryid: catId, question: $("#question").val(), answers: answers }, function(data) {
-			alert(data);
-		});
+		$.post("../../action/create_question_action.php", { categoryid: $("#category").val(), question: $("#question").val(), answers: answers }, function() {});
 	});
 });
