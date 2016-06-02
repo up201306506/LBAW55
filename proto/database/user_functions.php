@@ -28,7 +28,6 @@
  		return $stmt->fetchAll();
  	}
 
-<<<<<<< HEAD
  	function getClassById($classid) {
  		global $conn;
  		$stmt = $conn->prepare("SELECT *
@@ -36,13 +35,13 @@
  								WHERE classid = ?");
  		$stmt->execute(array($classid));
  		return $stmt->fetch();
-=======
+ 	}
+
  	function getAllCategories() {
  		global $conn;
  		$stmt = $conn->prepare("SELECT * FROM category");
  		$stmt->execute();
  		return $stmt->fetchAll();
->>>>>>> master
  	}
 	
  	function getManagerOfClass($userid) {
