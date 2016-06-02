@@ -112,8 +112,8 @@
 								<td>{$exam.examidentification}</td>
 								<td>{$exam.date}</td>
 								<td>{$exam_owners[$exam.examid]}</td>
-								<td>IF IT HAS A PASSWORD</td>
-								<td>IF IT IS OPEN ONGOING OR... UH!</td>
+								<td>{if $exam.password eq ''}OPEN{else}PRIVATE{/if}</td>
+								<td>{if $exam.exampublished}Published{else}{if $exam.isongoing}Being Solved{else}Not Visible{/if}{/if}</td>
 								<td>
 									<button class="btn btn-danger">Ban</button>
 								</td>
