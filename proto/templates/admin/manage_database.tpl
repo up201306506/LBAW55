@@ -141,10 +141,13 @@
 						<div class="form-group">
 							<label for="category">Category</label>
 							<select id="category" class="form-control">
-								<option>Category #1</option>
-								<option>Category #2</option>
-								<option>Category #3</option>
-								<option>Category #4</option>
+							{if !$categorylist}
+								<option value=''>No categories...</option>
+							{else}
+							{foreach $categorylist as $category}
+								<option value='{$category.categoryid}'>{$category.type}</option>
+							{/foreach}
+							{/if}
 							</select>
 						</div>
 					</div>
@@ -166,14 +169,14 @@
 				<div class="input-group question">
 					<div class="my-panel">
 						<div class="my-panel-header">
-							<span>This is a question</span>
+							<span></span>
 						</div>
 						<div class="my-panel-body">
 							<ul id="answers">
-								<li><span>This is an answer</span></li>
-								<li><span>This is an answer</span></li>
-								<li><span>This is an answer</span></li>
-								<li><span>This is an answer</span></li>
+								<li><span></span></li>
+								<li><span></span></li>
+								<li><span></span></li>
+								<li><span></span></li>
 							</ul>
 						</div>
 					</div>

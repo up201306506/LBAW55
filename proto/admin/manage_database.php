@@ -36,8 +36,9 @@
 	}
 	$smarty->assign('exam_owners', $exam_owners);
 	
-	
 	//Questions
+	$categorylist = getAllCategories();
+	$smarty->assign('categorylist', $categorylist);
 	
 	
 	$smarty->assign('pagename', 'Manage Database');
