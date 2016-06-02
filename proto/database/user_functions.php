@@ -55,7 +55,7 @@
 
  	function getClassProfessors($classid) {
  		global $conn;
- 		$stmt = $conn->prepare("SELECT name, accounttypevar
+ 		$stmt = $conn->prepare("SELECT users.userid AS userid, name, accounttypevar
  								FROM professormanagesclass, users
  								WHERE classid = ?
  								AND professormanagesclass.userid = users.userid");
@@ -65,12 +65,51 @@
 
  	function getClassStudents($classid) {
  		global $conn;
- 		$stmt = $conn->prepare("SELECT name, accounttypevar
+ 		$stmt = $conn->prepare("SELECT users.userid AS userid, name, accounttypevar
  								FROM userclass, users
  								WHERE classid = ?
  								AND userclass.userid = users.userid");
  		$stmt->execute(array($classid));
  		return $stmt->fetchAll();
+ 	}
+
+ 	function getExamsOfClass($classid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT examid, examidentification, date, password
+ 								FROM exam
+ 								WHERE exam.classid = ?");
+ 		$stmt->execute(array($classid));
+ 		return $stmt->fetchAll();
+ 	}
+
+ 	function getExamsByUser($userid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT examid, examidentification, date, password
+ 								FROM userclass, exam
+ 								WHERE userclass.userid = ?
+ 								AND userclass.classid = exam.classid");
+ 		$stmt->execute(array($userid));
+ 		return $stmt->fetchAll();
+ 	}
+
+ 	function getClassesByUser($userid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT class.classid AS classid, classname, users.userid AS profid, name, class.password AS classpass
+ 								FROM userclass, class, users
+ 								WHERE userclass.userid = ?
+ 								AND userclass.classid = class.classid
+ 								AND class.directorid = users.userid");
+ 		$stmt->execute(array($userid));
+ 		return $stmt->fetchAll();
+ 	}
+
+ 	function getExamById($examid) {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT *
+ 								FROM exam
+ 								WHERE examid = ?");
+ 		$stmt->execute(array($examid));
+ 		return $stmt->fetch();
  	}
 
 	function isLoginCorrect($username, $password) {
@@ -110,6 +149,10 @@
 		$stmt->bindParam(':question', $question);
 		$stmt->bindParam(':categoryid', $categoryid);
 		$stmt->execute();
+	}
+
+	function insertNewAnswer($answer) {
+
 	}
 	
 	function updateName($name, $userid) {

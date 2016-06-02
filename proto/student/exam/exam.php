@@ -2,10 +2,11 @@
 
 	/*This summons the database and smarty initializer */
 	include_once('../../config/init.php');
+	include_once('../../database/user_functions.php');
 
 	/*Other PHP actions should go here*/
-	$pagename = 'Exam';
-	$smarty->assign('pagename', $pagename);
+	$exam = getExamById($_GET['id']);
+	$smarty->assign('pagename', $exam['examidentification']);
 
 	$smarty->assign('bootstrap', "../../css/Bootstrap/css/bootstrap.min.css");
 	$smarty->assign('csspage', "../../css/exam.css");
@@ -17,6 +18,9 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
+
+	/*Other variables*/
+	$smarty->assign('exam', $exam);
 	
 	/*This summons the smarty template*/
 	$smarty->display('student/exam/exam.tpl');

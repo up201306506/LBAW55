@@ -31,7 +31,17 @@
 						</tr>
 					</thead>
 					<tbody>
-						
+					{foreach $exams as $exam}
+						<tr>
+							<td><a href="{$BASE_URL|cat:'student/exam/exam.php?id='|cat:$exam.examid}">{$exam.examidentification}</a></td>
+							<td>{$exam.date}</td>
+						{if $exam.password}
+							<td>Private</td>
+						{else}
+							<td>Public</td>
+						{/if}
+						</tr>
+					{/foreach}
 					</tbody>
 				</table>
 			</div>
@@ -46,7 +56,7 @@
 					<tbody>
 					{foreach $participants as $participant}
 						<tr>
-							<td>{$participant.name}</td>
+							<td><a href="{$BASE_URL|cat:'public/profile.php?id='|cat:$participant.userid}">{$participant.name}</a></td>
 							<td>{$participant.accounttypevar}</td>
 						</tr>
 					{/foreach}

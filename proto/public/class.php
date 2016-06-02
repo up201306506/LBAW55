@@ -26,6 +26,7 @@
 
 	$participants = array_merge(getClassProfessors($_GET['id']), getClassStudents($_GET['id']));
 	$smarty->assign('participants', $participants);
+	$smarty->assign('exams', getExamsOfClass($_GET['id']));
 
 	/*This summons the smarty template*/
 	$smarty->display('public/class.tpl');

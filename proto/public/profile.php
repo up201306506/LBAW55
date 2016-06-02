@@ -24,6 +24,7 @@
 	$smarty->assign('name', getName($_GET['id']));
 	$smarty->assign('email', getEmail($_GET['id']));
 	$smarty->assign('description', getDescription($_GET['id']));
+	$smarty->assign('classes', getClassesByUser($_GET['id']));
 	
 	/*This summons the smarty template*/
 	$smarty->display('public/profile.tpl');

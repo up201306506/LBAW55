@@ -32,7 +32,17 @@
 						</tr>
 					</thead>
 					<tbody>
-
+					{foreach $classes as $class}
+						<tr>
+							<td><a href="{$BASE_URL|cat:'public/class.php?id='|cat:$class.classid}">{$class.classname}</a></td>
+							<td><a href="{$BASE_URL|cat:'public/profile.php?id='|cat:$class.profid}">{$class.name}</a></td>
+						{if $class.classpass}
+							<td>Private</td>
+						{else}
+							<td>Public</td>
+						{/if}
+						</tr>
+					{/foreach}
 					</tbody>
 				</table>
 			</div>
