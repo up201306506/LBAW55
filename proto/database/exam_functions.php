@@ -10,8 +10,8 @@
 	
 	function getExamsClassID($examid) {
 	    global $conn;
-	    $stmt = $conn->prepare("SELECT classid 
-	                            FROM exam
+	    $stmt = $conn->prepare("SELECT * 
+	                            FROM exam, class
 								WHERE examid = ?");
 	    $stmt->execute(array($examid));
 	    return $stmt->fetch();
