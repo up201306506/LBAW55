@@ -9,6 +9,15 @@
 	    return $stmt->fetch();
  	}
 	
+	function getUserbyID($userid) {
+	    global $conn;
+	    $stmt = $conn->prepare("SELECT * 
+	                            FROM users 
+	                            WHERE userid = ?");
+	    $stmt->execute(array($userid));
+	    return $stmt->fetch();
+ 	}
+	
 	function getAllUsers() {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 
