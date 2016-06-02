@@ -21,7 +21,6 @@
 								<a href="{$BASE_URL|cat:'public/class.php?id='|cat: $class.classid}">{$class.classname}</a>
 							</td>
 							<td>
-								<!-- <img src="{$BASE_URL|cat: 'css/res/user_img.png'}" width="35" height="35"> -->
 								<a href="{$BASE_URL|cat:'public/profile.php?id='|cat: $class.userid}">{$class.name}</a>
 							</td>
 						{if $class.classpass}
