@@ -4,10 +4,11 @@
 	include_once('../config/init.php');
 	include_once('../database/user_functions.php');
 	include_once('../database/exam_functions.php');
-	
+	include_once('../database/class_functions.php');
 	
 	/*Other PHP actions should go here*/
 	
+	//Users
 	$userlist = getAllUsers();
 	$length = count($userlist);
 	$user_pages_needed = $length / 15;
@@ -17,7 +18,7 @@
 	$smarty->assign('userlist', $userlist);
 	$smarty->assign('user_pages_needed', $user_pages_needed);
 	
-	
+	//Exams
 	$examlist = getAllExams();
 	$length = count($examlist);
 	$exam_pages_needed = $length / 15;
@@ -27,6 +28,16 @@
 	$smarty->assign('examlist', $examlist);
 	$smarty->assign('exam_pages_needed', $exam_pages_needed);
 	
+	$exam_owners = [];
+	foreach ($examlist as $exam){
+		$temp = getExamsClassID($exam[examid]);
+		$temp = getClassOwnerID($temp[classid]);
+		$exam_owners[$exam[examid]] =getUserbyID($temp[directorid])[name];
+	}
+	$smarty->assign('exam_owners', $exam_owners);
+	
+	
+	//Questions
 	
 	
 	$smarty->assign('pagename', 'Manage Database');
