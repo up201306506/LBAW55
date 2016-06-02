@@ -3,6 +3,8 @@
 	/*This summons the database and smarty initializer */
 	include_once('../config/init.php');
 	include_once('../database/user_functions.php');
+	include_once('../database/class_functions.php');
+	include_once('../action/session_check.php');
 
 	/*Other PHP actions should go here*/
 	$smarty->assign('pagename', 'Your Profile');
@@ -23,8 +25,27 @@
 	$smarty->assign('description', getDescription($_SESSION['userid']));
 
 	/*Other variables*/
-	$smarty->assign('exams', getExamsByUser($_SESSION['userid']));
-	$smarty->assign('classes', getClassesByUser($_SESSION['userid']));
+	if($user_type == "Student")
+	{
+		$smarty->assign('exams', getExamsByUser($_SESSION['userid']));
+		$smarty->assign('classes', getClassesByUser($_SESSION['userid']));
+	}	
+	else
+	{
+		$classes_owned = getClassByOwnerID($_SESSION['userid']);
+		$classes_managed = getClassByManagerID($_SESSION['userid']);
+		$classes = array_merge($classes_owned, $classes_managed);
+		//echo print_r($classes,true);
+		
+		$exams = [];
+		foreach ($classes as $class)
+			$exams = array_merge($exams,getExamsOfClass($class['classid']));
+		//echo print_r($exams,true);
+		
+		$smarty->assign('exams', $exams);
+		$smarty->assign('classes', $classes);
+	}
+	
 	
 	/*This summons the smarty template*/
 	$smarty->display('profile/profile.tpl');
