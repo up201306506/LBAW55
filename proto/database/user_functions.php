@@ -155,41 +155,31 @@
 	/* search fuctions */
 	function searchUserBar($user,$prof,$stu){
 		global $conn;
-		echo "<script type='text/javascript'>alert('$user');</script>";
 		$professors =   [];
 		$student =  [];
 		if($prof){
 	    	$stmt = $conn->prepare("SELECT name, description, userid, accounttypevar
 									FROM 
 									(
-										SELECT name, description,userid,accounttypevar,
-										to_tsvector(users.name) || to_tsvector(users.description) as document
-										FROM users
+									SELECT name, description,userid,accounttypevar,
+									to_tsvector(users.name) || to_tsvector(users.description) as document
+									FROM users
 									) AS alias
-									WHERE alias.document @@ to_tsquery(:searchfield) AND accounttypevar = 'Professor'"); // --Professor or Student 
-	    	$stmt->bindParam(':searchfield', $user);
+									WHERE alias.document @@ to_tsquery(?) AND accounttypevar = 'Professor'"); // --Professor or Student 
+	    	$stmt->execute(array($user));
 	    	$professors = $stmt->fetchAll();
 		}
 		if($stu){	
 			$stmt = $conn->prepare("SELECT name, description, userid, accounttypevar
 									FROM 
 									(
-										SELECT name, description,userid,accounttypevar,
-										to_tsvector(users.name) || to_tsvector(users.description) as document
-										FROM users
+									SELECT name, description,userid,accounttypevar,
+									to_tsvector(users.name) || to_tsvector(users.description) as document
+									FROM users
 									) AS alias
-									WHERE alias.document @@ to_tsquery(:searchfield) AND accounttypevar = 'Student'"); // --Professor or Student 
-	    	$stmt->bindParam(':searchfield', $user);
+									WHERE alias.document @@ to_tsquery(?) AND accounttypevar = 'Student'"); // --Professor or Student 
+	    	$stmt->execute(array($user));
 	    	$student = $stmt->fetchAll();
-		}
-
-		foreach ($student as $key => $user) {
-			$message = "student: " + $user['name'];
-			echo "<script type='text/javascript'>alert('$message');</script>";
-		}
-		foreach ($professors as $key => $user) {
-			$message = "professors: " + $user['name'];
-			echo "<script type='text/javascript'>alert('$message');</script>";
 		}
 
 	    return array_merge($professors,$student);	
@@ -197,10 +187,14 @@
 
 	function seachClass($class){
 		global $conn;
-		$stmt = $conn->prepare("SELECT * FROM classes
-								WHERE search_tsv = to_tsvector(classes.classname || ' ' || classes.directorId)
-								AND search_tsv @@ to_tsquery(:searchfield)"); 
-	    $stmt->bindParam(':searchfield', $class);
+		$stmt = $conn->prepare("SELECT classname, description, classid, directorid FROM 
+								(
+								SELECT classname, description, classid, directorid,
+								to_tsvector(class.classname) as document
+								FROM class
+								) AS alias
+								WHERE alias.document @@ to_tsquery(?);"); 
+	    $stmt->execute(array($class));
 	    return $stmt->fetchAll();
 	}
 ?>
