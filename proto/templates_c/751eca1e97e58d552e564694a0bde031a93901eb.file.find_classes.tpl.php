@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.15, created on 2016-06-01 17:32:29
+=======
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-02 09:50:46
+>>>>>>> master
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/find_classes.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:603227613574ca77a6dc042-37244728%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +11,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '751eca1e97e58d552e564694a0bde031a93901eb' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/find_classes.tpl',
+<<<<<<< HEAD
       1 => 1464795148,
+=======
+      1 => 1464821764,
+>>>>>>> master
       2 => 'file',
     ),
   ),
@@ -20,7 +28,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'all_classes' => 0,
+<<<<<<< HEAD
     'BASE_URL' => 0,
+=======
+>>>>>>> master
     'class' => 0,
   ),
   'has_nocache_code' => false,
@@ -50,6 +61,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['class']->key => $_smarty_tpl->tpl_var
 $_smarty_tpl->tpl_vars['class']->_loop = true;
 ?>
 						<tr>
+<<<<<<< HEAD
 							<td>
 								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/class.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
 "><?php echo $_smarty_tpl->tpl_vars['class']->value['classname'];?>
@@ -67,6 +79,14 @@ $_smarty_tpl->tpl_vars['class']->_loop = true;
 						<?php } else { ?>
 							<td>Public</td>
 						<?php }?>
+=======
+							<td><?php echo $_smarty_tpl->tpl_vars['class']->value['classname'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['class']->value['name'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['class']->value['classpass'];?>
+</td>
+>>>>>>> master
 						</tr>
 					<?php } ?>
 					</tbody>

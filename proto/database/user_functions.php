@@ -19,20 +19,6 @@
 	    return $stmt->fetchAll();
  	}
 
- 	function getExamsByUser($userid) {
- 		global $conn;
- 		$stmt = $conn->prepare("");
- 		$stmt->execute(array($userid));
- 		return $stmt->fetch();
- 	}
-
- 	function getClassesByUser($userid) {
- 		global $conn;
- 		$stmt = $conn->prepare("");
- 		$stmt->execute(array($userid));
- 		return $stmt->fetch();
- 	}
-
  	function getAllClasses() {
  		global $conn;
  		$stmt = $conn->prepare("SELECT classid, classname, userid, name, class.password AS classpass
@@ -42,6 +28,7 @@
  		return $stmt->fetchAll();
  	}
 
+<<<<<<< HEAD
  	function getClassById($classid) {
  		global $conn;
  		$stmt = $conn->prepare("SELECT *
@@ -49,6 +36,13 @@
  								WHERE classid = ?");
  		$stmt->execute(array($classid));
  		return $stmt->fetch();
+=======
+ 	function getAllCategories() {
+ 		global $conn;
+ 		$stmt = $conn->prepare("SELECT * FROM category");
+ 		$stmt->execute();
+ 		return $stmt->fetchAll();
+>>>>>>> master
  	}
 	
  	function getManagerOfClass($userid) {
@@ -109,6 +103,14 @@
 		$stmt->bindParam(':isactive', $isactive);
 		$stmt->execute();
 		return getUser($username);
+	}
+
+	function insertNewQuestion($question, $categoryid) {
+		global $conn;
+	    $stmt = $conn->prepare("INSERT INTO question (question,categoryid) VALUES (:question, :categoryid)");
+		$stmt->bindParam(':question', $question);
+		$stmt->bindParam(':categoryid', $categoryid);
+		$stmt->execute();
 	}
 	
 	function updateName($name, $userid) {

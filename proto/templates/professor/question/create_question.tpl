@@ -6,36 +6,35 @@
 		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
 			<h1>New Question</h1>
 			<div class="box">
-				<form action="{$BASE_URL|cat:'action/create_question_action.php'}" method="post" role="form">
+				<form role="create-question">
 					<div class="category">
 						<div class="form-group">
 							<label for="category">Category:</label>
 							<select id="category" class="form-control">
-								<option value="math">Math</option>
-								<option value="history">History</option>
-								<option value="science">Science</option>
-								<option value="other">Other</option>
+							{foreach $categories as $cat}
+								<option id="{$cat.categoryid}" value="{$cat.type}">{$cat.type}</option>
+							{/foreach}
 							</select>
 						</div>
 					</div>
 					<div class="question">
 						<div class="form-group">
 							<label for="question">Question:</label>
-							<textarea id="question" name="question" class="form-control" rows="10"></textarea>
+							<textarea id="question" class="form-control" rows="10" required="required"></textarea>
 							<input id="upload_img" type="file" accept="image/*"></input>
 						</div>
 					</div>
 					<div class="answers">
 						<div class="answer-block">
 							<div class="form-group">
-								<label for="answer">Answer #1:</label>
-								<textarea id="answer" name="answer-1" class="form-control" rows="5"></textarea>
+								<label for="answer-1">Answer #1:</label>
+								<textarea id="answer-1" class="form-control answer" rows="5" required="required"></textarea>
 							</div>
 						</div>
 						<div class="answer-block">
 							<div class="form-group">
-								<label for="answer">Answer #2:</label>
-								<textarea id="answer" name="answer-2" class="form-control" rows="5"></textarea>
+								<label for="answer-2">Answer #2:</label>
+								<textarea id="answer-2" class="form-control answer" rows="5" required="required"></textarea>
 							</div>
 						</div>
 					</div>
