@@ -15,8 +15,7 @@
 			header('Location: ' . $_SERVER['HTTP_REFERER']);
 			exit;
 		}
-	} else
-	{
+	} else {
 		$class = getClassById($_GET['id']);
 		if (empty($class['password'])){
 			insertNewUserClass($_SESSION['userid'], $class['classid']);
