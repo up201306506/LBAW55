@@ -61,27 +61,19 @@
 					</thead>
 					<tbody>
 					{foreach $classes as $class}
+						<tr>
+							<td>
+								<a href="{$BASE_URL|cat:'public/class.php?id='|cat:$class.classid}">{$class.classname}</a>
+							</td>
+							<td>
+								<a href="{$BASE_URL|cat:'public/profile.php?id='|cat:$class.profid}">{$class.name}</a>
+							</td>
 						{if $class.classpass}
-						<tr>
-							<td>
-								<a href="{$BASE_URL|cat:'public/class.php?id='|cat:$class.classid}">{$class.classname}</a>
-							</td>
-							<td>
-								<a href="{$BASE_URL|cat:'public/profile.php?id='|cat:$class.profid}">{$class.name}</a>
-							</td>
 							<td>Private</td>
-						</tr>
 						{else}
-						<tr>
-							<td>
-								<a href="{$BASE_URL|cat:'public/class.php?id='|cat:$class.classid}">{$class.classname}</a>
-							</td>
-							<td>
-								<a href="{$BASE_URL|cat:'public/profile.php?id='|cat:$class.profid}">{$class.name}</a>
-							</td>
 							<td>Public</td>
-						</tr>
 						{/if}
+						</tr>
 					{/foreach}
 					</tbody>
 				</table>
@@ -121,8 +113,10 @@
 			<div id="options" class="box">
 				<ul>
 					{if $usertype eq 'Administrator'}
-						<li><a href="{$BASE_URL|cat:'admin/validate_accounts.php'}"><span class="glyphicon glyphicon-th-list"></span>Validate Professor Accounts</a></li>
-						<li><a href="{$BASE_URL|cat:'admin/manage_database.php'}"><span class="glyphicon glyphicon-folder-close"></span>Manage Database</a></li>
+						<li><a href="{$BASE_URL|cat:'admin/validate_accounts.php'}"><span class="glyphicon glyphicon-th-list"></span>Validate Accounts</a></li>
+						<li><a href="{$BASE_URL|cat:'admin/manage_accounts.php'}"><span class="glyphicon glyphicon-book"></span>Manage Accounts</a></li>
+						<li><a href="{$BASE_URL|cat:'admin/manage_exams.php'}"><span class="glyphicon glyphicon-file"></span>Manage Exams</a></li>
+						<li><a href="{$BASE_URL|cat:'admin/manage_questions.php'}"><span class="glyphicon glyphicon-question-sign"></span>Manage Questions</a></li>
 					{elseif $usertype eq 'Professor'}
 						<li><a href="{$BASE_URL|cat:'professor/class/create_class.php'}"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
 						<li><a href="{$BASE_URL|cat:'professor/exam/create_exam.php'}"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>

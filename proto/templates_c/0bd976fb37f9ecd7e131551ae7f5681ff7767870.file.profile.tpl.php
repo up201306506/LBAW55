@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 16:14:16
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 17:10:21
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2128119125574fe7b2aea268-37880714%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0bd976fb37f9ecd7e131551ae7f5681ff7767870' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl',
-      1 => 1464963223,
+      1 => 1464966618,
       2 => 'file',
     ),
   ),
@@ -118,35 +118,23 @@ $_smarty_tpl->tpl_vars['exam']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['class']->key => $_smarty_tpl->tpl_vars['class']->value) {
 $_smarty_tpl->tpl_vars['class']->_loop = true;
 ?>
+						<tr>
+							<td>
+								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/class.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
+"><?php echo $_smarty_tpl->tpl_vars['class']->value['classname'];?>
+</a>
+							</td>
+							<td>
+								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/profile.php?id=')).($_smarty_tpl->tpl_vars['class']->value['profid']);?>
+"><?php echo $_smarty_tpl->tpl_vars['class']->value['name'];?>
+</a>
+							</td>
 						<?php if ($_smarty_tpl->tpl_vars['class']->value['classpass']) {?>
-						<tr>
-							<td>
-								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/class.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
-"><?php echo $_smarty_tpl->tpl_vars['class']->value['classname'];?>
-</a>
-							</td>
-							<td>
-								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/profile.php?id=')).($_smarty_tpl->tpl_vars['class']->value['profid']);?>
-"><?php echo $_smarty_tpl->tpl_vars['class']->value['name'];?>
-</a>
-							</td>
 							<td>Private</td>
-						</tr>
 						<?php } else { ?>
-						<tr>
-							<td>
-								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/class.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
-"><?php echo $_smarty_tpl->tpl_vars['class']->value['classname'];?>
-</a>
-							</td>
-							<td>
-								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/profile.php?id=')).($_smarty_tpl->tpl_vars['class']->value['profid']);?>
-"><?php echo $_smarty_tpl->tpl_vars['class']->value['name'];?>
-</a>
-							</td>
 							<td>Public</td>
-						</tr>
 						<?php }?>
+						</tr>
 					<?php } ?>
 					</tbody>
 				</table>
@@ -197,9 +185,13 @@ $_smarty_tpl->tpl_vars['day']->first = $_smarty_tpl->tpl_vars['day']->iteration 
 				<ul>
 					<?php if ($_smarty_tpl->tpl_vars['usertype']->value=='Administrator') {?>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/validate_accounts.php');?>
-"><span class="glyphicon glyphicon-th-list"></span>Validate Professor Accounts</a></li>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_database.php');?>
-"><span class="glyphicon glyphicon-folder-close"></span>Manage Database</a></li>
+"><span class="glyphicon glyphicon-th-list"></span>Validate Accounts</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_accounts.php');?>
+"><span class="glyphicon glyphicon-book"></span>Manage Accounts</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_exams.php');?>
+"><span class="glyphicon glyphicon-file"></span>Manage Exams</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_questions.php');?>
+"><span class="glyphicon glyphicon-question-sign"></span>Manage Questions</a></li>
 					<?php } elseif ($_smarty_tpl->tpl_vars['usertype']->value=='Professor') {?>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/class/create_class.php');?>
 "><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
