@@ -190,7 +190,7 @@
 		$stmt = $conn->prepare("SELECT classname, description, classid, directorid FROM 
 								(
 								SELECT classname, description, classid, directorid,
-								to_tsvector(class.classname) as document
+								to_tsvector(class.classname) || to_tsvector(class.description) as document
 								FROM class
 								) AS alias
 								WHERE alias.document @@ to_tsquery(?);"); 
