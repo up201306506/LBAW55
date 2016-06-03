@@ -54,5 +54,23 @@
 		
 	   
  // 	}
+ 
+	function checkStudentBelongsClass($userid, $classid){
+		global $conn;
+		$stmt = $conn->prepare(" SELECT *
+								FROM userclass
+								WHERE userid = ?
+								AND classid = ?");
+		$stmt->execute(array($userid, $classid));
+		return $stmt->fetch() == true;
+	}
+	
+	/*
+	function checkProfessBelongsClass($userid, $classid){
+		global $conn;
+		
+		
+	}
+	*/
 	
 ?>
