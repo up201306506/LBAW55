@@ -176,12 +176,13 @@ function getExamById($examid) {
 	return $stmt->fetch();
 }
 
-function correctClassPassword($password) {
+function correctClassPassword($password, $id) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT *
 		FROM class
-		WHERE password = ?");
-	$stmt->execute(array($password));
+		WHERE password = ?
+		AND classid = ?");
+	$stmt->execute(array($password, $id));
 	return $stmt->fetch();
 }
 
