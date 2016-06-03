@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-02 11:21:57
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 00:48:45
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/professor/question/create_question.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2075567543574ff873207915-30799027%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd04390ec906b8dd3aa21c0479f110ddf3b31a3c0' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/professor/question/create_question.tpl',
-      1 => 1464859315,
+      1 => 1464907723,
       2 => 'file',
     ),
   ),
@@ -31,7 +31,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <div class="container">
 	<div class="row">
-		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
+		<div class="col-lg-8 col-md-8 col-sm-12 col-lg-offset-2 col-md-offset-2">
 			<h1>New Question</h1>
 			<div class="box">
 				<form role="create-question">
@@ -58,16 +58,24 @@ $_smarty_tpl->tpl_vars['cat']->_loop = true;
 						</div>
 					</div>
 					<div class="answers">
-						<div class="answer-block">
-							<div class="form-group">
-								<label for="answer-1">Answer #1:</label>
+						<div class="form-group answer-block">
+							<label for="answer-1">Answer #1:</label>
+							<div class="input-group">
 								<textarea id="answer-1" class="form-control answer" rows="5" required="required"></textarea>
+								<span class="input-group-addon">
+									<input type="radio" name="correct" value="1">
+									<span class="glyphicon glyphicon-ok"></span>
+								</span>
 							</div>
 						</div>
-						<div class="answer-block">
-							<div class="form-group">
-								<label for="answer-2">Answer #2:</label>
+						<div class="form-group answer-block">
+							<label for="answer-2">Answer #2:</label>
+							<div class="input-group">
 								<textarea id="answer-2" class="form-control answer" rows="5" required="required"></textarea>
+								<span class="input-group-addon">
+									<input type="radio" name="correct" value="2">
+									<span class="glyphicon glyphicon-ok"></span>
+								</span>
 							</div>
 						</div>
 					</div>

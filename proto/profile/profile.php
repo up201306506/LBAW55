@@ -25,6 +25,11 @@
 	/*Other variables*/
 	$smarty->assign('exams', getExamsByUser($_SESSION['userid']));
 	$smarty->assign('classes', getClassesByUser($_SESSION['userid']));
+
+	/*Calendar*/
+	$smarty->assign('month', date('F'));
+	$smarty->assign('days', date('t'));
+	$smarty->assign('interval', abs(date('N') - date('j')));
 	
 	/*This summons the smarty template*/
 	$smarty->display('profile/profile.tpl');

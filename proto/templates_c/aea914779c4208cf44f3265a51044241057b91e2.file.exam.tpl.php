@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-02 11:02:37
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-02 17:34:06
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/student/exam/exam.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:830771527574ff39f15c779-20925958%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'aea914779c4208cf44f3265a51044241057b91e2' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/student/exam/exam.tpl',
-      1 => 1464858156,
+      1 => 1464858366,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'exam' => 0,
     'session_username' => 0,
+    'questions' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -57,6 +58,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<span><?php echo $_smarty_tpl->tpl_vars['exam']->value['information'];?>
 </span>
 			</div>
+			<?php  $_smarty_tpl->tpl_vars['question'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['question']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['questions']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['question']->key => $_smarty_tpl->tpl_vars['question']->value) {
+$_smarty_tpl->tpl_vars['question']->_loop = true;
+?>
+			
+			<?php } ?>
 			<div class="input-group">
 				<div class="my-panel">
 					<div class="my-panel-header">
