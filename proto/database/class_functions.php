@@ -57,7 +57,7 @@
  
 	function checkStudentBelongsClass($userid, $classid){
 		global $conn;
-		$stmt = $conn->prepare(" SELECT *
+		$stmt = $conn->prepare("SELECT *
 								FROM userclass
 								WHERE userid = ?
 								AND classid = ?");
@@ -65,13 +65,25 @@
 		return $stmt->fetch() == true;
 	}
 	
-	/*
+	
 	function checkProfessBelongsClass($userid, $classid){
 		global $conn;
+		$stmt = $conn->prepare("SELECT *
+								FROM class
+								WHERE classid = ?
+								AND directorid = ?");
+		$stmt->execute(array($classid, $userid));
+		$result1 = $stmt->fetch();
+		$stmt = $conn->prepare("SELECT *
+								FROM professormanagesclass
+								WHERE classid = ?
+								AND userid = ?");
+		$stmt->execute(array($classid, $userid));
+		$result2 = $stmt->fetch();
 		
-		
+		return ($result1 == true || $result2 == true);
 	}
-	*/
+	
 	
 	function checkClassRequiresPassword($classid){
 		global $conn;

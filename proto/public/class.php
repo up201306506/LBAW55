@@ -12,7 +12,7 @@
 	if($user_type == 'Student')
 		$this_class_belong = checkStudentBelongsClass($_SESSION['userid'], $_GET['id']);
 	elseif ($user_type == 'Professor')
-		$this_class_belong = true;
+		$this_class_belong = checkProfessBelongsClass($_SESSION['userid'], $_GET['id']);
 	else
 		$this_class_belong = true;
 	

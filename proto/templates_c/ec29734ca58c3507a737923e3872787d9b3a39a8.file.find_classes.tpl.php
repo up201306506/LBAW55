@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 12:25:40
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 14:21:49
          compiled from "D:\Programs\wamp\www\LBAW55\proto\templates\public\find_classes.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1362957515b241c7a30-93494869%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ec29734ca58c3507a737923e3872787d9b3a39a8' => 
     array (
       0 => 'D:\\Programs\\wamp\\www\\LBAW55\\proto\\templates\\public\\find_classes.tpl',
-      1 => 1464940628,
+      1 => 1464956507,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_57515b2448fbd7_50450871',
   'variables' => 
   array (
     'all_classes' => 0,
@@ -22,8 +24,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'BASE_URL' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_57515b2448fbd7_50450871',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_57515b2448fbd7_50450871')) {function content_57515b2448fbd7_50450871($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -52,7 +52,7 @@ $_smarty_tpl->tpl_vars['class']->_loop = true;
 						<?php if ($_smarty_tpl->tpl_vars['class']->value['classpass']) {?>
 						<tr>
 							<td>
-								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/enroll_class.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
+								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/class.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
 "><?php echo $_smarty_tpl->tpl_vars['class']->value['classname'];?>
 </a>
 							</td>

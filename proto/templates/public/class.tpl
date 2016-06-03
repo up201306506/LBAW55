@@ -10,7 +10,7 @@
 				<span>Created by: {$manager}</span>
 				<span>Date: {$class.creationdate}</span>
 			{if $usertype eq 'Professor'}
-			{if !$this_class_belong}
+			{if $this_class_belong}
 				<div id="center-edit">
 					<a id="edit" class="btn btn-primary" href="{$BASE_URL}professor/class/edit_class.php?id={$class.classid}">Edit Class</a>
 				</div>
