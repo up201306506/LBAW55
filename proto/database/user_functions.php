@@ -91,6 +91,15 @@ function getExamsOfClass($classid) {
 	return $stmt->fetchAll();
 }
 
+function getExamsOfClassAll($classid) {
+	global $conn;
+	$stmt = $conn->prepare("SELECT *
+		FROM exam
+		WHERE exam.classid = ?");
+	$stmt->execute(array($classid));
+	return $stmt->fetchAll();
+}
+
 function getExamsByUser($userid) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT examid, examidentification, date, password
