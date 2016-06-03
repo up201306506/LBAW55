@@ -12,6 +12,7 @@
 			header('Location: ' . $BASE_URL . 'public/class.php?id=' . $class['classid']);
 			exit;
 		} else {
+			$_SESSION['error'] = 'Wrong Password!';
 			header('Location: ' . $_SERVER['HTTP_REFERER']);
 			exit;
 		}
@@ -22,6 +23,7 @@
 			header('Location: ' . $BASE_URL . 'public/class.php?id=' . $class['classid']);
 			exit;
 		} else {
+			$_SESSION['error'] = 'Something went wrong!';
 			header('Location: ' . $BASE_URL);
 			exit;
 		}

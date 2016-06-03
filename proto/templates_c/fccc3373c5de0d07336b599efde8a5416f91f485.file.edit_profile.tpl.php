@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 16:38:59
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 16:40:07
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/edit_profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1155752256574fee39cca721-63215288%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fccc3373c5de0d07336b599efde8a5416f91f485' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/edit_profile.tpl',
-      1 => 1464964736,
+      1 => 1464964756,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_574fee39e4e910_34813664',
   'variables' => 
   array (
-    'ERROR_MESSAGES' => 0,
+    'error' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -32,12 +32,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<div class="row">
 		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
 			<h1>Edit Profile</h1>
-			<?php if ($_smarty_tpl->tpl_vars['ERROR_MESSAGES']->value) {?>
+			<?php if ($_smarty_tpl->tpl_vars['error']->value) {?>
 			<div class="alert alert-danger alert-dismissible" role="alert">
 				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<strong>Warning!</strong> <?php echo $_smarty_tpl->tpl_vars['ERROR_MESSAGES']->value;?>
+				<strong>Warning!</strong> <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
 
 			</div>
 			<?php }?>

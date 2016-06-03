@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 03:16:53
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 16:44:52
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/enroll_class.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:895116285575043f72fdd04-98082752%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '77a2b5745b57018698858586b04f39030105220b' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/enroll_class.tpl',
-      1 => 1464916087,
+      1 => 1464965089,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'classid' => 0,
+    'error' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -44,6 +45,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					</div>
 				</form>
 			</div>
+			<?php if ($_smarty_tpl->tpl_vars['error']->value) {?>
+			<div class="alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<strong>Warning!</strong> <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+
+			</div>
+			<?php }?>
 		</div>
 	</div>
 </div>

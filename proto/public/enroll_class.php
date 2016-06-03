@@ -20,8 +20,8 @@
 	$smarty->assign('usertype', getAccountType($_SESSION['userid']));
 	
 	$smarty->assign('classid', $_GET['id']);
-	
-	
+	$smarty->assign('error', $_SESSION['error']);
+
 	/*This summons the smarty template*/
 	$smarty->display('public/enroll_class.tpl');
 
