@@ -3,8 +3,8 @@
 	/*This summons the database and smarty initializer */
 	include_once('../config/init.php');
 	include_once('../database/user_functions.php');
-	include_once('../action/session_check.php');
 	include_once('../database/class_functions.php');
+	include_once('../action/session_check.php');
 	
 	/* Check if Class is Private and if User Belongs*/
 	$this_class = getClassById($_GET['id']);
@@ -44,7 +44,6 @@
 	$smarty->assign('month', date('F'));
 	$smarty->assign('days', date('t'));
 	$smarty->assign('interval', abs(date('N') - date('j')));
-	
 	
 	/*Other PHP actions should go here*/
 	$smarty->assign('pagename', 'Class');

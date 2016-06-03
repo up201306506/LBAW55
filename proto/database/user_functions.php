@@ -68,7 +68,8 @@ function getAllUsers() {
 	global $conn;
 	$stmt = $conn->prepare("SELECT * 
 		FROM users 
-		WHERE accounttypevar != 'Administrator' 
+		WHERE accounttypevar != 'Administrator'
+		AND isactive != 'Pending'
 		ORDER BY username ASC");
 	$stmt->execute();
 	return $stmt->fetchAll();
