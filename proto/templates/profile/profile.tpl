@@ -64,7 +64,7 @@
 						{if $class.classpass}
 						<tr>
 							<td>
-								<a href="{$BASE_URL|cat:'public/enroll_class.php?id='|cat:$class.classid}">{$class.classname}</a>
+								<a href="{$BASE_URL|cat:'public/class.php?id='|cat:$class.classid}">{$class.classname}</a>
 							</td>
 							<td>
 								<a href="{$BASE_URL|cat:'public/profile.php?id='|cat:$class.profid}">{$class.name}</a>
