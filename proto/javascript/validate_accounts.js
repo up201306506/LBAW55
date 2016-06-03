@@ -25,7 +25,7 @@ $(document).ready(function() {
 		}
 	});
 	
-	$("#buttondone").click(function() {
+	$("#done").click(function() {
 		var arr_good = "";
 		var arr_bad = "";
 

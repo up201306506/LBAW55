@@ -77,6 +77,10 @@ h5:first-child {
 	text-align: center;
 }
 
+.blank {
+	color: transparent;
+}
+
 #options ul {
 	margin: 0;
 	padding: 0;

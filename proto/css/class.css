@@ -27,7 +27,7 @@ h5:first-child {
 	display: block;
 }
 
-#center-btn {
+#center-edit {
 	margin: 10px auto 0 auto;
 	text-align: center;
 }
@@ -67,6 +67,10 @@ h5:first-child {
 #month li, #weekdays li, #days li {
 	float: left;
 	text-align: center;
+}
+
+.blank {
+	color: transparent;
 }
 
 #options ul {

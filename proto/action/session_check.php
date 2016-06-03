@@ -1,7 +1,6 @@
 <?php
 	
-	if(!isset($_SESSION['userid']))
-	{
+	if(!isset($_SESSION['userid'])) {
 		header('Location: '.$BASE_URL.'/login_signup.php');
 	}
 	

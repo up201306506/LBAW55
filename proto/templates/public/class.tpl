@@ -9,11 +9,11 @@
 				<h3>Information</h3>
 				<span>Created by: {$manager}</span>
 				<span>Date: {$class.creationdate}</span>
-			<!-- {if $usertype eq 'Professor'}
-				<div id="center-btn">
-					<button class="btn btn-primary" type="button">Edit Class</button>
+			{if $usertype eq 'Professor'}
+				<div id="center-edit">
+					<a id="edit" class="btn btn-primary" href="{$BASE_URL}professor/class/edit_class.php?id={$class.classid}">Edit Class</a>
 				</div>
-			{/if} -->
+			{/if}
 			</div>
 			<div class="box">
 				<h3>Description</h3>
@@ -77,7 +77,7 @@
 			<div id="calendar" class="box">
 				<ul id="month">
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
-					<li><a href="#">Month</a></li>
+					<li><a href="{$BASE_URL|cat:'profile/calendar.php'}">{$month}</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
 				</ul>
 				<ul id="weekdays">
@@ -90,37 +90,12 @@
 					<li><abbr title="Sunday">Sun</abbr></li>
 				</ul>
 				<ul id="days">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
-					<li>10</li>
-					<li>11</li>
-					<li>12</li>
-					<li>13</li>
-					<li>14</li>
-					<li>15</li>
-					<li>16</li>
-					<li>17</li>
-					<li>18</li>
-					<li>19</li>
-					<li>20</li>
-					<li>21</li>
-					<li>22</li>
-					<li>23</li>
-					<li>24</li>
-					<li>25</li>
-					<li>26</li>
-					<li>27</li>
-					<li>28</li>
-					<li>29</li>
-					<li>30</li>
-					<li>31</li>
+				{for $int=1 to $interval}
+					<li class="blank">{$int}</li>
+				{/for}
+				{for $day=1 to $days}
+					<li>{$day}</li>
+				{/for}
 				</ul>
 			</div>
 			<div id="options" class="box">

@@ -24,9 +24,15 @@
 	$smarty->assign('class', getClassById($_GET['id']));
 	$smarty->assign('manager', $manager);
 
+	/*Participants*/
 	$participants = array_merge(getClassProfessors($_GET['id']), getClassStudents($_GET['id']));
 	$smarty->assign('participants', $participants);
 	$smarty->assign('exams', getExamsOfClass($_GET['id']));
+
+	/*Calendar*/
+	$smarty->assign('month', date('F'));
+	$smarty->assign('days', date('t'));
+	$smarty->assign('interval', abs(date('N') - date('j')));
 
 	/*This summons the smarty template*/
 	$smarty->display('public/class.tpl');
