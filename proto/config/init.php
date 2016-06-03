@@ -9,7 +9,7 @@
     //$BASE_URL = '/LBAW55/proto/'; //FIXME
 
     $BASE_DIR = '/opt/lbaw/lbaw1555/public_html/LBAW55/proto/'; //FIXME
-  $BASE_URL = '/~lbaw1555/frmk/'; //FIXME
+    $BASE_URL = '/~lbaw1555/LBAW55/proto/'; //FIXME
 
     //$BASE_DIR = '/opt/lbaw/lbaw1555/public_html/LBAW55/proto/'; //FIXME
     //$BASE_URL = '/~lbaw1555/LBAW55/proto/'; //FIXME
