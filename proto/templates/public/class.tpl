@@ -13,6 +13,12 @@
 				<div id="center-edit">
 					<a id="edit" class="btn btn-primary" href="{$BASE_URL}professor/class/edit_class.php?id={$class.classid}">Edit Class</a>
 				</div>
+			{else}
+			{if !$this_class_belong}
+				<div id="center-edit">
+					<a id="edit" class="btn btn-primary" href="{$BASE_URL}action/enroll_class_action.php?id={$class.classid}">Enroll Class</a>
+				</div>
+			{/if}
 			{/if}
 			</div>
 			<div class="box">

@@ -73,4 +73,13 @@
 	}
 	*/
 	
+	function checkClassRequiresPassword($classid){
+		global $conn;
+		$stmt = $conn->prepare(" SELECT password
+								FROM class
+								WHERE classid = ?");
+		$stmt->execute(array($classid));
+		return $stmt->fetch() == true;
+	}
+	
 ?>

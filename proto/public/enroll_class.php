@@ -19,6 +19,9 @@
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
 	$smarty->assign('usertype', getAccountType($_SESSION['userid']));
 	
+	$smarty->assign('classid', $_GET['id']);
+	
+	
 	/*This summons the smarty template*/
 	$smarty->display('public/enroll_class.tpl');
 
