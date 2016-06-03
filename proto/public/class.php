@@ -17,12 +17,14 @@
 		$this_class_belong = true;
 	
 	if ($this_class_private && !$this_class_belong){
-		header('Location: ../public/enroll_class.php?id=' . $_GET['id']);
+		if($user_type == 'Student')
+			header('Location: ../public/enroll_class.php?id=' . $_GET['id']);
+		if($user_type == 'Professor')
+			header('Location:' . $_SERVER['HTTP_REFERER']);
 		exit;
 	}
+
 	$smarty->assign('this_class_belong', $this_class_belong);
-		
-	
 	
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
