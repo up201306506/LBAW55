@@ -16,11 +16,27 @@
 					</thead>
 					<tbody>
 					{foreach $all_classes as $class}
+						{if $class.classpass}
 						<tr>
-							<td>{$class.classname}</td>
-							<td>{$class.name}</td>
-							<td>{$class.classpass}</td>
+							<td>
+								<a href="{$BASE_URL|cat:'public/enroll_class.php?id='|cat: $class.classid}">{$class.classname}</a>
+							</td>
+							<td>
+								<a href="{$BASE_URL|cat:'public/profile.php?id='|cat: $class.userid}">{$class.name}</a>
+							</td>
+							<td>Private</td>
 						</tr>
+						{else}
+						<tr>
+							<td>
+								<a href="{$BASE_URL|cat:'public/class.php?id='|cat: $class.classid}">{$class.classname}</a>
+							</td>
+							<td>
+								<a href="{$BASE_URL|cat:'public/profile.php?id='|cat: $class.userid}">{$class.name}</a>
+							</td>
+							<td>Public</td>
+						</tr>
+						{/if}
 					{/foreach}
 					</tbody>
 				</table>

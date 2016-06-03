@@ -1,25 +1,37 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-05-31 00:51:51
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-02 23:34:35
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_database.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1253914862574cc378841c31-31266500%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:5006431815750a66b946564-27505690%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0bb59bb9449731a561663770fe7515e41e1a7243' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_database.tpl',
-      1 => 1464648687,
+      1 => 1464877226,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1253914862574cc378841c31-31266500',
+  'nocache_hash' => '5006431815750a66b946564-27505690',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_574cc37890e098_35014455',
+  'variables' => 
+  array (
+    'userlist' => 0,
+    'user' => 0,
+    'user_pages_needed' => 0,
+    'c' => 0,
+    'examlist' => 0,
+    'exam' => 0,
+    'exam_owners' => 0,
+    'categorylist' => 0,
+    'category' => 0,
+  ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_5750a66bc97db4_59837694',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_574cc37890e098_35014455')) {function content_574cc37890e098_35014455($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5750a66bc97db4_59837694')) {function content_5750a66bc97db4_59837694($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -59,25 +71,49 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</tr>
 					</thead>
 					<tbody>
+					<?php if (!$_smarty_tpl->tpl_vars['userlist']->value) {?>
 						<tr>
-							<td>Name</td>
-							<td>Username</td>
-							<td>Email</td>
-							<td>Type</td>
-							<td>
-								<button class="btn btn-danger">Ban</button>
-							</td>
+							<td>The loneliest website ever! You're all alone here, admin.</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
 						</tr>
+					<?php } else { ?>
+						<?php  $_smarty_tpl->tpl_vars['user'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['user']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['userlist']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['user']->key => $_smarty_tpl->tpl_vars['user']->value) {
+$_smarty_tpl->tpl_vars['user']->_loop = true;
+?>
+							<tr>
+								<td><?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
+</td>
+								<td><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
+</td>
+								<td><?php echo $_smarty_tpl->tpl_vars['user']->value['email'];?>
+</td>
+								<td><?php echo $_smarty_tpl->tpl_vars['user']->value['accountvartype'];?>
+</td>
+								<td>
+									<button class="btn btn-danger">Ban</button>
+								</td>
+							</tr>
+						<?php } ?>
+					<?php }?>
 					</tbody>
 				</table>
 				<div id="center">
+				<?php if ($_smarty_tpl->tpl_vars['userlist']->value!='') {?>
 					<ul class="pagination">
-						<li class="active"><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
+					<?php $_smarty_tpl->tpl_vars['c'] = new Smarty_Variable;$_smarty_tpl->tpl_vars['c']->step = 1;$_smarty_tpl->tpl_vars['c']->total = (int) ceil(($_smarty_tpl->tpl_vars['c']->step > 0 ? $_smarty_tpl->tpl_vars['user_pages_needed']->value+1 - (1) : 1-($_smarty_tpl->tpl_vars['user_pages_needed']->value)+1)/abs($_smarty_tpl->tpl_vars['c']->step));
+if ($_smarty_tpl->tpl_vars['c']->total > 0) {
+for ($_smarty_tpl->tpl_vars['c']->value = 1, $_smarty_tpl->tpl_vars['c']->iteration = 1;$_smarty_tpl->tpl_vars['c']->iteration <= $_smarty_tpl->tpl_vars['c']->total;$_smarty_tpl->tpl_vars['c']->value += $_smarty_tpl->tpl_vars['c']->step, $_smarty_tpl->tpl_vars['c']->iteration++) {
+$_smarty_tpl->tpl_vars['c']->first = $_smarty_tpl->tpl_vars['c']->iteration == 1;$_smarty_tpl->tpl_vars['c']->last = $_smarty_tpl->tpl_vars['c']->iteration == $_smarty_tpl->tpl_vars['c']->total;?>
+						<li <?php if ($_smarty_tpl->tpl_vars['c']->value==1) {?>class="active"<?php }?>><a href="#"><?php echo $_smarty_tpl->tpl_vars['c']->value;?>
+</a></li>
+					<?php }} ?>
 					</ul>
+				<?php }?>
 				</div>
 			</div>
 		</div>
@@ -109,16 +145,35 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						</tr>
 					</thead>
 					<tbody>
+					<?php if (!$_smarty_tpl->tpl_vars['examlist']->value) {?>
 						<tr>
-							<td>Exam</td>
-							<td>Date</td>
-							<td>Manager</td>
-							<td>Accessibility</td>
-							<td>Done/Ongoing/Not Done</td>
-							<td>
-								<button class="btn btn-primary">Edit</button>
-							</td>
+							<td>No exams were found in the database.</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
 						</tr>
+					<?php } else { ?>
+						<?php  $_smarty_tpl->tpl_vars['exam'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['exam']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['examlist']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['exam']->key => $_smarty_tpl->tpl_vars['exam']->value) {
+$_smarty_tpl->tpl_vars['exam']->_loop = true;
+?>
+							<tr>
+								<td><?php echo $_smarty_tpl->tpl_vars['exam']->value['examidentification'];?>
+</td>
+								<td><?php echo $_smarty_tpl->tpl_vars['exam']->value['date'];?>
+</td>
+								<td><?php echo $_smarty_tpl->tpl_vars['exam_owners']->value[$_smarty_tpl->tpl_vars['exam']->value['examid']];?>
+</td>
+								<td><?php if ($_smarty_tpl->tpl_vars['exam']->value['password']=='') {?>OPEN<?php } else { ?>PRIVATE<?php }?></td>
+								<td><?php if ($_smarty_tpl->tpl_vars['exam']->value['exampublished']) {?>Published<?php } else { ?><?php if ($_smarty_tpl->tpl_vars['exam']->value['isongoing']) {?>Being Solved<?php } else { ?>Not Visible<?php }?><?php }?></td>
+								<td>
+									<button class="btn btn-danger">Ban</button>
+								</td>
+							</tr>
+						<?php } ?>
+					<?php }?>
 					</tbody>
 				</table>
 				<div id="center">
@@ -140,10 +195,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<div class="form-group">
 							<label for="category">Category</label>
 							<select id="category" class="form-control">
-								<option>Category #1</option>
-								<option>Category #2</option>
-								<option>Category #3</option>
-								<option>Category #4</option>
+							<?php if (!$_smarty_tpl->tpl_vars['categorylist']->value) {?>
+								<option value=''>No categories...</option>
+							<?php } else { ?>
+							<?php  $_smarty_tpl->tpl_vars['category'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['category']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['categorylist']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['category']->key => $_smarty_tpl->tpl_vars['category']->value) {
+$_smarty_tpl->tpl_vars['category']->_loop = true;
+?>
+								<option value='<?php echo $_smarty_tpl->tpl_vars['category']->value['categoryid'];?>
+'><?php echo $_smarty_tpl->tpl_vars['category']->value['type'];?>
+</option>
+							<?php } ?>
+							<?php }?>
 							</select>
 						</div>
 					</div>
@@ -165,14 +229,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<div class="input-group question">
 					<div class="my-panel">
 						<div class="my-panel-header">
-							<span>This is a question</span>
+							<span></span>
 						</div>
 						<div class="my-panel-body">
 							<ul id="answers">
-								<li><span>This is an answer</span></li>
-								<li><span>This is an answer</span></li>
-								<li><span>This is an answer</span></li>
-								<li><span>This is an answer</span></li>
+								<li><span></span></li>
+								<li><span></span></li>
+								<li><span></span></li>
+								<li><span></span></li>
 							</ul>
 						</div>
 					</div>

@@ -17,6 +17,9 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
+
+	/*Other variables*/
+	$smarty->assign('categories', getAllCategories());
 	
 	/*This summons the smarty template*/
 	$smarty->display('professor/question/create_question.tpl');

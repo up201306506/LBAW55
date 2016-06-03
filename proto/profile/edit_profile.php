@@ -3,10 +3,10 @@
 	/*This summons the database and smarty initializer */
 	include_once('../config/init.php');
 	include_once('../database/user_functions.php');
+	include_once('../action/edit_profile_action.php');
 
 	/*Other PHP actions should go here*/
-	$pagename = 'Edit Profile';
-	$smarty->assign('pagename', $pagename);
+	$smarty->assign('pagename', 'Edit Profile');
 
 	$smarty->assign('bootstrap', "../css/Bootstrap/css/bootstrap.min.css");
 	$smarty->assign('csspage', "../css/edit_profile.css");
@@ -17,6 +17,9 @@
 
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
+
+	/*Error message*/
+	$smarty->assign('error', $error);
 	
 	/*This summons the smarty template*/
 	$smarty->display('profile/edit_profile.tpl');

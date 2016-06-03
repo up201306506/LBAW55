@@ -98,16 +98,28 @@
 						</tr>
 					</thead>
 					<tbody>
+					{if !$examlist}
 						<tr>
-							<td>Exam</td>
-							<td>Date</td>
-							<td>Manager</td>
-							<td>Accessibility</td>
-							<td>Done/Ongoing/Not Done</td>
-							<td>
-								<button class="btn btn-primary">Edit</button>
-							</td>
+							<td>No exams were found in the database.</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
 						</tr>
+					{else}
+						{foreach $examlist as $exam}
+							<tr>
+								<td>{$exam.examidentification}</td>
+								<td>{$exam.date}</td>
+								<td>{$exam_owners[$exam.examid]}</td>
+								<td>{if $exam.password eq ''}OPEN{else}PRIVATE{/if}</td>
+								<td>{if $exam.exampublished}Published{else}{if $exam.isongoing}Being Solved{else}Not Visible{/if}{/if}</td>
+								<td>
+									<button class="btn btn-danger">Ban</button>
+								</td>
+							</tr>
+						{/foreach}
+					{/if}
 					</tbody>
 				</table>
 				<div id="center">
@@ -129,10 +141,13 @@
 						<div class="form-group">
 							<label for="category">Category</label>
 							<select id="category" class="form-control">
-								<option>Category #1</option>
-								<option>Category #2</option>
-								<option>Category #3</option>
-								<option>Category #4</option>
+							{if !$categorylist}
+								<option value=''>No categories...</option>
+							{else}
+							{foreach $categorylist as $category}
+								<option value='{$category.categoryid}'>{$category.type}</option>
+							{/foreach}
+							{/if}
 							</select>
 						</div>
 					</div>
@@ -154,14 +169,14 @@
 				<div class="input-group question">
 					<div class="my-panel">
 						<div class="my-panel-header">
-							<span>This is a question</span>
+							<span></span>
 						</div>
 						<div class="my-panel-body">
 							<ul id="answers">
-								<li><span>This is an answer</span></li>
-								<li><span>This is an answer</span></li>
-								<li><span>This is an answer</span></li>
-								<li><span>This is an answer</span></li>
+								<li><span></span></li>
+								<li><span></span></li>
+								<li><span></span></li>
+								<li><span></span></li>
 							</ul>
 						</div>
 					</div>

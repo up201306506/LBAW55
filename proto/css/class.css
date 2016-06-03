@@ -27,6 +27,11 @@ h5:first-child {
 	display: block;
 }
 
+#center-edit {
+	margin: 10px auto 0 auto;
+	text-align: center;
+}
+
 .box table {
 	margin-bottom: 0;
 }
@@ -62,6 +67,10 @@ h5:first-child {
 #month li, #weekdays li, #days li {
 	float: left;
 	text-align: center;
+}
+
+.blank {
+	color: transparent;
 }
 
 #options ul {

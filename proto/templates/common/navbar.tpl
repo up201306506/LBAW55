@@ -24,7 +24,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="{$BASE_URL|cat:'profile/profile.php'}"><span class="glyphicon glyphicon-user"></span> {$session_username}</a></li>
 				<li><a href="{$BASE_URL|cat:'profile/edit_profile.php'}"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
-				<li><a href="{$BASE_URL|cat:'action/logout_request.php'}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+				<li><a href="{$BASE_URL|cat:'action/logout_action.php'}"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 			</ul>
 		</div>
 	</div> <!-- container-fluid -->

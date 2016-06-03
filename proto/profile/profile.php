@@ -3,10 +3,11 @@
 	/*This summons the database and smarty initializer */
 	include_once('../config/init.php');
 	include_once('../database/user_functions.php');
+	include_once('../database/class_functions.php');
+	include_once('../action/session_check.php');
 
 	/*Other PHP actions should go here*/
-	$pagename = 'Your Profile';
-	$smarty->assign('pagename', $pagename);
+	$smarty->assign('pagename', 'Your Profile');
 
 	$smarty->assign('bootstrap', "../css/Bootstrap/css/bootstrap.min.css");
 	$smarty->assign('csspage', "../css/profile.css");
@@ -23,9 +24,28 @@
 	$smarty->assign('session_email', getEmail($_SESSION['userid']));
 	$smarty->assign('description', getDescription($_SESSION['userid']));
 
-	/*Other variables*/
-	// $smarty->assign('exams', getExams($_SESSION['userid']));
-	// $smarty->assign('classes', getClasses($_SESSION['userid']));
+	/*Calendar*/
+	$smarty->assign('month', date('F'));
+	$smarty->assign('days', date('t'));
+	$smarty->assign('interval', abs(date('N') - date('j')));
+
+	if($user_type == "Student") {
+		$smarty->assign('exams', getExamsByUser($_SESSION['userid']));
+		$smarty->assign('classes', getClassesByUser($_SESSION['userid']));
+	} else {
+		$classes_owned = getClassByOwnerID($_SESSION['userid']);
+		$classes_managed = getClassByManagerID($_SESSION['userid']);
+		$classes = array_merge($classes_owned, $classes_managed);
+		//echo print_r($classes,true);
+		
+		$exams = [];
+		foreach ($classes as $class)
+			$exams = array_merge($exams,getExamsOfClass($class['classid']));
+		//echo print_r($exams,true);
+		
+		$smarty->assign('exams', $exams);
+		$smarty->assign('classes', $classes);
+	}
 	
 	/*This summons the smarty template*/
 	$smarty->display('profile/profile.tpl');
