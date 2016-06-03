@@ -6,7 +6,7 @@
 		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
 			<h1>New Class</h1>
 			<div class="box">
-				<form action="#" method="post" role="form">
+				<form action="../../action/create_class.php" method="post" role="form">
 					<div class="form-group">
 						<label for="classname">Name of the Class:</label>
 						<input id="classname" name="classname" class="form-control" type="text" required="required"></input>
