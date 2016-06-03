@@ -15,5 +15,16 @@
 			header('Location: ' . $_SERVER['HTTP_REFERER']);
 			exit;
 		}
+	} else
+	{
+		$class = getClassById($_GET['id']);
+		if (empty($class['password'])){
+			insertNewUserClass($_SESSION['userid'], $class['classid']);
+			header('Location: ' . $BASE_URL . 'public/class.php?id=' . $class['classid']);
+			exit;
+		} else {
+			header('Location: ' . $BASE_URL);
+			exit;
+		}
 	}
 ?>

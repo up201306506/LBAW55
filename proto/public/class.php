@@ -20,6 +20,7 @@
 		header('Location: ../public/enroll_class.php?id=' . $_GET['id']);
 		exit;
 	}
+	$smarty->assign('this_class_belong', $this_class_belong);
 		
 	
 	
