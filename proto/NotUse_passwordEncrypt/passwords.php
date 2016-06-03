@@ -1,4 +1,7 @@
 <?php
+
+	header('Location: ../login_signup.php');
+	
 	function updateDataBaseUserPopulation() {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * FROM users");
