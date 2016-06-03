@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 02:07:15
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 16:20:44
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1090193883574fed098bc8a5-58355018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e9e688fa7ca940a3db17530cffb78c45ab16c3b3' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl',
-      1 => 1464912432,
+      1 => 1464963223,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'class' => 0,
     'manager' => 0,
     'usertype' => 0,
+    'this_class_belong' => 0,
     'BASE_URL' => 0,
     'exams' => 0,
     'exam' => 0,
@@ -52,11 +53,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<span>Date: <?php echo $_smarty_tpl->tpl_vars['class']->value['creationdate'];?>
 </span>
 			<?php if ($_smarty_tpl->tpl_vars['usertype']->value=='Professor') {?>
+			<?php if ($_smarty_tpl->tpl_vars['this_class_belong']->value) {?>
 				<div id="center-edit">
 					<a id="edit" class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 professor/class/edit_class.php?id=<?php echo $_smarty_tpl->tpl_vars['class']->value['classid'];?>
 ">Edit Class</a>
 				</div>
+			<?php }?>
+			<?php } else { ?>
+			<?php if (!$_smarty_tpl->tpl_vars['this_class_belong']->value) {?>
+				<div id="center-edit">
+					<a id="edit" class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+action/enroll_class_action.php?id=<?php echo $_smarty_tpl->tpl_vars['class']->value['classid'];?>
+">Enroll Class</a>
+				</div>
+			<?php }?>
 			<?php }?>
 			</div>
 			<div class="box">
