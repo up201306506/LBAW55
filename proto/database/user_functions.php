@@ -1,5 +1,51 @@
 <?php
 
+/* search fuctions */
+function searchUserBar($user,$prof,$stu){
+	global $conn;
+	$professors =   [];
+	$student =  [];
+	if($prof){
+    	$stmt = $conn->prepare("SELECT name, description, userid, accounttypevar
+								FROM 
+								(
+								SELECT name, description,userid,accounttypevar,
+								to_tsvector(users.name) || to_tsvector(users.description) as document
+								FROM users
+								) AS alias
+								WHERE alias.document @@ to_tsquery(?) AND accounttypevar = 'Professor'"); // --Professor or Student 
+    	$stmt->execute(array($user));
+    	$professors = $stmt->fetchAll();
+	}
+	if($stu){	
+		$stmt = $conn->prepare("SELECT name, description, userid, accounttypevar
+								FROM 
+								(
+								SELECT name, description,userid,accounttypevar,
+								to_tsvector(users.name) || to_tsvector(users.description) as document
+								FROM users
+								) AS alias
+								WHERE alias.document @@ to_tsquery(?) AND accounttypevar = 'Student'"); // --Professor or Student 
+    	$stmt->execute(array($user));
+    	$student = $stmt->fetchAll();
+	}
+
+    return array_merge($professors,$student);	
+}
+
+function seachClass($class){
+	global $conn;
+	$stmt = $conn->prepare("SELECT classname, description, classid, directorid FROM 
+							(
+							SELECT classname, description, classid, directorid,
+							to_tsvector(class.classname) || to_tsvector(class.description) as document
+							FROM class
+							) AS alias
+							WHERE alias.document @@ to_tsquery(?);"); 
+    $stmt->execute(array($class));
+    return $stmt->fetchAll();
+}
+
 function getUser($username) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT * 
