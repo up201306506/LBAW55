@@ -24,14 +24,15 @@
 	$smarty->assign('session_email', getEmail($_SESSION['userid']));
 	$smarty->assign('description', getDescription($_SESSION['userid']));
 
-	/*Other variables*/
-	if($user_type == "Student")
-	{
+	/*Calendar*/
+	$smarty->assign('month', date('F'));
+	$smarty->assign('days', date('t'));
+	$smarty->assign('interval', abs(date('N') - date('j')));
+
+	if($user_type == "Student") {
 		$smarty->assign('exams', getExamsByUser($_SESSION['userid']));
 		$smarty->assign('classes', getClassesByUser($_SESSION['userid']));
-	}	
-	else
-	{
+	} else {
 		$classes_owned = getClassByOwnerID($_SESSION['userid']);
 		$classes_managed = getClassByManagerID($_SESSION['userid']);
 		$classes = array_merge($classes_owned, $classes_managed);
@@ -45,7 +46,6 @@
 		$smarty->assign('exams', $exams);
 		$smarty->assign('classes', $classes);
 	}
-	
 	
 	/*This summons the smarty template*/
 	$smarty->display('profile/profile.tpl');

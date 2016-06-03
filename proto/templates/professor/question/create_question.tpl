@@ -3,7 +3,7 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
+		<div class="col-lg-8 col-md-8 col-sm-12 col-lg-offset-2 col-md-offset-2">
 			<h1>New Question</h1>
 			<div class="box">
 				<form role="create-question">
@@ -24,16 +24,24 @@
 						</div>
 					</div>
 					<div class="answers">
-						<div class="answer-block">
-							<div class="form-group">
-								<label for="answer-1">Answer #1:</label>
+						<div class="form-group answer-block">
+							<label for="answer-1">Answer #1:</label>
+							<div class="input-group">
 								<textarea id="answer-1" class="form-control answer" rows="5" required="required"></textarea>
+								<span class="input-group-addon">
+									<input type="radio" name="correct" value="1">
+									<span class="glyphicon glyphicon-ok"></span>
+								</span>
 							</div>
 						</div>
-						<div class="answer-block">
-							<div class="form-group">
-								<label for="answer-2">Answer #2:</label>
+						<div class="form-group answer-block">
+							<label for="answer-2">Answer #2:</label>
+							<div class="input-group">
 								<textarea id="answer-2" class="form-control answer" rows="5" required="required"></textarea>
+								<span class="input-group-addon">
+									<input type="radio" name="correct" value="2">
+									<span class="glyphicon glyphicon-ok"></span>
+								</span>
 							</div>
 						</div>
 					</div>

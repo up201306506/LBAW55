@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-02 10:40:41
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 02:07:15
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1090193883574fed098bc8a5-58355018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e9e688fa7ca940a3db17530cffb78c45ab16c3b3' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl',
-      1 => 1464856840,
+      1 => 1464912432,
       2 => 'file',
     ),
   ),
@@ -22,11 +22,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'class' => 0,
     'manager' => 0,
     'usertype' => 0,
-    'exams' => 0,
     'BASE_URL' => 0,
+    'exams' => 0,
     'exam' => 0,
     'participants' => 0,
     'participant' => 0,
+    'month' => 0,
+    'interval' => 0,
+    'int' => 0,
+    'days' => 0,
+    'day' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -46,11 +51,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </span>
 				<span>Date: <?php echo $_smarty_tpl->tpl_vars['class']->value['creationdate'];?>
 </span>
-			<!-- <?php if ($_smarty_tpl->tpl_vars['usertype']->value=='Professor') {?>
-				<div id="center-btn">
-					<button class="btn btn-primary" type="button">Edit Class</button>
+			<?php if ($_smarty_tpl->tpl_vars['usertype']->value=='Professor') {?>
+				<div id="center-edit">
+					<a id="edit" class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+professor/class/edit_class.php?id=<?php echo $_smarty_tpl->tpl_vars['class']->value['classid'];?>
+">Edit Class</a>
 				</div>
-			<?php }?> -->
+			<?php }?>
 			</div>
 			<div class="box">
 				<h3>Description</h3>
@@ -129,7 +136,9 @@ $_smarty_tpl->tpl_vars['participant']->_loop = true;
 			<div id="calendar" class="box">
 				<ul id="month">
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
-					<li><a href="#">Month</a></li>
+					<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('profile/calendar.php');?>
+"><?php echo $_smarty_tpl->tpl_vars['month']->value;?>
+</a></li>
 					<li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
 				</ul>
 				<ul id="weekdays">
@@ -142,37 +151,20 @@ $_smarty_tpl->tpl_vars['participant']->_loop = true;
 					<li><abbr title="Sunday">Sun</abbr></li>
 				</ul>
 				<ul id="days">
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
-					<li>7</li>
-					<li>8</li>
-					<li>9</li>
-					<li>10</li>
-					<li>11</li>
-					<li>12</li>
-					<li>13</li>
-					<li>14</li>
-					<li>15</li>
-					<li>16</li>
-					<li>17</li>
-					<li>18</li>
-					<li>19</li>
-					<li>20</li>
-					<li>21</li>
-					<li>22</li>
-					<li>23</li>
-					<li>24</li>
-					<li>25</li>
-					<li>26</li>
-					<li>27</li>
-					<li>28</li>
-					<li>29</li>
-					<li>30</li>
-					<li>31</li>
+				<?php $_smarty_tpl->tpl_vars['int'] = new Smarty_Variable;$_smarty_tpl->tpl_vars['int']->step = 1;$_smarty_tpl->tpl_vars['int']->total = (int) ceil(($_smarty_tpl->tpl_vars['int']->step > 0 ? $_smarty_tpl->tpl_vars['interval']->value+1 - (1) : 1-($_smarty_tpl->tpl_vars['interval']->value)+1)/abs($_smarty_tpl->tpl_vars['int']->step));
+if ($_smarty_tpl->tpl_vars['int']->total > 0) {
+for ($_smarty_tpl->tpl_vars['int']->value = 1, $_smarty_tpl->tpl_vars['int']->iteration = 1;$_smarty_tpl->tpl_vars['int']->iteration <= $_smarty_tpl->tpl_vars['int']->total;$_smarty_tpl->tpl_vars['int']->value += $_smarty_tpl->tpl_vars['int']->step, $_smarty_tpl->tpl_vars['int']->iteration++) {
+$_smarty_tpl->tpl_vars['int']->first = $_smarty_tpl->tpl_vars['int']->iteration == 1;$_smarty_tpl->tpl_vars['int']->last = $_smarty_tpl->tpl_vars['int']->iteration == $_smarty_tpl->tpl_vars['int']->total;?>
+					<li class="blank"><?php echo $_smarty_tpl->tpl_vars['int']->value;?>
+</li>
+				<?php }} ?>
+				<?php $_smarty_tpl->tpl_vars['day'] = new Smarty_Variable;$_smarty_tpl->tpl_vars['day']->step = 1;$_smarty_tpl->tpl_vars['day']->total = (int) ceil(($_smarty_tpl->tpl_vars['day']->step > 0 ? $_smarty_tpl->tpl_vars['days']->value+1 - (1) : 1-($_smarty_tpl->tpl_vars['days']->value)+1)/abs($_smarty_tpl->tpl_vars['day']->step));
+if ($_smarty_tpl->tpl_vars['day']->total > 0) {
+for ($_smarty_tpl->tpl_vars['day']->value = 1, $_smarty_tpl->tpl_vars['day']->iteration = 1;$_smarty_tpl->tpl_vars['day']->iteration <= $_smarty_tpl->tpl_vars['day']->total;$_smarty_tpl->tpl_vars['day']->value += $_smarty_tpl->tpl_vars['day']->step, $_smarty_tpl->tpl_vars['day']->iteration++) {
+$_smarty_tpl->tpl_vars['day']->first = $_smarty_tpl->tpl_vars['day']->iteration == 1;$_smarty_tpl->tpl_vars['day']->last = $_smarty_tpl->tpl_vars['day']->iteration == $_smarty_tpl->tpl_vars['day']->total;?>
+					<li><?php echo $_smarty_tpl->tpl_vars['day']->value;?>
+</li>
+				<?php }} ?>
 				</ul>
 			</div>
 			<div id="options" class="box">

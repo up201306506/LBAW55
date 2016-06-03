@@ -6,7 +6,7 @@
 		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
 			<h1>New Class</h1>
 			<div class="box">
-				<form action="#" method="post" role="form">
+				<form method="post" role="form">
 					<div class="form-group">
 						<label for="classname">Name of the Class:</label>
 						<input id="classname" name="classname" class="form-control" type="text" required="required"></input>
@@ -21,11 +21,19 @@
 					</div>
 					<div class="form-group">
 						<label for="description">Description:</label>
-						<textarea id="description" name="description" class="form-control" rows="6"></textarea>
+						<textarea id="description" name="description" class="form-control" rows="6" required="required"></textarea>
 					</div>
-					<input id="submit" class="btn btn-primary" type="submit" value="Done"></input>
+					<input name="done" class="btn btn-primary" type="submit" value="Done"></input>
 				</form>
 			</div>
+			{if $error}
+			<div class="alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<strong>Warning!</strong> {$error}
+			</div>
+			{/if}
 		</div>
 	</div>
 </div>
