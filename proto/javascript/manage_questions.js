@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	var listElement = $('#questions');
-	var perPage = 5;
+	var perPage = 7;
 	var numItems = listElement.children().size();
 	var numPages = Math.ceil(numItems/perPage);
 

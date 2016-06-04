@@ -12,7 +12,8 @@
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT * 
 	                            FROM exam, class
-								WHERE examid = ?");
+								WHERE examid = ?
+								AND exam.classid = class.classid");
 	    $stmt->execute(array($examid));
 	    return $stmt->fetch();
  	}

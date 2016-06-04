@@ -332,12 +332,22 @@ function getDescription($userid) {
 	return $stmt->fetch()['description'];
 }
 
-function banUser($userId){
+function banUser($userid){
 	global $conn;
 	$stmt = $conn->prepare("UPDATE users 
 		SET isactive = 'Inactive' 
 		WHERE userid  = ?");
-	$stmt->execute(array($userId));
+	$stmt->execute(array($userid));
+	$count = $stmt->rowCount();
+	return $count == 1;
+}
+
+function unbanUser($userid) {
+	global $conn;
+	$stmt = $conn->prepare("UPDATE users 
+		SET isactive = 'Active' 
+		WHERE userid  = ?");
+	$stmt->execute(array($userid));
 	$count = $stmt->rowCount();
 	return $count == 1;
 }

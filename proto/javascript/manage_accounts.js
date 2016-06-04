@@ -22,7 +22,6 @@ $(document).ready(function() {
 		$('tr').each(function() {
 			if ($(this).attr("style") == "display: block;") {
 				$(this).removeAttr("style");
-				console.log("lol");
 			}
 		});
 	}
@@ -54,4 +53,16 @@ $(document).ready(function() {
 		$('.pagination').attr("curr",page);
 		removeStyle();
 	}
+
+	$(".ban").click(function() {
+		$.post("../action/manage_accounts_action.php", { id: $(this).parent().parent().attr("id"), ban: "true" }, function() {
+			window.location = "manage_accounts.php";
+		});
+	});
+
+	$(".unban").click(function() {
+		$.post("../action/manage_accounts_action.php", { id: $(this).parent().parent().attr("id"), ban: "false" }, function() {
+			window.location = "manage_accounts.php";
+		});
+	});
 });

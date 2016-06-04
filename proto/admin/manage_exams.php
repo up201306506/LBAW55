@@ -27,7 +27,7 @@
 	foreach ($examlist as $exam) {
 		$temp = getExamsClassID($exam['examid']);
 		$temp = getClassOwnerID($temp['classid']);
-		$exam_owners[$exam['examid']] =getUserbyID($temp['directorid'])['name'];
+		$exam_owners[$exam['examid']] = getUserbyID($temp['directorid'])['name'];
 	}
 
 	$smarty->assign('examlist', $examlist);

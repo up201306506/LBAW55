@@ -27,7 +27,7 @@
 				</tr>
 			{else}
 				{foreach $userlist as $user}
-				<tr>
+				<tr id="{$user.userid}">
 					<td>{$user.username}</td>
 					<td>{$user.name}</td>
 					<td>{$user.email}</td>
@@ -35,9 +35,9 @@
 					<td>{$user.isactive}</td>
 					<td>
 					{if $user.isactive eq 'Active'}
-						<button class="btn btn-danger">Ban</button>
+						<button class="btn btn-danger ban">Ban</button>
 					{else}
-						<button class="btn btn-success">Unban</button>
+						<button class="btn btn-success unban">Unban</button>
 					{/if}
 					</td>
 				</tr>
