@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 18:48:28
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-04 02:35:53
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_exams.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:5195576925751b141b89f95-24510131%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cf2def38dd905f60ac9bf85dadfd9b5d72395a01' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_exams.tpl',
-      1 => 1464972491,
+      1 => 1465000530,
       2 => 'file',
     ),
   ),
@@ -36,10 +36,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Name</th>
-					<th>Username</th>
-					<th>Email</th>
-					<th>Account Type</th>
+					<th>Exam</th>
+					<th>Date</th>
+					<th>Manager</th>
+					<th>Accessibility</th>
 					<th>State</th>
 					<th>Action</th>
 				</tr>

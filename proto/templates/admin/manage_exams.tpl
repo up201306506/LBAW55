@@ -7,10 +7,10 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Name</th>
-					<th>Username</th>
-					<th>Email</th>
-					<th>Account Type</th>
+					<th>Exam</th>
+					<th>Date</th>
+					<th>Manager</th>
+					<th>Accessibility</th>
 					<th>State</th>
 					<th>Action</th>
 				</tr>

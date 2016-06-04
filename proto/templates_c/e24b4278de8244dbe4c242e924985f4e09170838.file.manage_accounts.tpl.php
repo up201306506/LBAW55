@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 18:29:32
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-04 02:11:31
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_accounts.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:38817100257519f364b00a7-96170946%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e24b4278de8244dbe4c242e924985f4e09170838' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_accounts.tpl',
-      1 => 1464971370,
+      1 => 1464998928,
       2 => 'file',
     ),
   ),
@@ -59,7 +59,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 foreach ($_from as $_smarty_tpl->tpl_vars['user']->key => $_smarty_tpl->tpl_vars['user']->value) {
 $_smarty_tpl->tpl_vars['user']->_loop = true;
 ?>
-				<tr>
+				<tr id="<?php echo $_smarty_tpl->tpl_vars['user']->value['userid'];?>
+">
 					<td><?php echo $_smarty_tpl->tpl_vars['user']->value['username'];?>
 </td>
 					<td><?php echo $_smarty_tpl->tpl_vars['user']->value['name'];?>
@@ -72,9 +73,9 @@ $_smarty_tpl->tpl_vars['user']->_loop = true;
 </td>
 					<td>
 					<?php if ($_smarty_tpl->tpl_vars['user']->value['isactive']=='Active') {?>
-						<button class="btn btn-danger">Ban</button>
+						<button class="btn btn-danger ban">Ban</button>
 					<?php } else { ?>
-						<button class="btn btn-success">Unban</button>
+						<button class="btn btn-success unban">Unban</button>
 					<?php }?>
 					</td>
 				</tr>
