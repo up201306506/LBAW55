@@ -33,7 +33,7 @@
 						<td>{if $exam.password eq ''}Public{else}Private{/if}</td>
 						<td>{if $exam.exampublished}Published{else}{if $exam.isongoing}Being Solved{else}Not Visible{/if}{/if}</td>
 						<td>
-							<button class="btn btn-primary">Edit</button>
+							<a class="btn btn-primary" href="{$BASE_URL}admin/edit_exam.php?id={$exam.examid}">Edit</a>
 						</td>
 					</tr>
 				{/foreach}

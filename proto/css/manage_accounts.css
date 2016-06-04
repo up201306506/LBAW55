@@ -20,6 +20,10 @@ h1 {
 	text-align: center;
 }
 
+.table.table-hover {
+	margin-bottom: 0;
+}
+
 .pagination {
 	margin: 0;
 }
