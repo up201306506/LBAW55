@@ -17,6 +17,7 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
+	
 
 	/*Statistics*/
 	$classes_owned = getClassByOwnerID($_SESSION['userid']);
@@ -35,9 +36,8 @@
 
 	echo count($exams);
 
-	// echo print_r($exams);
-	//$smarty->assign('classes', $classes);
-	//$smarty->assign('exams', $exams);
+	$smarty->assign('classes', $classes);
+	$smarty->assign('exams', $exams);
 	
 	/*This summons the smarty template*/
 	$smarty->display('professor/statistics/statistics.tpl');
