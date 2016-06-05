@@ -3,6 +3,9 @@
 
 <div class="container">
 	<h1>Statistics</h1>
+	<div class="box">
+		<table class="table table-hover"></table>
+	</div>
 </div>
 
 {include file='javascript_plugins/jquery.tpl'}
