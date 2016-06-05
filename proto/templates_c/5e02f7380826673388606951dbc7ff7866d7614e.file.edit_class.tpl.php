@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 02:34:50
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 05:07:50
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/professor/class/edit_class.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8854362605750ca74ca4c60-18487818%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5e02f7380826673388606951dbc7ff7866d7614e' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/professor/class/edit_class.tpl',
-      1 => 1464914088,
+      1 => 1465096054,
       2 => 'file',
     ),
   ),
@@ -32,7 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="container">
 	<div class="row">
 		<div class="col-lg-10 col-md-10 col-sm-12 col-lg-offset-1 col-md-offset-1">
-			<h1>Edit Class</h1>
+			<h1>Edit Participants</h1>
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12">
 					<div class="row">

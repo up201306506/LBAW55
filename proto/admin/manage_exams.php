@@ -3,7 +3,6 @@
 	/*This summons the database and smarty initializer */
 	include_once('../config/init.php');
 	include_once('../database/user_functions.php');
-	include_once('../database/class_functions.php');
 	include_once('../database/exam_functions.php');
 	
 	/*Other PHP actions should go here*/
@@ -21,17 +20,7 @@
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
 
 	/*Exams*/
-	$examlist = getAllExams();
-
-	$exam_owners = [];
-	foreach ($examlist as $exam) {
-		$temp = getExamsClassID($exam['examid']);
-		$temp = getClassOwnerID($temp['classid']);
-		$exam_owners[$exam['examid']] = getUserbyID($temp['directorid'])['name'];
-	}
-
-	$smarty->assign('examlist', $examlist);
-	$smarty->assign('exam_owners', $exam_owners);
+	$smarty->assign('examlist', getAllExams());
 		
 	/*This summons the smarty template*/
 	$smarty->display('admin/manage_exams.tpl');

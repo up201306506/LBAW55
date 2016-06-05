@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 16:20:44
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 05:09:30
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1090193883574fed098bc8a5-58355018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e9e688fa7ca940a3db17530cffb78c45ab16c3b3' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl',
-      1 => 1464963223,
+      1 => 1465096096,
       2 => 'file',
     ),
   ),
@@ -55,15 +55,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<?php if ($_smarty_tpl->tpl_vars['usertype']->value=='Professor') {?>
 			<?php if ($_smarty_tpl->tpl_vars['this_class_belong']->value) {?>
 				<div id="center-edit">
-					<a id="edit" class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-professor/class/edit_class.php?id=<?php echo $_smarty_tpl->tpl_vars['class']->value['classid'];?>
-">Edit Class</a>
+					<a class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+professor/class/edit_class_participants.php?id=<?php echo $_smarty_tpl->tpl_vars['class']->value['classid'];?>
+">Edit Participants</a>
 				</div>
 			<?php }?>
 			<?php } else { ?>
 			<?php if (!$_smarty_tpl->tpl_vars['this_class_belong']->value) {?>
 				<div id="center-edit">
-					<a id="edit" class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+					<a class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 action/enroll_class_action.php?id=<?php echo $_smarty_tpl->tpl_vars['class']->value['classid'];?>
 ">Enroll Class</a>
 				</div>

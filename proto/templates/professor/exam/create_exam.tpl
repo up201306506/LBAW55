@@ -21,10 +21,6 @@
 					<input id="date" class="form-control" type="text" placeholder="DD/MM/YYYY" required="required">
 				</div>
 				<div class="form-group">
-					<label for="hour">Hour:</label>
-					<input id="hour" class="form-control" type="text" placeholder="HH:MM" required="required">
-				</div>
-				<div class="form-group">
 					<label for="duration">Duration:</label>
 					<input id="duration" class="form-control" type="text" placeholder="HH:MM" required="required">
 				</div>
@@ -48,60 +44,6 @@
 					<label for="information">Information:</label>
 					<textarea id="information" class="form-control" rows="6" required="required"></textarea>
 				</div>
-				<div class="form-group">
-					<label for="professors">Responsible Professors:</label>
-					<ul id="professors" class="list-group">
-						<li class="list-group-item">
-							<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">
-							<span>{$session_username}</span>
-						</li>
-					</ul>
-					<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#professor-modal">Add Professor</button>
-					<div id="professor-modal" class="modal fade" role="list professors">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h4 class="modal-title">List of Professors</h4>
-								</div>
-								<div class="modal-body">
-									<ul class="list-group">
-										<li class="list-group-item">
-											<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">
-											<span>Professor #1</span>
-											<button class="btn btn-default">
-												<span class="glyphicon glyphicon-plus"></span>
-											</button>
-										</li>
-										<li class="list-group-item">
-											<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">
-											<span>Professor #2</span>
-											<button class="btn btn-default">
-												<span class="glyphicon glyphicon-plus"></span>
-											</button>
-										</li>
-										<li class="list-group-item">
-											<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">
-											<span>Professor #3</span>
-											<button class="btn btn-default">
-												<span class="glyphicon glyphicon-plus"></span>
-											</button>
-										</li>
-										<li class="list-group-item">
-											<img src="../../css/res/user_img.png" alt="User's Profile Image" width="35" height="35">
-											<span>Professor #4</span>
-											<button class="btn btn-default">
-												<span class="glyphicon glyphicon-plus"></span>
-											</button>
-										</li>
-									</ul>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -122,7 +64,7 @@
 			</div>
 		</div>
 		<div class="input-group question">
-			<div class="my-panel">
+			<div class="my-panel panel-success">
 				<div class="my-panel-header">
 					<span>This is a question</span>
 				</div>
@@ -135,7 +77,7 @@
 					</ul>
 				</div>
 			</div>
-			<span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span></span>
+			<span class="input-group-addon"><span class="glyphicon glyphicon-plus plus"></span></span>
 		</div>
 		<div class="input-group question">
 			<div class="my-panel">
@@ -151,7 +93,7 @@
 					</ul>
 				</div>
 			</div>
-			<span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span></span>
+			<span class="input-group-addon"><span class="glyphicon glyphicon-plus plus"></span></span>
 		</div>
 		<div class="input-group question">
 			<div class="my-panel">
@@ -167,7 +109,7 @@
 					</ul>
 				</div>
 			</div>
-			<span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span></span>
+			<span class="input-group-addon"><span class="glyphicon glyphicon-plus plus"></span></span>
 		</div>
 		<div class="input-group question">
 			<div class="my-panel">
@@ -183,7 +125,7 @@
 					</ul>
 				</div>
 			</div>
-			<span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span></span>
+			<span class="input-group-addon"><span class="glyphicon glyphicon-plus plus"></span></span>
 		</div>
 		<div class="input-group question">
 			<div class="my-panel">
@@ -199,15 +141,11 @@
 					</ul>
 				</div>
 			</div>
-			<span class="input-group-addon"><span class="glyphicon glyphicon-plus"></span></span>
+			<span class="input-group-addon"><span class="glyphicon glyphicon-plus plus"></span></span>
 		</div>
 		<div id="options" class="row">
 			<ul class="pagination">
-				<li class="active"><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
+				
 			</ul>
 			<input id="submit" class="btn btn-primary" type="submit" value="Next">
 		</div>

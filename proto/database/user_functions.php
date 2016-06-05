@@ -75,6 +75,17 @@ function getAllUsers() {
 	return $stmt->fetchAll();
 }
 
+function getProfessors() {
+	global $conn;
+	$stmt = $conn->prepare("SELECT * 
+							FROM users 
+							WHERE accounttypevar = 'Professor'
+							AND isactive = 'Active'
+							ORDER BY name ASC");
+	$stmt->execute();
+	return $stmt->fetchAll();
+}
+
 function getAllClasses() {
 	global $conn;
 	$stmt = $conn->prepare("SELECT classid, classname, userid, name, class.password AS classpass
@@ -90,6 +101,16 @@ function getClassById($classid) {
 		FROM class
 		WHERE classid = ?");
 	$stmt->execute(array($classid));
+	return $stmt->fetch();
+}
+
+function getClassByManagerAndClassname($userid, $classname) {
+	global $conn;
+	$stmt = $conn->prepare("SELECT *
+							FROM class
+							WHERE directorid = ?
+							AND classname = ?");
+	$stmt->execute(array($userid, $classname));
 	return $stmt->fetch();
 }
 
@@ -122,11 +143,17 @@ function getClassProfessors($classid) {
 function getClassStudents($classid) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT users.userid AS userid, name, accounttypevar
-		FROM userclass, users
-		WHERE classid = ?
-		AND userclass.userid = users.userid");
+							FROM userclass, users
+							WHERE classid = ?
+							AND userclass.userid = users.userid");
 	$stmt->execute(array($classid));
 	return $stmt->fetchAll();
+}
+
+function banUserFromClass($classid, $userid) {
+	global $conn;
+	$stmt = $conn->prepare("DELETE FROM userclass WHERE classid = ? AND userid = ?");
+	$stmt->execute(array($classid, $userid));
 }
 
 function getExamsOfClass($classid) {
@@ -250,6 +277,7 @@ function insertNewClassWithoutPass($userid, $name, $description, $creationdate) 
 	$stmt->bindParam(':description', $description);
 	$stmt->bindParam(':creationdate', $creationdate);
 	$stmt->execute();
+	return getClassByManagerAndClassname($userid, $name)['classid'];
 }
 
 function insertNewClassWithPass($userid, $name, $password, $description, $creationdate) {
@@ -260,6 +288,15 @@ function insertNewClassWithPass($userid, $name, $password, $description, $creati
 	$stmt->bindParam(':password', $password);
 	$stmt->bindParam(':description', $description);
 	$stmt->bindParam(':creationdate', $creationdate);
+	$stmt->execute();
+	return getClassByManagerAndClassname($userid, $name)['classid'];
+}
+
+function insertProfessorInClass($classid, $profid) {
+	global $conn;
+	$stmt = $conn->prepare("INSERT INTO professormanagesclass (classid,userid) VALUES (:classid, :profid)");
+	$stmt->bindParam(':classid', $classid);
+	$stmt->bindParam(':profid', $profid);
 	$stmt->execute();
 }
 
@@ -334,9 +371,7 @@ function getDescription($userid) {
 
 function banUser($userid){
 	global $conn;
-	$stmt = $conn->prepare("UPDATE users 
-		SET isactive = 'Inactive' 
-		WHERE userid  = ?");
+	$stmt = $conn->prepare("UPDATE users SET isactive = 'Inactive' WHERE userid  = ?");
 	$stmt->execute(array($userid));
 	$count = $stmt->rowCount();
 	return $count == 1;
@@ -344,9 +379,7 @@ function banUser($userid){
 
 function unbanUser($userid) {
 	global $conn;
-	$stmt = $conn->prepare("UPDATE users 
-		SET isactive = 'Active' 
-		WHERE userid  = ?");
+	$stmt = $conn->prepare("UPDATE users SET isactive = 'Active' WHERE userid  = ?");
 	$stmt->execute(array($userid));
 	$count = $stmt->rowCount();
 	return $count == 1;

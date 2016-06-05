@@ -23,14 +23,6 @@ h1, h3 {
 	resize: vertical;
 }
 
-.modal-body .list-group {
-	margin-bottom: 0;
-}
-
-.modal-body button {
-	float: right;
-}
-
 .col-lg-8 .form-group:last-child {
 	margin-bottom: 0;
 }

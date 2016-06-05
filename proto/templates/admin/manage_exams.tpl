@@ -9,7 +9,7 @@
 				<tr>
 					<th>Exam</th>
 					<th>Date</th>
-					<th>Manager</th>
+					<th>Local</th>
 					<th>Accessibility</th>
 					<th>State</th>
 					<th>Action</th>
@@ -29,7 +29,7 @@
 					<tr>
 						<td>{$exam.examidentification}</td>
 						<td>{$exam.date}</td>
-						<td>{$exam_owners[$exam.examid]}</td>
+						<td>{$exam.local}</td>
 						<td>{if $exam.password eq ''}Public{else}Private{/if}</td>
 						<td>{if $exam.exampublished}Published{else}{if $exam.isongoing}Being Solved{else}Not Visible{/if}{/if}</td>
 						<td>
