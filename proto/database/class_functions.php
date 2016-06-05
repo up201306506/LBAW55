@@ -1,4 +1,5 @@
-<?php	
+<?php
+
 	function getClassOwnerID($classid) {
 	    global $conn;
 	    $stmt = $conn->prepare("SELECT directorid 
@@ -28,32 +29,6 @@
 	    $stmt->execute(array($userid));
 	    return $stmt->fetchAll();
  	}
-
-	// function insertNewClass($directorid, $classname, $password, $description) {
-	//     global $conn;
-	// 	if(isset($password))
-	// 		$password_n = $password;
-	// 	else
-	// 		$password_n = '';
-		
-	// 	echo $directorid;
-	// 	echo $classname;
-	// 	echo $password_n; 
-	// 	echo $description;
-		
-	// 	if(isset($description)){
-	// 		$stmt = $conn->prepare("INSERT INTO class 
-	// 						(directorId,classname,password, description) 
-	// 						VALUES (?,?,?,?)");
-	// 		return $stmt->execute(array($directorid, $classname, $password_n, $description));
-	// 	}
-	// 	$stmt = $conn->prepare("INSERT INTO class 
-	// 		(directorId,classname,password) 
-	// 		VALUES (?,?,?)");
-	//     return $stmt->execute(array($directorid, $classname, $password_n));
-		
-	   
- // 	}
  
 	function checkStudentBelongsClass($userid, $classid){
 		global $conn;
