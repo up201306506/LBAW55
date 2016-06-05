@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 16:44:52
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 17:26:33
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/enroll_class.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:895116285575043f72fdd04-98082752%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '77a2b5745b57018698858586b04f39030105220b' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/enroll_class.tpl',
-      1 => 1464965089,
+      1 => 1465140292,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_575043f73ce395_40176823',
   'variables' => 
   array (
-    'classid' => 0,
     'error' => 0,
   ),
   'has_nocache_code' => false,
@@ -34,14 +33,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
 			<h1>Please insert a password</h1>
 			<div class="box">
-				<form action="../action/enroll_class_action.php?id=<?php echo $_smarty_tpl->tpl_vars['classid']->value;?>
-" method="post" role="enroll">
+				<form method="post" role="enroll">
 					<div class="form-group">
 						<label for="password">Password:</label>
-						<input class="form-control" type="password" name="password" required="required">
+						<input id="password" class="form-control" type="password" name="password" required="required">
 					</div>
 					<div id="center">
-						<input class="btn btn-primary" type="submit" value="Enroll">
+						<input name="submit" class="btn btn-primary" type="submit" value="Enroll">
 					</div>
 				</form>
 			</div>

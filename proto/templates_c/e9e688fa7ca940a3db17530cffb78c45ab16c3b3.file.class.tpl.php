@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 05:09:30
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 17:40:30
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1090193883574fed098bc8a5-58355018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e9e688fa7ca940a3db17530cffb78c45ab16c3b3' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl',
-      1 => 1465096096,
+      1 => 1465141225,
       2 => 'file',
     ),
   ),
@@ -194,12 +194,12 @@ $_smarty_tpl->tpl_vars['day']->first = $_smarty_tpl->tpl_vars['day']->iteration 
 "><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/statistics/statistics.php');?>
 "><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php');?>
+						<li><a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
 "><span class="glyphicon glyphicon-list"></span>Review Grades</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/find_classes.php');?>
 "><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					<?php } else { ?>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php');?>
+						<li><a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
 "><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/find_classes.php');?>
 "><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
