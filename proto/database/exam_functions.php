@@ -38,10 +38,8 @@ function getExamQuestions($examid) {
 
 function getAnswers($questionid) {
 	global $conn;
-	$stmt = $conn->prepare("SELECT answer FROM question, questionanswer, answersavailable
-							WHERE answersavailable.questionid = ?
-							AND answersavailable.questionid = question.questionid
-							AND answersavailable.questionanswerid = questionanswer.questionanswerid");
+	$stmt = $conn->prepare("SELECT answer FROM questionanswer
+							WHERE questionid = ?");
 	$stmt->execute(array($questionid));
 	return $stmt->fetchAll();
 }
