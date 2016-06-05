@@ -292,11 +292,12 @@ function insertNewQuestion($question, $categoryid) {
 	return getQuestionIdByQuestionAndCategory($question, $categoryid)['questionid'];
 }
 
-function insertNewAnswer($answer, $correct) {
+function insertNewAnswer($answer, $correct, $questionid) {
 	global $conn;
-	$stmt = $conn->prepare("INSERT INTO questionanswer (answer,iscorrectanswer) VALUES (:answer, :correct)");
+	$stmt = $conn->prepare("INSERT INTO questionanswer (answer,iscorrectanswer,questionid) VALUES (:answer, :correct, :questionid)");
 	$stmt->bindParam(':answer', $answer);
 	$stmt->bindParam(':correct', $correct);
+	$stmt->bindParam(':questionid', $questionid);
 	$stmt->execute();
 	return getAnswerIdByQuestionAndIsCorrect($answer, $correct)['questionanswerid'];
 }
