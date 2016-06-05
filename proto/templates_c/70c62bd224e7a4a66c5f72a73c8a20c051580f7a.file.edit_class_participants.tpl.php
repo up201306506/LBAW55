@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 05:33:00
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 06:35:04
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/professor/class/edit_class_participants.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:136454705957539827d54334-48455957%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '70c62bd224e7a4a66c5f72a73c8a20c051580f7a' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/professor/class/edit_class_participants.tpl',
-      1 => 1465097540,
+      1 => 1465101274,
       2 => 'file',
     ),
   ),
@@ -20,8 +20,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'classid' => 0,
-    'participants' => 0,
-    'participant' => 0,
+    'allstudents' => 0,
+    'student' => 0,
+    'studentspermission' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -43,30 +44,33 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 							<th>Action</th>
 						</tr>
 					</thead>
-					<tbody>
-					<?php  $_smarty_tpl->tpl_vars['participant'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['participant']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['participants']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['participant']->key => $_smarty_tpl->tpl_vars['participant']->value) {
-$_smarty_tpl->tpl_vars['participant']->_loop = true;
+					<tbody id="users">
+					<?php  $_smarty_tpl->tpl_vars['student'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['student']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['allstudents']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['student']->key => $_smarty_tpl->tpl_vars['student']->value) {
+$_smarty_tpl->tpl_vars['student']->_loop = true;
 ?>
-						<tr id="<?php echo $_smarty_tpl->tpl_vars['participant']->value['userid'];?>
+						<tr id="<?php echo $_smarty_tpl->tpl_vars['student']->value['userid'];?>
 ">
-							<td><?php echo $_smarty_tpl->tpl_vars['participant']->value['name'];?>
+							<td><?php echo $_smarty_tpl->tpl_vars['student']->value['name'];?>
 </td>
+						<?php if ($_smarty_tpl->tpl_vars['studentspermission']->value[$_smarty_tpl->tpl_vars['student']->value['userid']]=='true') {?>
 							<td>
 								<button class="btn btn-danger ban">Ban</button>
-								<button class="btn btn-default undo">Undo</button>
 							</td>
+						<?php } else { ?>
+							<td>
+								<button class="btn btn-success add">Add</button>
+							</td>
+						<?php }?>
 						</tr>
 					<?php } ?>
-						<tr>
-							<td></td>
-							<td>
-								<button id="done" class="btn btn-primary">Done</button>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<div id="center">
+					<ul class="pagination">
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -13,24 +13,27 @@
 							<th>Action</th>
 						</tr>
 					</thead>
-					<tbody>
-					{foreach $participants as $participant}
-						<tr id="{$participant.userid}">
-							<td>{$participant.name}</td>
+					<tbody id="users">
+					{foreach $allstudents as $student}
+						<tr id="{$student.userid}">
+							<td>{$student.name}</td>
+						{if $studentspermission[$student['userid']] eq 'true'}
 							<td>
 								<button class="btn btn-danger ban">Ban</button>
-								<button class="btn btn-default undo">Undo</button>
 							</td>
+						{else}
+							<td>
+								<button class="btn btn-success add">Add</button>
+							</td>
+						{/if}
 						</tr>
 					{/foreach}
-						<tr>
-							<td></td>
-							<td>
-								<button id="done" class="btn btn-primary">Done</button>
-							</td>
-						</tr>
 					</tbody>
 				</table>
+				<div id="center">
+					<ul class="pagination">
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
