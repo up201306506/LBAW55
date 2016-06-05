@@ -8,11 +8,11 @@
     //$BASE_DIR = 'D:/Programs/wamp/www/LBAW55/proto/'; //FIXME
     //$BASE_URL = '/LBAW55/proto/'; //FIXME
 
-    $BASE_DIR = '/opt/lbaw/lbaw1555/public_html/LBAW55/proto/'; //FIXME
-    $BASE_URL = '/~lbaw1555/LBAW55/proto/'; //FIXME
+    //$BASE_DIR = '/opt/lbaw/lbaw1555/public_html/LBAW55/proto/'; //FIXME
+    //$BASE_URL = '/~lbaw1555/LBAW55/proto/'; //FIXME
 
-    //$BASE_DIR = '/Applications/MAMP/htdocs/LBAW55/proto/';
-    //$BASE_URL = '/LBAW55/proto/';
+    $BASE_DIR = '/Applications/MAMP/htdocs/LBAW55/proto/';
+    $BASE_URL = '/LBAW55/proto/';
 
     $conn = new PDO('pgsql:host=dbm.fe.up.pt;dbname=lbaw1555', 'lbaw1555', 'VK15D1P4'); //FIXME
     $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -27,5 +27,6 @@
     $smarty->compile_dir = $BASE_DIR . 'templates_c/';
 
     $smarty->assign('BASE_URL', $BASE_URL);
+    $smarty->assign('BASE_DIR', $BASE_DIR);
 
 ?>
