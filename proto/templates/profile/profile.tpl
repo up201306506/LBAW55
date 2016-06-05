@@ -121,7 +121,7 @@
 						<li><a href="{$BASE_URL|cat:'professor/class/create_class.php'}"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
 						<li><a href="{$BASE_URL|cat:'professor/exam/create_exam.php'}"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
 						<li><a href="{$BASE_URL|cat:'professor/question/create_question.php'}"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
-						<li><a href="{$BASE_URL|cat:'professor/statistics/statistics.php'}"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
+						<li><a href="{$BASE_URL|cat:'professor/stats/stats.php'}"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
 						<li><a href="{$BASE_URL|cat:'public/find_classes.php'}"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					{else}
 						<li><a href="{$BASE_URL|cat:'public/find_classes.php'}"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
