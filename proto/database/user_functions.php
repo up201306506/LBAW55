@@ -194,6 +194,16 @@ function getExamsByUser($userid) {
 	return $stmt->fetchAll();
 }
 
+function getGrade($userid, $examid) {
+	global $conn;
+	$stmt = $conn->prepare("SELECT *
+							FROM executeexam
+							WHERE userid = ?
+							AND examid = ?");
+	$stmt->execute(array($userid, $examid));
+	return $stmt->fetch();
+}
+
 function getClassesByUser($userid) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT class.classid AS classid, classname, users.userid AS profid, name, class.password AS classpass

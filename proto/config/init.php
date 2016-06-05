@@ -8,11 +8,11 @@
     //$BASE_DIR = 'D:/Programs/wamp/www/LBAW55/proto/'; //FIXME
     //$BASE_URL = '/LBAW55/proto/'; //FIXME
 
-    $BASE_DIR = '/opt/lbaw/lbaw1555/public_html/LBAW55/proto/'; //FIXME
-    $BASE_URL = '/~lbaw1555/LBAW55/proto/'; //FIXME
+    //$BASE_DIR = '/opt/lbaw/lbaw1555/public_html/LBAW55/proto/'; //FIXME
+    //$BASE_URL = '/~lbaw1555/LBAW55/proto/'; //FIXME
 
-    //$BASE_DIR = '/Applications/MAMP/htdocs/LBAW55/proto/';
-    //$BASE_URL = '/LBAW55/proto/';
+    $BASE_DIR = '/Applications/MAMP/htdocs/LBAW55/proto/';
+    $BASE_URL = '/LBAW55/proto/';
 
     $conn = new PDO('pgsql:host=dbm.fe.up.pt;dbname=lbaw1555', 'lbaw1555', 'VK15D1P4'); //FIXME
     $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -29,20 +29,7 @@
 
     $smarty->assign('BASE_URL', $BASE_URL);
 
-    $smarty->assign('ERROR_MESSAGES', $_SESSION['error_messages']);  
-    $smarty->assign('FIELD_ERRORS', $_SESSION['field_errors']);
-    $smarty->assign('SUCCESS_MESSAGES', $_SESSION['success_messages']);
-    $smarty->assign('FORM_VALUES', $_SESSION['form_values']);
+    $smarty->assign('error', $_SESSION['error']);
+    unset($_SESSION['error']);
 
-    $smarty->assign('USERNAME', $_SESSION['username']);
-    $smarty->assign('ACCOUNTTYPEVAR', $_SESSION['accounttypevar']);
-    $smarty->assign('DESCRIPTION', $_SESSION['description']);
-    $smarty->assign('EMAIL', $_SESSION['email']);
-    $smarty->assign('NAME', $_SESSION['name']);
-
-    unset($_SESSION['success_messages']);
-    unset($_SESSION['error_messages']);  
-    unset($_SESSION['field_errors']);
-    unset($_SESSION['form_values']);
-  
 ?>
