@@ -20,7 +20,6 @@
 
     $conn->exec('SET SCHEMA \'eldoom\''); //FIXME?
 
-
     include_once($BASE_DIR . 'lib/smarty/Smarty.class.php');
 
     $smarty = new Smarty;
@@ -28,8 +27,5 @@
     $smarty->compile_dir = $BASE_DIR . 'templates_c/';
 
     $smarty->assign('BASE_URL', $BASE_URL);
-
-    $smarty->assign('error', $_SESSION['error']);
-    unset($_SESSION['error']);
 
 ?>
