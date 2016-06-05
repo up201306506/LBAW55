@@ -65,7 +65,6 @@
 		return $stmt->fetch() == true;
 	}
 	
-	
 	function checkProfessBelongsClass($userid, $classid){
 		global $conn;
 		$stmt = $conn->prepare("SELECT *
@@ -83,7 +82,6 @@
 		
 		return ($result1 == true || $result2 == true);
 	}
-	
 	
 	function checkClassRequiresPassword($classid){
 		global $conn;

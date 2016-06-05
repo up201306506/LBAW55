@@ -26,8 +26,9 @@ $(document).ready(function() {
 		});
 
 		var corr = $("input[type=\"radio\"]:checked", "form").val();
-		$.post("../../action/create_question_action.php", { categoryid: $("#category").val(), question: $("#question").val(), answers: answers, correct: (corr - 1) }, function() {
-			window.location = "../../profile/profile.php";
+		$.post("../../action/create_question_action.php", { categoryid: $("#category").val(), question: $("#question").val(), answers: answers, correct: (corr - 1) }, function(data) {
+			console.log(data);
+			// window.location = "../../profile/profile.php";
 		});
 	});
 });

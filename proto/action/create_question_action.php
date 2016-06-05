@@ -4,14 +4,17 @@
 	include_once('../database/user_functions.php');
 
 	if (!empty($_POST['categoryid']) && !empty($_POST['question']) && !empty($_POST['answers']) && !empty($_POST['correct'])) {
-		insertNewQuestion($_POST['question'], $_POST['categoryid']);
+		$questionid = insertNewQuestion($_POST['question'], $_POST['categoryid']);
+		echo $questionid;
 
 		$answers = explode("|:|", $_POST['answers']);
 		for ($i = 0; $i < count($answers); $i++) {
-			if ($i === $_POST['correct']) {
-				insertNewAnswer($answers[$i], 'true');
+			if ($i == $_POST['correct']) {
+				$answerid = insertNewAnswer($answers[$i], 'true');
+				insertAnswerAvailable($questionid, $answerid);
 			} else {
-				insertNewAnswer($answers[$i], 'false');
+				$answerid = insertNewAnswer($answers[$i], 'false');
+				insertAnswerAvailable($questionid, $answerid);
 			}
 		}
 	}

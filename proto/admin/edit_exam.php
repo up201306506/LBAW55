@@ -2,7 +2,7 @@
 
 	/*This summons the database and smarty initializer */
 	include_once('../config/init.php');
-	include_once('../database/user_functions.php');
+	include_once('../action/edit_exam_action.php');
 	
 	/*Other PHP actions should go here*/
 	$smarty->assign('pagename', 'Edit Exam');
@@ -19,8 +19,19 @@
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
 
 	/*Exam*/
+	$smarty->assign('error', $error);
 	$smarty->assign('exam', getExamById($_GET['id']));
-		
+
+	$questions = getExamQuestions($_GET['id']);
+
+	$answers = [];
+	foreach ($questions as $question) {
+		$answers[$question['questionid']] = getAnswers($question['questionid']);
+	}
+	
+	$smarty->assign('questions', $questions);
+	$smarty->assign('answers', $answers);
+
 	/*This summons the smarty template*/
 	$smarty->display('admin/edit_exam.tpl');
 
