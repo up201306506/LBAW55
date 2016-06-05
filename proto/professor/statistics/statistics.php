@@ -17,6 +17,7 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
+	
 
 	/*Statistics*/
 	$classes_owned = getClassByOwnerID($_SESSION['userid']);
