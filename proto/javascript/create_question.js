@@ -24,8 +24,9 @@ $(document).ready(function() {
 				answers += "|:|" + $(this).val();
 			}
 		});
-
+		
 		var corr = $("input[type=\"radio\"]:checked", "form").val();
+		console.log(corr);
 		$.post("../../action/create_question_action.php", { categoryid: $("#category").val(), question: $("#question").val(), answers: answers, correct: (corr - 1) }, function(data) {
 			console.log(data);
 			// window.location = "../../profile/profile.php";
