@@ -1,73 +1,78 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 20:25:45
-         compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2128119125574fe7b2aea268-37880714%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 16:56:48
+         compiled from "D:\Programs\wamp\www\LBAW55\proto\templates\public\class.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2722257543db05bc6c2-01934446%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '0bd976fb37f9ecd7e131551ae7f5681ff7767870' => 
+    '0d1b4a46ce3417f8e043a4e276fa375ecbf09dae' => 
     array (
-      0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl',
-      1 => 1465151117,
+      0 => 'D:\\Programs\\wamp\\www\\LBAW55\\proto\\templates\\public\\class.tpl',
+      1 => 1465104325,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2128119125574fe7b2aea268-37880714',
+  'nocache_hash' => '2722257543db05bc6c2-01934446',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_574fe7b2e54e47_40015100',
   'variables' => 
   array (
+    'class' => 0,
+    'manager' => 0,
+    'usertype' => 0,
+    'this_class_belong' => 0,
     'BASE_URL' => 0,
-    'session_username' => 0,
-    'session_name' => 0,
-    'session_email' => 0,
-    'description' => 0,
     'exams' => 0,
     'exam' => 0,
-    'classes' => 0,
-    'class' => 0,
+    'participants' => 0,
+    'participant' => 0,
     'month' => 0,
     'interval' => 0,
     'int' => 0,
     'days' => 0,
     'day' => 0,
-    'usertype' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_57543db0759a79_23354685',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_574fe7b2e54e47_40015100')) {function content_574fe7b2e54e47_40015100($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_57543db0759a79_23354685')) {function content_57543db0759a79_23354685($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 <div class="container">
-	<h1>Profile</h1>
+	<h1><?php echo $_smarty_tpl->tpl_vars['class']->value['classname'];?>
+</h1>
 	<div class="row">
 		<div id="first" class="col-lg-3 col-md-4 col-sm-12">
-			<div class="box">
-				<img id="user-img" class="img-circle img-responsive" src="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('css/res/user_img.png');?>
-" width="200" height="200">
-				<div id="username">
-					<span class="glyphicon glyphicon-credit-card"></span>
-					<span><?php echo $_smarty_tpl->tpl_vars['session_username']->value;?>
+			<div id="class-info" class="box">
+				<h3>Information</h3>
+				<span>Created by: <?php echo $_smarty_tpl->tpl_vars['manager']->value;?>
 </span>
-				</div>
-				<div id="name">
-					<span class="glyphicon glyphicon-user"></span>
-					<span><?php echo $_smarty_tpl->tpl_vars['session_name']->value;?>
+				<span>Date: <?php echo $_smarty_tpl->tpl_vars['class']->value['creationdate'];?>
 </span>
+			<?php if ($_smarty_tpl->tpl_vars['usertype']->value=='Professor') {?>
+			<?php if ($_smarty_tpl->tpl_vars['this_class_belong']->value) {?>
+				<div id="center-edit">
+					<a class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+professor/class/edit_class_participants.php?id=<?php echo $_smarty_tpl->tpl_vars['class']->value['classid'];?>
+">Edit Participants</a>
 				</div>
-				<div id="email">
-					<span class="glyphicon glyphicon-envelope"></span>
-					<span><?php echo $_smarty_tpl->tpl_vars['session_email']->value;?>
-</span>
+			<?php }?>
+			<?php } else { ?>
+			<?php if (!$_smarty_tpl->tpl_vars['this_class_belong']->value) {?>
+				<div id="center-edit">
+					<a class="btn btn-primary" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+action/enroll_class_action.php?id=<?php echo $_smarty_tpl->tpl_vars['class']->value['classid'];?>
+">Enroll Class</a>
 				</div>
+			<?php }?>
+			<?php }?>
 			</div>
 			<div class="box">
 				<h3>Description</h3>
-				<span id="description"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+				<span><?php echo $_smarty_tpl->tpl_vars['class']->value['description'];?>
 </span>
 			</div>
 		</div>
@@ -103,41 +108,33 @@ $_smarty_tpl->tpl_vars['exam']->_loop = true;
 					</tbody>
 				</table>
 			</div>
-			<div class="box">
+			<div id="participants" class="box">
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th>Class</th>
-							<th>Manager</th>
-							<th>Accessibility</th>
+							<th>Name</th>
+							<th>Account Type</th>
 						</tr>
 					</thead>
 					<tbody>
-					<?php  $_smarty_tpl->tpl_vars['class'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['class']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['classes']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['class']->key => $_smarty_tpl->tpl_vars['class']->value) {
-$_smarty_tpl->tpl_vars['class']->_loop = true;
+					<?php  $_smarty_tpl->tpl_vars['participant'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['participant']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['participants']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['participant']->key => $_smarty_tpl->tpl_vars['participant']->value) {
+$_smarty_tpl->tpl_vars['participant']->_loop = true;
 ?>
 						<tr>
-							<td>
-								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/class.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
-"><?php echo $_smarty_tpl->tpl_vars['class']->value['classname'];?>
-</a>
-							</td>
-							<td>
-								<a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/profile.php?id=')).($_smarty_tpl->tpl_vars['class']->value['profid']);?>
-"><?php echo $_smarty_tpl->tpl_vars['class']->value['name'];?>
-</a>
-							</td>
-						<?php if ($_smarty_tpl->tpl_vars['class']->value['classpass']) {?>
-							<td>Private</td>
-						<?php } else { ?>
-							<td>Public</td>
-						<?php }?>
+							<td><a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/profile.php?id=')).($_smarty_tpl->tpl_vars['participant']->value['userid']);?>
+"><?php echo $_smarty_tpl->tpl_vars['participant']->value['name'];?>
+</a></td>
+							<td><?php echo $_smarty_tpl->tpl_vars['participant']->value['accounttypevar'];?>
+</td>
 						</tr>
 					<?php } ?>
 					</tbody>
 				</table>
+			</div>
+			<div id="center">
+				<button id="shide" class="btn btn-default">Show Participants</button>
 			</div>
 		</div>
 		<div id="third" class="col-lg-3 col-md-4 col-sm-12">
@@ -185,13 +182,9 @@ $_smarty_tpl->tpl_vars['day']->first = $_smarty_tpl->tpl_vars['day']->iteration 
 				<ul>
 					<?php if ($_smarty_tpl->tpl_vars['usertype']->value=='Administrator') {?>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/validate_accounts.php');?>
-"><span class="glyphicon glyphicon-th-list"></span>Validate Accounts</a></li>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_accounts.php');?>
-"><span class="glyphicon glyphicon-book"></span>Manage Accounts</a></li>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_exams.php');?>
-"><span class="glyphicon glyphicon-file"></span>Manage Exams</a></li>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_questions.php');?>
-"><span class="glyphicon glyphicon-question-sign"></span>Manage Questions</a></li>
+"><span class="glyphicon glyphicon-th-list"></span>Validate Professor Accounts</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_database.php');?>
+"><span class="glyphicon glyphicon-folder-close"></span>Manage Database</a></li>
 					<?php } elseif ($_smarty_tpl->tpl_vars['usertype']->value=='Professor') {?>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/class/create_class.php');?>
 "><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
@@ -199,11 +192,15 @@ $_smarty_tpl->tpl_vars['day']->first = $_smarty_tpl->tpl_vars['day']->iteration 
 "><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/question/create_question.php');?>
 "><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/stats/stats.php');?>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/statistics/statistics.php');?>
 "><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php');?>
+"><span class="glyphicon glyphicon-list"></span>Review Grades</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/find_classes.php');?>
 "><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					<?php } else { ?>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php');?>
+"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/find_classes.php');?>
 "><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					<?php }?>

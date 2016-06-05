@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 20:25:45
-         compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:2128119125574fe7b2aea268-37880714%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 20:38:03
+         compiled from "D:\Programs\wamp\www\LBAW55\proto\templates\profile\profile.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:29915575436909f8024-04023431%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '0bd976fb37f9ecd7e131551ae7f5681ff7767870' => 
+    '4269cc68516bc987721b7f14936a368cff7e6a54' => 
     array (
-      0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl',
-      1 => 1465151117,
+      0 => 'D:\\Programs\\wamp\\www\\LBAW55\\proto\\templates\\profile\\profile.tpl',
+      1 => 1465151855,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2128119125574fe7b2aea268-37880714',
+  'nocache_hash' => '29915575436909f8024-04023431',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_574fe7b2e54e47_40015100',
+  'unifunc' => 'content_57543690cf5624_63284636',
   'variables' => 
   array (
     'BASE_URL' => 0,
@@ -37,7 +37,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_574fe7b2e54e47_40015100')) {function content_574fe7b2e54e47_40015100($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_57543690cf5624_63284636')) {function content_57543690cf5624_63284636($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 

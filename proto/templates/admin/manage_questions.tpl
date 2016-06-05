@@ -21,39 +21,29 @@
 			</div>
 		</div>
 		<div id="questions">
-		{foreach $questions as $question}
-			<div class="input-group question">
-				<div class="my-panel">
-					<div class="my-panel-header">
-						<span>{$question.questionid}:{$question.question}</span>
+		{if $questions}
+			{foreach $questions as $question}
+				<div class="input-group question">
+					<div class="my-panel">
+						<div class="my-panel-header">
+							<span>{$question.questionid}:{$question.question}</span>
+						</div>
+						<div class="my-panel-body">
+							<ul id="answers">
+							{foreach $answers[$question.questionid] as $answer}
+								<li>{$answer.answer}</li>
+							{/foreach}
+							</ul>
+						</div>
 					</div>
-					<div class="my-panel-body">
-						<ul id="answers">
-						{foreach $answers[$question.questionid] as $answer}
-							<li>{$answer.answer}</li>
-						{/foreach}
-						</ul>
-					</div>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
 				</div>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
-			</div>
-		{/foreach}
+			{/foreach}
+		{else}
 			<div class="input-group question">
-				<div class="my-panel">
-					<div class="my-panel-header">
-						<span>Example</span>
-					</div>
-					<div class="my-panel-body">
-						<ul id="answers">
-							<li><span>Example</span></li>
-							<li><span>Example</span></li>
-							<li><span>Example</span></li>
-							<li><span>Example</span></li>
-						</ul>
-					</div>
-				</div>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+				<div> No questions to display </div>
 			</div>
+		{/if}
 		</div>
 		<nav id="center">
 			<ul class="pagination">
