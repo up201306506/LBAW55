@@ -36,12 +36,10 @@
 		$classes_owned = getClassByOwnerID($_SESSION['userid']);
 		$classes_managed = getClassByManagerID($_SESSION['userid']);
 		$classes = array_merge($classes_owned, $classes_managed);
-		//echo print_r($classes,true);
 		
 		$exams = [];
 		foreach ($classes as $class)
 			$exams = array_merge($exams,getExamsOfClass($class['classid']));
-		//echo print_r($exams,true);
 		
 		$smarty->assign('exams', $exams);
 		$smarty->assign('classes', $classes);
