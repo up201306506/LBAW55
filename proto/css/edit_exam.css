@@ -61,3 +61,9 @@ h1 {
 	cursor: pointer;
 	box-shadow: 0 2px 15px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
+
+.alert {
+	border: 0;
+	border-radius: 0;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}

@@ -1,31 +1,25 @@
 <?php
+	
+	$error;
 
-	include_once('../config/init.php');
-	include_once('../database/user_functions.php');
-	include_once('../database/class_functions.php');
-	include_once('../action/session_check.php');
-
-	if (!empty($_POST['password'])) {
-		$class = correctClassPassword($_POST['password'], $_GET['id']);
-		if (!empty($class)) {
-			insertNewUserClass($_SESSION['userid'], $class['classid']);
-			header('Location: ' . $BASE_URL . 'public/class.php?id=' . $class['classid']);
-			exit;
+	if (isset($_POST['submit'])) {
+		if (!empty($_POST['password'])) {
+			$class = correctClassPassword($_POST['password'], $_GET['id']);
+			if (!empty($class)) {
+				insertNewUserClass($_SESSION['userid'], $_GET['id']);
+				header('Location: ' . $BASE_URL . 'public/class.php?id=' . $_GET['id']);
+			} else {
+				$error = 'Wrong Password!';
+			}
 		} else {
-			$_SESSION['error'] = 'Wrong Password!';
-			header('Location: ' . $_SERVER['HTTP_REFERER']);
-			exit;
-		}
-	} else {
-		$class = getClassById($_GET['id']);
-		if (empty($class['password'])){
-			insertNewUserClass($_SESSION['userid'], $class['classid']);
-			header('Location: ' . $BASE_URL . 'public/class.php?id=' . $class['classid']);
-			exit;
-		} else {
-			$_SESSION['error'] = 'Something went wrong!';
-			header('Location: ' . $BASE_URL);
-			exit;
+			$class = getClassById($_GET['id']);
+			if (empty($class['password'])){
+				insertNewUserClass($_SESSION['userid'], $_GET['id']);
+				header('Location: ' . $BASE_URL . 'public/class.php?id=' . $_GET['id']);
+			} else {
+				$error = 'Something went wrong!';
+			}
 		}
 	}
+
 ?>
