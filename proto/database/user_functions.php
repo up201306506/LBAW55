@@ -276,6 +276,16 @@ function correctClassPassword($password, $id) {
 	return $stmt->fetch();
 }
 
+function correctExamPassword($password, $examid) {
+	global $conn;
+	$stmt = $conn->prepare("SELECT *
+							FROM exam
+							WHERE password = ?
+							AND examid = ?");
+	$stmt->execute(array($password, $examid));
+	return $stmt->fetch() == true;
+}
+
 function isLoginCorrect($username, $password) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT * 
@@ -388,6 +398,13 @@ function insertProfessorInClass($classid, $profid) {
 	$stmt = $conn->prepare("INSERT INTO professormanagesclass (classid,userid) VALUES (:classid, :profid)");
 	$stmt->bindParam(':classid', $classid);
 	$stmt->bindParam(':profid', $profid);
+	$stmt->execute();
+}
+
+function insertNewCategory($category) {
+	global $conn;
+	$stmt = $conn->prepare("INSERT INTO category (type) VALUES (:category)");
+	$stmt->bindParam(':category', $category);
 	$stmt->execute();
 }
 

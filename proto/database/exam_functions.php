@@ -143,8 +143,4 @@ function updatePublish($examid, $publish) {
 	$stmt->execute(array($publish, $examid));
 }
 
-function calculateGrades($examid) {
-	
-}
-
 ?>

@@ -9,11 +9,21 @@
 	include_once('../../database/exam_functions.php');
 	include_once('../../action/session_check.php');
 
+	if ($user_type == 'Administrator') {
+		header('Location: ' . $BASE_URL . 'profile/profile.php');
+	}
+
 	/*Other PHP actions should go here*/
 	$exam = getExamById($_GET['id']);
 
 	if ($_SESSION['userid'] == "Student" && $exam['tries'] > 0) {
 		header('Location: ' . $BASE_URL . 'student/exam/exam_error.php?error=You have already completed this test!');
+	}
+
+	if ($_SESSION['userid'] == "Student" && $exam['password']) {
+		if ($_SESSION['allow'] != 'true') {
+			header('Location: enroll_exam.php?id=' . $_GET['id']);
+		}
 	}
 
 	$smarty->assign('pagename', $exam['examidentification']);

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 08:39:50
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 13:20:59
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1090193883574fed098bc8a5-58355018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e9e688fa7ca940a3db17530cffb78c45ab16c3b3' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl',
-      1 => 1465195158,
+      1 => 1465210013,
       2 => 'file',
     ),
   ),
@@ -147,6 +147,8 @@ $_smarty_tpl->tpl_vars['participant']->_loop = true;
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_database.php');?>
 "><span class="glyphicon glyphicon-folder-close"></span>Manage Database</a></li>
 					<?php } elseif ($_smarty_tpl->tpl_vars['usertype']->value=='Professor') {?>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/category/create_category.php');?>
+"><span class="glyphicon glyphicon-bookmark"></span>Create Category</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/class/create_class.php');?>
 "><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/exam/create_exam.php');?>

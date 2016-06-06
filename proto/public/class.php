@@ -5,6 +5,10 @@
 	include_once('../database/user_functions.php');
 	include_once('../database/class_functions.php');
 	include_once('../action/session_check.php');
+
+	if ($user_type == 'Administrator') {
+		header('Location: ' . $BASE_URL . 'profile/profile.php');
+	}
 	
 	/* Check if Class is Private and if User Belongs*/
 	$this_class = getClassById($_GET['id']);

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 07:12:36
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 12:37:36
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_questions.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17117282525751b5bf7e54e9-53469417%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a5026cca2e6e7ab41905b26a1835be8b7f72d270' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_questions.tpl',
-      1 => 1465189953,
+      1 => 1465209455,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_5751b5bfa3f035_56535147',
   'variables' => 
   array (
-    'categorylist' => 0,
-    'category' => 0,
     'questions' => 0,
     'question' => 0,
     'answers' => 0,
@@ -36,28 +34,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <div class="container">
 	<h1>Manage Questions</h1>
 	<div class="box">
-		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-12 col-lg-offset-4 col-md-offset-4">
-				<div class="form-group">
-					<label for="category">Category</label>
-					<select id="category" class="form-control">
-					<?php if (!$_smarty_tpl->tpl_vars['categorylist']->value) {?>
-						<option value=''>No categories...</option>
-					<?php } else { ?>
-					<?php  $_smarty_tpl->tpl_vars['category'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['category']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['categorylist']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['category']->key => $_smarty_tpl->tpl_vars['category']->value) {
-$_smarty_tpl->tpl_vars['category']->_loop = true;
-?>
-						<option value='<?php echo $_smarty_tpl->tpl_vars['category']->value['categoryid'];?>
-'><?php echo $_smarty_tpl->tpl_vars['category']->value['type'];?>
-</option>
-					<?php } ?>
-					<?php }?>
-					</select>
-				</div>
-			</div>
-		</div>
 		<div id="questions">
 		<?php if ($_smarty_tpl->tpl_vars['questions']->value) {?>
 			<?php  $_smarty_tpl->tpl_vars['question'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['question']->_loop = false;
@@ -69,8 +45,7 @@ $_smarty_tpl->tpl_vars['question']->_loop = true;
 " class="input-group question">
 					<div class="my-panel">
 						<div class="my-panel-header">
-							<span><?php echo $_smarty_tpl->tpl_vars['question']->value['questionid'];?>
-:<?php echo $_smarty_tpl->tpl_vars['question']->value['question'];?>
+							<span><?php echo $_smarty_tpl->tpl_vars['question']->value['question'];?>
 </span>
 						</div>
 						<div class="my-panel-body">

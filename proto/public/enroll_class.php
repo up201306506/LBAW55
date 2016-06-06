@@ -7,6 +7,10 @@
 	include_once('../action/session_check.php');
 	include_once('../action/enroll_class_action.php');
 
+	if ($user_type == 'Administrator') {
+		header('Location: ' . $BASE_URL . 'profile/profile.php');
+	}
+
 	/*Other PHP actions should go here*/
 	$smarty->assign('pagename', 'Enroll Class');
 

@@ -4,6 +4,11 @@
 	include_once('../config/init.php');
 	include_once('../database/exam_functions.php');
 	include_once('../database/user_functions.php');
+	include_once('../action/session_check.php');
+
+	if ($user_type != 'Administrator') {
+		header('Location: ' . $BASE_URL . 'profile/profile.php');
+	}
 	
 	/*Other PHP actions should go here*/
 	$smarty->assign('pagename', 'Manage Questions');
@@ -21,7 +26,6 @@
 
 	/*Questions*/
 	$questions = getAllQuestions();
-	$smarty->assign('categorylist', getAllCategories());
 
 	$answers = [];
 	foreach ($questions as $question) {

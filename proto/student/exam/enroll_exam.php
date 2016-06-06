@@ -3,6 +3,12 @@
 	/*This summons the database and smarty initializer */
 	include_once('../../config/init.php');
 	include_once('../../database/user_functions.php');
+	include_once('../../action/session_check.php');
+	include_once('../../action/enroll_exam_action.php');
+
+	if ($user_type == 'Administrator') {
+		header('Location: ' . $BASE_URL . 'profile/profile.php');
+	}
 
 	/*Other PHP actions should go here*/
 	$smarty->assign('pagename', 'Enroll Exam');
@@ -16,7 +22,7 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
-	$smarty->assign('usertype', getAccountType($_SESSION['userid']));
+	$smarty->assign('error', $error);
 	
 	/*This summons the smarty template*/
 	$smarty->display('student/exam/enroll_exam.tpl');

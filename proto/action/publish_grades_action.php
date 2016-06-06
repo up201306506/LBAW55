@@ -5,7 +5,6 @@
 
 	if (!empty($_POST['examid'])) {
 		updatePublish($_POST['examid'], 'true');
-		calculateGrades($_POST['examid']);
 	}
 
 ?>

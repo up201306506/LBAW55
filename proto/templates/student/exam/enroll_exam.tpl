@@ -12,10 +12,18 @@
 						<input class="form-control" type="password" name="password" required="required">
 					</div>
 					<div id="center">
-						<input class="btn btn-primary" type="submit" value="Enroll">
+						<input name="enroll" class="btn btn-primary" type="submit" value="Enroll">
 					</div>
 				</form>
 			</div>
+			{if $error}
+			<div class="alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<strong>Warning!</strong> {$error}
+			</div>
+			{/if}
 		</div>
 	</div>
 </div>
