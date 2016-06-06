@@ -1,6 +1,8 @@
 <?php
 
 	header('Location: ../login_signup.php');
+	die;
+	exit;
 	
 	function updateDataBaseUserPopulation() {
 	    global $conn;
