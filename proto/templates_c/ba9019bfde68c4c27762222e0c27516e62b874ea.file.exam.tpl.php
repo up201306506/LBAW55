@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 07:12:04
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 07:33:24
          compiled from "D:\Programs\wamp\www\LBAW55\proto\templates\student\exam\exam.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1909257543f3abbe2f4-95795881%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ba9019bfde68c4c27762222e0c27516e62b874ea' => 
     array (
       0 => 'D:\\Programs\\wamp\\www\\LBAW55\\proto\\templates\\student\\exam\\exam.tpl',
-      1 => 1465188331,
+      1 => 1465191197,
       2 => 'file',
     ),
   ),
@@ -24,6 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'img_url' => 0,
     'BASE_URL' => 0,
     'session_username' => 0,
+    'exam_timeleft' => 0,
     'questions' => 0,
     'question' => 0,
     'answers' => 0,
@@ -52,8 +53,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</div>
 				<div id="finish">
 					<span class="glyphicon glyphicon-time"></span>
-					<span><?php echo $_smarty_tpl->tpl_vars['exam']->value['duration'];?>
+					<span id=examduration><?php echo $_smarty_tpl->tpl_vars['exam']->value['duration'];?>
+</span> minutes<br>
+					<span id=timeleft hidden><?php echo $_smarty_tpl->tpl_vars['exam_timeleft']->value;?>
 </span>
+					<div id="clockdiv"></div>
 				</div>
 				<div id="center">
 					<button class="btn btn-warning">Done</button>
