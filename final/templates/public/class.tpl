@@ -18,7 +18,7 @@
 			{else}
 			{if !$this_class_belong}
 				<div id="center-edit">
-					<a class="btn btn-primary" href="{$BASE_URL}action/enroll_class_action.php?id={$class.classid}">Enroll Class</a>
+					<a class="btn btn-primary" href="{$BASE_URL}action/enroll_class.php?id={$class.classid}">Enroll Class</a>
 				</div>
 			{/if}
 			{/if}
