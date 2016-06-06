@@ -11,6 +11,11 @@
 
 	/*Other PHP actions should go here*/
 	$exam = getExamById($_GET['id']);
+
+	if ($_SESSION['userid'] == "Student" && $exam['tries'] > 0) {
+		header('Location: ' . $BASE_URL . 'student/exam/exam_error.php?error=You have already completed this test!');
+	}
+
 	$smarty->assign('pagename', $exam['examidentification']);
 	$smarty->assign('bootstrap', "../../css/Bootstrap/css/bootstrap.min.css");
 	$smarty->assign('csspage', "../../css/exam.css");
@@ -20,7 +25,9 @@
 	$smarty->assign('script', "../../javascript/exam.js");
 	
 	/*Session variables*/
+	$smarty->assign('userid', $_SESSION['userid']);
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
+	$smarty->assign('usertype', getAccountType($_SESSION['userid']));
 	
 	/*Other variables*/
 	$smarty->assign('exam', $exam);
@@ -52,6 +59,15 @@
 		$exam_ongoing = false;
 		$exam_is_finished = false;
 	}
+
+	if ($usertype == "Student" && !$exam_ongoing) {
+		if ($exam_is_finished) {
+			header('Location: ' . $BASE_URL . 'student/exam/exam_error.php?error=This is exam is already over!');
+		} else {
+			header('Location: ' . $BASE_URL . 'student/exam/exam_error.php?error=This exam has not started yet!');
+		}
+	}
+
 	$smarty->assign('exam_ongoing', $exam_ongoing);
 	$smarty->assign('exam_is_finished', $exam_is_finished);
 	$smarty->assign('exam_timeleft', $exam_timeleft);

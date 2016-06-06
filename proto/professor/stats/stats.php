@@ -26,8 +26,10 @@
 
 	$exams = [];
 	foreach ($classes as $class) {
-		$exams[$class['classid']] = getExamsOfClassAll($class['classid'])[0];
+		$exams[$class['classid']] = getExamsOfClassAll($class['classid']);
 	}
+
+	// echo print_r($exams);
 
 	$smarty->assign('classes', $classes);
 	$smarty->assign('exams', $exams);

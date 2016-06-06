@@ -391,6 +391,21 @@ function insertProfessorInClass($classid, $profid) {
 	$stmt->execute();
 }
 
+function updateUserAnswer($examid, $userid, $questionanswerid, $questionid) {
+	global $conn;
+	$stmt = $conn->prepare("UPDATE useranswers SET questionanswerid = ?
+							WHERE examid = ?
+							AND userid = ?
+							AND questionid = ?");
+	$stmt->execute(array($questionanswerid, $examid, $userid, $questionid));
+}
+
+function updateTries($examid, $tries) {
+	global $conn;
+	$stmt = $conn->prepare("UPDATE exam SET tries = ? WHERE examid = ?");
+	$stmt->execute(array($tries, $examid));
+}
+
 function updateName($name, $userid) {
 	global $conn;
 	$stmt = $conn->prepare("UPDATE users SET name = ? WHERE userid = ?");
