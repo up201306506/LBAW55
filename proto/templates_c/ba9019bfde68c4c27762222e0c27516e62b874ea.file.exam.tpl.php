@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 07:42:05
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 07:57:22
          compiled from "D:\Programs\wamp\www\LBAW55\proto\templates\student\exam\exam.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1909257543f3abbe2f4-95795881%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ba9019bfde68c4c27762222e0c27516e62b874ea' => 
     array (
       0 => 'D:\\Programs\\wamp\\www\\LBAW55\\proto\\templates\\student\\exam\\exam.tpl',
-      1 => 1465195189,
+      1 => 1465196240,
       2 => 'file',
     ),
   ),
@@ -59,11 +59,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </span> minutes<br>
 					<span id=timeleft hidden><?php echo $_smarty_tpl->tpl_vars['exam_timeleft']->value;?>
 </span>
-					<div id="clockdiv"></div>
+					<div id="clockdiv"<?php if (!$_smarty_tpl->tpl_vars['exam_ongoing']->value) {?> hidden<?php }?>></div>
 				</div>
-				<div id="center">
-					<button class="btn btn-warning">Done</button>
-				</div>
+				<?php if ($_smarty_tpl->tpl_vars['exam_ongoing']->value) {?>	
+					<div id="center">
+						<button id="end_exam" class="btn btn-warning">Done</button>
+					</div>
+				<?php }?>	
 			</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-12">
@@ -72,8 +74,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<span><?php echo $_smarty_tpl->tpl_vars['exam']->value['information'];?>
 </span>
 			</div>
-			<?php if ($_smarty_tpl->tpl_vars['exam_ongoing']->value) {?>
-				
+			<?php if ($_smarty_tpl->tpl_vars['exam_ongoing']->value) {?>	
 				<?php if ($_smarty_tpl->tpl_vars['questions']->value) {?>
 					<?php  $_smarty_tpl->tpl_vars['question'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['question']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['questions']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
