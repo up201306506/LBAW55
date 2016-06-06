@@ -13,7 +13,9 @@
 				</div>
 				<div id="finish">
 					<span class="glyphicon glyphicon-time"></span>
-					<span>{$exam.duration}</span>
+					<span id=examduration>{$exam.duration}</span> minutes<br>
+					<span id=timeleft hidden>{$exam_timeleft}</span>
+					<div id="clockdiv"></div>
 				</div>
 				<div id="center">
 					<button class="btn btn-warning">Done</button>

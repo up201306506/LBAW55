@@ -4,6 +4,8 @@
 		header('Location:'.$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'] . "&page=1");
 		die;
 	}
+	
+	date_default_timezone_set('Europe/Lisbon');
 
 	/*This summons the database and smarty initializer */
 	include_once('../../config/init.php');
@@ -39,6 +41,7 @@
 	//echo $today . "<br>";
 	//echo $exam_start_date . "<br>";
 	//echo $exam_finish_date . "<br>";
+	$exam_timeleft = 0;
 	if ($today > $exam_finish_date) {
 		//echo "Exam is now finished";
 		$exam_ongoing = false;
@@ -54,6 +57,10 @@
 		$exam_ongoing = false;
 		$exam_is_finished = false;
 	}
+	
+	$smarty->assign('exam_ongoing', $exam_ongoing);
+	$smarty->assign('exam_is_finished', $exam_is_finished);
+	$smarty->assign('exam_timeleft', $exam_timeleft);
 	
 	//Get exam questions
 	$questions = getExamQuestions($_GET['id']);
