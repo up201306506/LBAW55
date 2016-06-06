@@ -57,7 +57,6 @@
 		$exam_ongoing = false;
 		$exam_is_finished = false;
 	}
-	
 	$smarty->assign('exam_ongoing', $exam_ongoing);
 	$smarty->assign('exam_is_finished', $exam_is_finished);
 	$smarty->assign('exam_timeleft', $exam_timeleft);
@@ -71,6 +70,26 @@
 	$smarty->assign('questions', $questions);
 	$smarty->assign('answers', $answers);
 		
+	//If a user is permited in the exam and the exam is ongoing, his exam ecution should be tracked in the database
+	if($user_type == "Student" && $exam_ongoing){
+
+		//Generate Grades table
+		$user_grade_data =  getGrade($_SESSION['userid'], $_GET['id']);
+		if (!isset($user_grade_data)){
+			insertGrade($_SESSION['userid'], $_GET['id']);
+			$user_grade_data =  getGrade($_SESSION['userid'], $_GET['id']);
+		}	
+		echo "HELLO <br>";
+		
+		//Generate Answers Table
+		foreach ($questions as $question) {
+			$tempvar = 0;
+			$tempvar = getUserAnswer($_SESSION['userid'], $_GET['id'],$question['questionid']);
+			if (!$tempvar)
+				insertUserAnswer($_SESSION['userid'], $_GET['id'],$question['questionid']);
+		}
+		
+	}
 	
 	//User image
 	$img_url = $BASE_URL . "css/res/user_img/".$_SESSION['userid'].".png";

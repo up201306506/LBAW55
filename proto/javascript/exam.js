@@ -24,7 +24,10 @@ $(document).ready(function() {
 			display.text(hours + ":" + minutes + ":" + seconds);
 
 			if (--timer < 0) {
-				timer = duration;
+				
+				/*
+					ACTIONS FOR WHEN THE CLOCK REACHES ZERO SHOULD GO HERE
+				*/
 			}
 		}, 1000);
 	}
