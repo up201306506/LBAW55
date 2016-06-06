@@ -82,30 +82,6 @@
 				<h5>COMING SOON</h5>
 				<span> - Nothing to report</span>
 			</div>
-			<div id="calendar" class="box">
-				<ul id="month">
-					<li><a href="#"><span class="glyphicon glyphicon-triangle-left"></span></a></li>
-					<li><a href="{$BASE_URL|cat:'profile/calendar.php'}">{$month}</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-triangle-right"></span></a></li>
-				</ul>
-				<ul id="weekdays">
-					<li><abbr title="Monday">Mon</abbr></li>
-					<li><abbr title="Tuesday">Tue</abbr></li>
-					<li><abbr title="Wednesday">Wed</abbr></li>
-					<li><abbr title="Thursday">Thu</abbr></li>
-					<li><abbr title="Friday">Fri</abbr></li>
-					<li><abbr title="Saturday">Sat</abbr></li>
-					<li><abbr title="Sunday">Sun</abbr></li>
-				</ul>
-				<ul id="days">
-				{for $int=1 to $interval}
-					<li class="blank">{$int}</li>
-				{/for}
-				{for $day=1 to $days}
-					<li>{$day}</li>
-				{/for}
-				</ul>
-			</div>
 			<div id="options" class="box">
 				<ul>
 					{if $usertype eq 'Administrator'}
