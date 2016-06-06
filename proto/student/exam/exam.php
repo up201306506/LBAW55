@@ -1,5 +1,10 @@
 <?php
 
+	if(!isset($_GET['page'])){
+		header('Location:'.$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'] . "&page=1");
+		die;
+	}
+
 	/*This summons the database and smarty initializer */
 	include_once('../../config/init.php');
 	include_once('../../database/user_functions.php');
@@ -34,7 +39,6 @@
 	//echo $today . "<br>";
 	//echo $exam_start_date . "<br>";
 	//echo $exam_finish_date . "<br>";
-	
 	if ($today > $exam_finish_date) {
 		//echo "Exam is now finished";
 		$exam_ongoing = false;
@@ -44,12 +48,22 @@
 		$exam_ongoing = true;
 		$exam_is_finished = false;
 		$exam_timeleft = strtotime($exam_finish_date) - strtotime($today);
-		echo $exam_timeleft;
+		//echo $exam_timeleft;
 	} else {
 		//echo "Exam has not started";
 		$exam_ongoing = false;
 		$exam_is_finished = false;
 	}
+	
+	//Get exam questions
+	$questions = getExamQuestions($_GET['id']);
+	$answers = [];
+	foreach ($questions as $question) {
+		$answers[$question['questionid']] = getAnswers($question['questionid']);
+	}
+	$smarty->assign('questions', $questions);
+	$smarty->assign('answers', $answers);
+		
 	
 	//User image
 	$img_url = $BASE_URL . "css/res/user_img/".$_SESSION['userid'].".png";
