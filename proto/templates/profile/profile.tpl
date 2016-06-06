@@ -6,7 +6,7 @@
 	<div class="row">
 		<div id="first" class="col-lg-3 col-md-4 col-sm-12">
 			<div class="box">
-				<img id="user-img" class="img-circle img-responsive" src="{$BASE_URL|cat:'css/res/user_img.png'}" width="200" height="200">
+				<img id="user-img" class="img-circle img-responsive" src="{if $use_image}{$img_url}{else}{$BASE_URL|cat:'css/res/user_img/default.png'}{/if}" width="200" height="200">
 				<div id="username">
 					<span class="glyphicon glyphicon-credit-card"></span>
 					<span>{$session_username}</span>
@@ -121,11 +121,9 @@
 						<li><a href="{$BASE_URL|cat:'professor/class/create_class.php'}"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
 						<li><a href="{$BASE_URL|cat:'professor/exam/create_exam.php'}"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
 						<li><a href="{$BASE_URL|cat:'professor/question/create_question.php'}"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
-						<li><a href="{$BASE_URL|cat:'professor/statistics/statistics.php'}"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
-						<li><a href="{$BASE_URL|cat:'public/review_grades.php'}"><span class="glyphicon glyphicon-list"></span>Review Grades</a></li>
+						<li><a href="{$BASE_URL|cat:'professor/stats/stats.php'}"><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
 						<li><a href="{$BASE_URL|cat:'public/find_classes.php'}"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					{else}
-						<li><a href="{$BASE_URL|cat:'public/review_grades.php'}"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
 						<li><a href="{$BASE_URL|cat:'public/find_classes.php'}"><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					{/if}
 				</ul>

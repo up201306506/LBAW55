@@ -36,16 +36,19 @@
 		$classes_owned = getClassByOwnerID($_SESSION['userid']);
 		$classes_managed = getClassByManagerID($_SESSION['userid']);
 		$classes = array_merge($classes_owned, $classes_managed);
-		//echo print_r($classes,true);
 		
 		$exams = [];
 		foreach ($classes as $class)
 			$exams = array_merge($exams,getExamsOfClass($class['classid']));
-		//echo print_r($exams,true);
 		
 		$smarty->assign('exams', $exams);
 		$smarty->assign('classes', $classes);
 	}
+	$img_url = $BASE_URL . "css/res/user_img/".$_SESSION['userid'].".png";
+	$use_image = file_exists($BASE_DIR . "css/res/user_img/".$_SESSION['userid'].".png");
+	
+	$smarty->assign('img_url', $img_url);
+	$smarty->assign('use_image', $use_image);
 	
 	/*This summons the smarty template*/
 	$smarty->display('profile/profile.tpl');

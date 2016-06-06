@@ -14,19 +14,19 @@
 	<div class="row">
 		<div class="col-lg-4 col-md-4 col-sm-12">
 			<div class="box">
-				<img class="img-circle img-responsive" src="user_img.png">
+				<img class="img-circle img-responsive" src="{$BASE_URL|cat:'css/res/light-bulb-icon.png'}">
 				<h3>Easy to Use</h3>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-12">
 			<div class="box">
-				<img class="img-circle img-responsive" src="user_img.png">
+				<img class="img-circle img-responsive" src="{$BASE_URL|cat:'css/res/light-bulb-icon.png'}">
 				<h3>Efficient Exam Management</h3>
 			</div>
 		</div>
 		<div class="col-lg-4 col-md-4 col-sm-12">
 			<div class="box">
-				<img class="img-circle img-responsive" src="user_img.png">
+				<img class="img-circle img-responsive" src="{$BASE_URL|cat:'css/res/light-bulb-icon.png'}">
 				<h3>Best Way to Organize your Learning Groups</h3>
 			</div>
 		</div>

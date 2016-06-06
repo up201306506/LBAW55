@@ -34,8 +34,38 @@
 		} else {
 			$error = 'You new description can\'t be empty!';
 		}
-	}/* else if (isset($_POST['edit-profile-pic'])) {
+	}else if (isset($_POST['edit-profile-pic'])) {
+
+		$target_dir = $BASE_DIR . "css/res/user_img/";
+		$target_file = $target_dir . $_SESSION['userid'] . ".png";
+		$uploadOk = 1;
 		
-	}*/
+		// Check if image file is a actual image or fake image
+		$check = getimagesize($_FILES["upload_img"]["tmp_name"]);
+		if($check !== false) {
+			$error = "File is an image - " . $check["mime"] . ".";
+			$uploadOk = 1;
+		} else {
+			$error = "File is not an image.";
+			$uploadOk = 0;
+		}
+		 // Check file size
+		if ($_FILES["upload_img"]["size"] > 500000) {
+			$error =  "Sorry, your file is too large.";
+			$uploadOk = 0;
+		} 
+		// Check if $uploadOk is set to 0 by an error
+		if ($uploadOk == 0) {
+			$error = "Sorry, your file was not uploaded.";
+		// if everything is ok, try to upload file
+		} else {
+			if (  imagepng(imagecreatefromstring(file_get_contents($_FILES["upload_img"]["tmp_name"])), $target_file) ) {
+				$error =  "The file ". basename( $_FILES["upload_img"]["name"]). " has been uploaded.";
+			} else {
+				$error = "Sorry, there was an error uploading your file.";
+			}
+		}
+		
+	}
 
 ?>

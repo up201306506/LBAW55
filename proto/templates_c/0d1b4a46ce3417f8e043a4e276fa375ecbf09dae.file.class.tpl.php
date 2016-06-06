@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 19:03:57
-         compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:1090193883574fed098bc8a5-58355018%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 16:56:48
+         compiled from "D:\Programs\wamp\www\LBAW55\proto\templates\public\class.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2722257543db05bc6c2-01934446%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'e9e688fa7ca940a3db17530cffb78c45ab16c3b3' => 
+    '0d1b4a46ce3417f8e043a4e276fa375ecbf09dae' => 
     array (
-      0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/public/class.tpl',
-      1 => 1465145766,
+      0 => 'D:\\Programs\\wamp\\www\\LBAW55\\proto\\templates\\public\\class.tpl',
+      1 => 1465104325,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1090193883574fed098bc8a5-58355018',
+  'nocache_hash' => '2722257543db05bc6c2-01934446',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_574fed09bf7c38_70267086',
   'variables' => 
   array (
     'class' => 0,
@@ -35,8 +33,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'day' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_57543db0759a79_23354685',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_574fed09bf7c38_70267086')) {function content_574fed09bf7c38_70267086($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_57543db0759a79_23354685')) {function content_57543db0759a79_23354685($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <?php echo $_smarty_tpl->getSubTemplate ('common/navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -194,12 +194,12 @@ $_smarty_tpl->tpl_vars['day']->first = $_smarty_tpl->tpl_vars['day']->iteration 
 "><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/statistics/statistics.php');?>
 "><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
-						<li><a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php');?>
 "><span class="glyphicon glyphicon-list"></span>Review Grades</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/find_classes.php');?>
 "><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					<?php } else { ?>
-						<li><a href="<?php echo (($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php?id=')).($_smarty_tpl->tpl_vars['class']->value['classid']);?>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php');?>
 "><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/find_classes.php');?>
 "><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>

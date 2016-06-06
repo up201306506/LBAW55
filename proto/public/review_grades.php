@@ -21,29 +21,29 @@
 	$smarty->assign('usertype', $usertype);
 
 	if ($usertype == 'Student') {
-		$classes = getClassesByUser($_SESSION['userid']);
+		$exams = getExamsOfClassAll($_GET['id']);
 
-		$exams = [];
-		foreach ($classes as $class) {
-			$exams[$class['classname']] = getExamsOfClassAll($class['classid']);
+		$grades = [];
+		foreach ($exams as $exam) {
+			$grades[$exam['examid']] = getGrade($_SESSION['userid'], $exam['examid']);
 		}
 
 		$smarty->assign('exams', $exams);
-		$smarty->assign('classes', $classes);
+		$smarty->assign('grades', $grades);
 	} else if ($usertype == 'Professor') {
-		$classes_owned = getClassByOwnerID($_SESSION['userid']);
-		$classes_managed = getClassByManagerID($_SESSION['userid']);
-		$classes = array_merge($classes_owned, $classes_managed);
-		//echo print_r($classes,true);
-		
-		$exams = [];
-		foreach ($classes as $class) {
-			$exams[$class['classname']] = getExamsOfClassAll($class['classid']);
+		$exams = getExamsOfClassAll($_GET['id']);
+		$students = getClassStudents($_GET['id']);
+
+		$grades = [];
+		foreach ($exams as $exam) {
+			foreach ($students as $student) {
+				$grades[$student['userid']] = getGrade($student['userid'], $exam['examid']);
+			}
 		}
-		//echo print_r($exams,true);
-		
+
 		$smarty->assign('exams', $exams);
-		$smarty->assign('classes', $classes);
+		$smarty->assign('students', $students);
+		$smarty->assign('grades', $grades);
 	}
 	
 	/*This summons the smarty template*/

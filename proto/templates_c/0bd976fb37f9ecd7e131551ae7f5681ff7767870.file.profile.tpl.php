@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 17:10:21
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 20:25:45
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2128119125574fe7b2aea268-37880714%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0bd976fb37f9ecd7e131551ae7f5681ff7767870' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl',
-      1 => 1464966618,
+      1 => 1465151117,
       2 => 'file',
     ),
   ),
@@ -199,15 +199,11 @@ $_smarty_tpl->tpl_vars['day']->first = $_smarty_tpl->tpl_vars['day']->iteration 
 "><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/question/create_question.php');?>
 "><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/statistics/statistics.php');?>
+						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('professor/stats/stats.php');?>
 "><span class="glyphicon glyphicon-stats"></span>Statistics</a></li>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php');?>
-"><span class="glyphicon glyphicon-list"></span>Review Grades</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/find_classes.php');?>
 "><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					<?php } else { ?>
-						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/review_grades.php');?>
-"><span class="glyphicon glyphicon-list-alt"></span>Review Grades</a></li>
 						<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('public/find_classes.php');?>
 "><span class="glyphicon glyphicon-search"></span>Find Classes</a></li>
 					<?php }?>

@@ -194,6 +194,16 @@ function getExamsByUser($userid) {
 	return $stmt->fetchAll();
 }
 
+function getGrade($userid, $examid) {
+	global $conn;
+	$stmt = $conn->prepare("SELECT *
+							FROM executeexam
+							WHERE userid = ?
+							AND examid = ?");
+	$stmt->execute(array($userid, $examid));
+	return $stmt->fetch();
+}
+
 function getClassesByUser($userid) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT class.classid AS classid, classname, users.userid AS profid, name, class.password AS classpass
@@ -282,11 +292,12 @@ function insertNewQuestion($question, $categoryid) {
 	return getQuestionIdByQuestionAndCategory($question, $categoryid)['questionid'];
 }
 
-function insertNewAnswer($answer, $correct) {
+function insertNewAnswer($answer, $correct, $questionid) {
 	global $conn;
-	$stmt = $conn->prepare("INSERT INTO questionanswer (answer,iscorrectanswer) VALUES (:answer, :correct)");
+	$stmt = $conn->prepare("INSERT INTO questionanswer (answer,iscorrectanswer,questionid) VALUES (:answer, :correct, :questionid)");
 	$stmt->bindParam(':answer', $answer);
 	$stmt->bindParam(':correct', $correct);
+	$stmt->bindParam(':questionid', $questionid);
 	$stmt->execute();
 	return getAnswerIdByQuestionAndIsCorrect($answer, $correct)['questionanswerid'];
 }
