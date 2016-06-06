@@ -54,12 +54,12 @@
 				</form>
 			</div>
 			<div class="box">
-				<form method="post" role="form">
+				<form method="post" role="form" enctype="multipart/form-data">
 					<div class="form-group">
 						<label for="upload_img">Profile Picture:</label>
 						<input id="upload_img" name="upload_img" type="file" accept="image/*" required="required"></input>
 					</div>
-					<input name="edit-profile-pic" class="btn btn-primary" type="submit" value="Submit new Profile Picture"></input>
+					<input name="edit-profile-pic" class="btn btn-primary" type="submit" name="submit" value="Submit new Profile Picture"></input>
 				</form>
 			</div>
 		</div>
