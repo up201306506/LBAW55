@@ -45,6 +45,11 @@
 		$smarty->assign('classes', $classes);
 	} 
 	
+	$img_url = $BASE_URL . "css/res/user_img/".$_SESSION['userid'].".png";
+	$use_image = file_exists($BASE_DIR . "css/res/user_img/".$_SESSION['userid'].".png");
+	$smarty->assign('img_url', $img_url);
+	$smarty->assign('use_image', $use_image);
+	
 	/*This summons the smarty template*/
 	$smarty->display('profile/profile.tpl');
 
