@@ -138,7 +138,7 @@
 			<div class="row">
 				<div class="col-lg-6 col-md-6 col-sm-12">
 					<div class="box">
-						<img id="user-img" class="img-circle img-responsive" src="{$BASE_URL|cat:'css/res/user_img.png'}" width="200" height="200">
+						<img id="user-img" class="img-circle img-responsive" src="{if $use_image}{$img_url}{else}{$BASE_URL|cat:'css/res/user_img/default.png'}{/if}" width="200" height="200">
 						<div id="username">
 							<span class="glyphicon glyphicon-credit-card"></span>
 							<span>{$session_username}</span>
