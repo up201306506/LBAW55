@@ -20,7 +20,11 @@
 						<tr>
 							<td>{$exam.examidentification}</td>
 							<td>{$exam.date}</td>
+						{if $grades[$exam.examid]['finalgrade']}
 							<td>{$grades[$exam.examid]['finalgrade']}</td>
+						{else}
+							<td>Not Yet Published</td>
+						{/if}
 						</tr>
 					{/foreach}
 					</tbody>

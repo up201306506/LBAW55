@@ -61,26 +61,6 @@ h5:first-child {
 	margin-right: 5px;
 }
 
-#calendar {
-	display: table;
-	content: " ";
-}
-
-#month, #weekdays, #days {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
-
-#month li, #weekdays li, #days li {
-	float: left;
-	text-align: center;
-}
-
-.blank {
-	color: transparent;
-}
-
 #options ul {
 	margin: 0;
 	padding: 0;

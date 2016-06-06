@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-02 17:34:17
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 09:06:34
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/student/exam/enroll_exam.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:766390807575051f93e3fe7-45370896%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce0fe0e0d20f2938669e1ada8733992df246fa56' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/student/exam/enroll_exam.tpl',
-      1 => 1464881530,
+      1 => 1465196489,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'variables' => 
-  array (
-    'examid' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.15',
   'unifunc' => 'content_575051f94d6649_89908948',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_575051f94d6649_89908948')) {function content_575051f94d6649_89908948($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -33,8 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
 			<h1>Please insert a password</h1>
 			<div class="box">
-				<form action="../../action/enroll_exam_action.php?id=<?php echo $_smarty_tpl->tpl_vars['examid']->value;?>
-" method="post" role="enroll">
+				<form method="post" role="enroll">
 					<div class="form-group">
 						<label for="password">Password:</label>
 						<input class="form-control" type="password" name="password" required="required">
