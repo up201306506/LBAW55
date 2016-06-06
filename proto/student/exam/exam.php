@@ -78,6 +78,7 @@
 		}
 	}
 
+	$smarty->assign('exam_start_date',$exam_start_date);
 	$smarty->assign('exam_ongoing', $exam_ongoing);
 	$smarty->assign('exam_is_finished', $exam_is_finished);
 	$smarty->assign('exam_timeleft', $exam_timeleft);

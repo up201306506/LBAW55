@@ -11,6 +11,10 @@
 					<span class="glyphicon glyphicon-credit-card"></span>
 					<span>{$session_username}</span>
 				</div>
+				<div id="startdate">
+					<span class="glyphicon glyphicon-calendar"></span>
+					<span>{$exam_start_date}</span>
+				</div>
 				<div id="finish">
 					<span class="glyphicon glyphicon-time"></span>
 					<span id=examduration>{$exam.duration}</span> minutes<br>
