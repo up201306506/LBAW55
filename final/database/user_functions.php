@@ -306,15 +306,19 @@ function existsUser($username) {
 
 function insertNewUser($username, $email, $password, $usertype, $name, $isactive) {
 	global $conn;
-	$stmt = $conn->prepare("INSERT INTO users (username,accounttypevar,description,email,name,password,isActive) VALUES (:username, :usertype, 'Please insert a description', :email, :name, :password, :isactive)");// needs the isActive contrain
-	$stmt->bindParam(':username', $username);
-	$stmt->bindParam(':usertype', $usertype);
-	$stmt->bindParam(':email', $email);
-	$stmt->bindParam(':name', $name);
-	$stmt->bindParam(':password', hash('sha256', $password));
-	$stmt->bindParam(':isactive', $isactive);
-	$stmt->execute();
-	return getUser($username);
+	$user = null;
+	try{
+		$stmt = $conn->prepare("INSERT INTO users (username,accounttypevar,description,email,name,password,isActive) VALUES (:username, :usertype, 'Please insert a description', :email, :name, :password, :isactive)");// needs the isActive contrain
+		$stmt->bindParam(':username', $username);
+		$stmt->bindParam(':usertype', $usertype);
+		$stmt->bindParam(':email', $email);
+		$stmt->bindParam(':name', $name);
+		$stmt->bindParam(':password', hash('sha256', $password));
+		$stmt->bindParam(':isactive', $isactive);
+		$stmt->execute();
+		$user = getUser($username);
+	}catch(PDOException $e){}
+	return $user;
 }
 
 function getQuestionIdByQuestionAndCategory($question, $categoryid) {
