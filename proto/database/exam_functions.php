@@ -67,6 +67,21 @@ function removeQuestionFromExam($examid, $questionid) {
 	$stmt->execute(array($examid, $questionid));
 }
 
+function insertNewExamWithPassword($identification, $classid, $date, $hour, $duration, $local, $information, $password) {
+	global $conn;
+	$stmt = $conn->prepare("INSERT INTO exam (examidentification,classid,date,local,password,duration,information,beginningtime) VALUES (:examidentification, :classid, :date, :local, :password, :duration, :information, :beginningtime)");
+	$stmt->bindParam(':examidentification', $identification);
+	$stmt->bindParam(':classid', $classid);
+	$stmt->bindParam(':date', $date);
+	$stmt->bindParam(':local', $local);
+	$stmt->bindParam(':password', $password);
+	$stmt->bindParam(':duration', $duration);
+	$stmt->bindParam(':information', $information);
+	$stmt->bindParam(':beginningtime', $hour);
+	$stmt->execute();
+	return getExamIdAndClassId($identification, $classid)['examid'];
+}
+
 function insertNewExamWithoutPassword($identification, $classid, $date, $hour, $duration, $local, $information) {
 	global $conn;
 	$stmt = $conn->prepare("INSERT INTO exam (examidentification,classid,date,local,duration,information,beginningtime) VALUES (:examidentification, :classid, :date, :local, :duration, :information, :beginningtime)");
@@ -79,6 +94,17 @@ function insertNewExamWithoutPassword($identification, $classid, $date, $hour, $
 	$stmt->bindParam(':beginningtime', $hour);
 	$stmt->execute();
 	return getExamIdAndClassId($identification, $classid)['examid'];
+}
+
+function insertQuestionInExam($examid, $questionid, $correct, $incorrect, $questionnumber) {
+	global $conn;
+	$stmt = $conn->prepare("INSERT INTO questiongrades (examid,questionid,correctanswervalue,incorrectanswervalue,questionnumber) VALUES (:examid, :questionid, :correct, :incorrect, :questionnumber)");
+	$stmt->bindParam(':examid', $examid);
+	$stmt->bindParam(':questionid', $questionid);
+	$stmt->bindParam(':correct', $correct);
+	$stmt->bindParam(':incorrect', $incorrect);
+	$stmt->bindParam(':questionnumber', $questionnumber);
+	$stmt->execute();
 }
 
 function updateExamDate($examid, $date) {

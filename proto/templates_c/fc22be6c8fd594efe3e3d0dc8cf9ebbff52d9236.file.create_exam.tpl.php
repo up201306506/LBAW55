@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 06:18:03
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 08:11:59
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/professor/exam/create_exam.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:670833142575461b3c68d45-39691758%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'fc22be6c8fd594efe3e3d0dc8cf9ebbff52d9236' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/professor/exam/create_exam.tpl',
-      1 => 1465186681,
+      1 => 1465193513,
       2 => 'file',
     ),
   ),
@@ -21,8 +21,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'classes' => 0,
     'class' => 0,
-    'categories' => 0,
-    'category' => 0,
     'questions' => 0,
     'question' => 0,
     'answers' => 0,
@@ -107,13 +105,13 @@ $_smarty_tpl->tpl_vars['class']->_loop = true;
 				<div class="row">
 					<div class="col-lg-6 col-md-6 col-sm-12">
 						<div class="form-group">
-							<label for="correct">Correct Answer Value:</label>
+							<label for="correct">Correct Answer Value (0 to 1):</label>
 							<input id="correct" class="form-control" type="text">
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-12">
 						<div class="form-group">
-							<label for="incorrect">Incorrect Answer Value:</label>
+							<label for="incorrect">Incorrect Answer Value (-1 to 0):</label>
 							<input id="incorrect" class="form-control" type="text">
 						</div>
 					</div>
@@ -123,24 +121,6 @@ $_smarty_tpl->tpl_vars['class']->_loop = true;
 	</div>
 	<div class="box">
 		<h3>Questions</h3>
-		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-8 col-lg-offset-4 col-md-offset-4 col-sm-offset-2">
-				<div class="form-group">
-					<label for="category">Category:</label>
-					<select id="category" class="form-control">
-					<?php  $_smarty_tpl->tpl_vars['category'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['category']->_loop = false;
- $_from = $_smarty_tpl->tpl_vars['categories']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['category']->key => $_smarty_tpl->tpl_vars['category']->value) {
-$_smarty_tpl->tpl_vars['category']->_loop = true;
-?>
-						<option value="<?php echo $_smarty_tpl->tpl_vars['category']->value['categoryid'];?>
-"><?php echo $_smarty_tpl->tpl_vars['category']->value['type'];?>
-</option>
-					<?php } ?>
-					</select>
-				</div>
-			</div>
-		</div>
 		<div id="questions">
 		<?php  $_smarty_tpl->tpl_vars['question'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['question']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['questions']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}

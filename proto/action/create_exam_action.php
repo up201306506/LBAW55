@@ -7,19 +7,30 @@
 
 		if (!empty($_POST['password']) && !empty($_POST['re_password'])) {
 			if ($_POST['password'] === $_POST['re_password']) {
+				$examid = insertNewExamWithPassword($_POST['identification'], $_POST['classid'], $_POST['date'], $_POST['hour'], $_POST['duration'], $_POST['local'], $_POST['information'], $_POST['password']);
+
+				$i = 0;
 				$ids = explode(",", $_POST['questions']);
 				foreach ($ids as $id) {
+					insertQuestionInExam($examid, $id, $_POST['correct'], $_POST['incorrect'], $i);
+					$i++;
 				}
+
+				echo "success";
 			} else {
 				echo "diff-pass";
 			}
 		} else {
 			$examid = insertNewExamWithoutPassword($_POST['identification'], $_POST['classid'], $_POST['date'], $_POST['hour'], $_POST['duration'], $_POST['local'], $_POST['information']);
+			
+			$i = 0;
+			$ids = explode(",", $_POST['questions']);
+			foreach ($ids as $id) {
+				insertQuestionInExam($examid, $id, $_POST['correct'], $_POST['incorrect'], $i);
+				$i++;
+			}
+
 			echo "success";
-			// $ids = explode(",", $_POST['questions']);
-			// foreach ($ids as $id) {
-			// 	insertQuestionInExam($examid, $id, $_POST['correct'], $_POST['incorrect']);
-			// }
 		}
 	} else {
 		echo "empty-field";
