@@ -22,7 +22,6 @@ $(document).ready(function() {
 		$('.input-group.question').each(function() {
 			if ($(this).attr("style") == "display: block;") {
 				$(this).removeAttr("style");
-				console.log("lol");
 			}
 		});
 	}
@@ -54,4 +53,10 @@ $(document).ready(function() {
 		$('.pagination').attr("curr",page);
 		removeStyle();
 	}
+
+	$(".remove").click(function() {
+		$.post("../action/delete_question_action.php", { questionid: $(this).parent().attr("id") }, function() {
+			location.reload();
+		});
+	});
 });

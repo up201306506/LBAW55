@@ -27,7 +27,6 @@
 	foreach ($questions as $question) {
 		$answers[$question['questionid']] = getAnswers($question['questionid']);
 	}
-	//echo print_r($answers);
 
 	$smarty->assign('questions', $questions);
 	$smarty->assign('answers', $answers);

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 20:25:45
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 03:44:14
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2128119125574fe7b2aea268-37880714%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0bd976fb37f9ecd7e131551ae7f5681ff7767870' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl',
-      1 => 1465151117,
+      1 => 1465177452,
       2 => 'file',
     ),
   ),
@@ -19,6 +19,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_574fe7b2e54e47_40015100',
   'variables' => 
   array (
+    'usertype' => 0,
     'BASE_URL' => 0,
     'session_username' => 0,
     'session_name' => 0,
@@ -33,7 +34,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'int' => 0,
     'days' => 0,
     'day' => 0,
-    'usertype' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -43,6 +43,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 
 <div class="container">
+<?php if ($_smarty_tpl->tpl_vars['usertype']->value!='Administrator') {?>
 	<h1>Profile</h1>
 	<div class="row">
 		<div id="first" class="col-lg-3 col-md-4 col-sm-12">
@@ -211,6 +212,55 @@ $_smarty_tpl->tpl_vars['day']->first = $_smarty_tpl->tpl_vars['day']->iteration 
 			</div>
 		</div>
 	</div>
+<?php } else { ?>
+	<div class="row">
+		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
+			<h1>Profile</h1>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="box">
+						<img id="user-img" class="img-circle img-responsive" src="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('css/res/user_img.png');?>
+" width="200" height="200">
+						<div id="username">
+							<span class="glyphicon glyphicon-credit-card"></span>
+							<span><?php echo $_smarty_tpl->tpl_vars['session_username']->value;?>
+</span>
+						</div>
+						<div id="name">
+							<span class="glyphicon glyphicon-user"></span>
+							<span><?php echo $_smarty_tpl->tpl_vars['session_name']->value;?>
+</span>
+						</div>
+						<div id="email">
+							<span class="glyphicon glyphicon-envelope"></span>
+							<span><?php echo $_smarty_tpl->tpl_vars['session_email']->value;?>
+</span>
+						</div>
+					</div>
+					<div class="box">
+						<h3>Description</h3>
+						<span id="description"><?php echo $_smarty_tpl->tpl_vars['description']->value;?>
+</span>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<div id="admin-options" class="box">
+						<ul>
+							<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/validate_accounts.php');?>
+"><span class="glyphicon glyphicon-th-list"></span>Validate Accounts</a></li>
+							<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_accounts.php');?>
+"><span class="glyphicon glyphicon-book"></span>Manage Accounts</a></li>
+							<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_exams.php');?>
+"><span class="glyphicon glyphicon-file"></span>Manage Exams</a></li>
+							<li><a href="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('admin/manage_questions.php');?>
+"><span class="glyphicon glyphicon-question-sign"></span>Manage Questions</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<?php }?>
 </div>
 
 <?php echo $_smarty_tpl->getSubTemplate ('javascript_plugins/jquery.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>

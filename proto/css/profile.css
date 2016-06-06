@@ -91,3 +91,14 @@ h5:first-child {
 	padding: 5px;
 	margin-right: 5px;
 }
+
+#admin-options ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#admin-options a span {
+	padding: 5px;
+	margin-right: 5px;
+}

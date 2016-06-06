@@ -32,7 +32,7 @@
 	if($user_type == "Student") {
 		$smarty->assign('exams', getExamsByUser($_SESSION['userid']));
 		$smarty->assign('classes', getClassesByUser($_SESSION['userid']));
-	} else {
+	} else if ($user_type == "Professor") {
 		$classes_owned = getClassByOwnerID($_SESSION['userid']);
 		$classes_managed = getClassByManagerID($_SESSION['userid']);
 		$classes = array_merge($classes_owned, $classes_managed);
@@ -43,7 +43,7 @@
 		
 		$smarty->assign('exams', $exams);
 		$smarty->assign('classes', $classes);
-	}
+	} 
 	
 	$img_url = $BASE_URL . "css/res/user_img/".$_SESSION['userid'].".png";
 	$use_image = file_exists($BASE_DIR . "css/res/user_img/".$_SESSION['userid'].".png");
