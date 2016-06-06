@@ -16,16 +16,7 @@
 				</tr>
 			</thead>
 			<tbody id="users">
-			{if !$userlist}
-				<tr>
-					<td>The loneliest website ever! You're all alone here, admin.</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			{else}
+			{if $userlist}
 				{foreach $userlist as $user}
 				<tr id="{$user.userid}">
 					<td>{$user.username}</td>
@@ -42,6 +33,10 @@
 					</td>
 				</tr>
 				{/foreach}
+			{else}
+				<div>
+					<span>No users to display</span>
+				</div>
 			{/if}
 			</tbody>
 		</table>

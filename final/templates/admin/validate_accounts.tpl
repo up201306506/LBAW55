@@ -14,14 +14,7 @@
 				</tr>
 			</thead>
 			<tbody>
-			{if !$professor_list}
-				<tr>
-					<td><span class="empty_list">There are no professors left to validate!</span></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			{else}
+			{if $professor_list}
 				<form role="validate">
 				{foreach $professor_list as $professor}
 					<tr id="{$professor.userid}">
@@ -48,6 +41,10 @@
 						</td>
 					</tr>
 				</form>
+			{else}
+				<div>
+					<span>No pending accounts to display</span>
+				</div>
 			{/if}
 			</tbody>
 		</table>
