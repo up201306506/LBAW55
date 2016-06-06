@@ -16,15 +16,7 @@
 				</tr>
 			</thead>
 			<tbody id="exams">
-			{if !$examlist}
-				<tr>
-					<td>No exams were found in the database.</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			{else}
+			{if $examlist}
 				{foreach $examlist as $exam}
 					<tr>
 						<td>{$exam.examidentification}</td>
@@ -37,6 +29,10 @@
 						</td>
 					</tr>
 				{/foreach}
+			{else}
+				<div>
+					<span>No exams to display</span>
+				</div>
 			{/if}
 			</tbody>
 		</table>
