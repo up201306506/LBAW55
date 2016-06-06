@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 03:07:18
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 07:07:09
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_questions.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17117282525751b5bf7e54e9-53469417%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a5026cca2e6e7ab41905b26a1835be8b7f72d270' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_questions.tpl',
-      1 => 1465175237,
+      1 => 1465188881,
       2 => 'file',
     ),
   ),
@@ -59,35 +59,40 @@ $_smarty_tpl->tpl_vars['category']->_loop = true;
 			</div>
 		</div>
 		<div id="questions">
-		<?php  $_smarty_tpl->tpl_vars['question'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['question']->_loop = false;
+		<?php if ($_smarty_tpl->tpl_vars['questions']->value) {?>
+			<?php  $_smarty_tpl->tpl_vars['question'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['question']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['questions']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['question']->key => $_smarty_tpl->tpl_vars['question']->value) {
 $_smarty_tpl->tpl_vars['question']->_loop = true;
 ?>
-			<div id="<?php echo $_smarty_tpl->tpl_vars['question']->value['questionid'];?>
-" class="input-group question">
-				<div class="my-panel">
-					<div class="my-panel-header">
-						<span><?php echo $_smarty_tpl->tpl_vars['question']->value['questionid'];?>
+				<div class="input-group question">
+					<div class="my-panel">
+						<div class="my-panel-header">
+							<span><?php echo $_smarty_tpl->tpl_vars['question']->value['questionid'];?>
 :<?php echo $_smarty_tpl->tpl_vars['question']->value['question'];?>
 </span>
-					</div>
-					<div class="my-panel-body">
-						<ul id="answers">
-						<?php  $_smarty_tpl->tpl_vars['answer'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['answer']->_loop = false;
+						</div>
+						<div class="my-panel-body">
+							<ul id="answers">
+							<?php  $_smarty_tpl->tpl_vars['answer'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['answer']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['answers']->value[$_smarty_tpl->tpl_vars['question']->value['questionid']]; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['answer']->key => $_smarty_tpl->tpl_vars['answer']->value) {
 $_smarty_tpl->tpl_vars['answer']->_loop = true;
 ?>
-							<li><?php echo $_smarty_tpl->tpl_vars['answer']->value['answer'];?>
+								<li><?php echo $_smarty_tpl->tpl_vars['answer']->value['answer'];?>
 </li>
-						<?php } ?>
-						</ul>
+							<?php } ?>
+							</ul>
+						</div>
 					</div>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
 				</div>
-				<span class="input-group-addon remove"><span class="glyphicon glyphicon-remove"></span></span>
+			<?php } ?>
+		<?php } else { ?>
+			<div class="input-group question">
+				<div> No questions to display </div>
 			</div>
-		<?php } ?>
+		<?php }?>
 		</div>
 		<nav id="center">
 			<ul class="pagination">
