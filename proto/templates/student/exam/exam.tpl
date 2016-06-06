@@ -15,11 +15,13 @@
 					<span class="glyphicon glyphicon-time"></span>
 					<span id=examduration>{$exam.duration}</span> minutes<br>
 					<span id=timeleft hidden>{$exam_timeleft}</span>
-					<div id="clockdiv"></div>
+					<div id="clockdiv"{if !$exam_ongoing} hidden{/if}></div>
 				</div>
-				<div id="center">
-					<button class="btn btn-warning">Done</button>
-				</div>
+				{if $exam_ongoing}	
+					<div id="center">
+						<button id="end_exam" class="btn btn-warning">Done</button>
+					</div>
+				{/if}	
 			</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-12">
@@ -27,8 +29,7 @@
 				<h3>Information</h3>
 				<span>{$exam.information}</span>
 			</div>
-			{if $exam_ongoing}
-				
+			{if $exam_ongoing}	
 				{if $questions}
 					{foreach $questions as $question}
 					<div class="input-group">

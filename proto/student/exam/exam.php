@@ -1,10 +1,5 @@
 <?php
 
-	if(!isset($_GET['page'])){
-		header('Location:'.$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'] . "&page=1");
-		die;
-	}
-	
 	date_default_timezone_set('Europe/Lisbon');
 
 	/*This summons the database and smarty initializer */
