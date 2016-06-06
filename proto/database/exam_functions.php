@@ -45,7 +45,7 @@ function getExamQuestions($examid) {
 function getAnswers($questionid) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT answer FROM questionanswer
- +							WHERE questionid = ?");
+							WHERE questionid = ?");
 	$stmt->execute(array($questionid));
 	return $stmt->fetchAll();
 }
