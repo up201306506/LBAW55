@@ -23,7 +23,7 @@
 		<div id="questions">
 		{if $questions}
 			{foreach $questions as $question}
-				<div class="input-group question">
+				<div id="{$question.questionid}" class="input-group question">
 					<div class="my-panel">
 						<div class="my-panel-header">
 							<span>{$question.questionid}:{$question.question}</span>
@@ -36,7 +36,7 @@
 							</ul>
 						</div>
 					</div>
-					<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+					<span class="input-group-addon remove"><span class="glyphicon glyphicon-remove"></span></span>
 				</div>
 			{/foreach}
 		{else}
