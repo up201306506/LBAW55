@@ -46,7 +46,10 @@
 	$smarty->assign('days', date('t'));
 	$smarty->assign('interval', abs(date('N') - date('j')));
 	
-	
+	$img_url = $BASE_URL . "css/res/user_img/".$_GET['id'].".png";
+	$use_image = file_exists($BASE_DIR . "css/res/user_img/".$_GET['id'].".png");
+	$smarty->assign('img_url', $img_url);
+	$smarty->assign('use_image', $use_image);
 	
 	
 	
