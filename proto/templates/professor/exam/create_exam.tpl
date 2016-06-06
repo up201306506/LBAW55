@@ -67,13 +67,13 @@
 				<div class="row">
 					<div class="col-lg-6 col-md-6 col-sm-12">
 						<div class="form-group">
-							<label for="correct">Correct Answer Value:</label>
+							<label for="correct">Correct Answer Value (0 to 1):</label>
 							<input id="correct" class="form-control" type="text">
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-12">
 						<div class="form-group">
-							<label for="incorrect">Incorrect Answer Value:</label>
+							<label for="incorrect">Incorrect Answer Value (-1 to 0):</label>
 							<input id="incorrect" class="form-control" type="text">
 						</div>
 					</div>
@@ -83,18 +83,6 @@
 	</div>
 	<div class="box">
 		<h3>Questions</h3>
-		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-8 col-lg-offset-4 col-md-offset-4 col-sm-offset-2">
-				<div class="form-group">
-					<label for="category">Category:</label>
-					<select id="category" class="form-control">
-					{foreach $categories as $category}
-						<option value="{$category.categoryid}">{$category.type}</option>
-					{/foreach}
-					</select>
-				</div>
-			</div>
-		</div>
 		<div id="questions">
 		{foreach $questions as $question}
 			<div id="{$question.questionid}" class="input-group question">

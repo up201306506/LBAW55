@@ -79,7 +79,7 @@ $(document).ready(function() {
 			$(".alert").css("display", "block");
 			$("#error").html(" The exam must have at least one question!");
 		} else {
-			$.post("../../action/create_exam_action.php", { identification: $("#identification").val(), classid: $("#class").val(), date: $("#date").val(), hour: $("#hour").val(), local: $("#local").val(), duration: duration, password: $("#password").val(), re_password: $("#re-password").val(), information: $("#information").val(), correct: $("#correct").val(), incorrect: $("#incorrect").val(), questions: questions }, function(data) {
+			$.post("../../action/create_exam_action.php", { identification: $("#identification").val(), classid: $("#class").val(), date: $("#date").val(), hour: $("#hour").val(), local: $("#local").val(), duration: $("#duration").val(), password: $("#password").val(), re_password: $("#re-password").val(), information: $("#information").val(), correct: $("#correct").val(), incorrect: $("#incorrect").val(), questions: questions }, function(data) {
 				if (data == "diff-pass") {
 					$(".alert").css("display", "block");
 					$("#error").html(" Your confirmation password is different!");
@@ -89,10 +89,7 @@ $(document).ready(function() {
 				} else if (data == "success") {
 					window.location = "../../profile/profile.php";
 				}
-				alert(data);
 			});
 		}
-
-		// console.log($("#identification").val() + "; " + $("#class").val() + "; " + $("#date").val() + "; " + $("#hour").val() + "; " + $("#local").val() + "; " + $("#duration").val() + "; " + $("#password").val() + "; " + $("#information").val() + "; " + $("#correct").val() + "; " + $("#incorrect").val());
 	});
 });

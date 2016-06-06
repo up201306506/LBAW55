@@ -35,7 +35,6 @@
 	$smarty->assign('questions', $questions);
 	$smarty->assign('answers', $answers);
 	$smarty->assign('classes', $classes);
-	$smarty->assign('categories', getAllCategories());
 	
 	/*This summons the smarty template*/
 	$smarty->display('professor/exam/create_exam.tpl');
