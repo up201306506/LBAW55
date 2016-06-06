@@ -8,8 +8,16 @@
     //$BASE_DIR = 'D:/Programs/wamp/www/LBAW55/proto/'; //FIXME
     //$BASE_URL = '/LBAW55/proto/'; //FIXME
 
+<<<<<<< HEAD
     //$BASE_DIR = '/opt/lbaw/lbaw1555/public_html/LBAW55/proto/'; //FIXME
     //$BASE_URL = '/~lbaw1555/LBAW55/proto/'; //FIXME
+=======
+  //$BASE_DIR = '/opt/lbaw/lbaw1555/public_html/LBAW55/proto/'; //FIXME
+  //$BASE_URL = '/~lbaw1555/LBAW55/proto/'; //FIXME
+
+  $BASE_DIR = '/Applications/MAMP/htdocs/LBAW55/proto/'; //FIXME
+  $BASE_URL = '/LBAW55/proto/'; //FIXME
+>>>>>>> refs/remotes/origin/master
 
     //$BASE_DIR = '/Applications/MAMP/htdocs/LBAW55/proto/';
     //$BASE_URL = '/LBAW55/proto/';
