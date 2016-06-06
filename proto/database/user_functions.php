@@ -211,6 +211,29 @@ function getGrade($userid, $examid) {
 	return $stmt->fetch();
 }
 
+function insertGrade($userid, $examid) {
+	global $conn;
+	$stmt = $conn->prepare("INSERT INTO executeexam (examid,userid) VALUES (?,?)");
+	return $stmt->execute(array($examid, $userid));
+}
+
+function insertUserAnswer($userid, $examid, $questionid) {
+	global $conn;
+	$stmt = $conn->prepare("INSERT INTO useranswers (examid,userid,questionid) VALUES (?, ?, ?)");
+	return $stmt->execute(array($examid, $userid, $questionid));
+}
+
+function getUserAnswer($userid, $examid, $questionid) {
+	global $conn;
+	$stmt = $conn->prepare("SELECT *
+							FROM useranswers
+							WHERE userid = ?
+							AND examid = ?
+							AND questionid = ?");
+	$stmt->execute(array($examid, $userid, $questionid));
+	return $stmt->fetch();
+}
+
 function getClassesByUser($userid) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT class.classid AS classid, classname, users.userid AS profid, name, class.password AS classpass
