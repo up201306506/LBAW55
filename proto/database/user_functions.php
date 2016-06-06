@@ -230,9 +230,21 @@ function getUserAnswer($userid, $examid, $questionid) {
 							WHERE userid = ?
 							AND examid = ?
 							AND questionid = ?");
-	$stmt->execute(array($examid, $userid, $questionid));
+	$stmt->execute(array($userid, $examid, $questionid));
 	return $stmt->fetch();
 }
+
+function changeUserAnswer($newanswer, $userid, $examid, $questionid) {
+	global $conn;
+	$stmt = $conn->prepare("UPDATE useranswers
+							SET questionanswerid = ?
+							WHERE userid = ?
+							AND examid = ?
+							AND questionid = ?");
+	$stmt->execute(array($newanswer, $userid, $examid, $questionid));
+	return $stmt->fetch();
+}
+
 
 function getClassesByUser($userid) {
 	global $conn;

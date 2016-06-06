@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 07:33:24
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 07:57:22
          compiled from "D:\Programs\wamp\www\LBAW55\proto\templates\student\exam\exam.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1909257543f3abbe2f4-95795881%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ba9019bfde68c4c27762222e0c27516e62b874ea' => 
     array (
       0 => 'D:\\Programs\\wamp\\www\\LBAW55\\proto\\templates\\student\\exam\\exam.tpl',
-      1 => 1465191197,
+      1 => 1465196240,
       2 => 'file',
     ),
   ),
@@ -25,10 +25,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'BASE_URL' => 0,
     'session_username' => 0,
     'exam_timeleft' => 0,
+    'exam_ongoing' => 0,
     'questions' => 0,
     'question' => 0,
     'answers' => 0,
     'answer' => 0,
+    'exam_is_finished' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -57,11 +59,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </span> minutes<br>
 					<span id=timeleft hidden><?php echo $_smarty_tpl->tpl_vars['exam_timeleft']->value;?>
 </span>
-					<div id="clockdiv"></div>
+					<div id="clockdiv"<?php if (!$_smarty_tpl->tpl_vars['exam_ongoing']->value) {?> hidden<?php }?>></div>
 				</div>
-				<div id="center">
-					<button class="btn btn-warning">Done</button>
-				</div>
+				<?php if ($_smarty_tpl->tpl_vars['exam_ongoing']->value) {?>	
+					<div id="center">
+						<button id="end_exam" class="btn btn-warning">Done</button>
+					</div>
+				<?php }?>	
 			</div>
 		</div>
 		<div class="col-lg-9 col-md-8 col-sm-12">
@@ -70,50 +74,63 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<span><?php echo $_smarty_tpl->tpl_vars['exam']->value['information'];?>
 </span>
 			</div>
-			<?php if ($_smarty_tpl->tpl_vars['questions']->value) {?>
-			<?php  $_smarty_tpl->tpl_vars['question'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['question']->_loop = false;
+			<?php if ($_smarty_tpl->tpl_vars['exam_ongoing']->value) {?>	
+				<?php if ($_smarty_tpl->tpl_vars['questions']->value) {?>
+					<?php  $_smarty_tpl->tpl_vars['question'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['question']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['questions']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['question']->key => $_smarty_tpl->tpl_vars['question']->value) {
 $_smarty_tpl->tpl_vars['question']->_loop = true;
 ?>
-			<div class="input-group">
-				<div class="my-panel">
-					<div class="my-panel-header">
-						<span>
-							<?php echo $_smarty_tpl->tpl_vars['question']->value['question'];?>
+					<div class="input-group">
+						<div class="my-panel">
+							<div class="my-panel-header">
+								<span>
+									<?php echo $_smarty_tpl->tpl_vars['question']->value['question'];?>
 
-						</span>
-					</div>
-					<div class="my-panel-body">
-						<form role="answers">
-							<?php  $_smarty_tpl->tpl_vars['answer'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['answer']->_loop = false;
+								</span>
+							</div>
+							<div class="my-panel-body">
+								<form role="answers">
+									<?php  $_smarty_tpl->tpl_vars['answer'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['answer']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['answers']->value[$_smarty_tpl->tpl_vars['question']->value['questionid']]; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['answer']->key => $_smarty_tpl->tpl_vars['answer']->value) {
 $_smarty_tpl->tpl_vars['answer']->_loop = true;
 ?>
-								<div class="radio">
-									<label><input type="radio" name="optradio"/><?php echo $_smarty_tpl->tpl_vars['answer']->value['answer'];?>
+										<div class="radio">
+											<label><input type="radio" name="optradio"/><?php echo $_smarty_tpl->tpl_vars['answer']->value['answer'];?>
 </label>
-								</div>
-							<?php } ?>
-						</form>
+										</div>
+									<?php } ?>
+								</form>
+							</div>
+						</div>
+						<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 					</div>
-				</div>
-				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
-			</div>
-			<?php } ?>
+					<?php } ?>
+					<?php } else { ?>
+					<div class="input-group question">
+						<div> No questions to display </div>
+					</div>
+				<?php }?>
+				<ul class="pagination">
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+				</ul>
+			
 			<?php } else { ?>
-			<div class="input-group question">
-				<div> No questions to display </div>
-			</div>
+				<?php if ($_smarty_tpl->tpl_vars['exam_is_finished']->value) {?>
+					<div class="box">
+						<span>This is exam is already over. Please wait for your grades.</span>
+					</div>
+				<?php } else { ?>
+					<div class="box">
+						<span>This exam has not started yet.</span>
+					</div>
+				<?php }?>
 			<?php }?>
-			<ul class="pagination">
-				<li class="active"><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-			</ul>
 		</div>
 	</div>
 </div>

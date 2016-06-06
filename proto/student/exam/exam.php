@@ -1,10 +1,5 @@
 <?php
 
-	if(!isset($_GET['page'])){
-		header('Location:'.$_SERVER['PHP_SELF'].'?'.$_SERVER['QUERY_STRING'] . "&page=1");
-		die;
-	}
-	
 	date_default_timezone_set('Europe/Lisbon');
 
 	/*This summons the database and smarty initializer */
@@ -79,11 +74,10 @@
 			insertGrade($_SESSION['userid'], $_GET['id']);
 			$user_grade_data =  getGrade($_SESSION['userid'], $_GET['id']);
 		}	
-		echo "HELLO <br>";
 		
 		//Generate Answers Table
 		foreach ($questions as $question) {
-			$tempvar = 0;
+			$tempvar = false;
 			$tempvar = getUserAnswer($_SESSION['userid'], $_GET['id'],$question['questionid']);
 			if (!$tempvar)
 				insertUserAnswer($_SESSION['userid'], $_GET['id'],$question['questionid']);
