@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 03:44:14
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 06:50:34
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2128119125574fe7b2aea268-37880714%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0bd976fb37f9ecd7e131551ae7f5681ff7767870' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/profile/profile.tpl',
-      1 => 1465177452,
+      1 => 1465187950,
       2 => 'file',
     ),
   ),
@@ -20,6 +20,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'usertype' => 0,
+    'use_image' => 0,
+    'img_url' => 0,
     'BASE_URL' => 0,
     'session_username' => 0,
     'session_name' => 0,
@@ -48,8 +50,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<div class="row">
 		<div id="first" class="col-lg-3 col-md-4 col-sm-12">
 			<div class="box">
-				<img id="user-img" class="img-circle img-responsive" src="<?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('css/res/user_img.png');?>
-" width="200" height="200">
+				<img id="user-img" class="img-circle img-responsive" src="<?php if ($_smarty_tpl->tpl_vars['use_image']->value) {?><?php echo $_smarty_tpl->tpl_vars['img_url']->value;?>
+<?php } else { ?><?php echo ($_smarty_tpl->tpl_vars['BASE_URL']->value).('css/res/user_img/default.png');?>
+<?php }?>" width="200" height="200">
 				<div id="username">
 					<span class="glyphicon glyphicon-credit-card"></span>
 					<span><?php echo $_smarty_tpl->tpl_vars['session_username']->value;?>
