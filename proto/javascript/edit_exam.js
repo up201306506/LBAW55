@@ -55,8 +55,8 @@ $(document).ready(function() {
 	}
 
 	$(".minus").click(function() {
-		$.post("../action/edit_exam_action.php", { questionid: $(this).parent().attr("id"), examid: $("h1").attr("id"), remove: "true" }, function(data) {
-			console.log(data);
+		$.post("../action/remove_question_from_exam_action.php", { questionid: $(this).parent().attr("id"), examid: $("h1").attr("id"), remove: "true" }, function(data) {
+			location.reload();
 		});
 	});
 });

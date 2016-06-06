@@ -22,7 +22,6 @@ $(document).ready(function() {
 		$('tr').each(function() {
 			if ($(this).attr("style") == "display: block;") {
 				$(this).removeAttr("style");
-				console.log("lol");
 			}
 		});
 	}

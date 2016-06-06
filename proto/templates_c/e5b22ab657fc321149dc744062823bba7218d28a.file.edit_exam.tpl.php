@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 03:21:47
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 02:47:50
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/edit_exam.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:998079159575226e1a0e796-32515235%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'e5b22ab657fc321149dc744062823bba7218d28a' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/edit_exam.tpl',
-      1 => 1465089701,
+      1 => 1465174067,
       2 => 'file',
     ),
   ),
@@ -139,14 +139,16 @@ $_smarty_tpl->tpl_vars['question']->_loop = true;
 </span>
 					</div>
 					<div class="my-panel-body">
-					<?php  $_smarty_tpl->tpl_vars['answer'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['answer']->_loop = false;
+						<ul>
+						<?php  $_smarty_tpl->tpl_vars['answer'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['answer']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['answers']->value[$_smarty_tpl->tpl_vars['question']->value['questionid']]; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['answer']->key => $_smarty_tpl->tpl_vars['answer']->value) {
 $_smarty_tpl->tpl_vars['answer']->_loop = true;
 ?>
-						<span><?php echo $_smarty_tpl->tpl_vars['answer']->value['answer'];?>
-</span>
-					<?php } ?>
+							<li><?php echo $_smarty_tpl->tpl_vars['answer']->value['answer'];?>
+</li>
+						<?php } ?>
+						</ul>
 					</div>
 				</div>
 				<span class="input-group-addon minus"><span class="glyphicon glyphicon-minus"></span></span>

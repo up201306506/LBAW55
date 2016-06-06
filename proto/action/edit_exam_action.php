@@ -55,12 +55,6 @@
 		} else {
 			$error = 'New local can\'t be empty!';
 		}
-	} else if (isset($_POST['remove'])) {
-		if ($_POST['remove'] == "true") {
-			echo $_POST['examid'] . "; " . $_POST['questionid'];
-			// removeQuestionFromExam($_POST['examid'], $_POST['questionid']);
-			// header('Location: ' . $BASE_URL . 'admin/manage_exams.php');
-		}
 	}
 
 ?>

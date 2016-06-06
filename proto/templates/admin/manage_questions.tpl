@@ -22,7 +22,7 @@
 		</div>
 		<div id="questions">
 		{foreach $questions as $question}
-			<div class="input-group question">
+			<div id="{$question.questionid}" class="input-group question">
 				<div class="my-panel">
 					<div class="my-panel-header">
 						<span>{$question.questionid}:{$question.question}</span>
@@ -35,25 +35,9 @@
 						</ul>
 					</div>
 				</div>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+				<span class="input-group-addon remove"><span class="glyphicon glyphicon-remove"></span></span>
 			</div>
 		{/foreach}
-			<div class="input-group question">
-				<div class="my-panel">
-					<div class="my-panel-header">
-						<span>Example</span>
-					</div>
-					<div class="my-panel-body">
-						<ul id="answers">
-							<li><span>Example</span></li>
-							<li><span>Example</span></li>
-							<li><span>Example</span></li>
-							<li><span>Example</span></li>
-						</ul>
-					</div>
-				</div>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
-			</div>
 		</div>
 		<nav id="center">
 			<ul class="pagination">

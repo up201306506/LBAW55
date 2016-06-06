@@ -26,6 +26,12 @@ function getAllQuestions() {
 	return $stmt->fetchAll();
 }
 
+function deleteQuestion($questionid) {
+	global $conn;
+	$stmt = $conn->prepare("DELETE FROM question WHERE questionid = ?");
+	$stmt->execute(array($questionid));
+}
+
 function getExamQuestions($examid) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT question.questionid, question
@@ -38,18 +44,41 @@ function getExamQuestions($examid) {
 
 function getAnswers($questionid) {
 	global $conn;
-	$stmt = $conn->prepare("SELECT answer FROM question, questionanswer, answersavailable
-							WHERE answersavailable.questionid = ?
-							AND answersavailable.questionid = question.questionid
-							AND answersavailable.questionanswerid = questionanswer.questionanswerid");
+	$stmt = $conn->prepare("SELECT *
+							FROM questionanswer
+							WHERE questionid = ?");
 	$stmt->execute(array($questionid));
 	return $stmt->fetchAll();
+}
+
+function getExamIdAndClassId($identification, $classid) {
+	global $conn;
+	$stmt = $conn->prepare("SELECT *
+							FROM exam
+							WHERE examidentification = ?
+							AND classid = ?");
+	$stmt->execute(array($identification, $classid));
+	return $stmt->fetch();
 }
 
 function removeQuestionFromExam($examid, $questionid) {
 	global $conn;
 	$stmt = $conn->prepare("DELETE FROM questiongrades WHERE examid = ? AND questionid = ?");
 	$stmt->execute(array($examid, $questionid));
+}
+
+function insertNewExamWithoutPassword($identification, $classid, $date, $hour, $duration, $local, $information) {
+	global $conn;
+	$stmt = $conn->prepare("INSERT INTO exam (examidentification,classid,date,local,duration,information,beginningtime) VALUES (:examidentification, :classid, :date, :local, :duration, :information, :beginningtime)");
+	$stmt->bindParam(':examidentification', $identification);
+	$stmt->bindParam(':classid', $classid);
+	$stmt->bindParam(':date', $date);
+	$stmt->bindParam(':local', $local);
+	$stmt->bindParam(':duration', $duration);
+	$stmt->bindParam(':information', $information);
+	$stmt->bindParam(':beginningtime', $hour);
+	$stmt->execute();
+	return getExamIdAndClassId($identification, $classid)['examid'];
 }
 
 function updateExamDate($examid, $date) {
