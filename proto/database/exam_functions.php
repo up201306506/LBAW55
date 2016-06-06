@@ -34,10 +34,11 @@ function deleteQuestion($questionid) {
 
 function getExamQuestions($examid) {
 	global $conn;
-	$stmt = $conn->prepare("SELECT question.questionid, question
+	$stmt = $conn->prepare("SELECT question.questionid, question, questionnumber
 							FROM question, questiongrades
 							WHERE examid = ?
-							AND questiongrades.questionid = question.questionid");
+							AND questiongrades.questionid = question.questionid
+							ORDER BY questionnumber ASC");
 	$stmt->execute(array($examid));
 	return $stmt->fetchAll();
 }
