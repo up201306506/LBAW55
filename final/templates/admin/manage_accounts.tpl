@@ -7,8 +7,8 @@
 		<table class="table table-hover">
 			<thead>
 				<tr>
-					<th>Name</th>
 					<th>Username</th>
+					<th>Name</th>
 					<th>Email</th>
 					<th>Account Type</th>
 					<th>State</th>
