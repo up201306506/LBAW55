@@ -79,11 +79,10 @@
 			insertGrade($_SESSION['userid'], $_GET['id']);
 			$user_grade_data =  getGrade($_SESSION['userid'], $_GET['id']);
 		}	
-		echo "HELLO <br>";
 		
 		//Generate Answers Table
 		foreach ($questions as $question) {
-			$tempvar = 0;
+			$tempvar = false;
 			$tempvar = getUserAnswer($_SESSION['userid'], $_GET['id'],$question['questionid']);
 			if (!$tempvar)
 				insertUserAnswer($_SESSION['userid'], $_GET['id'],$question['questionid']);

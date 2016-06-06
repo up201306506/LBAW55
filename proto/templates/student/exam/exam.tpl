@@ -27,40 +27,54 @@
 				<h3>Information</h3>
 				<span>{$exam.information}</span>
 			</div>
-			{if $questions}
-			{foreach $questions as $question}
-			<div class="input-group">
-				<div class="my-panel">
-					<div class="my-panel-header">
-						<span>
-							{$question.question}
-						</span>
+			{if $exam_ongoing}
+				
+				{if $questions}
+					{foreach $questions as $question}
+					<div class="input-group">
+						<div class="my-panel">
+							<div class="my-panel-header">
+								<span>
+									{$question.question}
+								</span>
+							</div>
+							<div class="my-panel-body">
+								<form role="answers">
+									{foreach $answers[$question.questionid] as $answer}
+										<div class="radio">
+											<label><input type="radio" name="optradio"/>{$answer.answer}</label>
+										</div>
+									{/foreach}
+								</form>
+							</div>
+						</div>
+						<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
 					</div>
-					<div class="my-panel-body">
-						<form role="answers">
-							{foreach $answers[$question.questionid] as $answer}
-								<div class="radio">
-									<label><input type="radio" name="optradio"/>{$answer.answer}</label>
-								</div>
-							{/foreach}
-						</form>
+					{/foreach}
+					{else}
+					<div class="input-group question">
+						<div> No questions to display </div>
 					</div>
-				</div>
-				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
-			</div>
-			{/foreach}
+				{/if}
+				<ul class="pagination">
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+				</ul>
+			
 			{else}
-			<div class="input-group question">
-				<div> No questions to display </div>
-			</div>
+				{if $exam_is_finished}
+					<div class="box">
+						<span>This is exam is already over. Please wait for your grades.</span>
+					</div>
+				{else}
+					<div class="box">
+						<span>This exam has not started yet.</span>
+					</div>
+				{/if}
 			{/if}
-			<ul class="pagination">
-				<li class="active"><a href="#">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
-				<li><a href="#">5</a></li>
-			</ul>
 		</div>
 	</div>
 </div>
