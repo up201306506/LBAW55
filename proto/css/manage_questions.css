@@ -56,6 +56,7 @@ h1 {
 
 .input-group-addon:hover {
 	cursor: pointer;
+	box-shadow: 0 2px 25px 0 rgba(0,0,0,0.16),0 2px 25px 0 rgba(0,0,0,0.12);
 }
 
 #answers li {

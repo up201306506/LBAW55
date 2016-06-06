@@ -2,6 +2,7 @@
 {include file='common/navbar.tpl'}
 
 <div class="container">
+{if $usertype neq 'Administrator'}
 	<h1>Profile</h1>
 	<div class="row">
 		<div id="first" class="col-lg-3 col-md-4 col-sm-12">
@@ -130,6 +131,46 @@
 			</div>
 		</div>
 	</div>
+{else}
+	<div class="row">
+		<div class="col-lg-6 col-md-8 col-sm-12 col-lg-offset-3 col-md-offset-2">
+			<h1>Profile</h1>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<div class="box">
+						<img id="user-img" class="img-circle img-responsive" src="{$BASE_URL|cat:'css/res/user_img.png'}" width="200" height="200">
+						<div id="username">
+							<span class="glyphicon glyphicon-credit-card"></span>
+							<span>{$session_username}</span>
+						</div>
+						<div id="name">
+							<span class="glyphicon glyphicon-user"></span>
+							<span>{$session_name}</span>
+						</div>
+						<div id="email">
+							<span class="glyphicon glyphicon-envelope"></span>
+							<span>{$session_email}</span>
+						</div>
+					</div>
+					<div class="box">
+						<h3>Description</h3>
+						<span id="description">{$description}</span>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<div id="admin-options" class="box">
+						<ul>
+							<li><a href="{$BASE_URL|cat:'admin/validate_accounts.php'}"><span class="glyphicon glyphicon-th-list"></span>Validate Accounts</a></li>
+							<li><a href="{$BASE_URL|cat:'admin/manage_accounts.php'}"><span class="glyphicon glyphicon-book"></span>Manage Accounts</a></li>
+							<li><a href="{$BASE_URL|cat:'admin/manage_exams.php'}"><span class="glyphicon glyphicon-file"></span>Manage Exams</a></li>
+							<li><a href="{$BASE_URL|cat:'admin/manage_questions.php'}"><span class="glyphicon glyphicon-question-sign"></span>Manage Questions</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{/if}
 </div>
 
 {include file='javascript_plugins/jquery.tpl'}

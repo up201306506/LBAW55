@@ -3,6 +3,8 @@
 	/*This summons the database and smarty initializer */
 	include_once('../../config/init.php');
 	include_once('../../database/user_functions.php');
+	include_once('../../database/class_functions.php');
+	include_once('../../database/exam_functions.php');
 
 	/*Other PHP actions should go here*/
 	$smarty->assign('pagename', 'Create Exam');
@@ -17,6 +19,23 @@
 	
 	/*Session variables*/
 	$smarty->assign('session_username', getUsername($_SESSION['userid']));
+
+	/*Other variables*/
+	$classes_owned = getClassByOwnerID($_SESSION['userid']);
+	$classes_managed = getClassByManagerID($_SESSION['userid']);
+	$classes = array_merge($classes_owned, $classes_managed);
+
+	$questions = getAllQuestions();
+
+	$answers = [];
+	foreach ($questions as $question) {
+		$answers[$question['questionid']] = getAnswers($question['questionid']);
+	}
+
+	$smarty->assign('questions', $questions);
+	$smarty->assign('answers', $answers);
+	$smarty->assign('classes', $classes);
+	$smarty->assign('categories', getAllCategories());
 	
 	/*This summons the smarty template*/
 	$smarty->display('professor/exam/create_exam.tpl');

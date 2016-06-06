@@ -121,6 +121,13 @@ function getAllCategories() {
 	return $stmt->fetchAll();
 }
 
+function getClasses() {
+	global $conn;
+	$stmt = $conn->prepare("SELECT * FROM class");
+	$stmt->execute();
+	return $stmt->fetchAll();
+}
+
 function getManagerOfClass($userid) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT name

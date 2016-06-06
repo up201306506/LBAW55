@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-03 19:28:58
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 03:07:18
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_questions.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:17117282525751b5bf7e54e9-53469417%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a5026cca2e6e7ab41905b26a1835be8b7f72d270' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/admin/manage_questions.tpl',
-      1 => 1464974931,
+      1 => 1465175237,
       2 => 'file',
     ),
   ),
@@ -64,7 +64,8 @@ $_smarty_tpl->tpl_vars['category']->_loop = true;
 foreach ($_from as $_smarty_tpl->tpl_vars['question']->key => $_smarty_tpl->tpl_vars['question']->value) {
 $_smarty_tpl->tpl_vars['question']->_loop = true;
 ?>
-			<div class="input-group question">
+			<div id="<?php echo $_smarty_tpl->tpl_vars['question']->value['questionid'];?>
+" class="input-group question">
 				<div class="my-panel">
 					<div class="my-panel-header">
 						<span><?php echo $_smarty_tpl->tpl_vars['question']->value['questionid'];?>
@@ -84,25 +85,9 @@ $_smarty_tpl->tpl_vars['answer']->_loop = true;
 						</ul>
 					</div>
 				</div>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+				<span class="input-group-addon remove"><span class="glyphicon glyphicon-remove"></span></span>
 			</div>
 		<?php } ?>
-			<div class="input-group question">
-				<div class="my-panel">
-					<div class="my-panel-header">
-						<span>Example</span>
-					</div>
-					<div class="my-panel-body">
-						<ul id="answers">
-							<li><span>Example</span></li>
-							<li><span>Example</span></li>
-							<li><span>Example</span></li>
-							<li><span>Example</span></li>
-						</ul>
-					</div>
-				</div>
-				<span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
-			</div>
 		</div>
 		<nav id="center">
 			<ul class="pagination">

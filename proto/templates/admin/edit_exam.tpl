@@ -95,9 +95,11 @@
 						<span>{$question.question}</span>
 					</div>
 					<div class="my-panel-body">
-					{foreach $answers[$question.questionid] as $answer}
-						<span>{$answer.answer}</span>
-					{/foreach}
+						<ul>
+						{foreach $answers[$question.questionid] as $answer}
+							<li>{$answer.answer}</li>
+						{/foreach}
+						</ul>
 					</div>
 				</div>
 				<span class="input-group-addon minus"><span class="glyphicon glyphicon-minus"></span></span>
