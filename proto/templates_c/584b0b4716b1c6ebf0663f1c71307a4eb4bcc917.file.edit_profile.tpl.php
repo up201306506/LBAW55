@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-05 17:03:08
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 05:40:24
          compiled from "D:\Programs\wamp\www\LBAW55\proto\templates\profile\edit_profile.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2839157543f2c757b71-81259138%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '584b0b4716b1c6ebf0663f1c71307a4eb4bcc917' => 
     array (
       0 => 'D:\\Programs\\wamp\\www\\LBAW55\\proto\\templates\\profile\\edit_profile.tpl',
-      1 => 1464940628,
+      1 => 1465181318,
       2 => 'file',
     ),
   ),
@@ -15,13 +15,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_57543f2c8282e0_09122836',
   'variables' => 
   array (
     'error' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_57543f2c8282e0_09122836',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_57543f2c8282e0_09122836')) {function content_57543f2c8282e0_09122836($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
@@ -82,12 +82,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</form>
 			</div>
 			<div class="box">
-				<form method="post" role="form">
+				<form method="post" role="form" enctype="multipart/form-data">
 					<div class="form-group">
 						<label for="upload_img">Profile Picture:</label>
 						<input id="upload_img" name="upload_img" type="file" accept="image/*" required="required"></input>
 					</div>
-					<input name="edit-profile-pic" class="btn btn-primary" type="submit" value="Submit new Profile Picture"></input>
+					<input name="edit-profile-pic" class="btn btn-primary" type="submit" name="submit" value="Submit new Profile Picture"></input>
 				</form>
 			</div>
 		</div>

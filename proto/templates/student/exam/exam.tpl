@@ -9,11 +9,11 @@
 				<img id="user-img" class="img-circle img-responsive" src="{if $use_image}{$img_url}{else}{$BASE_URL|cat:'css/res/user_img/default.png'}{/if}" width="200" height="200">
 				<div id="username">
 					<span class="glyphicon glyphicon-credit-card"></span>
-					<span> {$session_username}</span>
+					<span>{$session_username}</span>
 				</div>
 				<div id="finish">
 					<span class="glyphicon glyphicon-time"></span>
-					<span> {$exam.duration}</span>
+					<span>{$exam.duration}</span>
 				</div>
 				<div id="center">
 					<button class="btn btn-warning">Done</button>
@@ -25,133 +25,33 @@
 				<h3>Information</h3>
 				<span>{$exam.information}</span>
 			</div>
+			{if $questions}
 			{foreach $questions as $question}
-			
+			<div class="input-group">
+				<div class="my-panel">
+					<div class="my-panel-header">
+						<span>
+							{$question.question}
+						</span>
+					</div>
+					<div class="my-panel-body">
+						<form role="answers">
+							{foreach $answers[$question.questionid] as $answer}
+								<div class="radio">
+									<label><input type="radio" name="optradio"/>{$answer.answer}</label>
+								</div>
+							{/foreach}
+						</form>
+					</div>
+				</div>
+				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
+			</div>
 			{/foreach}
-			<div class="input-group">
-				<div class="my-panel">
-					<div class="my-panel-header">
-						<span>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</span>
-					</div>
-					<div class="my-panel-body">
-						<form role="answers">
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-						</form>
-					</div>
-				</div>
-				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
+			{else}
+			<div class="input-group question">
+				<div> No questions to display </div>
 			</div>
-			<div class="input-group">
-				<div class="my-panel">
-					<div class="my-panel-header">
-						<span>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</span>
-					</div>
-					<div class="my-panel-body">
-						<form role="answers">
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-						</form>
-					</div>
-				</div>
-				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
-			</div>
-			<div class="input-group">
-				<div class="my-panel">
-					<div class="my-panel-header">
-						<span>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</span>
-					</div>
-					<div class="my-panel-body">
-						<form role="answers">
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-						</form>
-					</div>
-				</div>
-				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
-			</div>
-			<div class="input-group">
-				<div class="my-panel">
-					<div class="my-panel-header">
-						<span>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-						</span>
-					</div>
-					<div class="my-panel-body">
-						<form role="answers">
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-							<div class="radio">
-								<label><input type="radio" name="optradio"/>This is an answer</label>
-							</div>
-						</form>
-					</div>
-				</div>
-				<span class="input-group-addon flag"><span class="glyphicon glyphicon-flag"></span></span>
-			</div>
+			{/if}
 			<ul class="pagination">
 				<li class="active"><a href="#">1</a></li>
 				<li><a href="#">2</a></li>
