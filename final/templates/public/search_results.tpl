@@ -17,7 +17,7 @@
 					<tbody>
 						{foreach $searched_users as $tempUser}
 							 <tr>
-							     <td>{$tempUser.name}</td>
+							     <td><a href="{$BASE_URL|cat:'public/profile.php?id='|cat:$tempUser.userid}">{$tempUser.name}</a></td>
 							     <td class="accounttype">{$tempUser.accounttypevar}</td>
 							 </tr>
 						{/foreach}
@@ -37,7 +37,8 @@
 					<tbody>
 						{foreach $searched_classes as $tempClass}
 							<tr>
-							     <td>{$tempClass.classname}</td>
+							     
+							     <td class="accounttype"><a href="{$BASE_URL|cat:'public/class.php?id='|cat:$tempUser.classid}">{$tempClass.classname}</a></td>
 							     <td>{$tempClass.description}</td>{* change in fuction adding name of director *}
 							     {if !$tempClass.password}  
 							     	<td>open</td>
