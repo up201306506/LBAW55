@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 02:10:30
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 11:40:12
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/professor/stats/stats.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:28874142657546ec1bd32a2-04565161%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'df04fb6d5e898c2c06d6ae3b04e33a25f6ca2148' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/professor/stats/stats.tpl',
-      1 => 1465171829,
+      1 => 1465206010,
       2 => 'file',
     ),
   ),
@@ -22,6 +22,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'classes' => 0,
     'class' => 0,
     'exams' => 0,
+    'exam' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -44,26 +45,32 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				</tr>
 			</thead>
 			<tbody>
-			<?php  $_smarty_tpl->tpl_vars['class'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['class']->_loop = false;
+		<?php  $_smarty_tpl->tpl_vars['class'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['class']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['classes']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
 foreach ($_from as $_smarty_tpl->tpl_vars['class']->key => $_smarty_tpl->tpl_vars['class']->value) {
 $_smarty_tpl->tpl_vars['class']->_loop = true;
 ?>
-				<?php if ($_smarty_tpl->tpl_vars['exams']->value[$_smarty_tpl->tpl_vars['class']->value['classid']]['examid']) {?>
+			<?php  $_smarty_tpl->tpl_vars['exam'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['exam']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['exams']->value[$_smarty_tpl->tpl_vars['class']->value['classid']]; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['exam']->key => $_smarty_tpl->tpl_vars['exam']->value) {
+$_smarty_tpl->tpl_vars['exam']->_loop = true;
+?>
+				<?php if ($_smarty_tpl->tpl_vars['exam']->value['gradespublished']) {?>
 				<tr>
-					<td><?php echo $_smarty_tpl->tpl_vars['exams']->value[$_smarty_tpl->tpl_vars['class']->value['classid']]['examidentification'];?>
+					<td><?php echo $_smarty_tpl->tpl_vars['exam']->value['examidentification'];?>
 </td>
-					<td><?php echo $_smarty_tpl->tpl_vars['exams']->value[$_smarty_tpl->tpl_vars['class']->value['classid']]['min_grade'];?>
+					<td><?php echo $_smarty_tpl->tpl_vars['exam']->value['min_grade'];?>
 </td>
-					<td><?php echo $_smarty_tpl->tpl_vars['exams']->value[$_smarty_tpl->tpl_vars['class']->value['classid']]['max_grade'];?>
+					<td><?php echo $_smarty_tpl->tpl_vars['exam']->value['max_grade'];?>
 </td>
-					<td><?php echo $_smarty_tpl->tpl_vars['exams']->value[$_smarty_tpl->tpl_vars['class']->value['classid']]['average'];?>
+					<td><?php echo $_smarty_tpl->tpl_vars['exam']->value['average'];?>
 </td>
-					<td><?php echo $_smarty_tpl->tpl_vars['exams']->value[$_smarty_tpl->tpl_vars['class']->value['classid']]['approved_percentage'];?>
+					<td><?php echo $_smarty_tpl->tpl_vars['exam']->value['approved_percentage'];?>
 </td>
 				</tr>
 				<?php }?>
 			<?php } ?>
+		<?php } ?>
 			</tbody>
 		</table>
 		<div id="export-choice">

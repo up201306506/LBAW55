@@ -5,6 +5,6 @@
 	}
 	
 	$user_type = getUserbyID($_SESSION['userid'])['accounttypevar'];
-	$smarty->assign('user_type', "user_type");
+	$smarty->assign('user_type', $user_type);
 
 ?>

@@ -276,6 +276,16 @@ function correctClassPassword($password, $id) {
 	return $stmt->fetch();
 }
 
+function correctExamPassword($password, $examid) {
+	global $conn;
+	$stmt = $conn->prepare("SELECT *
+							FROM exam
+							WHERE password = ?
+							AND examid = ?");
+	$stmt->execute(array($password, $examid));
+	return $stmt->fetch() == true;
+}
+
 function isLoginCorrect($username, $password) {
 	global $conn;
 	$stmt = $conn->prepare("SELECT * 
@@ -389,6 +399,28 @@ function insertProfessorInClass($classid, $profid) {
 	$stmt->bindParam(':classid', $classid);
 	$stmt->bindParam(':profid', $profid);
 	$stmt->execute();
+}
+
+function insertNewCategory($category) {
+	global $conn;
+	$stmt = $conn->prepare("INSERT INTO category (type) VALUES (:category)");
+	$stmt->bindParam(':category', $category);
+	$stmt->execute();
+}
+
+function updateUserAnswer($examid, $userid, $questionanswerid, $questionid) {
+	global $conn;
+	$stmt = $conn->prepare("UPDATE useranswers SET questionanswerid = ?
+							WHERE examid = ?
+							AND userid = ?
+							AND questionid = ?");
+	$stmt->execute(array($questionanswerid, $examid, $userid, $questionid));
+}
+
+function updateTries($examid, $tries) {
+	global $conn;
+	$stmt = $conn->prepare("UPDATE exam SET tries = ? WHERE examid = ?");
+	$stmt->execute(array($tries, $examid));
 }
 
 function updateName($name, $userid) {

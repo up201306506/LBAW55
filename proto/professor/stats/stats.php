@@ -4,6 +4,11 @@
 	include_once('../../config/init.php');
 	include_once('../../database/class_functions.php');
 	include_once('../../database/user_functions.php');
+	include_once('../../action/session_check.php');
+
+	if ($user_type != 'Professor') {
+		header('Location: ' . $BASE_URL . 'profile/profile.php');
+	}
 
 	/*Other PHP actions should go here*/
 	$smarty->assign('pagename', 'Statistics');
@@ -26,8 +31,10 @@
 
 	$exams = [];
 	foreach ($classes as $class) {
-		$exams[$class['classid']] = getExamsOfClassAll($class['classid'])[0];
+		$exams[$class['classid']] = getExamsOfClassAll($class['classid']);
 	}
+
+	// echo print_r($exams);
 
 	$smarty->assign('classes', $classes);
 	$smarty->assign('exams', $exams);

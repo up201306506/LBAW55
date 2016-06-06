@@ -3,6 +3,7 @@
 	/*This summons the database and smarty initializer */
 	include_once('../config/init.php');
 	include_once('../database/user_functions.php');
+	include_once('../action/session_check.php');
 	include_once('../action/edit_profile_action.php');
 
 	/*Other PHP actions should go here*/

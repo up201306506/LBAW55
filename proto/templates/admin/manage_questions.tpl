@@ -4,29 +4,13 @@
 <div class="container">
 	<h1>Manage Questions</h1>
 	<div class="box">
-		<div class="row">
-			<div class="col-lg-4 col-md-4 col-sm-12 col-lg-offset-4 col-md-offset-4">
-				<div class="form-group">
-					<label for="category">Category</label>
-					<select id="category" class="form-control">
-					{if !$categorylist}
-						<option value=''>No categories...</option>
-					{else}
-					{foreach $categorylist as $category}
-						<option value='{$category.categoryid}'>{$category.type}</option>
-					{/foreach}
-					{/if}
-					</select>
-				</div>
-			</div>
-		</div>
 		<div id="questions">
 		{if $questions}
 			{foreach $questions as $question}
 				<div id="{$question.questionid}" class="input-group question">
 					<div class="my-panel">
 						<div class="my-panel-header">
-							<span>{$question.questionid}:{$question.question}</span>
+							<span>{$question.question}</span>
 						</div>
 						<div class="my-panel-body">
 							<ul id="answers">

@@ -95,6 +95,7 @@
 						<li><a href="{$BASE_URL|cat:'admin/manage_exams.php'}"><span class="glyphicon glyphicon-file"></span>Manage Exams</a></li>
 						<li><a href="{$BASE_URL|cat:'admin/manage_questions.php'}"><span class="glyphicon glyphicon-question-sign"></span>Manage Questions</a></li>
 					{elseif $usertype eq 'Professor'}
+						<li><a href="{$BASE_URL|cat:'professor/category/create_category.php'}"><span class="glyphicon glyphicon-bookmark"></span>Create Category</a></li>
 						<li><a href="{$BASE_URL|cat:'professor/class/create_class.php'}"><span class="glyphicon glyphicon-education"></span>Create Class</a></li>
 						<li><a href="{$BASE_URL|cat:'professor/exam/create_exam.php'}"><span class="glyphicon glyphicon-file"></span>Create Exam</a></li>
 						<li><a href="{$BASE_URL|cat:'professor/question/create_question.php'}"><span class="glyphicon glyphicon-pencil"></span>Create Question</a></li>

@@ -15,17 +15,19 @@
 				</tr>
 			</thead>
 			<tbody>
-			{foreach $classes as $class}
-				{if $exams[$class.classid]['examid']}
+		{foreach $classes as $class}
+			{foreach $exams[$class.classid] as $exam}
+				{if $exam.gradespublished}
 				<tr>
-					<td>{$exams[$class.classid]['examidentification']}</td>
-					<td>{$exams[$class.classid]['min_grade']}</td>
-					<td>{$exams[$class.classid]['max_grade']}</td>
-					<td>{$exams[$class.classid]['average']}</td>
-					<td>{$exams[$class.classid]['approved_percentage']}</td>
+					<td>{$exam.examidentification}</td>
+					<td>{$exam.min_grade}</td>
+					<td>{$exam.max_grade}</td>
+					<td>{$exam.average}</td>
+					<td>{$exam.approved_percentage}</td>
 				</tr>
 				{/if}
 			{/foreach}
+		{/foreach}
 			</tbody>
 		</table>
 		<div id="export-choice">

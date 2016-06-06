@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 09:06:34
+<?php /* Smarty version Smarty-3.1.15, created on 2016-06-06 13:11:55
          compiled from "/Applications/MAMP/htdocs/LBAW55/proto/templates/student/exam/enroll_exam.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:766390807575051f93e3fe7-45370896%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce0fe0e0d20f2938669e1ada8733992df246fa56' => 
     array (
       0 => '/Applications/MAMP/htdocs/LBAW55/proto/templates/student/exam/enroll_exam.tpl',
-      1 => 1465196489,
+      1 => 1465211511,
       2 => 'file',
     ),
   ),
@@ -17,6 +17,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'version' => 'Smarty-3.1.15',
   'unifunc' => 'content_575051f94d6649_89908948',
+  'variables' => 
+  array (
+    'error' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_575051f94d6649_89908948')) {function content_575051f94d6649_89908948($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
@@ -35,10 +39,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 						<input class="form-control" type="password" name="password" required="required">
 					</div>
 					<div id="center">
-						<input class="btn btn-primary" type="submit" value="Enroll">
+						<input name="enroll" class="btn btn-primary" type="submit" value="Enroll">
 					</div>
 				</form>
 			</div>
+			<?php if ($_smarty_tpl->tpl_vars['error']->value) {?>
+			<div class="alert alert-danger alert-dismissible" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<strong>Warning!</strong> <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+
+			</div>
+			<?php }?>
 		</div>
 	</div>
 </div>

@@ -45,7 +45,7 @@ function getExamQuestions($examid) {
 
 function getAnswers($questionid) {
 	global $conn;
-	$stmt = $conn->prepare("SELECT answer FROM questionanswer
+	$stmt = $conn->prepare("SELECT * FROM questionanswer
 							WHERE questionid = ?");
 	$stmt->execute(array($questionid));
 	return $stmt->fetchAll();
@@ -135,6 +135,12 @@ function updateExamLocal($examid, $local) {
 	global $conn;
 	$stmt = $conn->prepare("UPDATE exam SET local = ? WHERE examid = ?");
 	$stmt->execute(array($local, $examid));
+}
+
+function updatePublish($examid, $publish) {
+	global $conn;
+	$stmt = $conn->prepare("UPDATE exam SET gradespublished = ? WHERE examid = ?");
+	$stmt->execute(array($publish, $examid));
 }
 
 ?>
