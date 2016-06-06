@@ -6,7 +6,7 @@
 	<div class="row">
 		<div id="first" class="col-lg-3 col-md-4 col-sm-12">
 			<div class="box">
-				<img id="user-img" class="img-circle img-responsive" src="{$BASE_URL|cat:'css/res/user_img.png'}" width="200" height="200">
+				<img id="user-img" class="img-circle img-responsive" src="{if $use_image}{$img_url}{else}{$BASE_URL|cat:'css/res/user_img/default.png'}{/if}" width="200" height="200">
 				<div id="name">
 					<span class="glyphicon glyphicon-user"></span>
 					<span>{$name}</span>
