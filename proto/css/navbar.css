@@ -15,3 +15,7 @@ body {
 .input-group {
 	padding: 8px 15px;
 }
+
+.box {
+	background-color: #ededed;
+}
